@@ -32,14 +32,98 @@ Pulumi Cloud has three entity types:
 
 ## Giving someone permissions on an entity {#entity-access}
 
-You can give a member or a team a [permission set](/docs/administration/concepts/rbac/permission-sets) on a single stack, environment, or cloud account, on top of what their role allows. This works in every edition.
+You can give a member, a team, or a [service principal](/docs/administration/concepts/rbac/service-principals/) a [permission set](/docs/administration/concepts/rbac/permission-sets) on a single stack, environment, or cloud account, on top of what their role allows. This is available in the Essentials, Pro, and Enterprise editions.
 
 1. Open the entity's access settings. For a stack or an environment, select **Settings** > **Access**. For a cloud account, select the **Access** tab.
 1. Choose **Add Principal**.
-1. Choose **User** or **Team**, then the member or team.
+1. Choose **User**, **Team**, or **Service Principal**, then the member, team, or service principal.
 1. Choose a permission set and confirm.
 
-Anyone who can read the entity can see who has permissions on it. Readers and Builders can grant Read, Maintainers and members on `Member (legacy)` can grant every set except Admin, and organization admins, the entity's owner, and members with a custom role can grant any permission set. Each grant is still checked against your own permissions on the entity. To remove a grant, open the same access settings and remove the member or team from the list.
+Each principal holds one permission set on an entity, so granting another one replaces it. To change a grant, pick a different permission set in the principal's row. To remove it, select **Remove**.
+
+### Who has access
+
+The access settings list everyone who was granted access on the entity:
+
+* The **Owner**, the member or team that created the entity or was made its owner, has full access. Select **Reassign** to hand ownership to someone else.
+* Members, teams, and service principals with a grant appear with their permission set.
+* On stacks, people who were added before per-entity grants existed appear as a **Collaborator** with a fixed Stack Read, Stack Write, or Stack Admin. To give a collaborator a different permission set, add them again with **Add Principal**. Removing a collaborator also removes any permission set they were granted on the stack.
+
+Organization admins have full access through their role and aren't listed unless they also hold a grant. A member's page lists the stacks, environments, and cloud accounts they were granted under **Access**.
+
+### Who can grant what
+
+Anyone who can read the entity can see who has access to it. To change it, you need the entity's `stack_access:update`, `environment_access:update`, or `insights_account_access:update` scope, which the built-in Admin permission sets include.
+
+You can only grant what you hold: you must have every scope in the permission set on that same entity, through your role, your teams, or a grant of your own. Holding the scope on another stack doesn't count. The console offers the permission sets your role is likely to hold: Readers and Builders can grant Read, Maintainers and members on `Member (legacy)` can grant every set except Admin, and organization admins, the entity's owner, and members with a custom role can grant any permission set, including [custom ones](/docs/administration/concepts/rbac/permission-sets/#custom-permission-sets).
+
+Without permission to change access, the controls are disabled and say why. Access can't be changed while the organization is locked.
+
+### How grants behave over time
+
+* A grant stays in place when the member's role, or the organization's [default role](/docs/administration/concepts/rbac/default-roles/), changes. Removing a member from the organization removes their grants.
+* A grant on a cloud account covers its regions and discovered child accounts, which have no access settings of their own.
+* [Transferring a stack](/docs/administration/concepts/organizations/#transferring-stacks) to another organization removes every grant on it.
+
+### Teams
+
+Granting a team access requires the Pro or Enterprise edition. A team can hold one of the built-in permission sets on an entity. The [Everyone team](/docs/administration/concepts/rbac/teams/#the-everyone-team) can be granted access in every edition that has entity access. See [team entity access grants](/docs/administration/concepts/rbac/teams/#team-entity-access-grants).
+
+### Using the REST API
+
+Entity access for members and service principals uses two routes. Both identify the entity by its type and ID. For teams, see [managing environment access via the REST API](/docs/administration/concepts/rbac/teams/#managing-environment-access-via-the-rest-api).
+
+List who has access and which permission sets you can grant:
+
+```bash
+curl -s -X POST \
+  "https://api.pulumi.com/api/orgs/{orgName}/assignments/list" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "context": { "__type": "PermissionExpressionStack" },
+    "id": "{stackId}"
+  }'
+```
+
+Grant, change, or revoke access:
+
+```bash
+curl -s -X POST \
+  "https://api.pulumi.com/api/orgs/{orgName}/assignments/update" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "context": { "__type": "PermissionExpressionStack" },
+    "id": "{stackId}",
+    "userId": "{userLogin}",
+    "permissionSetId": "{permissionSetId}"
+  }'
+```
+
+* `context.__type` is `PermissionExpressionStack`, `PermissionExpressionEnvironment`, or `PermissionExpressionInsightsAccount`.
+* `userId` is a member's or service principal's login.
+* Leave out `permissionSetId` to revoke the grant.
+
+A request that grants more than you hold fails with `403` and names the scopes you're missing.
+
+### Using the Pulumi Service provider
+
+The [`OrganizationMemberEntityAccess`](/registry/packages/pulumiservice/api-docs/organizationmemberentityaccess/) resource, available from version 1.7.0, manages one member's permission set on one entity:
+
+```yaml
+resources:
+  aliceOnDev:
+    type: pulumiservice:OrganizationMemberEntityAccess
+    properties:
+      organizationName: my-org
+      username: alice
+      entityType: stack
+      entityName: my-project/dev
+      permission: stack-write
+```
+
+`entityType` is `stack`, `environment`, or `insightsAccount`. Set `permission` to a built-in permission set such as `stack-read`, `environment-open`, or `insights-account-admin`, or set `permissionSetId` to a custom one.
 
 ## Organization-level access
 

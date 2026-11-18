@@ -5,22 +5,24 @@ h1: Use your coding agent with Pulumi
 meta_desc: Use Pulumi skills, the MCP server, and the CLI with Claude Code, Codex, Cursor, and other coding agents.
 menu:
     ai:
-        name: Use Pulumi with your coding agent
-        parent: ai-start
+        name: Use your coding agent
+        parent: ai-home
         identifier: ai-coding-agents
-        weight: 10
+        weight: 30
 ---
 
-Use Pulumi with Claude Code, Codex, Cursor, and other coding agents. Pulumi provides skills for infrastructure workflows, an MCP server for cloud context, and a CLI for infrastructure operations.
+Use Pulumi from Claude Code, Codex, Cursor, or another coding agent in your repository.
 
-## Pulumi Agent Skills
+## Install Pulumi skills {#pulumi-agent-skills}
 
-Skills teach your coding agent Pulumi workflows, including writing components, managing secrets, and migrating infrastructure. See [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/) for the available skills and installation instructions.
+Skills give your coding agent instructions for work such as writing components, managing secrets, and migrating Terraform projects. [Install the skills for your coding agent](/docs/ai/concepts/agent-skills/), then ask it to use the relevant skill on your project.
 
-## Pulumi MCP server
+## Run Pulumi commands {#pulumi-cli}
 
-The MCP server lets your coding agent query stacks and resources in Pulumi Cloud and look up resource schemas in the Pulumi Registry. See [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) for client configuration, authentication, and supported tools.
+Your coding agent needs the CLI to run a preview or another Pulumi command. See [CLI for agents](/docs/ai/concepts/cli-for-agents/) for installation options and commands to preview changes to your stack.
 
-## Pulumi CLI
+## Look up cloud resources and schemas {#pulumi-mcp-server}
 
-Coding agents that can run shell commands can use the Pulumi CLI to preview and deploy infrastructure. See [CLI for agents](/docs/ai/concepts/cli-for-agents/) for CLI features such as structured JSON output and direct resource operations.
+[Connect the MCP server](/docs/ai/guides/set-up-mcp-server/) when your coding agent needs to query stacks and resources in Pulumi Cloud or look up resource schemas in the Pulumi Registry. The setup guide includes configuration for each supported client.
+
+The server also exposes a tool that can start tasks and send approvals. Review [tool access and costs](/docs/ai/guides/set-up-mcp-server/#costs-and-edition-requirements) when choosing which tools to enable.

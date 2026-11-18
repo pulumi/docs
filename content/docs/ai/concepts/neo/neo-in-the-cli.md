@@ -1,50 +1,51 @@
 ---
-title: Neo in the Pulumi CLI
-title_tag: Neo in the Pulumi CLI
-h1: Neo in the Pulumi CLI
-meta_desc: Run pulumi neo to start an interactive Neo session in your terminal with access to your local project, credentials, and stacks.
+title: Use Neo in the CLI
+title_tag: Use Neo in the CLI | Pulumi Agents
+h1: Use Neo in the CLI
+meta_desc: Run pulumi neo to start a Neo session in your terminal with access to your local project, credentials, and stacks.
 aliases:
 - /docs/ai/pulumi-cli/
 - /docs/ai/neo/pulumi-cli/
 menu:
     ai:
-        name: Use Neo in the CLI
+        name: Use the CLI
         identifier: ai-pulumi-cli
-        parent: ai-neo
-        weight: 40
+        parent: ai-agents-tasks
+        weight: 30
 ---
 
-`pulumi neo` is Neo in your terminal. Run the command from your project directory to start an interactive session. Prefer working in your IDE? Neo can also run [directly in your editor](/docs/ai/concepts/neo/neo-in-your-editor/).
+Run `pulumi neo` to work with Neo from the terminal in your local project. You can also [use your editor's agent panel](/docs/ai/concepts/neo/neo-in-your-editor/).
 
-## What local execution unlocks
+## Work in your local environment {#what-local-execution-unlocks}
 
-Running locally means Neo inherits your setup: the CLIs you've authenticated, the environment variables and kubeconfigs you've configured, and the project you're editing. Neo can run the same commands you would, against the same systems you have access to, without any additional setup on your part.
+<span id="how-permissions-work"></span>
 
-You can ask Neo to investigate a failed preview, make changes to your program and verify them against a fresh preview, read live stack state, or walk through what's happening in a stack you're unfamiliar with. The session is interactive, so follow-up messages refine the task in real time.
-
-## Controls
-
-The controls you have in Pulumi Cloud apply in the terminal:
-
-- **[Approval modes](/docs/ai/concepts/neo/tasks/#task-modes)** (manual, balanced, auto) govern whether Neo asks before using tools. `manual` is the same mode the console calls **Review**.
-- **[Permission modes](/docs/ai/concepts/neo/permissions/#permission-mode-and-approval-mode)** (default, read-only) govern what Neo can change
-- **[Plan mode](/docs/ai/concepts/neo/tasks/#plan-mode)** lets Neo research and plan before executing (toggle with **Shift+Tab** before sending your first message)
-
-## Integrations
-
-[Integrations](/docs/ai/integrations/) carry over from Pulumi Cloud. GitHub, Slack, and the rest of the [integration catalog](/docs/ai/integrations/external-mcp-servers/) work the same way from the terminal.
-
-## Agent handoff
-
-The [Neo handoff skill](https://github.com/pulumi/agent-skills/tree/main/delegation) lets other AI agents start a Neo task using `pulumi neo` under the hood. From Claude Code, Cursor, or any tool that supports agent skills, you can hand off infrastructure work to Neo without leaving your current session.
-
-## How permissions work
-
-`pulumi neo` uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/concepts/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.
+The agent can read and change local files and run installed CLIs. It uses your `pulumi login` account for Pulumi Cloud and credentials from your environment variables, CLI logins, and Kubernetes configuration for other systems. Sign in to the tools the task needs before starting a session. See [Permissions and approvals](/docs/ai/agents/permissions/) for access and approval controls.
 
 ## Get started
 
-1. Authenticate to Pulumi Cloud with `pulumi login`
-1. Run `pulumi neo` from a directory containing a `Pulumi.yaml` file
+1. Authenticate to Pulumi Cloud with `pulumi login`.
+1. Run `pulumi neo` from a directory containing a `Pulumi.yaml` file.
+1. Describe the change you want or the problem to solve. Include the stack name and any relevant error output.
 
 See the [`pulumi neo` command reference](/docs/iac/cli/commands/pulumi_neo/) for the full list of flags and options.
+
+## Controls
+
+Choose approval, permission, and plan settings for the session:
+
+- **[Approval modes](/docs/ai/agents/permissions/#separate-approvals-from-access)** (manual, balanced, auto) control when the session pauses for confirmation. `manual` is the same mode the console calls **Review**.
+- **[Permission modes](/docs/ai/agents/permissions/#permission-mode-and-approval-mode)** (`default`, `read-only`) control whether the session can write to Pulumi Cloud. They do not restrict local file changes or the credentials used by local commands.
+- **[Plan mode](/docs/ai/agents/tasks/#plan-mode)** lets the agent propose a plan before changing files (toggle with **Shift+Tab** before sending your first message).
+
+<span id="integrations"></span>
+
+For connections configured in Pulumi Cloud, see [Integrations](/docs/ai/agents/integrations/).
+
+## Agent handoff
+
+Install the [delegation skill](/docs/ai/concepts/agent-skills/#delegation-plugin) in your coding agent to transfer work to a Neo task. When you explicitly request a handoff, the skill summarizes the goal, repository state, and conversation, then passes that summary to `pulumi neo`.
+
+The handoff session can read your local working tree, including uncommitted changes. You do not need to commit or push them for the handoff.
+
+The skill returns a task URL and instructs the original coding agent to stop. Continue the work in that task. This is a one-way transfer; the original coding agent does not wait for a result and resume automatically.

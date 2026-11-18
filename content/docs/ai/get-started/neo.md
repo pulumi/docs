@@ -1,89 +1,75 @@
 ---
-title: Getting started with Neo
-title_tag: Getting started with Pulumi Neo
-h1: Getting started with Pulumi Neo
-meta_desc: Learn how to set up Pulumi Neo for your organization and run your first infrastructure task through conversational AI.
+title: Start your first task
+title_tag: Start your first task | Pulumi Agents
+h1: Start your first task
+meta_desc: Ask Neo to review stack encryption settings, check its findings, and request a pull request if changes are needed.
 aliases:
 - /docs/pulumi-cloud/neo/get-started/
 - /docs/iac/neo/get-started/
 - /docs/ai/neo/get-started/
 menu:
     ai:
-        name: Use Neo
+        name: Start your first task
         parent: ai-start
         weight: 20
         identifier: ai-get-started-neo
 ---
 
-## Enabling and Disabling Neo
+Neo is the built-in agent in Pulumi Agents. In this walkthrough, you ask Neo to check a stack's storage encryption settings. Sending the request starts a task where Neo reports its findings and you can ask questions as needed. If a change is needed, you can continue the task by asking Neo to prepare a pull request.
 
-Neo is enabled by default. To disable Neo for your organization, navigate to **Settings > Neo Settings > General** in the Pulumi Cloud console.
+<span id="enabling-and-disabling-neo"></span>
+<span id="enable-neo-for-your-organization"></span>
+<span id="vcs-integration"></span>
 
-## VCS integration
+## Before you begin
 
-A [version control integration](/docs/integrations/version-control/) is optional. With one connected, Neo can read your code and open pull requests. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/). A VCS integration:
+You need a [Pulumi Cloud account](https://app.pulumi.com/signin) and access to a stack that manages storage resources, such as buckets or disks. Pulumi Agents must be [enabled for your organization](/docs/ai/concepts/neo/settings/#neo-access).
 
-- Allows Neo to read repository content for better context
-- Enables pull request creation
-- Streamlines the code change workflow
+Neo can review the resource configuration recorded in Pulumi Cloud using only the stack you select.
 
-Neo can still provide code change suggestions without a VCS integration, but you'll need to apply the changes and open PRs manually.
+<span id="quick-start-guide"></span>
+<span id="create-your-first-task"></span>
 
-To set up a VCS integration, see the [version control docs](/docs/integrations/version-control/).
+## Start a task
 
-## Neo's permission model
+1. Open **Agents** in Pulumi Cloud.
+1. Select **Neo** in the agent selector.
+1. Select **Add context**, then **Stack**, and choose the stack to review.
+1. Open **Task options**, select **Permissions**, and choose **Read-only**.
+1. If your organization has connected CLI or MCP integrations, deselect them in the task composer for this review.
+1. Enter the following request, then select **Send message**:
 
-Neo operates within the conversing user's [RBAC entitlements](/docs/administration/concepts/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and tasks are private to the user who created them unless they [share one](/docs/ai/concepts/neo/tasks/#ownership-and-sharing). For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/concepts/neo/permissions/).
+    ```text
+    Review this stack's storage resources. Report whether encryption is
+    enabled and show the resource configuration that supports each answer.
+    If you cannot verify a setting, say what information is missing.
+    Do not make changes.
+    ```
 
-### Read-only mode
+<span id="neos-permission-model"></span>
+<span id="read-only-mode"></span>
 
-When you create a task, you can run Neo with your full permissions ("Use my permissions", the default) or in read-only mode. Read-only mode takes your existing permissions and removes the ability to trigger writes in Pulumi Cloud: Neo can still read state, run previews, write and refactor code, and open pull requests, but it can't trigger deployments or other Pulumi Cloud write operations directly. Neo never gets more access than you have, only less.
+Read-only mode blocks writes to Pulumi Cloud. Connected tools use their own credentials. See [Permissions and approvals](/docs/ai/agents/permissions/) before adding that access.
 
-Read-only is scoped to Pulumi Cloud. It does not, on its own, prevent Neo from opening [ESC](/docs/esc/) environments you can open or reaching the cloud accounts those environments unlock — see [ESC, secrets, and downstream cloud access](/docs/ai/concepts/neo/permissions/#esc-secrets-and-downstream-cloud-access).
+<span id="considerations-and-limitations"></span>
 
-## Quick Start Guide
+## Review the findings
 
-### Enable Neo for Your Organization
+Check the storage resources and encryption settings Neo cites. If they meet your requirements, the review is complete. If the stack configuration leaves a setting unresolved, check that resource in your cloud provider before deciding whether to change it.
 
-Neo is included on the Essentials, Pro, and Enterprise editions and is on by default, so there is nothing to turn on. Organizations on the Free edition, or on the legacy Starter, Pro, or per-stack plans that predate the current editions, need to move to a paid edition first — see [pricing](/pricing/). To access Neo:
+## Request a code change
 
-1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
-2. Click on **Agent Tasks** within the **Neo** section in the left navigation menu
+If the findings show that a change is needed, [connect your repository](/docs/ai/agents/integrations/#repositories), and check the [preview prerequisites](/docs/ai/agents/previews/#prerequisites). Give Neo the repository URL and describe the change:
 
-> If Neo doesn't appear in your navigation, verify that AI features have not been disabled for your organization. AI controls are located in **Settings > Neo Settings > General**.
+```text
+Prepare a pull request to enable encryption for the resource we just
+reviewed. Use this repository: <repository URL>.
+Include the preview results and explain any checks you could not complete.
+Do not apply the change.
+```
 
-### Create Your First Task
+[Review the code and preview](/docs/ai/agents/review-changes/) before merging. Use your team's deployment workflow to apply the change.
 
-Each conversation with Neo is called a "task" - a contained unit of work where Neo helps you accomplish a specific infrastructure goal.
+## Continue working
 
-Let's run a simple infrastructure [task](/docs/ai/concepts/neo/tasks/) to see Neo in action
-
-1. Start with a read-only analysis task by prompting Neo:
-
-    `Which of my resources are not using their latest major version?`
-
-2. Neo will:
-   - Acknowledge your request
-   - Search through your infrastructure
-   - Present findings in a clear format
-
-3. As a follow-up, ask Neo what you should address first:
-
-    `Which version issue should I address first?`
-
-4. Neo will respond with a plan to address the most important outdated version it found. Go ahead and ask it to propose a change for the highest priority finding:
-
-    `Can you propose the necessary code change to address the highest priority item?`
-
-5. Depending on the scale of the issue, Neo may propose a plan for addressing it; or, Neo may get to work right away to create a PR. Neo will then:
-
-   - Ask for confirmation before making changes
-   - Generate the necessary code modifications
-   - Request approval before opening a [pull request](/docs/ai/concepts/neo/pull-requests/)
-   - Create a [PR](/docs/ai/concepts/neo/pull-requests/) with clear documentation of the changes
-
-## Considerations and Limitations
-
-- Changes go through code, deployments, and APIs - Where your Pulumi Cloud configuration (deployment settings, stack configuration, environment definitions) is managed in IaC, Neo changes it through code and pull requests. Where it isn't, Neo can edit it directly through the Pulumi Cloud APIs. Neo can also run deployments (`pulumi up`) and, where it has access, cloud CLI operations, so its effects reach beyond code. See [Neo's permissions model](/docs/ai/concepts/neo/permissions/) for the full picture.
-- Creating repositories requires individual access - Neo creates repositories as your own connected version control account, not as the shared Pulumi app, so you must [grant individual access](/docs/integrations/version-control/github-app/#individual-user-setup) to your provider first. Custom VCS servers do not support repository creation at all.
-- Cannot Create New Projects - Neo cannot initialize new Pulumi projects. It can only work within existing projects that are already set up.
+See [task controls](/docs/ai/agents/tasks/) to return to a saved task, share its findings, or stop work in progress.

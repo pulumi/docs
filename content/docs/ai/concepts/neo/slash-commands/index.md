@@ -1,50 +1,48 @@
 ---
 title: Slash commands
-title_tag: Slash commands in Pulumi Neo
+title_tag: Slash commands | Pulumi Agents
 h1: Slash commands
-meta_desc: Use built-in Neo slash commands and create custom commands that capture your team's proven prompts.
+meta_desc: Select saved prompts in Neo tasks and create slash commands for your organization.
 menu:
     ai:
         name: Slash commands
-        parent: ai-neo
+        parent: ai-instructions
         identifier: ai-slash-commands
-        weight: 55
+        weight: 10
 ---
 
-Slash Commands capture proven prompts as shortcuts that anyone on your team can use. When you type `/` in a Neo conversation, you'll see available commands. Selecting a command sends the full prompt to Neo.
+<span id="slash-commands"></span>
+
+Type `/` in a task with Neo to select a saved prompt. Add the details for this assignment, then send the message. Create custom commands to share prompts across your organization.
 
 ## Built-in commands
 
-Neo includes several built-in commands for common infrastructure tasks:
+Built-in commands include:
 
 | Command | Description |
 |---------|-------------|
-| `/get-started` | Learn what Neo can do and how to structure effective requests |
-| `/policy-issues-report` | Lists your most severe policy violations |
-| `/component-version-report` | Lists components that are outdated in your private registry |
-| `/provider-version-report` | Lists providers that are outdated |
+| `/get-started` | Learn what Neo can do and how to request work |
+| `/policy-issues-report` | List your most severe policy violations |
+| `/component-version-report` | Find stacks using component versions at least one minor version behind the latest version in your private registry |
+| `/provider-version-report` | Find stacks using provider versions at least one minor version behind the latest release |
 
 ## Creating custom commands
 
-You can create organization-specific commands to capture your team's proven prompts:
+<span id="slash-command-best-practices"></span>
 
-1. Navigate to Neo Settings in Pulumi Cloud
-1. Select the "General" tab
-1. Scroll to the "Slash commands" section
-1. Click "Add custom slash command"
-1. Enter a name and description
-1. Define the prompt
-1. Save the command
+Creating commands requires `organization:update`, which the Admin role includes.
 
-![Slash Commands configuration](slash-commands.png)
+1. In Pulumi Cloud, open your organization's **Agent Settings**.
+1. Select **General**, then find **Slash commands** and select **Add custom slash command**.
+1. Enter a **Slash command slug**, such as `checkout-investigation`. Teammates use this name after `/`.
+1. Enter a **Description** that explains when to use the command.
+1. In **Instructions**, write the prompt the command should send. Include the information to check and the result to produce.
+1. Select **Add command**.
+
+![Slash command configuration](slash-commands.png)
 
 Once saved, the command is immediately available to all team members.
 
 ## Viewing slash command instructions
 
-When you have selected a slash command in a new or existing Neo task, click on the highlighted command name to view the actual prompt.
-
-## Slash command best practices
-
-- Create commands for frequently-used prompts that have proven effective
-- Use clear, descriptive names that indicate what the command does
+Select a highlighted slash command in the task to read the prompt it sends.

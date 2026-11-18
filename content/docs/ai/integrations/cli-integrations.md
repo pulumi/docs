@@ -14,15 +14,11 @@ menu:
         identifier: ai-integrations-cli
 ---
 
-CLI integrations let Pulumi Agents query your cloud infrastructure directly, through `aws`, `gcloud`, `az`, and `kubectl`. When an agent needs to list S3 buckets, inspect a Kubernetes deployment, or check a firewall rule, it calls the CLI against credentials you manage in [Pulumi ESC](/docs/esc/), scoped to exactly the permissions you choose.
+Connect a cloud CLI so an agent can inspect resources in AWS, Google Cloud, Azure, or Kubernetes. Each connection uses a [Pulumi ESC](/docs/esc/) environment to supply credentials when the agent runs a command. Those credentials determine which resources the agent can access and whether it can change them.
 
 ## How CLI integrations work
 
-A connected CLI integration has three parts:
-
-1. **A supported CLI**: `aws`, `gcp`, `azure`, or `kubernetes`. Agents know how to invoke each one.
-1. **An ESC environment** you own that emits the environment variables the CLI expects (for example, `AWS_ACCESS_KEY_ID` for the AWS CLI).
-1. **A name** you give the connection (for example, `production-aws`). The agent refers to the connection by this name when it decides which one to use.
+A connection pairs a CLI with an ESC environment and a name, such as `production-aws`, that you can use in task messages.
 
 When an agent decides to use the CLI, it runs the equivalent of:
 
@@ -30,11 +26,11 @@ When an agent decides to use the CLI, it runs the equivalent of:
 pulumi env run <orgLogin>/<escProject>/<escEnvironment> -- <cli> <args>
 ```
 
-The CLI connection stores a reference to the ESC environment. When the command runs, ESC opens the environment and supplies its variables and temporary files to the CLI.
+The connection stores the environment's organization, project, and name. It does not copy its credentials. ESC supplies the environment's current variables and temporary files whenever the CLI runs.
 
 ## Supported CLIs
 
-| CLI | Tool | Required environment variables | Optional |
+| Integration ID | CLI | Required environment variables | Optional |
 |---|---|---|---|
 | `aws` | AWS CLI (`aws`) | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` | `AWS_SESSION_TOKEN` (temporary credentials), `AWS_REGION` |
 | `gcp` | Google Cloud CLI (`gcloud`) | `CLOUDSDK_AUTH_ACCESS_TOKEN` (access token) | `CLOUDSDK_CORE_PROJECT` |
@@ -53,25 +49,27 @@ The **Login Provider Setup** wizard on the **Environments** page can create clou
 
 The [Kubernetes Cluster Access](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) guide walks through both options:
 
-- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. The connection reads the kubeconfig from the stack output when the environment is opened.
-- **Static kubeconfig.** Drop a kubeconfig directly into `files.KUBECONFIG` for clusters not managed by a Pulumi program.
+- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then write it to a temporary file through `files.KUBECONFIG`. The connection reads the kubeconfig from the stack output when the environment is opened.
+- **Static kubeconfig.** Set the kubeconfig contents in `files.KUBECONFIG` for clusters not managed by a Pulumi program.
+
+If the kubeconfig runs an authentication command, supply the credentials that command needs in the same ESC environment. For example, [Amazon EKS uses `aws eks get-token`](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html), so an EKS connection also needs AWS credentials for an identity with access to the cluster.
 
 ## Setting up a CLI integration
 
-A teammate with permission to manage organization integrations (`org_integrations:update`) connects each CLI to an ESC environment. The connection is shared across agents, but using it requires permission to open that environment:
+You need permission to manage organization integrations (`org_integrations:update`) to create a connection. You also need an ESC environment that supplies credentials for the cloud account or Kubernetes cluster.
+
+To use the connection, the agent must be able to retrieve those credentials by opening the ESC environment (`environment:open`):
 
 - For an agent your team configures, grant access through the agent's Pulumi Cloud role.
-- For Neo, the user running the task needs access.
+- For a Neo task, the user running it needs access.
 
-The credentials in the environment determine what the CLI can do in the cloud account. Grant only the access the agent needs. See [Permissions](/docs/ai/agents/permissions/).
+The cloud credentials separately control access to cloud resources. See [Permissions and approvals](/docs/ai/agents/permissions/#scope-credentials-for-connected-tools) to restrict that access.
 
 ### 1. Create the ESC environment
 
-If you don't already have one, create an ESC environment that emits the credentials the target CLI needs, following the [recommended credential setup](#recommended-credential-setup) for that CLI.
+If you don't already have one, create an ESC environment that supplies the credentials the CLI needs, following the [recommended credential setup](#recommended-credential-setup) for that CLI.
 
-**Scope the credentials to the agent's work.** Grant only the actions and resources it needs. Apply this to every connection.
-
-### 2. Connect the integration in Neo
+### 2. Connect the CLI to an ESC environment {#2-connect-the-integration-in-neo}
 
 {{% agent-cli-connection %}}
 
@@ -79,38 +77,34 @@ You can connect multiple instances of the same CLI (for example, one named `prod
 
 ### 3. Use the integration in a task
 
-For an agent your team has configured, connected CLI integrations are available without a selection step. Name the connection and resources in your assignment so the agent knows which account to use. For example:
-
-> List the S3 buckets in the `production-aws` account and identify those without versioning enabled.
-
-The agent needs permission to open the connection's ESC environment, and the AWS credentials must allow it to list buckets and read their versioning settings.
+For an agent your team has configured, connected CLI integrations are available without a selection step. Name the connection and resources in your assignment so the agent knows which account to use. The [provider guides](#recommended-credential-setup) include examples.
 
 ## Per-task selection
 
-Neo provides a per-task CLI selector. Tasks for agents your team configures do not have this selector.
+Neo tasks provide a per-task CLI selector. Tasks for agents your team configures do not have this selector.
 
-By default, a Neo task inherits all CLI integrations the organization has connected. If you want to narrow what Neo can reach for a specific task (for example, running an investigation against staging without granting access to production), open the **CLI integrations** submenu in the task composer and toggle individual instances off before you start the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
+By default, all CLI integrations connected to your organization are selected for a Neo task. Open the **CLI integrations** submenu in the task composer and turn off connections that are not needed for the assignment. The selection affects only that task; the organization configuration is unchanged.
 
-If you select every connected instance, the task inherits any future instances connected after the task is created. If you deselect everything, the task runs with no CLI integrations at all.
+Selecting connections does not narrow their credentials or revoke access to other ESC environments. To restrict a Neo task to staging, give the user access only to the staging ESC environments and use credentials that can access only staging resources.
 
-The submenu also includes a **Manage CLI integrations** shortcut that takes you to the org-level settings page. If your organization hasn't connected any CLI integrations yet, the submenu shows "No CLI integrations connected".
+If you keep all connections selected, the task can also use connections added later. If you deselect every connection, the task has no CLI integrations.
+
+The submenu also includes a **Manage CLI integrations** shortcut that takes you to the organization settings page. If your organization hasn't connected any CLI integrations yet, the submenu shows "No CLI integrations connected".
 
 ## Disconnecting an integration
 
-To remove a CLI integration, navigate to **Agent Settings**, **Integrations**, **CLI tools**, find the connected row, select **Manage integration**, then select **Disconnect integration**. Disconnecting:
+To remove a CLI integration, navigate to **Agent Settings**, **Integrations**, **CLI tools**, find the connected row, select **Manage integration**, then select **Disconnect integration**. New tasks can no longer use the connection. Existing tasks stop using it when the agent next resumes work.
 
-- Removes the connection's reference to the ESC environment. **It does not modify or delete the ESC environment itself.** That remains under your control.
-- Immediately prevents new tasks from using the integration.
-- Existing tasks reload the available connections when the agent next resumes work. Disconnecting does not revoke permission to open the ESC environment or credentials already issued by it.
+Disconnecting leaves the ESC environment unchanged. It does not revoke permission to open that environment or invalidate credentials already issued. To remove access immediately, revoke it in ESC or at the cloud provider as appropriate.
 
 ## Auditing
 
-Connect and disconnect events for CLI integrations are written to your organization's audit log, attributed to the user who performed the action. Each entry records the CLI, the connection name, and the ESC environment, so you can trace which integrations were available at any point in time.
+Connect and disconnect events for CLI integrations are written to your organization's audit log, attributed to the user who performed the action. Each entry records the CLI, the connection name, and the ESC environment, so you can trace which integrations were available at a given time.
 
 Individual CLI invocations made by an agent during a task are visible in the task transcript alongside its other tool calls.
 
 ## Troubleshooting
 
-**The agent can't run the CLI.** Check that the ESC environment supplies the required variables and that its credentials allow the requested action. For an ESC access error, check the configured agent's role, or the acting user's permissions for Neo. The relevant role or user must be able to open the environment.
+**The agent can't run the CLI.** Check that the ESC environment supplies the required variables and that its credentials allow the requested action. For an ESC access error, check the configured agent's role, or the acting user's permissions for a Neo task. The relevant role or user must be able to open the environment.
 
-**The agent picked the wrong account.** Give connections distinct names, such as `production-aws` and `staging-aws`, and name the intended connection in the task. For Neo, you can also use [per-task selection](#per-task-selection). Limit access to ESC environments through the agent's role or, for Neo, the user's permissions.
+**The agent picked the wrong account.** Give connections distinct names, such as `production-aws` and `staging-aws`, and name the intended connection in the task. For Neo tasks, you can also use [per-task selection](#per-task-selection). Limit access to ESC environments through the agent's role or, for Neo tasks, the user's permissions.

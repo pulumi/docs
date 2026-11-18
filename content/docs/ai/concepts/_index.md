@@ -2,35 +2,14 @@
 title: Concepts
 title_tag: Infrastructure AI concepts
 h1: Concepts
-meta_desc: How AI agents work with Pulumi, including Agent Skills, the Pulumi CLI for agents, and Pulumi Neo's tasks, permissions, automations, and settings.
-menu:
-    ai:
-        name: Concepts
-        parent: ai-home
-        identifier: ai-concepts
-        weight: 20
+meta_desc: Find documentation for Pulumi Agents, coding-agent setup, MCP tools, and CLI commands.
 ---
 
-These pages explain how AI agents work with Pulumi. To set something up, see [Guides](/docs/ai/guides/). To try it end to end, start with [Get started](/docs/ai/get-started/).
+<span id="agents-and-pulumi"></span>
+<span id="pulumi-neo"></span>
 
-## Agents and Pulumi
+Use [Pulumi Agents](/docs/ai/agents/) to delegate infrastructure work. When you create an agent, its [system prompt](/docs/ai/agents/instructions/) describes the work it should do and the results it should produce. [Integrations](/docs/ai/agents/integrations/) connect it to your repositories, cloud accounts, and monitoring tools. [Permissions and approvals](/docs/ai/agents/permissions/) explains how to control its access and when it asks for approval.
 
-- [Agent Skills](/docs/ai/concepts/agent-skills/): Packaged Pulumi workflows that teach coding agents how to work with Pulumi.
-- [CLI for agents](/docs/ai/concepts/cli-for-agents/): How the Pulumi CLI is built for agents, from `npx pulumi` to structured `--json` output.
+If you use Claude Code, Codex, Cursor, or another coding agent, see [Use your coding agent](/docs/ai/coding-agents/) for Pulumi skills, MCP, and CLI support.
 
-## Pulumi Neo
-
-- [Pulumi Neo](/docs/ai/concepts/neo/): What Neo does, where you can use it, and how much autonomy you give it.
-  - [Tasks](/docs/ai/concepts/neo/tasks/): The unit of work in Neo, including Plan Mode, task modes, and approvals.
-  - [Permissions model](/docs/ai/concepts/neo/permissions/): Which identity Neo acts as on each surface, and how permission and approval modes constrain it.
-  - [Automations](/docs/ai/concepts/neo/automations/): Scheduled Neo tasks that deliver their results as pull requests.
-  - [Neo in the CLI](/docs/ai/concepts/neo/neo-in-the-cli/): Interactive Neo sessions in your terminal with your local project and credentials.
-  - [Neo in your editor](/docs/ai/concepts/neo/neo-in-your-editor/): Neo inside Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client Protocol.
-  - [Pull requests](/docs/ai/concepts/neo/pull-requests/): How Neo opens and updates pull requests through your existing review process.
-  - [Code reviews](/docs/ai/concepts/neo/code-reviews/): How Neo reviews pull requests against what Pulumi Cloud knows about your infrastructure.
-  - [Previews](/docs/ai/concepts/neo/previews/): How Neo runs `pulumi preview` to validate changes before opening a pull request.
-  - [Instructions](/docs/ai/concepts/neo/instructions/): Organization-wide custom instructions and per-repository `AGENTS.md` instructions.
-  - [Slash commands](/docs/ai/concepts/neo/slash-commands/): Built-in and custom shortcuts for proven prompts.
-  - [Model providers](/docs/ai/concepts/neo/model-providers/): Running Neo with your own model provider credentials.
-  - [Settings](/docs/ai/concepts/neo/settings/): Access controls, the default task mode, and notifications.
-  - [Usage limits](/docs/ai/concepts/neo/usage-limits/): Spend limits for your organization and its members.
+For commands and tool parameters, see [Reference](/docs/ai/reference/).

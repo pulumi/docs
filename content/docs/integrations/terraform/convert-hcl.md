@@ -1228,7 +1228,7 @@ Don't skip this step when you're converting production infrastructure: a preview
 
 ## AI-assisted conversion with the Pulumi MCP server
 
-For most conversions, use a coding agent rather than `pulumi convert`. The converter is deterministic, so it handles what it recognizes and leaves a TODO for the rest, including heavy `for_each` and `dynamic` blocks and module indirection, and its output keeps the structure of the HCL rather than the idioms of the language you're moving to. An agent such as [Pulumi Neo](/docs/ai/concepts/neo/), Claude Code, Cursor, or Codex converts those constructs, writes idiomatic code, and can run `pulumi preview` and iterate until it reports no changes. Neo already knows this workflow end to end, including migrating your Terraform state; see [Migrating from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for that path.
+For most conversions, use a coding agent rather than `pulumi convert`. The converter is deterministic, so it handles what it recognizes and leaves a TODO for the rest, including heavy `for_each` and `dynamic` blocks and module indirection, and its output keeps the structure of the HCL rather than the idioms of the language you're moving to. An agent such as [Pulumi Neo](/docs/ai/agents/#start-with-neo), Claude Code, Cursor, or Codex converts those constructs, writes idiomatic code, and can run `pulumi preview` and iterate until it reports no changes. Neo already knows this workflow end to end, including migrating your Terraform state; see [Migrating from Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for that path.
 
 Whichever agent you use, the [Pulumi MCP (Model Context Protocol) server](/docs/ai/guides/set-up-mcp-server/) gives it access to the Pulumi Registry, your stacks, and a `convert-terraform-to-typescript` prompt.
 
@@ -1236,7 +1236,7 @@ Whichever agent you use, the [Pulumi MCP (Model Context Protocol) server](/docs/
 
 The [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) works with any agent that speaks MCP, including [Claude Code](https://www.anthropic.com/claude-code), Cursor, Windsurf, and Kiro. It ships a `convert-terraform-to-typescript` prompt that converts Terraform HCL to Pulumi TypeScript, so the agent has a Pulumi-authored starting point rather than whatever it would improvise.
 
-Beyond conversion, the server exposes tools for listing your stacks, searching your deployed resources, reading Registry schemas, checking policy findings, and handing longer jobs to [Pulumi Neo](/docs/ai/concepts/neo/). The [MCP server docs](/docs/ai/guides/set-up-mcp-server/) list every tool and prompt.
+Beyond conversion, the server exposes tools for listing your stacks, searching your deployed resources, reading Registry schemas, checking policy findings, and handing longer jobs to [Pulumi Neo](/docs/ai/agents/#start-with-neo). The [MCP server docs](/docs/ai/guides/set-up-mcp-server/) list every tool and prompt.
 
 To set it up and use it:
 

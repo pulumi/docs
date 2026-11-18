@@ -339,15 +339,16 @@ discovery-governance:
 
 # Infrastructure AI
 ai:
-  - name: Use Neo
-    parent: ai-guides
-    identifier: ai-neo
-    weight: 20
   - name: Version control
     parent: ai-agents-integrations
     identifier: ai-integrations-version-control
     url: /docs/ai/agents/integrations/#repositories
     weight: 10
+  - name: Kubernetes
+    parent: ai-integrations-cli
+    identifier: ai-integrations-cli-kubernetes
+    url: /docs/ai/integrations/cli-integrations/#kubernetes
+    weight: 13
   - name: Atlassian
     parent: ai-integrations-mcp
     identifier: ai-integrations-mcp-atlassian-jira-and-confluence

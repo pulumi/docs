@@ -4,46 +4,62 @@ title_tag: Pulumi Agents | Infrastructure AI
 meta_desc: Delegate ongoing infrastructure responsibilities to managed AI agents running in Pulumi Cloud. Configure their instructions, tools, and access for your team.
 linktitle: Pulumi Agents
 h1: Pulumi Agents
+aliases:
+- /docs/pulumi-cloud/neo/
+- /docs/iac/neo/
+- /docs/neo/
+- /docs/ai/neo/
 menu:
     ai:
         name: Pulumi Agents
-        parent: ai-concepts
+        parent: ai-home
         identifier: ai-agents
-        weight: 10
+        weight: 20
 ---
 
-Pulumi Agents are managed AI agents that run in Pulumi Cloud. Each agent has saved instructions, connected tools, and permissions for its work. Use a pre-built agent or build your own to take on ongoing infrastructure responsibilities, such as investigating incidents or maintaining dependencies.
+With Pulumi Agents, you can delegate infrastructure work in Pulumi Cloud. Ask an agent to diagnose a failed deployment, respond to an incident, or prepare a dependency upgrade. The agent uses the repositories and tools you connect to carry out the request. For code changes, it can open a pull request for your team to review and deploy.
 
-[Neo](/docs/ai/concepts/neo/) is your pre-built personal agent. It works on your behalf using your existing Pulumi Cloud access. You do not need to create it or assign it a separate role.
+<span id="neo-and-agents-you-configure"></span>
+<span id="use-neo"></span>
+<span id="tasks-and-access"></span>
 
-## Use pre-built agents
+## Start with Neo
+
+Neo is the built-in agent in Pulumi Agents. You can give it work without creating or configuring another agent. By default, Neo uses your Pulumi Cloud permissions to access your stacks and configuration.
+
+[Start your first task with Neo in Pulumi Cloud](/docs/ai/get-started/neo/), or use Neo from your [terminal](/docs/ai/concepts/neo/neo-in-the-cli/) or [editor](/docs/ai/concepts/neo/neo-in-your-editor/).
+
+## Create an agent for your team
 
 {{< pulumi-cloud "pulumi-agents" />}}
 
-Pulumi provides agents for incident investigation, drift response, deployment troubleshooting, and other infrastructure work. [Choose an agent](/docs/ai/agents/configure/#start-with-a-pre-built-agent), connect the tools it needs, and adapt its instructions to your team.
+Create an agent to delegate infrastructure work and collaborate with your team. Give the agent instructions, connect the tools it needs, and assign a Pulumi Cloud role to control its access. To review changes to the agent in a pull request, [define it in code](/docs/ai/agents/as-code/).
 
-## Build custom agents
+<span id="use-pre-built-agents"></span>
 
-{{< pulumi-cloud "pulumi-agents" />}}
+Pulumi provides agents for incident investigation, drift response, deployment troubleshooting, and other infrastructure work. [Choose an agent](/docs/ai/agents/configure/) and tailor its instructions and settings to your team's work.
 
-[Build an agent](/docs/ai/agents/custom/) around your team's infrastructure and operating procedures. For example, an agent investigating checkout failures can correlate application errors with recent deployments and cloud configuration, follow your incident runbook, and prepare a fix for review. Give it your service's runbooks and access to the relevant logs, resources, and repositories.
+<span id="build-custom-agents"></span>
 
-## Connect your tools
+To supply your own instructions, [start with a blank agent](/docs/ai/agents/configure/#build-your-own-agent).
 
-[Connect your tools](/docs/ai/agents/integrations/) so agents can work with your cloud resources, code, logs, and issues.
+<span id="connect-your-tools"></span>
+<span id="control-access-and-approvals"></span>
 
-## Assign and automate
+See [Integrations](/docs/ai/agents/integrations/) to connect repositories and other systems, and [Permissions and approvals](/docs/ai/agents/permissions/) to choose what the agent can access and when it asks for approval.
 
-[Assign work directly](/docs/ai/agents/tasks/), or use [events and schedules](/docs/ai/agents/triggers/) to start work automatically.
+## Assign work
 
-## Collaborate
+<span id="assign-and-automate"></span>
+<span id="collaborate"></span>
+<span id="use-pulumi-agents"></span>
 
-[Collaborate in tasks or Slack threads](/docs/ai/agents/tasks/#work-with-teammates) to add context, answer questions, and refine the agent's work.
+Start a task by asking the agent to do something specific, such as upgrading a dependency in a repository and opening a pull request. Follow its progress in the task and reply if it needs more information. For agents your team creates, teammates with access can contribute to the same task.
 
-## Control access and approvals
+[Continue a task with your team](/docs/ai/agents/tasks/), or [configure an event or schedule](/docs/ai/agents/triggers/) to start tasks automatically.
 
-Control which stacks, cloud accounts, and repositories an agent can access, and when it needs your approval. See [Permissions and approvals](/docs/ai/agents/permissions/) for how Pulumi Cloud roles, external credentials, and approval settings work together.
+## Review proposed changes
 
-## Use Pulumi Agents
+[Review the code and preview](/docs/ai/agents/review-changes/) before merging a pull request. Your team's deployment workflow applies the changes.
 
-[Create and manage agents](/docs/ai/agents/create-and-manage/) for your team, or [assign work to an existing agent](/docs/ai/agents/tasks/). For personal tasks, follow the [Neo guides](/docs/ai/concepts/neo/#use-neo).
+See [Manage and troubleshoot](/docs/ai/agents/manage/) to change an agent's configuration, stop its work, or resolve a failed task.

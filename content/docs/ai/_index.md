@@ -21,11 +21,11 @@ sections:
   - icon: rocket-launch
     heading: Delegate work to Pulumi Agents
     link: /docs/ai/agents/
-    description: Pulumi Agents are managed AI agents that run in Pulumi Cloud. Give them ongoing responsibilities, such as investigating incidents or maintaining infrastructure dependencies, with instructions and access tailored to your team.
+    description: Respond to incidents, troubleshoot failed deployments, and prepare infrastructure changes for review. Start a task with Neo or create an agent your team can use.
   - icon: terminal
     heading: Use Pulumi with your coding agent
     link: /docs/ai/coding-agents/
-    description: Work on Pulumi code in your repository. Add skills for Pulumi workflows, connect MCP for cloud context, and use the CLI to preview and deploy changes.
+    description: Write Pulumi code in your repository with Claude Code, Codex, or another coding agent. Install Pulumi skills, look up stack resources, and preview proposed changes.
 
 - type: flat
   heading: Have questions?
