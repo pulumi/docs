@@ -403,6 +403,46 @@
     },
     {
       "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "The approval of a Delivery gate got the approvals it needs.",
+      "displayName": "Delivery Gate Approved",
+      "event": "delivery-gate-approved",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "A user rejected the approval of a Delivery gate, which failed its run.",
+      "displayName": "Delivery Gate Rejected",
+      "event": "delivery-gate-rejected",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "A run of a Delivery pipeline was started from the head of its program branch.",
+      "displayName": "Delivery Run Dispatched",
+      "event": "delivery-run-dispatched",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "A release was force-promoted to a Delivery stage, past any gate that nobody approved.",
+      "displayName": "Delivery Stage Force-Promoted",
+      "event": "delivery-stage-force-promoted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
       "category": "deployments",
       "deprecated": false,
       "description": "A self-hosted deployment runner pool was registered with the organization.",
@@ -435,9 +475,39 @@
       "authenticationFailure": false,
       "category": "deployments",
       "deprecated": false,
-      "description": "A stack's deployment settings were assigned the role its deployments run as.",
+      "description": "A stack's deployment settings were deleted, along with the role or service principal its deployments ran as.",
+      "displayName": "Deployment Settings Deleted",
+      "event": "deployment-settings-deleted",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "deprecated": false,
+      "description": "A stack's deployment settings were assigned the role its deployments run as, or the role was removed.",
       "displayName": "Deployment Settings Role Updated",
       "event": "deployment-settings-role-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "deprecated": false,
+      "description": "A stack's deployment settings were assigned the service principal its deployments run as, or the service principal was removed.",
+      "displayName": "Deployment Settings Service Principal Updated",
+      "event": "deployment-settings-service-principal-updated",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "deprecated": false,
+      "description": "A deployment of a stack was queued, with what triggered it and the identity it runs as.",
+      "displayName": "Deployment Triggered",
+      "event": "deployment-triggered",
       "requiresOrgAdmin": false,
       "requiresStackAdmin": false
     },
@@ -1155,6 +1225,36 @@
       "authenticationFailure": false,
       "category": "organization",
       "deprecated": false,
+      "description": "An organization admin allowed anyone who proves an email domain to join without an invitation.",
+      "displayName": "Organization Joinable Domain Added",
+      "event": "organization-joinable-domain-added",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "An organization admin stopped allowing joining from an email domain without an invitation.",
+      "displayName": "Organization Joinable Domain Removed",
+      "event": "organization-joinable-domain-removed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user joined the organization without an invitation by proving an email domain it allows.",
+      "displayName": "Organization Joined by Domain",
+      "event": "organization-joined-by-domain",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
       "description": "An admin switched the organization between the permissive and the restricted permission mode.",
       "displayName": "Organization Permission Mode Updated",
       "event": "organization-permission-mode-updated",
@@ -1299,6 +1399,26 @@
       "displayName": "Policy Pack Enabled",
       "event": "policy-pack-enabled",
       "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A role was assigned to a user, a service principal or a team.",
+      "displayName": "Principal Role Assigned",
+      "event": "principal-role-assigned",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A role was removed from a user, a service principal or a team.",
+      "displayName": "Principal Role Removed",
+      "event": "principal-role-removed",
+      "requiresOrgAdmin": false,
       "requiresStackAdmin": false
     },
     {
@@ -1518,6 +1638,56 @@
       "description": "A service account was deleted from the organization, revoking its access tokens and permissions.",
       "displayName": "Service Deleted",
       "event": "service-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user-defined service principal was created.",
+      "displayName": "Service Principal Created",
+      "event": "service-principal-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user-defined service principal was deleted, with its access tokens and access.",
+      "displayName": "Service Principal Deleted",
+      "event": "service-principal-deleted",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "organization",
+      "deprecated": false,
+      "description": "A user-defined service principal was renamed.",
+      "displayName": "Service Principal Renamed",
+      "event": "service-principal-renamed",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "deprecated": false,
+      "description": "An access token was created for a user-defined service principal.",
+      "displayName": "Service Principal Token Created",
+      "event": "service-principal-token-created",
+      "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "access-tokens",
+      "deprecated": false,
+      "description": "An access token of a user-defined service principal was revoked.",
+      "displayName": "Service Principal Token Deleted",
+      "event": "service-principal-token-deleted",
       "requiresOrgAdmin": true,
       "requiresStackAdmin": false
     },
@@ -1759,6 +1929,16 @@
       "displayName": "Team Updated",
       "event": "team-updated",
       "requiresOrgAdmin": true,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "deployments",
+      "deprecated": false,
+      "description": "A Terraform run of a stack was queued, with what triggered it and the identity it runs as.",
+      "displayName": "Terraform Run Triggered",
+      "event": "terraform-run-triggered",
+      "requiresOrgAdmin": false,
       "requiresStackAdmin": false
     },
     {
