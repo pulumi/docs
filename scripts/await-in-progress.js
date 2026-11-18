@@ -86,6 +86,16 @@ function dropStaleRuns(runs, nowMs, log = console.log, warned = new Set()) {
     });
 }
 
+// testing-build-and-deploy.yml also deploys per-PR stacks (www-pr-<n>, see
+// scripts/pr-stack.sh) when it's dispatched for an infra PR, and names those runs
+// "PR stack www-pr-<n> ..." through its `run-name`. They hold their own stack's lock, not
+// www-testing's, so a master deploy must not queue behind one. Exported for tests.
+const prStackRunTitlePrefix = "PR stack www-pr-";
+
+function isPrStackRun(run) {
+    return typeof run.display_title === "string" && run.display_title.startsWith(prStackRunTitlePrefix);
+}
+
 // Where we record the number of seconds this run spent parked in the queue. The
 // build-duration alert (scripts/ci-build-duration-alert.sh) reads this file and subtracts
 // the wait from the wall-clock time of the "Build and deploy" step, so a backed-up queue
@@ -119,6 +129,14 @@ async function waitForInProgressRuns() {
 
     // See https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables
     // for an explanation of each of these variables.
+    // A per-PR stack is updated by one PR's runs only, and the workflow's concurrency
+    // group already runs those one at a time. Nothing to wait for.
+    if (process.env.PR_STACK_NUMBER) {
+        console.log(`Deploying PR stack www-pr-${process.env.PR_STACK_NUMBER}; not waiting on other runs.`);
+        recordQueueWait(0);
+        return;
+    }
+
     const githubToken = process.env.GITHUB_TOKEN;
     const currentRunID = parseInt(process.env.GITHUB_RUN_ID, 10);
     const workflowName = process.env.GITHUB_WORKFLOW;
@@ -171,7 +189,8 @@ async function waitForInProgressRuns() {
         for (const run of pages.flat()) {
             byId.set(run.id, run);  // a run can change status between calls
         }
-        const runs = dropStaleRuns([...byId.values()], Date.now(), console.log, warnedStaleRuns);
+        const runs = dropStaleRuns([...byId.values()], Date.now(), console.log, warnedStaleRuns)
+            .filter(run => !isPrStackRun(run));
 
         // Sort in-progress runs descendingly, excluding the current one.
         const recent = runs
@@ -229,4 +248,4 @@ if (require.main === module) {
     waitForInProgressRuns();
 }
 
-module.exports = { dropStaleRuns, maxRunAgeMs };
+module.exports = { dropStaleRuns, isPrStackRun, maxRunAgeMs };

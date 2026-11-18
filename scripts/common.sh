@@ -297,6 +297,19 @@ deploy_bucket_name() {
         fi
     fi
 
+    # A per-PR stack deploy (PR_STACK_NUMBER, set by testing-build-and-deploy.yml when it's
+    # dispatched for an infra PR) is named like a PR preview, "<prefix>-pr-<n>-<sha8>-<uniq>",
+    # so it follows the closed-PR retention rule in list-recent-buckets.sh and pr-closed.yml
+    # instead of the 10-bucket deploy-path window. In that window, a few days of master
+    # pushes would delete the bucket a still-open PR's stack is serving.
+    if [ -n "${PR_STACK_NUMBER:-}" ]; then
+        if [[ ! "$PR_STACK_NUMBER" =~ ^[0-9]+$ ]]; then
+            echo "ERROR: PR_STACK_NUMBER '${PR_STACK_NUMBER}' is not a PR number." >&2
+            return 1
+        fi
+        identifier="pr-${PR_STACK_NUMBER}-$(git_sha_short)"
+    fi
+
     name="${prefix}-${identifier}-${uniq}"
 
     if [ "${#name}" -gt "$max_len" ]; then

@@ -304,3 +304,42 @@ test("sanity check: this harness actually exercises the fix -- the OLD (pre-fix)
         "expected the pre-fix formula (no uniquifier) to collide across run IDs at the same commit -- if it doesn't, the new test's coverage is not meaningful",
     );
 });
+
+// A per-PR stack deploy (scripts/pr-stack.sh) is dispatched, but its bucket must be named
+// like a PR preview so the closed-PR rule cleans it up. Under the deploy-path name it would
+// fall into the 10-bucket window and be deleted while the PR's stack still serves it.
+function prStackBucketName(prNumber, { runId } = {}) {
+    return withEventPath("workflow_dispatch", {}, (eventPath) =>
+        runBash(
+            {
+                DEPLOYMENT_ENVIRONMENT: "testing",
+                GITHUB_EVENT_NAME: "workflow_dispatch",
+                GITHUB_EVENT_PATH: eventPath,
+                GITHUB_RUN_ID: runId ?? "1234567890",
+                GITHUB_RUN_ATTEMPT: "1",
+                PR_STACK_NUMBER: prNumber,
+            },
+            "deploy_bucket_name",
+        ));
+}
+
+test("deploy_bucket_name: a PR stack deploy is named <prefix>-pr-<n>-<sha8>-<uniq>", () => {
+    const name = prStackBucketName("23001");
+    assert.match(name, /^www-testing-pulumi-docs-origin-pr-23001-deadbeef-[0-9a-z]+$/);
+    assert.ok(name.length <= 63, `${name} is ${name.length} chars`);
+    assert.match(name, S3_BUCKET_NAME_RE);
+});
+
+test("deploy_bucket_name: a PR stack bucket matches the PR-number parse in list-recent-buckets.sh", () => {
+    const name = prStackBucketName("23001");
+    const prefix = "www-testing-pulumi-docs-origin";
+    assert.equal(name.replace(new RegExp(`^${prefix}-pr-([0-9]*)-.*$`), "$1"), "23001");
+});
+
+test("deploy_bucket_name: two PR stack deploys of one commit still get different buckets", () => {
+    assert.notEqual(prStackBucketName("23001", { runId: "1" }), prStackBucketName("23001", { runId: "2" }));
+});
+
+test("deploy_bucket_name: refuses a PR_STACK_NUMBER that isn't a number", () => {
+    assert.throws(() => prStackBucketName("1; rm -rf /"), (err) => /is not a PR number/.test(err.stderr));
+});

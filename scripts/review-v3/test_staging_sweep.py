@@ -214,6 +214,32 @@ def test_a_successful_deploy_writes_the_status_and_pokes_the_sentinel():
         h.close()
 
 
+def test_a_pr_stack_deploy_links_that_prs_own_site():
+    """An infra PR deploys to its own stack, not pulumi-test.io, so the green
+    status has to point a reviewer at pr-<n>.<suffix>."""
+    r = run(SHA_A)
+    r["display_title"] = "PR stack www-pr-21789 (camsoper/some-infra-fix)"
+    assert staging_sweep.site_url_for(r, "www.pulumi-test.io") == \
+        "https://pr-21789.www.pulumi-test.io"
+
+
+def test_a_deploy_without_a_pr_stack_still_links_pulumi_test_io():
+    """A branch cut before PR stacks existed, or an unset suffix variable,
+    deploys to (or can only be linked as) the shared testing site."""
+    plain = run(SHA_A)
+    plain["display_title"] = "Build and deploy testing"
+    assert staging_sweep.site_url_for(plain, "www.pulumi-test.io") == staging_sweep.DEPLOYED_SITE_URL
+    titled = run(SHA_A)
+    titled["display_title"] = "PR stack www-pr-21789 (x)"
+    assert staging_sweep.site_url_for(titled, "") == staging_sweep.DEPLOYED_SITE_URL
+
+
+def test_the_sweep_job_passes_the_pr_stack_domain_suffix():
+    """Without the variable the sweep links every PR stack deploy to pulumi-test.io."""
+    wf = (REPO_ROOT / ".github/workflows/staging-status.yml").read_text()
+    assert wf.count("PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}") >= 2
+
+
 def test_the_poke_is_sent_before_the_status_is_written():
     """The status is the idempotence key, so it must be written last.
 

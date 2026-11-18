@@ -1,0 +1,63 @@
+name: "Scheduled jobs: PR stack sweep"
+# Removes the www-pr-<n> stacks (scripts/pr-stack.sh) of PRs that have closed.
+# pr-closed.yml destroys a PR's stack when it closes, but AWS won't delete a
+# Lambda@Edge function until its replicas clear, which can take hours, so that
+# destroy often leaves a few resources behind. This retries until each stack is
+# empty and removed. It also catches a stack whose close-time destroy never ran.
+on:
+  schedule:
+    # Daily at 16:17 UTC, after bucket-cleanup-testing.yml.
+    - cron: '17 16 * * *'
+  workflow_dispatch: null
+concurrency:
+  group: pr-stack-sweep
+  cancel-in-progress: false
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+  pull-requests: read # To tell whether a stack's PR has closed
+jobs:
+  sweep:
+    if: github.repository == 'pulumi/docs'
+    name: Destroy the stacks of closed PRs
+    environment: testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::571684982431:role/ContinuousDelivery
+          role-session-name: docs-pr-stack-sweep
+          role-duration-seconds: 7200
+          aws-region: us-west-2
+
+      - name: Destroy closed PR stacks
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}
+          PR_STACK_CERTIFICATE_ARN: ${{ vars.PR_STACK_CERTIFICATE_ARN }}
+          PR_STACK_HOSTED_ZONE: ${{ vars.PR_STACK_HOSTED_ZONE }}
+        run: |
+          set -euo pipefail
+          pulumi login
+          failed=0
+          for pr in $(./scripts/pr-stack.sh closed); do
+            echo "::group::www-pr-${pr}"
+            ./scripts/pr-stack.sh destroy "$pr" || { echo "::error::could not destroy www-pr-${pr}"; failed=1; }
+            echo "::endgroup::"
+          done
+          exit "$failed"
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
