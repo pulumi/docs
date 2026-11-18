@@ -49,6 +49,9 @@
       "hash": "3d248213667328d14fbb682c9625f62c52eb6a309904965cc1ae1ec9f3994404",
       "lastmod": "2026-10-23"
     },
+    "Agent Integration Catalog": {
+      "hash": "86196e68ef8f150cf7a3b1cb55e8fd62400f2ac83e112e477eee6eab72f7b29a"
+    },
     "AuditLogs": {
       "hash": "7c95a0726424958927dc2eefdb28b02153c3d548908f61cbaf250db8ff9569a9",
       "lastmod": "2026-10-29"
@@ -309,6 +312,12 @@
     "AgentBackendEventWarning": {
       "hash": "e2e664b3163535c9ae238e0e4ef86199514cfb6393b25caa2580fc215eb6b1e0"
     },
+    "AgentCLICatalogEntry": {
+      "hash": "6f5fa23e9d9da4fb30b2dbdf83cd0570c5b459c96713746fb6b6c362977d819a"
+    },
+    "AgentCLIIntegrationResponse": {
+      "hash": "4a7a0cb82bdb9056786853bf214e13aed786a4c0d18a27073635b2f7b3695374"
+    },
     "AgentClaimRequest": {
       "hash": "6ac7f47e5299ed0978d9c35ec771842a670678085ef8cdc1c07badf3068f25e8",
       "lastmod": "2026-08-02"
@@ -337,7 +346,8 @@
       "lastmod": "2026-10-19"
     },
     "AgentDefinition": {
-      "hash": "fae12b9c0c5334efe8f2ffe4299c4bdd14f3029d363da67da34f1313496fb4ea"
+      "hash": "2c0f1e181908590e92f88ab90d039ee9f6992ba411808ef913611545570ed037",
+      "lastmod": "2026-11-18"
     },
     "AgentDefinitionTaskCounts": {
       "hash": "68ce04b78a733dfaa3b4311a5dd2e28d42279ef42c42cbe2aa1fc22e4e2be109"
@@ -364,6 +374,9 @@
     },
     "AgentEntityStack": {
       "hash": "ce634a71a36422558445f4cfb69333f6bf57903fd1ba08c375a0cbffea6ab835"
+    },
+    "AgentIntegrationResponse": {
+      "hash": "336e812de14d4aeaaac0a6126c8b8af12f77cfed6ebe7279f94057801363c7d6"
     },
     "AgentPool": {
       "hash": "6849522d21965b5793301d4e09fe88787ad179e389565536877dc1c1772d5be3",
@@ -392,8 +405,8 @@
       "hash": "36e1f7036fefadc0a3a47ea32a7aa9e179acf4677baaeac19d88c1f596fd8455"
     },
     "AgentTask": {
-      "hash": "5184b3b40506cf13964e90491ca1e37dc0ef85c7b1f941d1447de7f1b1bd4ae1",
-      "lastmod": "2026-11-04"
+      "hash": "d17c0c88763713691a8db031813f450fa1988dfba6e1baafe73133c1ab32c623",
+      "lastmod": "2026-11-18"
     },
     "AgentTaskIntegrationRef": {
       "hash": "b05a08fca109dbfd03a0975e1a7dd6fd63b4946c794a6603c617893bd2248539",
@@ -1017,6 +1030,12 @@
       "hash": "5d78e8363ec2e07eb3d3920ee19a0e50ae32d7e99b2d673e56bb84ed0f940725",
       "lastmod": "2026-05-13"
     },
+    "CLITelemetryEvent": {
+      "hash": "fd55295fe6f7352c49b8e6ff7adb80f08e66cd1a8da30296c6fed9dfd8659aef"
+    },
+    "CLITelemetryRequest": {
+      "hash": "1505abb8cddab912b86b2d9695cf8efc74ac3b829dfc65856bf470f1c9c78e56"
+    },
     "CacheOptions": {
       "hash": "1f2b1061c13356d3efbf0eea755f967b34123d154f73aa0abb24e14b48959393"
     },
@@ -1148,8 +1167,11 @@
       "hash": "75f8a54d48ecd10d8917d4f4ac5e80ff6742f609b65d948ec32efa41a5d2df77"
     },
     "ConsumptionUsage": {
-      "hash": "58471b4c02a655fe4cd947e0588ccb2831e82dcb7e185b2ad9f3887cd288247b",
-      "lastmod": "2026-09-15"
+      "hash": "e29874bfa3f37da333d2b929d1b6ebf8b37be964e5bdb3debe9d867d39f80ed7",
+      "lastmod": "2026-11-18"
+    },
+    "ConsumptionUsagePeriod": {
+      "hash": "390c441b12fdc4af916a0c98c75b9e484bfe1fded1455fe63d3690d45fd5c42a"
     },
     "ConsumptionUsageStatsV0": {
       "hash": "91e4f3677064b39846bcb673ad211fee0aead0f744e46a3b9a55ba041b5649b3"
@@ -1208,7 +1230,8 @@
       "lastmod": "2026-11-17"
     },
     "CreateAgentDefinitionRequest": {
-      "hash": "0e91d0a79ce11cea2eed80686d245c8055ff7c54b3e8764bafe88bb2e92d179c"
+      "hash": "0098adebb9d46468699fbdee24f1d590c158848ef4fe92529f5cced08d877a77",
+      "lastmod": "2026-11-18"
     },
     "CreateAgentTaskRequest": {
       "hash": "0c1e019e8c4d90109fd47b226f3c7d0a76c886f5ba71fa644c81d44752a72ac5",
@@ -1325,6 +1348,9 @@
     },
     "CreateTriggeredAgentAutomationV2Request": {
       "hash": "b508f7475cd16ff9f43ff54b43fe0b699aa75fd495389ed2480f6cc4c6a1fadf"
+    },
+    "CredentialFieldResponse": {
+      "hash": "53f302786a2304061d285a9128d36e0612594e3fa35492624fb248e4c517591d"
     },
     "CustomVCSIntegrationResponse": {
       "hash": "1edd5ba53336c11d85170ea96764f7e0036bcc2980d7eb1b4b7cd65280e366bf",
@@ -2068,8 +2094,14 @@
     "ListAgentAutomationsV2Response": {
       "hash": "a5d694154fb650b1741704d8a2a41b29c0da4ee403d93e7e2886b7852efd1673"
     },
+    "ListAgentCLIIntegrationsResponse": {
+      "hash": "7e69ac4db6706cc023eae660990cd2c3c9440a6a78baa97d987e449e28352233"
+    },
     "ListAgentDefinitionsResponse": {
       "hash": "c7fedeb0102e5435b3186b86722c14fc9d8879354dcaf3299e200e47bc1013e2"
+    },
+    "ListAgentIntegrationsResponse": {
+      "hash": "88da35798ecb154b22744046794c71dd9594dde6c66e55d18f8ac143ec2de327"
     },
     "ListAgentPoolsResponse": {
       "hash": "41e02661fe51566f7e1423b900a7762f6219046b6bf3c80282a43dce7bf98c49",
@@ -2456,8 +2488,8 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "fc193d10ac5ad5b26713d1fb72817f2f205f381c8e7e89639ddee0bec6c00943",
-      "lastmod": "2026-11-17"
+      "hash": "7e54d546ec89a793a029a00d1919db80789e0d573af4d42184650aee2b50caa9",
+      "lastmod": "2026-11-18"
     },
     "OrganizationMember": {
       "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
@@ -3067,8 +3099,8 @@
       "hash": "291ce6f3a14dd9a5c6dbd2ce43101d433e3fb8535b5024f680653dde4d670cf1"
     },
     "Team": {
-      "hash": "34ae409035fa23c8149264299c8ddeceb2928f9b3f22264d9f623ffe0e3e6e14",
-      "lastmod": "2026-09-15"
+      "hash": "ab5840223d83a9901c9ee3a6aa79ca399840d7b7a84c5f92b9d1adccd986c027",
+      "lastmod": "2026-11-18"
     },
     "TeamAccountPermission": {
       "hash": "8fd3501e8ab467d788a744c4baf078a6c0f9cf534224f11b43da4d2ccda7849d",
@@ -3364,8 +3396,8 @@
       "lastmod": "2026-09-15"
     },
     "UserInfo": {
-      "hash": "e094244ee8575cc3e093bee637ef5953752f3eb8df2a86a5d0b0cada14abda22",
-      "lastmod": "2026-11-10"
+      "hash": "cf05731bf7eba11b64126e1ae1454c58e4036db8572409abd9cdaa746d3506a5",
+      "lastmod": "2026-11-18"
     },
     "UserPermission": {
       "hash": "58b07d4b3fd79a48b83c4bae2cff70f5c22cf5886e49ea2ff8a81ff77a0324bb",
