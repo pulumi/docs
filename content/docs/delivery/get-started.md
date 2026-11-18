@@ -129,6 +129,7 @@ Then add the Delivery SDK to the `dependencies` in `pom.xml`:
 ```bash
 mkdir delivery && cd delivery
 pulumi new yaml --name shop-delivery --stack main --yes
+pulumi package add delivery
 ```
 
 {{% /choosable %}}
@@ -154,7 +155,7 @@ pulumi stack init main
 
 {{< /chooser >}}
 
-In a language with an SDK, the install step adds the Delivery SDK to the project's dependency file, such as `package.json` or `requirements.txt`. Commit that file, because Pulumi Cloud installs the SDK from it for each run. An HCL program names the provider in its `required_providers` block.
+In a language with an SDK, the install step adds the Delivery SDK to the project's dependency file, such as `package.json` or `requirements.txt`. In YAML, `pulumi package add delivery` writes a `packages` entry to `Pulumi.yaml`. Commit that file, because Pulumi Cloud installs the package from it for each run. An HCL program names the provider in its `required_providers` block.
 
 Now replace the program that `pulumi new` created with the pipeline. The program declares the repository as a source, three stages in order, and the `app` stack each stage updates:
 
