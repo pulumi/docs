@@ -134,7 +134,9 @@ pulumi new yaml --name shop-delivery --stack main --yes
 {{% /choosable %}}
 {{% choosable language hcl %}}
 
-<!-- TODO(launch): Confirm the setup steps for an HCL pipeline program, including the `required_providers` block. -->
+<!-- TODO(launch): Verified on 2026-11-18 with delivery 0.1.0-beta.1 and pulumi-hcl 0.20.1: a program without the `required_providers` block fails, and the block works when it names a `version`. Without a `version` it needs a stable release of the provider to resolve. Confirm that the block below works as written once 0.1.0 is released. -->
+
+An HCL program has no SDK to install. The `required_providers` block at the top of `main.tf`, shown in the next step, tells Pulumi which provider to install. Without that block, the program fails.
 
 Create `delivery/Pulumi.yaml` with the HCL runtime:
 
@@ -154,7 +156,7 @@ pulumi stack init main
 
 {{< /chooser >}}
 
-In a language with an SDK, the install step adds the Delivery SDK to the project's dependency file, such as `package.json` or `requirements.txt`. Commit that file, because Pulumi Cloud installs the SDK from it for each run. A YAML or HCL program needs no SDK.
+In a language with an SDK, the install step adds the Delivery SDK to the project's dependency file, such as `package.json` or `requirements.txt`. Commit that file, because Pulumi Cloud installs the SDK from it for each run. A YAML program needs no SDK, and an HCL program names the provider in its `required_providers` block.
 
 Now replace the program that `pulumi new` created with the pipeline. The program declares the repository as a source, three stages in order, and the `app` stack each stage updates:
 
