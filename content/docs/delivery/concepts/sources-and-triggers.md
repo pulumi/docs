@@ -26,6 +26,8 @@ Delivery has one source resource per version control provider. Each takes a `rep
 
 Pulumi Cloud uses your organization's [version control integration](/docs/integrations/version-control/) to interact with your source code provider. You'll need to give that integration access to every repository you use in your pipelines, including the repository containing the pipeline program itself.
 
+A source's `branch` is the branch the pipeline deploys and watches for pushes. It doesn't choose which branch the pipeline program runs from. That's the pipeline stack's `delivery:source` config. See [Choose the branch the pipeline tracks](/docs/delivery/concepts/#choose-the-branch-the-pipeline-tracks).
+
 When a run is created, Pulumi Delivery fetches the code from each source and pins the run to one commit from each. Every stage of the run uses those pinned commits, so the code stays the same as the release moves through the pipeline, even if new commits land in the meantime.
 
 Declare sources directly, not inside code that waits for a stack or job output. A source that appears only after a stack update or job finishes is too late to be pinned, and the run fails.
