@@ -30,7 +30,7 @@ aliases:
 
 Pulumi models cloud resources as source code, so changes to your infrastructure can be reviewed, tested, and deployed through a pipeline: pull requests, code review, automated tests, and promotion from one environment to the next. You can build that pipeline with [Pulumi Delivery](/docs/delivery/), which runs release pipelines in Pulumi Cloud, or run Pulumi in any continuous integration and continuous delivery (CI/CD) system you already use.
 
-## Pulumi-native continuous delivery
+## Pulumi Delivery {#pulumi-native-continuous-delivery}
 
 [Pulumi Delivery](/docs/delivery/) lets you write your release pipeline as a Pulumi program, in the same language as your infrastructure. Pulumi Cloud runs each release through the stages you define, in order. The pipeline run updates stacks, runs jobs such as tests, and holds the release at [gates](/docs/delivery/concepts/stages-and-gates/) until someone approves it or an AI decision gate judges the change safe to continue. Because the pipeline is a Pulumi program, it's versioned and reviewed with your code, and you can build it with loops, functions, and conditionals.
 
