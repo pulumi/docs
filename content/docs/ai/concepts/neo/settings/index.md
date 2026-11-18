@@ -1,24 +1,24 @@
 ---
-title: Settings
-title_tag: Neo Settings
-h1: Neo Settings
-meta_desc: Configure Neo access controls, model providers, integrations, the default task mode, and notification preferences.
+title: Organization AI settings
+title_tag: Organization AI settings
+h1: Organization AI settings
+meta_desc: Control organization AI access, configure agent model providers and integrations, and set Neo task defaults.
 aliases:
 - /docs/ai/settings/
 - /docs/ai/neo/settings/
 menu:
     ai:
-        name: Settings
-        parent: ai-neo
+        name: Organization AI settings
+        parent: ai-home
         identifier: ai-settings
-        weight: 90
+        weight: 40
 ---
 
 <script>
 // Redirect anchors whose content moved off this page.
 (function() {
   var moved = {
-    '/docs/ai/concepts/neo/instructions/': ['custom-instructions', 'what-to-include', 'example', 'configuring-custom-instructions', 'custom-instructions-best-practices', 'bootstrapping-repository-instructions', 'configuration-precedence', 'repository-instructions', 'how-it-works', 'example-1', 'subdirectory-support', 'repository-instructions-best-practices'],
+    '/docs/ai/agents/instructions/': ['custom-instructions', 'what-to-include', 'example', 'configuring-custom-instructions', 'custom-instructions-best-practices', 'bootstrapping-repository-instructions', 'configuration-precedence', 'repository-instructions', 'how-it-works', 'example-1', 'subdirectory-support', 'repository-instructions-best-practices'],
     '/docs/ai/concepts/neo/slash-commands/': ['slash-commands', 'built-in-commands', 'creating-custom-commands', 'viewing-slash-command-instructions', 'slash-command-best-practices']
   };
   var anchor = window.location.hash.replace(/^#/, '');
@@ -32,111 +32,81 @@ menu:
 })();
 </script>
 
-Neo can be configured at the organization, repository, and user level. Organization-level settings control default behaviors and capabilities for your team, repository-level instructions let you define project-specific conventions that Neo follows automatically, and user-level settings let each person tailor their own experience.
+Open your organization's **Agent Settings** in Pulumi Cloud to enable AI features, connect model providers and tools, and set defaults for Neo tasks. Organization administrators manage these settings. Each member manages their own [task notifications](#notifications).
 
-## Neo access
+## AI access {#neo-access}
 
-Neo and all of its features are enabled by default. You can turn Neo off entirely, or keep it on while disabling individual features.
+Use the organization switch to enable or disable AI features together. To disable only agent tasks, CLI explanations, or natural-language resource search, use the [per-feature controls](#per-feature-controls).
 
-### Enable Neo for organization
+### Enable organization AI features {#enable-neo-for-organization}
 
-The "Enable Neo for organization" toggle is the master switch. Turning it off disables Neo everywhere, including the Neo agent, natural-language resource search, AI explanations served to the Pulumi CLI, and Neo code reviews.
+1. Open your organization's **Agent Settings** and select **General**.
+1. Set **Enable AI features for this organization** on or off.
+1. Select **Save changes**.
 
-1. Navigate to Neo Settings from the Pulumi left navigation
-1. Select the "General" tab
-1. Toggle "Enable Neo for organization" on or off
+Turning this off disables agent tasks, natural-language resource search, CLI explanations, and AI review features for the organization.
 
 ### Per-feature controls
 
-If you'd rather keep Neo on but disable specific capabilities, use the per-feature controls. Each one is enabled by default and can be turned off independently:
+On the **General** tab, use these controls when organization AI features are enabled:
 
-- **Enable Neo agent**: The Neo agent that plans and executes infrastructure tasks
-- **Enable Neo CLI explanations**: AI explanations served to the Pulumi CLI
-- **Enable natural-language resource search**: Searching your resources with natural-language queries
+- **Enable Pulumi Agents** controls Neo tasks, tasks run by agents your team configures, code reviews, and tasks started through the MCP server. Turning it off also hides the organization's task history.
+- **Enable CLI explanations** controls AI explanations requested by the Pulumi CLI.
+- **Enable natural-language resource search** controls resource searches written in natural language.
 
-The per-feature controls are on the same **General** tab, below the master switch.
+Select **Save changes** after changing these controls. To configure automatic pull-request reviews, follow the [code review settings guide](/docs/ai/concepts/neo/code-reviews/).
 
-To disable [Neo code reviews](/docs/ai/concepts/neo/code-reviews/), select the "Code reviews" tab in Neo Settings and turn off "Enable code reviews".
-
-{{% notes type="info" %}}
-If Neo was previously disabled, it will need to be enabled as outlined above.
-{{% /notes %}}
-
-To cap what your organization spends on Neo, see [Usage limits](/docs/ai/concepts/neo/usage-limits/).
+For spending controls, see [Agent usage limits](/docs/ai/concepts/neo/usage-limits/).
 
 ## Model providers
 
 {{< pulumi-cloud "neo-byok" />}}
 
-Use the **Model provider** tab in Neo Settings to run Neo tasks with your own model provider credentials. Neo currently supports Anthropic's Claude models. You can access these models through Anthropic, Azure Foundry, or a custom Anthropic-compatible endpoint.
-
-See [Bring your own model provider](/docs/ai/concepts/neo/model-providers/) for setup steps, billing behavior, and instructions to switch providers.
+Use the **Model provider** tab to [connect a model provider](/docs/ai/concepts/neo/model-providers/) and set the organization default.
 
 ## Instructions and slash commands
 
-The **Organization instructions** tab and the slash commands section of the **General** tab configure the standing guidance Neo follows. See [Custom and repository instructions](/docs/ai/concepts/neo/instructions/) and [Slash commands](/docs/ai/concepts/neo/slash-commands/).
+Use the **Organization instructions** tab to set requirements for Neo tasks, such as your team's code-review conventions. An agent your team creates uses its **System prompt** instead. See [Instructions and context](/docs/ai/agents/instructions/) for which instructions each task uses.
+
+Configure reusable prompts for Neo tasks in the slash commands section of the **General** tab. See [Slash commands](/docs/ai/concepts/neo/slash-commands/).
 
 ## Integrations
 
-Neo can connect to third-party services like issue trackers, observability platforms, and incident response tools, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
+Use the **Integrations** tab for external MCP servers and cloud CLI tools. Configure repository access in **Version control** settings. Follow the [integration guides](/docs/ai/agents/integrations/) for connection and access requirements.
 
-See [Integrations](/docs/ai/integrations/) for the available integrations and how to set them up, and [credential storage](/docs/ai/integrations/external-mcp-servers/#credential-storage) for how Neo stores their credentials.
+## Neo task approval modes {#task-modes}
 
-## Task modes
+The organization default applies to new Neo tasks. Users can change the mode for their Neo tasks. Agents your team creates use the **Default mode** saved in the agent's configuration instead.
 
-Task modes are presets that control what actions Neo can take automatically. Each mode represents a predefined configuration of allowed commands. New tasks start with a default mode, which users can adjust or override during the task.
+<span id="available-modes"></span>
 
-### Available modes
+Choose **Review**, **Balanced**, or **Auto**. See [permission and approval modes](/docs/ai/agents/permissions/#permission-mode-and-approval-mode) for the differences.
 
-Organization administrators can set the default task mode. The available modes determine how much autonomy Neo has during execution:
+### Set the default Neo task mode {#configuring-default-task-mode}
 
-- **Review mode** (default): Neo requires approval before running `pulumi preview`, running `pulumi up`, and opening a pull request
-- **Balanced mode**: Neo requires approval only before running `pulumi up`
-- **Auto mode**: Neo will not request any approvals
-
-### Configuring default task mode
-
-1. Navigate to Neo Settings in Pulumi Cloud
-1. Select the "General" tab
-1. Locate the "Task mode" section
-1. Select the default mode from the dropdown
-1. Save changes
+1. Open your organization's **Agent Settings** and select **General**.
+1. Find the **Task mode** section.
+1. Choose a **Default task mode**.
+1. Select **Save changes**.
 
 ![Task mode configuration](task-mode.png)
 
-### Task mode best practices
-
-- Start with the most restrictive mode -- it's best for most organizations
-- Remember, users can override the default for individual tasks when needed
-
-{{% notes type="info" %}}
-Task modes control approvals during execution. [Plan Mode](/docs/ai/concepts/neo/tasks/#plan-mode) is a separate, opt-in feature that controls what happens before execution. You can use Plan Mode with any task mode.
-{{% /notes %}}
+<span id="task-mode-best-practices"></span>
 
 ## Notifications
 
-Notifications are user-level settings: each person configures their own preferences from their account settings, independent of any organization. They alert you when Neo needs your attention on a task while the Pulumi Cloud tab is in the background. Browser and audio notifications are both off by default.
+Each member can enable browser or audio notifications for tasks in each organization. These preferences apply in the browser where you configure them. Notifications alert you when a task completes or needs attention while the Pulumi Cloud tab is in the background.
 
-{{% notes type="info" %}}
-The "Neo settings" panel only appears for users whose organization has Neo enabled.
-{{% /notes %}}
-
-To configure notifications:
-
-1. Navigate to your account settings in Pulumi Cloud
-1. Locate the "Neo settings" panel
-1. Turn browser notifications and audio notifications on or off independently
-
-Notifications fire when Neo completes a response or requests your approval before continuing. To avoid interrupting you while you're actively watching a task, Neo suppresses both notification types whenever the Pulumi Cloud tab has focus.
+1. Open your account settings in Pulumi Cloud.
+1. In the organization's notification preferences, find **Agent tasks** and choose **Browser**, **Audio**, or both.
+1. If you enable browser notifications, allow them when your browser prompts you.
 
 ### Browser notifications
 
-When enabled, Neo sends native browser notifications that appear in your operating system's notification area, including when the Pulumi Cloud tab is in the background or your browser is minimized. Clicking a notification brings the browser to the foreground and opens the relevant task.
+Browser notifications appear in your operating system's notification area. Selecting one opens the relevant task. They are suppressed while the Pulumi Cloud tab has focus.
 
-Enabling this setting prompts your browser for notification permission. If you decline the prompt, or if you have previously blocked notifications for Pulumi Cloud, the toggle reverts to off and an "Enable notifications in your browser settings" message appears. To re-enable after a block, grant the permission in your browser settings and then turn the toggle on again.
-
-Browser notifications also require your operating system to allow notifications for your browser. If you've enabled the toggle and granted browser permission but don't see notifications, check your OS notification settings and confirm they are enabled for your browser.
+If notifications do not appear, check that your browser allows notifications from Pulumi Cloud and that your operating system allows notifications from your browser. Blocking notifications for the site affects every organization, even if you enabled notifications for an individual organization.
 
 ### Audio notifications
 
-When enabled, Neo plays a short two-note chime when a task needs your attention.
+Audio notifications play a chime when a task needs attention while the Pulumi Cloud tab is in the background. Enable or disable them independently of browser notifications.

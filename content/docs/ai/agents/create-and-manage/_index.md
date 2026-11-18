@@ -1,33 +1,28 @@
 ---
-title: Create and manage agents
-title_tag: Create and manage agents | Pulumi Agents
-h1: Create and manage agents
+title: Create an agent
+title_tag: Create an agent | Pulumi Agents
+h1: Create an agent
 pulumi_cloud_feature: pulumi-agents
-meta_desc: Set up a pre-built or custom agent with saved instructions and a role, assign tasks, and manage its work.
+meta_desc: Choose an agent or create your own, configure its instructions and access, and assign work.
 menu:
     ai:
-        name: Create and manage agents
-        parent: ai-guides
+        name: Create an agent
+        parent: ai-agents
         identifier: ai-agents-create-manage
-        weight: 10
+        weight: 20
 ---
 
-Create agents with saved instructions, integrations, and a Pulumi Cloud role. Start with a pre-built agent or write your own instructions. Teammates can assign tasks to the agent without repeating its setup.
-
-These guides cover agents created for your organization. For Neo, the pre-built personal agent that uses your permissions, see the [Neo guides](/docs/ai/concepts/neo/#use-neo).
+Create an agent to delegate infrastructure work and collaborate with your team.
 
 ## Set up an agent
 
-[Set up a pre-built agent](/docs/ai/agents/configure/) or [build a custom agent](/docs/ai/agents/custom/) for a job specific to your team. Connect its tools and assign a role. See [Permissions](/docs/ai/agents/permissions/) for guidance on scoping access.
+- [Create an agent in Pulumi Cloud](/docs/ai/agents/configure/) to choose its instructions, tools, and role in the console.
+- [Define an agent in code](/docs/ai/agents/as-code/) to manage its configuration in a Pulumi program and review changes in a pull request.
 
-## Use an existing agent
+To use Neo without creating another agent, follow [Start your first task](/docs/ai/get-started/neo/).
 
-[Assign a task](/docs/ai/agents/tasks/) with the result you want and the context the agent needs. Continue the conversation with teammates and review the findings or proposed pull request.
+<span id="use-an-existing-agent"></span>
+<span id="automate-work"></span>
+<span id="manage-an-agent"></span>
 
-## Automate work
-
-[Set up events and schedules](/docs/ai/agents/triggers/) to start tasks from Pulumi operations, incoming webhooks, or recurring schedules.
-
-## Manage an agent
-
-[Edit, pause, or delete an agent](/docs/ai/agents/manage/), and troubleshoot tasks that fail to start or cannot access the tools they need.
+After setup, [work with teammates on tasks](/docs/ai/agents/tasks/), [add events and schedules](/docs/ai/agents/triggers/), or [manage the agent](/docs/ai/agents/manage/).

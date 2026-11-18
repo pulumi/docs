@@ -1,72 +1,80 @@
 ---
 title_tag: The Pulumi CLI for AI Agents
-meta_desc: "The Pulumi CLI is built for AI agents: run it with npx pulumi, do one-shot resource operations with pulumi do, and parse structured --json output."
+meta_desc: "Run the Pulumi CLI from a coding agent, inspect resources, preview code changes, and read JSON output."
 title: CLI for agents
 h1: The Pulumi CLI for agents
 menu:
     ai:
-        name: Pulumi CLI for agents
-        parent: ai-concepts
-        weight: 40
+        name: Use the Pulumi CLI
+        parent: ai-coding-agents
+        weight: 30
 aliases:
 - /docs/ai/cli-for-agents/
 ---
 
-The [Pulumi CLI](/docs/iac/cli/) is built to be driven by AI agents. Because Pulumi infrastructure is real code with a verifiable plan for every change, agents like Claude Code, Codex, Cursor, and GitHub Copilot can write, preview, and deploy it directly, with no bespoke integration required. This page collects the CLI features that make that possible.
+Run the [Pulumi CLI](/docs/iac/cli/) from your coding agent to inspect stacks, preview code changes, and apply updates you authorize. The agent uses the credentials and tools available in its local environment.
 
-[Pulumi Agent Skills](/docs/ai/concepts/agent-skills/) teach agents Pulumi workflows. The [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) lets them query Pulumi Cloud and the Registry. See [Use your coding agent with Pulumi](/docs/ai/coding-agents/) for an overview of these tools.
+<span id="no-install-step-npx-pulumi"></span>
 
-## No install step: `npx pulumi`
+## Run the CLI with npx
 
-An agent working in a fresh sandbox rarely has the Pulumi CLI installed, and installing tools is exactly the kind of setup an agent shouldn't have to reason about. Running the CLI through `npx` removes that step entirely:
-
-```bash
-npx pulumi up
-npx pulumi stack output --json
-```
-
-Any `pulumi` command works this way. For a persistent local environment, [install the CLI](/docs/install/) the usual way; for ephemeral agent runs, `npx pulumi` keeps the CLI reachable with nothing to set up first.
-
-## One-shot resource operations: `pulumi do`
-
-[`pulumi do`](/docs/iac/cli/direct-resource-operations/) performs direct operations on cloud resources without requiring a Pulumi program. It exposes the full Pulumi provider ecosystem as a CLI, with commands generated dynamically from each provider's schema, so an agent can create, read, update, or delete a single resource, or query a cloud API, without scaffolding a whole program first.
+If your environment has [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), use `npx` to run the CLI without a separate global installation:
 
 ```bash
-# Query a cloud API with a read-only provider function
-pulumi do aws:ec2:getVpc --input-file query.yaml
-
-# Read a single resource by its cloud provider ID
-pulumi do aws:s3:Bucket read my-bucket
+npx pulumi version
 ```
 
-By default, resource changes are recorded in Pulumi state and support state tracking, drift detection, and policy enforcement. The `--stateless` flag opts out of that tracking. Use a Pulumi program and `pulumi up` for repeatable deployments defined in code. See [Direct resource operations](/docs/iac/cli/direct-resource-operations/) for the modes and their tradeoffs.
+The command prints the CLI version. When the package is not installed locally, `npx` downloads it and may ask for confirmation. Your environment needs network access for that download.
+
+Before running project commands, install the project's language dependencies, [log in to your backend](/docs/iac/cli/commands/pulumi_login/), and configure the stack and cloud credentials. Run commands from the directory containing `Pulumi.yaml`:
+
+```bash
+npx pulumi preview
+```
+
+For a persistent local environment, you can also [install the CLI](/docs/install/) and run `pulumi` directly.
+
+<span id="one-shot-resource-operations-pulumi-do"></span>
+
+## Inspect resources with pulumi do
+
+[`pulumi do`](/docs/iac/cli/direct-resource-operations/) calls cloud providers without requiring a Pulumi program. For example, to read an existing S3 bucket, configure AWS credentials and replace `my-bucket` with the bucket's name:
+
+```bash
+npx pulumi do aws:s3:Bucket read my-bucket
+```
+
+The command returns the resource's properties. Use the resource type and inputs defined by the provider's schema. See [Direct resource operations](/docs/iac/cli/direct-resource-operations/) for provider functions, write operations, and state tracking. Use a Pulumi program for repeatable deployments defined in code.
 
 {{% notes type="info" %}}
 `pulumi do` is in **research preview**. The command interface may change based on feedback.
 {{% /notes %}}
 
-## Structured `--json` output
+<span id="structured---json-output"></span>
 
-Agents work best with machine-readable results rather than scraped human-readable text. Most Pulumi commands accept a `--json` flag that emits structured output an agent can parse directly, including `preview`, `up`, `destroy`, `refresh`, `stack output`, and `config`:
+## Read JSON output
+
+Commands such as `preview`, `up`, `destroy`, `refresh`, `stack output`, and `config` support `--json` output:
 
 ```bash
-pulumi preview --json
-pulumi stack output --json
+npx pulumi preview --json
+npx pulumi stack output --json
 ```
 
-`pulumi do` writes structured JSON to stdout as well, with progress and prompts going to stderr, so its output pipes cleanly into other tools. See the [Pulumi CLI command reference](/docs/iac/cli/commands/) for the flags each command supports.
+Ask the coding agent to read this JSON when it needs to inspect proposed changes or use stack outputs in another command. `pulumi do` also writes JSON to stdout, with progress and prompts on stderr. Check the [command reference](/docs/iac/cli/commands/) for the output and flags each command supports.
 
-## Verifiable by design: preview every change
+<span id="verifiable-by-design-preview-every-change"></span>
 
-Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that shows exactly what will be created, updated, or deleted before anything happens. That plan-then-apply model matters for agents: a change can be inspected (by the agent, by a human, or by a [policy](/docs/discovery-governance/concepts/policy-as-code/)) and confirmed before it lands, rather than discovered after the fact. An agent can run `pulumi preview --json`, reason about the diff, and only then run `pulumi up`.
+## Preview code changes
 
-## Zero-friction accounts
+Run [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) to inspect the resource operations proposed by a Pulumi program before an update. Review the diff and any policy results before authorizing a deployment.
 
-An agent that runs the CLI still needs somewhere to store state. [Agent accounts](/docs/administration/concepts/agent-accounts/) remove that friction: when the CLI detects it is running in an agent context with no Pulumi Cloud credentials, it provisions a free ephemeral account automatically and keeps working, printing a claim link the user can redeem later. No human has to sign up first for the agent to get started.
+A preview describes the proposed operations using the information available at that time. Some values are unknown until resources are created. Resources created inside an [`apply` callback](/docs/iac/concepts/inputs-outputs/apply/) may be absent from the preview when its input is unknown.
 
-## Next steps
+<span id="zero-friction-accounts"></span>
 
-- [Agent Skills](/docs/ai/concepts/agent-skills/) — teach your agent proven Pulumi workflows it can apply on top of the CLI.
-- [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/): query Pulumi Cloud and the Pulumi Registry through the [Model Context Protocol](/topics/agentic-infrastructure/mcp-for-infrastructure-as-code/).
-- [Agent accounts](/docs/administration/concepts/agent-accounts/) — ephemeral Pulumi Cloud accounts provisioned automatically for agents.
-- [Pulumi CLI reference](/docs/iac/cli/) — the full command set behind everything above.
+## Create an agent account
+
+[Agent accounts](/docs/administration/concepts/agent-accounts/) let a coding agent start using Pulumi Cloud before a person creates an account. Set `PULUMI_ENABLE_AUTOMATIC_AGENT_SIGNUP=true` to opt in. When the CLI detects an agent environment without Pulumi Cloud credentials, it creates an ephemeral account and prints a claim link. Open that link to claim the account and keep its infrastructure.
+
+<span id="next-steps"></span>

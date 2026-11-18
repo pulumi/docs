@@ -2,7 +2,7 @@
 title: MCP server tools
 title_tag: Pulumi MCP server tools and prompts
 h1: Pulumi MCP server tools and prompts
-meta_desc: Reference for the tools and prompts the Pulumi MCP server exposes to AI agents, covering Pulumi Cloud, Neo, the Pulumi Registry, and code generation.
+meta_desc: Reference for Pulumi MCP tools and prompts to query infrastructure, look up provider schemas, generate code, and delegate tasks.
 menu:
     ai:
         name: MCP server tools
@@ -11,11 +11,11 @@ menu:
         weight: 10
 ---
 
-The [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) exposes the following tools and prompts to your agent. For what each tool needs from your organization and what it can cost, see [Costs and edition requirements](/docs/ai/guides/set-up-mcp-server/#costs-and-edition-requirements).
+The [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) exposes the following tools and prompts to your agent. For required permissions, feature availability, and charges, see [Costs and edition requirements](/docs/ai/guides/set-up-mcp-server/#costs-and-edition-requirements).
 
 ## Tools
 
-You don't call these tools directly: describe what you want and your agent picks the tool. The names matter when your agent asks you to approve a tool call and when you allow or deny tools in its settings.
+Your coding agent selects tools based on your request. Use these names to review tool calls and configure which tools the agent can use.
 
 ### Pulumi Cloud
 
@@ -26,12 +26,12 @@ You don't call these tools directly: describe what you want and your agent picks
 | `get-policy-violations` | List [policy as code](/docs/discovery-governance/concepts/policy-as-code/) violations for your stacks. |
 | `get-users` | List the members of your organization and their roles. |
 
-### Neo
+### Task tools {#neo}
 
 | Tool | Description |
 |---|---|
-| `neo-bridge` | Start a Neo task, send it follow-up messages, and approve or reject its requests. Returns a link to the task in the Pulumi Cloud console. |
-| `neo-get-tasks` | List your organization's Neo tasks and their status. |
+| `neo-bridge` | Start a Neo task in Pulumi Cloud, send it follow-up messages, and approve or reject its requests. Returns a link to the task in the Pulumi Cloud console. |
+| `neo-get-tasks` | List your organization's agent tasks and their status. |
 | `neo-continue-task` | Check the status of an existing task and read its latest events. |
 | `neo-reset-conversation` | Clear the server's tracked state for a task, or for all tasks. |
 

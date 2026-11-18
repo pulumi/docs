@@ -10,11 +10,11 @@ menu:
         weight: 12
 ---
 
-Connect Azure so an agent can use the Azure CLI with credentials from Pulumi ESC.
+Connect Azure so an agent can use the Azure CLI with credentials stored in [Pulumi ESC](/docs/esc/). ESC supplies these credentials when the command runs.
 
 ## Choose the service principal
 
-Use a service principal with access to the Azure resources the agent needs. Assign roles at the narrowest scope that covers its work, such as a resource group. See [Design access around the job](/docs/ai/agents/permissions/#design-access-around-the-job) for guidance on credential scope and lifecycle.
+Use a service principal with access to the Azure resources the agent needs. Assign roles at the narrowest scope that covers its work, such as a resource group. See [Choose integration permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose which permissions to grant.
 
 ## Prepare an ESC environment
 
@@ -25,9 +25,9 @@ The Azure CLI integration expects an ESC environment that supplies these [enviro
 | `AZURE_CLIENT_ID` | The service principal's application ID |
 | `AZURE_CLIENT_SECRET` | The service principal's client secret |
 | `AZURE_TENANT_ID` | The Microsoft Entra tenant ID |
-| `AZURE_SUBSCRIPTION_ID` | The subscription the agent should use |
+| `AZURE_SUBSCRIPTION_ID` | Optional default subscription ID |
 
-Store the client secret as a secret in ESC. The agent also needs [permission to open the environment](/docs/ai/agents/permissions/#scope-pulumi-cloud-access).
+This setup uses a service principal client secret. Store it as a secret in ESC. The administrator who manages the service principal must rotate the secret in Microsoft Entra ID and update the ESC environment before the old secret expires. Grant the agent's Pulumi Cloud role [permission to open the environment](/docs/ai/agents/permissions/#scope-pulumi-cloud-access), so ESC can supply these credentials to the Azure CLI.
 
 ## Connect the environment
 
@@ -43,4 +43,4 @@ The Azure CLI requires an explicit [service principal sign-in](https://learn.mic
 
 ## Use the connection
 
-In the task, name the connection and identify the subscription and resources the agent should work with. See [Tasks and collaboration](/docs/ai/agents/tasks/) to assign work and review the results.
+Include the connection name, subscription ID, and target resource groups in the [assignment](/docs/ai/agents/configure/#save-and-assign-a-task).

@@ -1,28 +1,30 @@
 ---
-title: Neo in Your Editor (ACP)
-title_tag: Neo in Your Editor (ACP)
-h1: Neo in Your Editor (ACP)
-meta_desc: Use Pulumi Neo directly inside Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client Protocol (ACP).
+title: Use Neo in your editor
+title_tag: Use Neo in your editor | Pulumi Agents
+h1: Use Neo in your editor
+meta_desc: Use Neo inside Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client Protocol (ACP).
 menu:
     ai:
-        name: Use Neo in your editor
+        name: Use your editor
         identifier: ai-editors
-        parent: ai-neo
-        weight: 50
+        parent: ai-agents-tasks
+        weight: 40
 aliases:
 - /docs/ai/neo/editors/
 ---
 
-Neo can run directly inside your editor's agent panel. You chat with Neo, review its plans, and watch its edits in the same window as your code, with no separate terminal session or browser tab.
+Use Neo from your editor's agent panel to work on your local project.
 
-Editors connect to Neo through the [Agent Client Protocol (ACP)](https://agentclientprotocol.com), the same open standard they use to host agents like Claude Code and Gemini CLI. Zed and JetBrains IDEs support ACP natively; VS Code and Cursor support it through an extension.
+Editors connect to Neo through the [Agent Client Protocol (ACP)](https://agentclientprotocol.com). Zed and JetBrains IDEs support ACP natively; VS Code and Cursor support it through an extension.
 
-Like [Neo in the CLI](/docs/ai/concepts/neo/neo-in-the-cli/), an editor session runs locally and inherits your setup: your `pulumi login`, the CLIs you've authenticated, your environment variables and kubeconfigs, and the project you have open. Neo edits your local files directly, so its changes show up in your working tree as it makes them.
+<span id="how-permissions-work"></span>
+
+Like a [CLI session](/docs/ai/concepts/neo/neo-in-the-cli/), an editor session can read and change your local files. It uses your `pulumi login` account for Pulumi Cloud and your local CLI logins, environment variables, and Kubernetes configuration for other systems.
 
 ## Prerequisites
 
-1. [Pulumi CLI](/docs/install/) v3.254.0 or later
-1. Authenticate to Pulumi Cloud with `pulumi login`
+1. Install [Pulumi CLI](/docs/install/) v3.254.0 or later.
+1. Authenticate to Pulumi Cloud with `pulumi login`.
 
 ## Zed
 
@@ -36,7 +38,7 @@ Open the Agent Panel, start a new thread, and select **Pulumi Neo** as the agent
 
 ## JetBrains IDEs
 
-JetBrains IDEs (IntelliJ IDEA, GoLand, PyCharm, WebStorm, and the rest of the lineup) support ACP agents through JetBrains AI Assistant 2026.2 or later. Open the **AI Chat** tool window, open the chat menu, and select **Add Custom Agent**. The IDE opens `~/.jetbrains/acp.json` for editing; add Neo under `agent_servers`:
+JetBrains AI Assistant 2026.2 or later supports ACP agents in JetBrains IDEs. Open the **AI Chat** tool window, open the chat menu, and select **Add Custom Agent**. The IDE opens `~/.jetbrains/acp.json` for editing; add Neo under `agent_servers`:
 
 ```json
 {
@@ -72,13 +74,9 @@ Open the **ACP Client** panel from the Activity Bar and select **Pulumi Neo** to
 
 ## Controls
 
-The controls you have elsewhere apply in your editor, exposed as session options in the agent UI:
+Your editor exposes these session options:
 
-- **[Permission modes](/docs/ai/concepts/neo/permissions/#permission-mode-and-approval-mode)** (default, read-only) govern what Neo can change
-- **[Plan mode](/docs/ai/concepts/neo/tasks/#plan-mode)** lets Neo research and agree on a plan with you before executing
+- **[Permission modes](/docs/ai/agents/permissions/#permission-mode-and-approval-mode)** (`default`, `read-only`) control whether the session can write to Pulumi Cloud. They do not restrict local file changes or the credentials used by local commands.
+- **[Plan mode](/docs/ai/agents/tasks/#plan-mode)** lets the agent propose a plan for you to review before changing files.
 
-Tool call approvals surface in the editor's agent panel, so you review Neo's actions the same way you review those of any other agent you run there.
-
-## How permissions work
-
-An editor session uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/concepts/rbac/) of your Pulumi user. Identity, RBAC, and audit all run through your Pulumi Cloud login, the same way they do in the console.
+Review and respond to tool approval requests in the editor's agent panel.

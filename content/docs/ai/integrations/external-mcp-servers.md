@@ -14,40 +14,28 @@ menu:
         identifier: ai-integrations-mcp
 ---
 
-MCP integrations let Pulumi Agents use tools from external providers through [Model Context Protocol](https://modelcontextprotocol.io/) servers. A teammate with permission to manage organization integrations (`org_integrations:update`) connects each provider with credentials stored in Pulumi Cloud. Agents can use these tools to query monitoring data, read runbooks, and work with issues during a task.
+Connect monitoring tools and issue trackers so agents can query logs, read runbooks, and create or update issues. Each connection uses the service's [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server to make its tools available to the agent.
+
+You need permission to manage organization integrations (`org_integrations:update`) and credentials for the service you want to connect. Pulumi Cloud stores those credentials for the organization's agents.
 
 > [!INFO]
-> To give an external coding agent access to Pulumi context, see the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/).
-
-Supported integrations are Atlassian (Jira and Confluence), Cloudflare, Dash0, Datadog, Honeycomb, Linear, New Relic, PagerDuty, Sentry, and Supabase.
+> To let Claude Code, Codex, or another coding agent query Pulumi Cloud, see the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/).
 
 ## Enabling an MCP integration
 
-To enable an integration, navigate to **Agent Settings**, select **Integrations**, open **MCP servers**, find the provider under **Available**, and select **Authorize**. Enter the required credentials, then select **Save**.
+1. Follow the [provider instructions below](#configuration) to create credentials with the permissions the agent needs.
+1. Open **Agent Settings** > **Integrations** > **MCP servers**.
+1. Find the provider under **Available** and select **Authorize**.
+1. Enter the required credentials, then select **Save**.
+1. [Select the integration for the agent](#per-task-control) before assigning work that needs it.
 
-Each MCP integration connects to the service's MCP server. Available tools depend on the credentials and authentication method the service supports.
+The credentials determine which of the service's tools and resources the agent can use.
 
-## Credential storage
+## Select integrations for an agent or task {#per-task-control}
 
-Integration credentials are encrypted at rest in Pulumi Cloud using a per-organization encryption key. When a task needs to connect to an integration, Pulumi Cloud decrypts the credentials at task time, constructs the appropriate authentication headers, and connects to the service on the agent's behalf. Credentials are never exposed to the language model and are never embedded in task state.
+For an agent your team configures, [add the integration to its configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs).
 
-## Disabling an integration
-
-To remove an integration from your organization, navigate to **Agent Settings**, select **Integrations**, open **MCP servers**, find the integration, and select **Manage integration**, then **Disconnect integration**.
-
-Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Existing tasks reload the available integrations when the agent next resumes work. To revoke credentials already in use, revoke them at the provider.
-
-## Per-task control
-
-For tasks started from an agent you configure, [select MCP integrations in the agent configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). The saved selection applies across that agent's tasks.
-
-Neo tasks inherit all integrations enabled by the organization. Before starting a task, turn off any integrations it does not need in the task composer. This selection applies only to that task.
-
-## If an integration fails
-
-If an integration fails, check that its credentials are valid, that they grant access to the requested data, and that the provider's MCP server is reachable. To replace expired credentials, disconnect the integration, then connect it again with new credentials.
-
-Some connection failures leave other tools available. A failure to retrieve or decrypt stored credentials can prevent a task from starting or continuing.
+All integrations connected to the organization are selected by default for Neo tasks. Before starting a task, turn off any integrations it does not need in the task composer. This selection applies only to that task.
 
 ## Configuration
 
@@ -80,27 +68,27 @@ Follow [Connect Datadog](/docs/ai/agents/integrations/datadog/) to create a serv
 
 ### Honeycomb
 
-1. In Honeycomb, navigate to **Account**, then **Team Settings**, then **API Keys**
-1. Select **Create Management API Key** and give it a name (e.g., "MCP Integration")
+1. In Honeycomb, navigate to **Account**, then **Team Settings**, then **API Keys**.
+1. Select **Create Management API Key** and give it a name (for example, "MCP Integration").
 1. Choose the **Model Context Protocol** and **Environments** scopes, then grant permissions:
     - **Read**: Required for all Honeycomb MCP operations. Make sure to grant read for both MCP and Environments.
     - **Write**: Required for the `create_board` tool.
 1. Copy the **Key ID** and **Key Secret**. You will not be able to see the Key Secret again.
-1. In the integration form, enter the **Key ID** and **Key Secret** in the corresponding fields
+1. In the integration form, enter the **Key ID** and **Key Secret** in the corresponding fields.
 
 ### Linear
 
 {{% notes type="info" %}}
-Linear API keys are personal tokens. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task.
+Linear API keys are user tokens. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task.
 {{% /notes %}}
 
-1. In Linear, open **Settings**, then **Security & Access**
+1. In Linear, open **Settings**, then **Security & Access**.
 1. Select **New API Key**, give it a name, and choose the permissions the agent needs:
-    - **Read**: required for all operations the agent performs through Linear
-    - **Create issues** and **Create comments**: required if the agent needs to file or comment on issues
-    - **Write** or **Admin**: required if the agent needs to update or delete existing issues
-1. Optionally limit the key to specific teams using the team-access controls
-1. In the integration form, enter the **API Key**
+    - **Read**: required for all operations the agent performs through Linear.
+    - **Create issues** and **Create comments**: required if the agent needs to file or comment on issues.
+    - **Write** or **Admin**: required if the agent needs to update or delete existing issues.
+1. Optionally limit the key to specific teams using the team-access controls.
+1. In the integration form, enter the **API Key**.
 
 ### New Relic
 
@@ -113,13 +101,13 @@ The key uses the automation account's permissions. Tools that require OAuth are 
 ### PagerDuty
 
 {{% notes type="info" %}}
-PagerDuty User API Tokens are tied to a single user account. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task. For shared use, consider creating a dedicated PagerDuty user (e.g. `pulumi-bot`) whose token agents can use.
+PagerDuty User API Tokens are tied to a single user account. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task. For shared use, consider creating a dedicated PagerDuty user (for example, `pulumi-bot`) whose token agents can use.
 {{% /notes %}}
 
-1. In PagerDuty, open your user profile and select **User Settings**
-1. Select **Create API User Token** and give it a name (e.g., "Pulumi Agents"). The token inherits the user's existing PagerDuty permissions, so its access matches whatever the user can already see in the PagerDuty UI.
-1. Copy the token
-1. In the integration form, enter the **User API Token**
+1. In PagerDuty, open your user profile and select **User Settings**.
+1. Select **Create API User Token** and give it a name (for example, "Pulumi Agents"). The token inherits the user's existing PagerDuty permissions, so its access matches whatever the user can already see in the PagerDuty UI.
+1. Copy the token.
+1. In the integration form, enter the **User API Token**.
 
 ### Sentry
 
@@ -132,9 +120,25 @@ This integration connects to Sentry SaaS using its [explicit-token authenticatio
 ### Supabase
 
 {{% notes type="info" %}}
-Supabase Access Tokens are tied to a single user account. Supabase does not offer service-account credentials for the MCP server. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task. For shared use, consider creating a dedicated Supabase user (e.g. `pulumi-bot`) whose token agents can use.
+Supabase Access Tokens are tied to a single user account. Supabase does not offer service-account credentials for the MCP server. All actions an agent takes through this integration are attributed to the user who created the token, regardless of who creates the task. For shared use, consider creating a dedicated Supabase user (for example, `pulumi-bot`) whose token agents can use.
 {{% /notes %}}
 
-1. On **supabase.com**, open **Account Preferences**, then **Access Tokens**
-1. Select **Generate New Token**, give it a name, and copy the token
-1. In the integration form, enter the **Access Token**
+1. On **supabase.com**, open **Account Preferences**, then **Access Tokens**.
+1. Select **Generate New Token**, give it a name, and copy the token.
+1. In the integration form, enter the **Access Token**.
+
+## Credential storage
+
+Pulumi Cloud encrypts the credentials with a key specific to your organization and uses them to authenticate requests to the connected tool. The language model does not receive the credentials, and they are not stored in the task's state.
+
+## Disabling an integration
+
+To remove an integration from your organization, navigate to **Agent Settings**, select **Integrations**, open **MCP servers**, find the integration, and select **Manage integration**, then **Disconnect integration**.
+
+Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Existing tasks reload the available integrations when the agent next resumes work. To revoke credentials already in use, revoke them at the provider.
+
+## If an integration fails
+
+If an integration fails, check that its credentials are valid, that they grant access to the requested data, and that the provider's MCP server is reachable. To replace expired credentials, disconnect the integration, then connect the same provider again with new credentials. Agents cannot use the integration until you reconnect it. Once reconnected, it is available to agents that already had it selected.
+
+If Pulumi cannot retrieve or decrypt the stored credentials, the task may fail to start or continue.

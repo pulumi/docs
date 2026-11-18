@@ -10,17 +10,17 @@ menu:
         weight: 11
 ---
 
-Connect Google Cloud so an agent can use the `gcloud` CLI with credentials from Pulumi ESC.
+Connect Google Cloud so an agent can use the `gcloud` CLI with credentials stored in [Pulumi ESC](/docs/esc/). ESC supplies these credentials when the command runs.
 
 ## Choose the service account
 
-Use a service account with access to the projects and resources the agent needs. Grant only the actions required for its work. See [Design access around the job](/docs/ai/agents/permissions/#design-access-around-the-job) for guidance on credential scope and lifecycle.
+Use a service account with access to the projects and resources the agent needs. Grant only the actions required for its work. See [Choose integration permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose which permissions to grant.
 
 ## Prepare an ESC environment
 
 Use the [Google Cloud login provider](/docs/esc/providers/login/gcp-login/) to get a temporary access token. Under [environmentVariables](/docs/esc/concepts/outputs/#environmentvariables), export its `accessToken` output as `CLOUDSDK_AUTH_ACCESS_TOKEN`. Set `CLOUDSDK_CORE_PROJECT` to the project ID the agent should use. The login provider's example shows the complete `gcloud` configuration.
 
-The agent also needs [permission to open the environment](/docs/ai/agents/permissions/#scope-pulumi-cloud-access).
+Grant the agent's Pulumi Cloud role [permission to open the environment](/docs/ai/agents/permissions/#scope-pulumi-cloud-access), so ESC can supply the token to `gcloud`.
 
 ## Connect the environment
 
@@ -32,4 +32,4 @@ Give the connection a name that identifies its purpose, such as `staging-google-
 
 ## Use the connection
 
-In the task, name the connection and identify the project and resources the agent should work with. See [Tasks and collaboration](/docs/ai/agents/tasks/) to assign work and review the results.
+Include the connection name, project ID, and target resources in the [assignment](/docs/ai/agents/configure/#save-and-assign-a-task).

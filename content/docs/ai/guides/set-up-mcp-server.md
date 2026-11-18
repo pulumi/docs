@@ -5,9 +5,9 @@ title: MCP server
 h1: Pulumi Model Context Protocol server
 menu:
     ai:
-        name: Set up the Pulumi MCP server
-        parent: ai-guides
-        weight: 30
+        name: Connect the MCP server
+        parent: ai-coding-agents
+        weight: 20
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md
@@ -27,16 +27,16 @@ aliases:
 })();
 </script>
 
-The Pulumi [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server gives the AI agent you already use access to Pulumi. Through it, an agent can list your stacks, search your resources, check policy violations, look up resource schemas in the Pulumi Registry, and hand tasks to [Pulumi Neo](/docs/ai/concepts/neo/). For background on MCP in infrastructure work, see [MCP for infrastructure as code](/topics/agentic-infrastructure/mcp-for-infrastructure-as-code/).
+Connect your coding agent to the Pulumi [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server to query stacks, search resources, read policy results, and look up provider schemas in the Pulumi Registry. For task tools, access controls, and billing, see [Costs and edition requirements](#costs-and-edition-requirements).
 
-Pulumi hosts the server at `https://mcp.ai.pulumi.com/mcp`, so there is nothing to install or run locally.
+Pulumi hosts the server at `https://mcp.ai.pulumi.com/mcp`. Your coding agent must support remote MCP connections or use a local adapter.
 
 > [!INFO]
-> This page is about connecting your own AI agent to Pulumi. For the opposite direction, connecting Neo to other services' MCP servers (Jira, Datadog, and others), see [External MCP servers](/docs/ai/integrations/external-mcp-servers/).
+> This page is about connecting your own AI agent to Pulumi. To connect Pulumi Agents to other services' MCP servers, such as Jira or Datadog, see [External MCP servers](/docs/ai/integrations/external-mcp-servers/).
 
 ## Configuration
 
-Add the server to your agent, then authenticate with a Pulumi access token the first time the agent connects. See [Authentication](#authentication) for what the token is used for and how to choose an organization.
+Follow the instructions for your coding agent, then complete [Authentication](#authentication).
 
 ### Claude Code
 
@@ -45,6 +45,16 @@ claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
 ```
 
 Then run `/mcp` in Claude Code, select **pulumi**, and authenticate in the browser window that opens.
+
+### Codex
+
+Register the Pulumi server from your terminal:
+
+```bash
+codex mcp add pulumi --url https://mcp.ai.pulumi.com/mcp
+```
+
+If Codex prompts you to sign in, complete the browser flow. To start sign-in manually, run `codex mcp login pulumi`.
 
 ### Cursor
 
@@ -105,7 +115,7 @@ Any agent that supports remote MCP servers over streamable HTTP with OAuth can c
 
 ## Authentication
 
-The MCP server calls Pulumi Cloud with a Pulumi [access token](/docs/administration/concepts/access-tokens/) that you provide. Every call runs as that token's identity, so the agent can see and do exactly what the token can, under your organization's [RBAC](/docs/administration/concepts/rbac/) settings, and nothing more. See [Choose a token](#choose-a-token) for which kind to use.
+The MCP server authenticates Pulumi Cloud API requests with the [access token](/docs/administration/concepts/access-tokens/) you provide. Pulumi Cloud checks access to the requested resources. Choose a token that can read the stacks and resources you want to query. Your coding agent's tool settings separately control which MCP tools it can call.
 
 ### Authenticate in the browser
 
@@ -116,14 +126,16 @@ The first time your agent connects, it opens a browser window:
 1. Confirm the redirect URL and select **Authorize Connection**.
 1. Return to your agent.
 
-The server stores the token encrypted and uses it for every call until the session ends. Sessions last 30 days, after which the agent asks you to authenticate again. If you delete the token, or it expires, before then, tool calls fail until you authenticate again with a new token. To switch the default organization, disconnect and reconnect the server in your agent and choose a different organization. You can also name an organization in a request ("list the stacks in the acme org") and the agent passes it to the tool.
+The server stores the token encrypted and uses it for tool calls during the session. Sessions last 30 days. If the session or token expires, authenticate again; use a new token if the old one has expired or been deleted.
+
+To switch the default organization, disconnect and reconnect the server in your agent and choose a different organization. You can also name an organization in a request, such as "list the stacks in the acme org".
 
 ### Choose a token
 
-The token you give the MCP server is separate from the one the Pulumi CLI uses (stored by `pulumi login` or set in `PULUMI_ACCESS_TOKEN`), so create a separate one for the MCP server. You can then revoke or rotate it without affecting the CLI. The server accepts any Pulumi access token, but two kinds are most useful:
+Create a separate token for the MCP server so you can revoke or rotate it without affecting the Pulumi CLI's token. The server accepts any Pulumi access token, but two kinds are most useful:
 
-- **An [organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)** acts as the organization with whatever [role](/docs/administration/concepts/rbac/roles/) you assign it, and works in a single organization. This is the way to limit what the agent can see and do in Pulumi Cloud, for example by assigning a role that can only read stacks. Don't rely on the token's role to block [Neo tasks](#costs-and-edition-requirements), though: deny `neo-bridge` in your agent as well if you want the agent to be read-only. Organization tokens are available in {{< pulumi-cloud-editions "org-team-access-tokens" >}}.
-- **A [personal access token](/docs/administration/concepts/access-tokens/#personal-access-tokens)** acts as you, with your permissions in every organization you belong to. Create one at [app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens).
+- **An [organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token)** acts as the organization with whatever [role](/docs/administration/concepts/rbac/roles/) you assign it, and works in a single organization. Assign a role that can read the stacks and resources you need. Organization tokens are available in {{< pulumi-cloud-editions "org-team-access-tokens" >}}.
+- **A [user access token](/docs/administration/concepts/access-tokens/#personal-access-tokens)** acts as you, with your permissions in every organization you belong to. Create one at [app.pulumi.com/account/tokens](https://app.pulumi.com/account/tokens).
 
 If your organization enforces an [access token expiry policy](/docs/administration/concepts/access-tokens/#access-token-expiry-policy), the token must meet it, or calls against that organization fail.
 
@@ -148,34 +160,31 @@ For CI pipelines and headless agents, skip the browser flow by sending the token
 Read the token from an environment variable or secret store rather than committing it, and check how your agent expands variables in its MCP configuration.
 
 > [!WARNING]
-> If `X-Pulumi-Org` names an organization the token can't access, or you omit the header, the server uses the first organization the token can access, without returning an error. Check the organization name carefully when using a personal token that belongs to more than one organization.
+> If `X-Pulumi-Org` names an organization the token can't access, or you omit the header, the server uses the first organization the token can access, without returning an error. Check the organization name carefully when using a user token that belongs to more than one organization.
+
+## Verify the connection
+
+Ask your coding agent to list the stacks in your organization, naming the organization in the request. Check that the response lists stacks you recognize in that organization. If the tool fails or returns the wrong organization, see [Troubleshooting](#troubleshooting).
 
 ## Costs and edition requirements
 
-Most of the server's tools only read data, and the server itself never runs `pulumi up` or changes your infrastructure. What the tools need from your organization:
+Most MCP tools return data or instructions for your coding agent to use. The `neo-bridge` tool delegates work to Pulumi Agents: it can create a task, send follow-up messages, and approve or reject the task's requests.
 
 | Tools | What they need | Cost |
 |---|---|---|
 | Registry tools, `deploy-to-aws`, and all prompts | Any Pulumi account | None. They return schemas and instructions that your agent's own model works with. |
 | `get-stacks`, `get-users`, `get-policy-violations` | Any Pulumi Cloud organization | None |
 | `resource-search` | [Resource search](/docs/discovery-governance/concepts/discovery/querying-resources/), available in {{< pulumi-cloud-editions "resource-search" >}} | Included in your edition |
-| `neo-bridge` | [Pulumi Neo](/docs/ai/concepts/neo/), available in {{< pulumi-cloud-editions "neo-integrations" >}} | Neo usage is billed to your organization |
+| `neo-bridge` | Neo tasks with [Pulumi Agents](/docs/ai/agents/), available in {{< pulumi-cloud-editions "neo-integrations" >}} | Task usage is billed to your organization |
 
-`neo-bridge` is the tool that can cost money. Each task it starts, and each message or approval it sends, runs Neo in Pulumi Cloud, which counts against your organization's Neo usage as it would in the Pulumi Cloud console. Approving a Neo request can also let Neo change infrastructure or open pull requests. Admins can cap that spend with [Neo usage limits](/docs/ai/concepts/neo/usage-limits/); see [pricing](/pricing/) for rates.
+Follow-up messages and approvals sent through `neo-bridge` can continue a task's work and incur further usage. Review the requested action before approving it. Admins can configure [usage limits](/docs/ai/concepts/neo/usage-limits/); see that guide for the charges those limits cover.
 
-To keep an agent from starting Neo work, deny `neo-bridge` in your agent's tool permissions. Restricting the token's role isn't enough on its own to prevent Neo tasks. In Claude Code, add `mcp__pulumi__neo-bridge` to `permissions.deny` in `settings.json`; in Cursor, turn the tool off under **Tools & MCP**.
+To use the server for queries without task creation, messages, or approvals, disable `neo-bridge` in your coding agent's tool permissions. In Claude Code, add `mcp__pulumi__neo-bridge` to `permissions.deny` in `settings.json`; in Cursor, turn the tool off under **Tools & MCP**.
 
-## Tools and prompts
+<span id="tools-and-prompts"></span>
+<span id="example-requests"></span>
 
-The server exposes tools for Pulumi Cloud, Neo, the Pulumi Registry, and code generation, plus reusable prompts for deployment and migration work. You don't call the tools directly: describe what you want and your agent picks the tool. For the full list, see [MCP server tools and prompts](/docs/ai/reference/mcp-server-tools/).
-
-## Example requests
-
-- "What stacks do I have, and which ones haven't been updated in the last 90 days?"
-- "Find every S3 bucket without tags and tell me which stacks they're in."
-- "Look up the properties for an Azure Container Registry with geo-replication and write the TypeScript for it."
-- "What policy violations do my production stacks have?"
-- "Ask Neo to restrict every security group that allows SSH from 0.0.0.0/0 and open a pull request."
+See [MCP server tools and prompts](/docs/ai/reference/mcp-server-tools/) for the full list of tools and prompts.
 
 ## Troubleshooting
 
@@ -187,14 +196,8 @@ The server exposes tools for Pulumi Cloud, Neo, the Pulumi Registry, and code ge
 
 **New or renamed tools don't appear.** Some agents, including Cursor, cache tool definitions. Restart the agent or reconnect the server.
 
-**A tool reports "Quota limit exceeded" or "Forbidden".** A quota error usually means the feature isn't available in your organization's edition; see [Costs and edition requirements](#costs-and-edition-requirements). "Forbidden" means the token's role lacks permission; see [Choose a token](#choose-a-token).
+**A tool reports "Quota limit exceeded" or "Forbidden".** A quota error usually means the feature isn't available in your organization's edition; see [Costs and edition requirements](#costs-and-edition-requirements). "Forbidden" can mean the token's role lacks permission or the requested feature is disabled. See [Choose a token](#choose-a-token) and the task checks below.
 
-**Neo tasks don't start.** Check that Neo is enabled for your organization and that it hasn't reached its [usage limit](/docs/ai/concepts/neo/usage-limits/).
+**A request to `neo-bridge` does not create a task.** Ask an administrator to check that **Enable AI features for this organization** and **Enable Pulumi Agents** are both on in [organization AI settings](/docs/ai/concepts/neo/settings/#enable-neo-for-organization). Also check that the organization has not reached its [usage limit](/docs/ai/concepts/neo/usage-limits/).
 
-## Next steps
-
-- [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/): teach your agent proven Pulumi workflows.
-- [Pulumi Neo](/docs/ai/concepts/neo/): Pulumi's infrastructure agent.
-- [Agent accounts](/docs/administration/concepts/agent-accounts/): Pulumi Cloud accounts that agents provision for themselves.
-- [Access tokens](/docs/administration/concepts/access-tokens/): personal, organization, and team tokens.
-- [What is agentic infrastructure?](/topics/agentic-infrastructure/)
+<span id="next-steps"></span>
