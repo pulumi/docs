@@ -16,7 +16,7 @@
 #   featured: [auto, my-editors-pick]       # slot 1 = latest post, slot 2 = pinned
 #   featured: [auto, pick-a, auto, pick-b]  # slots 1 & 3 latest; slots 2 & 4 pinned
 featured: 
-  - introducing-pulumi-delivery
+  - everything-after-code-as-code
   - introducing-pulumi-delivery
   - introducing-pulumi-agents
 
