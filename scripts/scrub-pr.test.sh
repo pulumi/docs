@@ -247,7 +247,8 @@ expect_no_write "actions/runs/9"   # another scrubbed PR's run with the same new
 [[ -f "$WORK/scrub-pr-42-github-support.md" ]] || fail "no support request written"
 
 # --- the default branch is never deleted, even with --force-branch ---
-run_case "default branch" '.pr.head.ref = "master" | .other_prs = []' $'42\n' 42 --force-branch
+# master is unprotected here so the default-branch check alone has to keep 903 safe.
+run_case "default branch" '.pr.head.ref = "master" | .other_prs = [] | .branches.master.protected = false' $'42\n' 42 --force-branch
 expect_status 0
 expect_out "Keep branch master: it's the default branch"
 expect_no_write "git/refs/heads"
@@ -267,7 +268,8 @@ grep -q "906" <<<"$OUT" && fail "plan lists the merge commit's deployment 906"
 run_case "failed write" '.fail_writes = ["DELETE repos/acme/site/issues/comments/101"]' $'42\n' 42
 expect_status 1
 expect_out "FAIL  comment 101"
-expect_out "comment 101"
+expect_out "   - comment 101"   # listed in the summary
+expect_write "DELETE repos/acme/site/pulls/comments/201"   # and the scrub kept going
 
 # --- a branch another PR uses is kept unless forced ---
 shared='.other_prs += [{"number": 41, "owner": "acme", "ref": "leak"}]'
