@@ -143,7 +143,15 @@ case ${PULUMI_ACTION} in
         # Given how frequently we update the CloudFront distribution, and how easy it can
         # be for our checkpointed CloudFront Etag to fall out of sync with what's current,
         # we refresh the distribution on every update.
-        retry_on_stack_lock pulumi -C infrastructure refresh -t "${CDN_PULUMI_URN}" --yes
+        #
+        # A per-PR stack's first deploy has no distribution yet, and refreshing a target
+        # that isn't in the state fails, so skip it there. Long-lived stacks always refresh.
+        if [ -n "${PR_STACK_NUMBER:-}" ] \
+            && ! pulumi -C infrastructure stack --show-urns 2>/dev/null | grep -qF "${CDN_PULUMI_URN}"; then
+            echo "First deploy of PR stack ${PR_STACK_NUMBER}: no distribution to refresh yet."
+        else
+            retry_on_stack_lock pulumi -C infrastructure refresh -t "${CDN_PULUMI_URN}" --yes
+        fi
 
         retry_on_stack_lock publish_if_newest
 

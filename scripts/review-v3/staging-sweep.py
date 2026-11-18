@@ -81,6 +81,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -105,6 +107,10 @@ STAGING_STATUS_CONTEXT = "staging/pulumi-test-io"
 STAGING_STATUS_WRITERS = frozenset({"github-actions[bot]", "pulumi-bot"})
 SENTINEL_WORKFLOW_FILE = "review-sentinel.yml"
 DEPLOYED_SITE_URL = "https://www.pulumi-test.io"
+# testing-build-and-deploy.yml titles a PR stack deploy "PR stack www-pr-<n>
+# (<branch>)"; that run's site is pr-<n>.<suffix> (scripts/pr-stack.sh).
+PR_STACK_TITLE = re.compile(r"^PR stack www-pr-(\d+)\b")
+PR_STACK_SUFFIX_ENV = "PR_STACK_DOMAIN_SUFFIX"
 DEFAULT_LOOKBACK_HOURS = 6
 # One page is ~two days of this workflow's runs; the lookback does the real
 # filtering.
@@ -140,6 +146,16 @@ def verdict_for(conclusion: str) -> tuple[str, str, bool]:
         return state, desc, conclusion == "success"
     state, desc = FAILED_VERDICT
     return state, desc, False
+
+
+def site_url_for(run: dict, suffix: str | None = None) -> str:
+    """The site a successful deploy run published: its PR stack, or pulumi-test.io."""
+    if suffix is None:
+        suffix = os.environ.get(PR_STACK_SUFFIX_ENV, "")
+    match = PR_STACK_TITLE.match(run.get("display_title") or "")
+    if match and suffix:
+        return f"https://pr-{match.group(1)}.{suffix}"
+    return DEPLOYED_SITE_URL
 
 
 def candidate_runs(runs: list[dict], *, default_branch: str, now: datetime,
@@ -300,7 +316,7 @@ def sweep(gh: GhClient, *, default_branch: str, now: datetime,
                         continue
                     entry["poked"] = "poke-failed"
 
-        target_url = DEPLOYED_SITE_URL if is_success else fact["run_url"]
+        target_url = site_url_for(fact["run"]) if is_success else fact["run_url"]
         try:
             gh.post(f"repos/{gh.repo}/statuses/{sha}", {
                 "state": state, "context": STAGING_STATUS_CONTEXT,

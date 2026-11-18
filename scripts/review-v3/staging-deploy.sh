@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# Dispatch a pulumi-test.io staging deploy of a PR head — the deploy whose
-# run record (and the `staging/pulumi-test-io` status written from it) is
-# the evidence Sentinel gate G4 verifies.
+# Dispatch a staging deploy of a PR head to that PR's own stack (www-pr-<n>,
+# see scripts/pr-stack.sh) — the deploy whose run record (and the
+# `staging/pulumi-test-io` status written from it) is the evidence Sentinel
+# gate G4 verifies. The status keeps its old context name so the Sentinel,
+# branch protection, and open PRs don't have to change with it.
 #
 # Two callers: staging-deploy-command.yml (`/deploy-staging`), and
 # staging-deploy-auto.yml, for every infra PR on open/push,
@@ -37,16 +39,18 @@
 
 set -euo pipefail
 
-REPO=""; HEAD_SHA=""; HEAD_REF=""
+REPO=""; HEAD_SHA=""; HEAD_REF=""; PR=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --repo)     REPO="$2"; shift 2 ;;
     --head-sha) HEAD_SHA="$2"; shift 2 ;;
     --head-ref) HEAD_REF="$2"; shift 2 ;;
-    # Accepted and ignored: an open PR branch runs ITS copy of
-    # staging-deploy-auto.yml against this base-branch script, and a branch
-    # cut before the watch mode went away still passes both.
-    --pr)            shift 2 ;;
+    # Names the PR whose own stack (www-pr-<n>, scripts/pr-stack.sh) gets the
+    # deploy. Optional: looked up from the head branch when a caller doesn't
+    # pass it, which an open PR's older copy of staging-deploy-auto.yml won't.
+    --pr)            PR="$2"; shift 2 ;;
+    # Accepted and ignored: a branch cut before the watch mode went away
+    # still passes it.
     --dispatch-only) shift ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
@@ -64,8 +68,35 @@ done
 # and post ITS outcome as this head's status. Backed off 2 s: both sides are
 # whole seconds and the compare is strict, so a run created in the stamp's
 # own second would otherwise be excluded by its own timestamp.
+if [ -z "$PR" ]; then
+  PR=$(gh pr list --repo "$REPO" --head "$HEAD_REF" --state open \
+         --json number --jq '.[0].number // empty') || PR=""
+fi
+if [ -n "$PR" ] && ! [[ "$PR" =~ ^[0-9]+$ ]]; then
+  echo "::error::--pr must be a PR number, got '$PR'" >&2
+  exit 2
+fi
+
+# The deploy goes to the PR's own stack, never to pulumi-test.io, which only
+# takes master. A `workflow_dispatch` runs the workflow file from the ref it
+# targets, so a branch cut before testing-build-and-deploy.yml grew its
+# `pr_number` input rejects the input (HTTP 422, "Unexpected inputs"). Such a
+# branch still gets a deploy, to pulumi-test.io as before, until it's rebased.
 SINCE=$(date -u -d '2 seconds ago' +%FT%TZ)
-gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF"
+DISPATCH_LOG=$(mktemp)
+if [ -z "$PR" ]; then
+  echo "::warning::no open PR for $HEAD_REF; deploying it to pulumi-test.io instead of a PR stack"
+  gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF"
+elif ! gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF" \
+       -f pr_number="$PR" 2> "$DISPATCH_LOG"; then
+  cat "$DISPATCH_LOG" >&2
+  if ! grep -qi "unexpected inputs" "$DISPATCH_LOG"; then
+    exit 1
+  fi
+  echo "::warning::$HEAD_REF predates PR stacks, so it deploys to pulumi-test.io. Merge master into it to get its own stack."
+  gh workflow run testing-build-and-deploy.yml --repo "$REPO" --ref "$HEAD_REF"
+fi
+rm -f "$DISPATCH_LOG"
 
 RUN_ID=""
 for _ in $(seq 1 12); do

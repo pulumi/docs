@@ -61,7 +61,8 @@ if [ "${1:-}" == "preview" ]; then
     hugo --minify --buildFuture --templateMetrics -e "preview"
 else
     if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then
-        export HUGO_BASEURL="https://www.pulumi-test.io"
+        # A per-PR stack (see scripts/pr-stack.sh) serves at its own domain.
+        export HUGO_BASEURL="https://${PR_STACK_DOMAIN:-www.pulumi-test.io}"
         hugo "${hugo_gc[@]}" --minify --buildFuture --templateMetrics -e "preview"
     else
         hugo "${hugo_gc[@]}" --minify --templateMetrics -e "production"

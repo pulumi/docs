@@ -2,7 +2,7 @@ name: Staging deploy (auto, infra PRs)
 
 # Supplies the evidence for the Sentinel's staging gate without anyone having to ask for it.
 #
-# The staging gate requires a successful pulumi-test.io deploy at the PR's current head.
+# The staging gate requires a successful deploy of the PR's current head to its own stack (scripts/pr-stack.sh).
 # This workflow makes that deploy the default for an infra PR, and it is the
 # automatic lane. A retry is a re-run of the failed "Build and deploy testing"
 # run, or a `/deploy-staging` comment on the PR (`staging-deploy-command.yml`),
@@ -236,6 +236,7 @@ jobs:
           LOG=$(mktemp)
           if scripts/review-v3/staging-deploy.sh \
                --repo "$REPO" \
+               --pr "$PR_NUMBER" \
                --head-sha "$HEAD_SHA" \
                --head-ref "$HEAD_REF" 2>&1 | tee "$LOG"; then
             exit 0

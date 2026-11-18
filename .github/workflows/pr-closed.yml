@@ -37,6 +37,24 @@ jobs:
           role-duration-seconds: 7200
           aws-region: us-west-2
 
+      # An infra PR deploys to its own stack (scripts/pr-stack.sh). Tear it down
+      # before the buckets go. A stack that won't empty (Lambda@Edge replicas
+      # can take hours to clear) is retried daily by pr-stack-sweep.yml, so a
+      # failure here never blocks the bucket cleanup below.
+      - name: Destroy the PR stack
+        if: hashFiles('scripts/pr-stack.sh') != ''
+        continue-on-error: true
+        timeout-minutes: 60
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}
+          PR_STACK_CERTIFICATE_ARN: ${{ vars.PR_STACK_CERTIFICATE_ARN }}
+          PR_STACK_HOSTED_ZONE: ${{ vars.PR_STACK_HOSTED_ZONE }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          pulumi login
+          ./scripts/pr-stack.sh destroy "$PR"
+
       - name: Remove unused resources
         run: make ci_pull_request_closed
         env:
