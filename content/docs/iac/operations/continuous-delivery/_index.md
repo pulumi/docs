@@ -1,11 +1,11 @@
 ---
 title_tag: "Continuous Delivery for the Cloud"
-meta_desc: Pulumi models cloud infrastructure as source code, so infrastructure changes flow through the same CI/CD pipeline as your application code.
-title: Continuous Delivery
-h1: Pulumi and Continuous Delivery
+meta_desc: Ship infrastructure changes with Pulumi Delivery, Pulumi's native release pipelines, or run Pulumi in the CI/CD system you already use.
+title: Continuous delivery
+h1: Pulumi and continuous delivery
 menu:
     iac:
-        name: Continuous Delivery
+        name: Continuous delivery
         parent: iac-operations
         weight: 20
         identifier: iac-operations-cicd
@@ -28,11 +28,27 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/add-support-for-cicd-systems/
 ---
 
-Pulumi models cloud resources as source code, so changes to your infrastructure can be reviewed, tested, and deployed through the same pipeline you already use for application code: pull requests, code review, and automated tests. Pulumi integrates with any continuous integration and continuous delivery (CI/CD) system.
+Pulumi models cloud resources as source code, so changes to your infrastructure can be reviewed, tested, and deployed through a pipeline: pull requests, code review, automated tests, and promotion from one environment to the next. You can build that pipeline with [Pulumi Delivery](/docs/delivery/), which runs release pipelines in Pulumi Cloud, or run Pulumi in any continuous integration and continuous delivery (CI/CD) system you already use.
 
-{{% notes %}}
-Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/).
+## Pulumi-native continuous delivery
+
+### Pulumi Delivery
+
+[Pulumi Delivery](/docs/delivery/) lets you write your release pipeline as a Pulumi program, in the same language as your infrastructure. Pulumi Cloud runs each release through the stages you define, in order: it updates stacks, runs jobs such as tests, and holds the release at [gates](/docs/delivery/concepts/stages-and-gates/) until someone approves it or an AI decision gate judges the change safe to continue. Because the pipeline is a Pulumi program, it's versioned and reviewed with your code, and you can build it with loops, functions, and conditionals instead of standalone pipeline files.
+
+![Pulumi Delivery inside Pulumi Cloud, promoting a release from your repository through dev, staging, and prod stages to your clouds](/images/docs/delivery-platform-diagram.svg)
+
+To deploy your first release through `dev`, `staging`, and `prod`, see [Get started with Pulumi Delivery](/docs/delivery/get-started/). To learn how pipelines, stages, gates, and sources fit together, see [How Pulumi Delivery works](/docs/delivery/concepts/).
+
+{{% notes type="info" %}}
+Pulumi Delivery is in public preview. Behavior, the SDK, and the REST API can change before general availability.
 {{% /notes %}}
+
+### Other Pulumi Cloud options
+
+- [Pulumi Deployments](/docs/deployments/) runs individual Pulumi operations on Pulumi-hosted infrastructure, triggered by git pushes, the CLI, or the API.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) are ephemeral environments created automatically for each pull request and destroyed when it closes.
+- The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) manages Pulumi stacks from within a Kubernetes cluster using a custom resource.
 
 ## The trunk-based development workflow
 
@@ -41,6 +57,8 @@ The most common way to run Pulumi in CI/CD follows a trunk-based development mod
 1. **Open a pull request.** The pipeline runs [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and posts the summary of proposed changes for review. Optionally, a [Review Stack](/docs/deployments/concepts/review-stacks/) provisions an ephemeral environment for the pull request so reviewers can exercise the change before it merges.
 1. **Merge to the main branch.** The pipeline runs [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) to deploy the change to an environment that receives continuous delivery, such as a shared development or staging environment.
 1. **Promote to production.** Pushing a git tag — or otherwise marking a release — triggers a deployment to production, keeping production updates deliberate and traceable.
+
+With [Pulumi Delivery](/docs/delivery/), you define these steps once as stages in a pipeline, and promotion to production can wait on an [approval gate](/docs/delivery/concepts/stages-and-gates/) instead of a git tag.
 
 ## Review infrastructure changes before merging
 
@@ -58,17 +76,13 @@ You can remove even that static secret with [OpenID Connect (OIDC)](/docs/admini
 
 [Pulumi ESC](/docs/esc/) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a CI/CD pipeline or a developer's machine, a single environment definition works in both places.
 
-## Pulumi-native continuous delivery
-
-Pulumi also provides its own continuous delivery mechanisms:
-
-- [Pulumi Deployments](/docs/deployments/) — runs Pulumi operations on Pulumi-hosted infrastructure, triggered by git pushes, the CLI, or the API.
-- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request and destroyed when it closes.
-- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — manages Pulumi stacks from within a Kubernetes cluster using a custom resource.
-
 ## Third-party CI/CD systems
 
-Pulumi has guides for running in the following CI/CD systems:
+{{% notes %}}
+Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/).
+{{% /notes %}}
+
+If you already run a CI/CD system, Pulumi has guides for running in the following systems:
 
 - [ArgoCD](/docs/iac/operations/continuous-delivery/argocd/)
 - [AWS Code Services](/docs/iac/operations/continuous-delivery/aws-code-services/)
