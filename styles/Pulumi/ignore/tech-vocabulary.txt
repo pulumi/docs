@@ -124,6 +124,7 @@ bundler
 Buoyant's
 burstiness
 bursty
+canarying
 capturable
 capturer
 Capulets
@@ -377,6 +378,7 @@ jamstack
 Jamstacks
 Javascript
 Jetstack
+Jev
 JFrog
 Jira
 Joep
