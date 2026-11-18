@@ -59,7 +59,7 @@ To change a team member's role:
 
 ## Role assignments {#role-assignments}
 
-When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team entity access grants](#team-entity-access-grants) (access on individual stacks, environments, and cloud accounts) and [Team access types](#team-access-types) (Team admin vs Team member).
+When your organization has custom roles enabled, teams can be assigned **roles** (built-in or custom). This is separate from [Team entity access grants](#team-entity-access-grants) (access on individual stacks, environments, and cloud accounts) and [Team access types](#team-access-types) (Team admin vs Team member).
 
 - Each team can have **multiple role assignments**. Members of the team receive the permissions from all of those roles in addition to their own [organization role](/docs/administration/concepts/rbac/roles#users).
 - To add or remove role assignments for a team, a user must hold the `team:update` scope, and either the `role:update` scope or the role being assigned. An organization admin can assign any role; a team admin without `role:update` can give the team only roles they hold themselves.

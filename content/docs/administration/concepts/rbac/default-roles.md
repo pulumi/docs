@@ -1,11 +1,11 @@
 ---
-title_tag: "Pulumi Cloud: Default roles"
+title_tag: "Pulumi Cloud: Default role"
 meta_desc: Learn how the default role decides what members of a Pulumi Cloud organization can do, and how to choose one.
-title: "Default roles"
-h1: "Default roles"
+title: "Default role"
+h1: "Default role"
 menu:
   administration:
-    name: Default roles
+    name: Default role
     parent: administration-concepts-rbac
     weight: 5
     identifier: administration-concepts-rbac-default-roles
@@ -15,7 +15,7 @@ Every Pulumi Cloud organization has a default role. Members follow it unless an 
 
 On the **Members** tab, **Default role (Builder)** means the member uses the organization's default role, currently Builder. Changing the organization's default role also changes this member's role. **Builder** alone means the member was explicitly assigned Builder and keeps that role even if the organization's default changes. Pending invitations use the same labels.
 
-## Roles for the default role {#built-in-roles}
+## Built-in roles for the default role {#built-in-roles}
 
 Three built-in roles are designed to be the default role. Each one includes everything the role before it allows.
 

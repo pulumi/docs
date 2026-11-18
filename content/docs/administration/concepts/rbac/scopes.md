@@ -35,7 +35,7 @@ You can use scopes to build [custom permission sets](/docs/administration/concep
 - `stack:delete`
 - `stack_deployment:create`
 
-## Default role assignments
+## Built-in role assignments
 
 Many scopes are automatically granted through [built-in roles](/docs/administration/concepts/rbac/roles#pulumi-defined-roles) in Pulumi Cloud. For example:
 

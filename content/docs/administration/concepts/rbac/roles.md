@@ -120,9 +120,9 @@ Roles can be assigned to organization access tokens, users, teams, and service p
 
 ### Organization access tokens
 
-[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) can be assigned exactly **one** role (default or custom) that defines the token's permissions across the organization.
+[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) can be assigned exactly **one** role (built-in or custom) that defines the token's permissions across the organization.
 
-Follow the process to [create an organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token), then choose a default or custom role to assign to the token. The token's access is limited to the permissions of that role within your organization.
+Follow the process to [create an organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token), then choose a built-in or custom role to assign to the token. The token's access is limited to the permissions of that role within your organization.
 
 ### Users
 
@@ -132,7 +132,7 @@ Anyone who can read a role can see which members and teams hold it.
 
 ### Teams
 
-When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (default or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role. A team can't be assigned the built-in `Admin` role.
+When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (built-in or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role. A team can't be assigned the built-in `Admin` role.
 
 ### Service principals
 

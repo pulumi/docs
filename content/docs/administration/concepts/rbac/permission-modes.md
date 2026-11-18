@@ -94,5 +94,5 @@ Switching the permission mode is recorded in the [audit logs](/docs/administrati
 
 - [Service principals](/docs/administration/concepts/rbac/service-principals/): Non-human identities with their own roles and entity access.
 - [Run as](/docs/deployments/concepts/settings/pulumi-cloud-role/): Choose the service principal or team a stack's deployments run as.
-- [Default roles](/docs/administration/concepts/rbac/default-roles/): The role members follow unless an admin assigns them another one.
+- [Default role](/docs/administration/concepts/rbac/default-roles/): The role members follow unless an admin assigns them another one.
 - [Access tokens](/docs/administration/concepts/access-tokens/): How organization and team tokens get their permissions.
