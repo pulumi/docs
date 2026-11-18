@@ -21,10 +21,10 @@ On the stack's **Settings** → **Deploy** page, the **Permissions** section has
 | **Team** | Every run uses the team's service principal, so the team's permissions apply. | {{< pulumi-cloud-editions "teams" >}} |
 | **Deployment role** | Automatic runs use a background runner limited to this role. Manual runs use the permissions of whoever starts them. | Essentials, Pro, Enterprise |
 
-In the Free edition, deployments always run as the organization's single member, and there's nothing to choose.
+In the Free edition, deployments always run as the organization's single member.
 
 {{% notes type="warning" %}}
-Deployment roles are being removed. Prefer a service principal or a team, which give every run the same permissions and are the only choices in organizations on the restricted [permission mode](/docs/administration/concepts/rbac/permission-modes/).
+Deployment roles are being deprecated. Prefer a service principal or a team, which give every run the same permissions and are the only choices in organizations on the restricted [permission mode](/docs/administration/concepts/rbac/permission-modes/).
 {{% /notes %}}
 
 ## Running as a service principal or a team

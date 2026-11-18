@@ -47,7 +47,7 @@ The access settings list everyone who was granted access on the entity:
 
 * The **Owner**, the member or team that created the entity or was made its owner, has full access. Select **Reassign** to hand ownership to someone else.
 * Members, teams, and service principals with a grant appear with their permission set.
-* On stacks, people who were added before per-entity grants existed appear as a **Collaborator** with a fixed Stack Read, Stack Write, or Stack Admin. To give a collaborator a different permission set, add them again with **Add Principal**. Removing a collaborator also removes any permission set they were granted on the stack.
+* On some stacks, people are listed as a **Collaborator**. These are members who were given access to the stack before this page existed. They keep the access they had, shown as Stack Read, Stack Write, or Stack Admin, and you can remove them like anyone else. To change what a collaborator can do, add them again with **Add Principal** and choose a permission set.
 
 Organization admins have full access through their role and aren't listed unless they also hold a grant. A member's page lists the stacks, environments, and cloud accounts they were granted under **Access**.
 
@@ -55,14 +55,14 @@ Organization admins have full access through their role and aren't listed unless
 
 Anyone who can read the entity can see who has access to it. To change it, you need the entity's `stack_access:update`, `environment_access:update`, or `insights_account_access:update` scope, which the built-in Admin permission sets include.
 
-You can only grant what you hold: you must have every scope in the permission set on that same entity, through your role, your teams, or a grant of your own. Holding the scope on another stack doesn't count. The console offers the permission sets your role is likely to hold: Readers and Builders can grant Read, Maintainers and members on `Member (legacy)` can grant every set except Admin, and organization admins, the entity's owner, and members with a custom role can grant any permission set, including [custom ones](/docs/administration/concepts/rbac/permission-sets/#custom-permission-sets).
+You can only grant what you hold: you must have every scope in the permission set on that same entity, through your role, your teams, or a grant of your own. The console offers the permission sets your role is likely to hold: Readers and Builders can grant Read, Maintainers and members on `Member (legacy)` can grant every set except Admin, and organization admins, the entity's owner, and members with a custom role can grant any permission set, including [custom ones](/docs/administration/concepts/rbac/permission-sets/#custom-permission-sets).
 
 Without permission to change access, the controls are disabled and say why. Access can't be changed while the organization is locked.
 
 ### How grants behave over time
 
 * A grant stays in place when the member's role, or the organization's [default role](/docs/administration/concepts/rbac/default-roles/), changes. Removing a member from the organization removes their grants.
-* A grant on a cloud account covers its regions and discovered child accounts, which have no access settings of their own.
+* A grant on a [cloud account](/docs/discovery-governance/concepts/discovery/cloud-accounts/) covers its regions and discovered child accounts, which have no access settings of their own.
 * [Transferring a stack](/docs/administration/concepts/organizations/#transferring-stacks) to another organization removes every grant on it.
 
 ### Teams
@@ -86,6 +86,14 @@ curl -s -X POST \
   }'
 ```
 
+Or equivalently using the `pulumi cloud api` command:
+
+```bash
+pulumi cloud api POST \
+  /orgs/{orgName}/assignments/list \
+  -- --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}"}'
+```
+
 Grant, change, or revoke access:
 
 ```bash
@@ -101,6 +109,14 @@ curl -s -X POST \
   }'
 ```
 
+Or equivalently using the `pulumi cloud api` command:
+
+```bash
+pulumi cloud api POST \
+  /orgs/{orgName}/assignments/update \
+  -- --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}","userId":"{userLogin}","permissionSetId":"{permissionSetId}"}'
+```
+
 * `context.__type` is `PermissionExpressionStack`, `PermissionExpressionEnvironment`, or `PermissionExpressionInsightsAccount`.
 * `userId` is a member's or service principal's login.
 * Leave out `permissionSetId` to revoke the grant.
@@ -110,6 +126,111 @@ A request that grants more than you hold fails with `403` and names the scopes y
 ### Using the Pulumi Service provider
 
 The [`OrganizationMemberEntityAccess`](/registry/packages/pulumiservice/api-docs/organizationmemberentityaccess/) resource, available from version 1.7.0, manages one member's permission set on one entity:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as pulumiservice from "@pulumi/pulumiservice";
+
+const aliceOnDev = new pulumiservice.OrganizationMemberEntityAccess("alice-on-dev", {
+    organizationName: "my-org",
+    username: "alice",
+    entityType: "stack",
+    entityName: "my-project/dev",
+    permission: "stack-write",
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+import pulumi_pulumiservice as pulumiservice
+
+alice_on_dev = pulumiservice.OrganizationMemberEntityAccess(
+    "alice-on-dev",
+    organization_name="my-org",
+    username="alice",
+    entity_type="stack",
+    entity_name="my-project/dev",
+    permission="stack-write",
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pulumiservice/sdk/go/pulumiservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pulumiservice.NewOrganizationMemberEntityAccess(ctx, "alice-on-dev", &pulumiservice.OrganizationMemberEntityAccessArgs{
+			OrganizationName: pulumi.String("my-org"),
+			Username:         pulumi.String("alice"),
+			EntityType:       pulumi.String("stack"),
+			EntityName:       pulumi.String("my-project/dev"),
+			Permission:       pulumi.String("stack-write"),
+		})
+		return err
+	})
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Pulumi.PulumiService;
+
+return await Deployment.RunAsync(() =>
+{
+    var aliceOnDev = new OrganizationMemberEntityAccess("alice-on-dev", new OrganizationMemberEntityAccessArgs
+    {
+        OrganizationName = "my-org",
+        Username = "alice",
+        EntityType = "stack",
+        EntityName = "my-project/dev",
+        Permission = "stack-write",
+    });
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.pulumiservice.OrganizationMemberEntityAccess;
+import com.pulumi.pulumiservice.OrganizationMemberEntityAccessArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var aliceOnDev = new OrganizationMemberEntityAccess("alice-on-dev", OrganizationMemberEntityAccessArgs.builder()
+                .organizationName("my-org")
+                .username("alice")
+                .entityType("stack")
+                .entityName("my-project/dev")
+                .permission("stack-write")
+                .build());
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
 
 ```yaml
 resources:
@@ -122,6 +243,10 @@ resources:
       entityName: my-project/dev
       permission: stack-write
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 `entityType` is `stack`, `environment`, or `insightsAccount`. Set `permission` to a built-in permission set such as `stack-read`, `environment-open`, or `insights-account-admin`, or set `permissionSetId` to a custom one.
 
