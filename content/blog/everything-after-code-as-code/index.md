@@ -59,11 +59,19 @@ At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too.
 
 ![Bar chart of the share of Pulumi operations done by agents in 2026: 0% in January, 15% in April, 30% in July, 35% in September, and 40% in October.](agents-share-2026.png)
 
+{{< pullquote variant="statement" >}}
+[TypeSafe AI](https://typesafe.ai) bet on Pulumi to scale Jev, their decision model, to over a trillion tokens per day using the engineering practices they already had.
+{{< /pullquote >}}
+
 ## What happens after the merge
 
 Frontier labs have made huge advances in agentic coding, code review, and everything up to the merge. Claude Code, Codex, and friends now write and test a growing share of the code we ship, and the labs felt it first. [Anthropic's monorepo](https://www.anthropic.com/research/redesigning-source-control) went from about 2,500 merges a day in May to over 30,000 by September. At OpenAI, where one engineer now has several changes ready for CI at once, [Git reliability at times fell below 90%](https://openai.com/index/scaling-git-at-openai/) under the load. Both rebuilt source control to keep up. And then it all stops at the pull request. Everything after the merge (provisioning, configuration, secrets, policy, and delivery) still runs on scripts, tickets, and waiting. Today's SDLC was designed for human hands working at human speed, and it has become the bottleneck. An agentic SDLC needs agentic delivery, too.
 
 We set out to answer a few questions. How does code get to production, and which gates does it pass through? Which of those gates need a human, and which can an agent handle? When something breaks in production, who responds, and how does the fix get back into the code? Pulumi Delivery and Pulumi Agents are our answers.
+
+{{< pullquote variant="statement" >}}
+Today's SDLC was designed for human hands working at human speed, and it has become the bottleneck. An agentic SDLC needs agentic delivery, too.
+{{< /pullquote >}}
 
 ## Built on infrastructure as code
 
@@ -622,6 +630,10 @@ Every agent gets its own identity, a least-privilege role, and short-lived crede
 Here, a Datadog memory alert on the checkout service dispatches an incident investigator, which traces the cause and opens a pull request to raise the task's memory, without deploying anything:
 
 ![Pulumi Agents incident investigator responding to a Datadog high-memory alert on the checkout service: it finds the service at 94% of its 512 MiB allocation and opens pull request #248 to raise the ECS task memory to 1,024 MiB.](agents-incident-investigator.png)
+
+{{< pullquote variant="statement" >}}
+Every agent gets its own identity and a least-privilege role. Agents never change production directly: their changes arrive as pull requests, checked against the same policies as your engineers'.
+{{< /pullquote >}}
 
 ## Closing the loop
 
