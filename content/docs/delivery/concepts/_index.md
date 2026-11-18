@@ -179,8 +179,8 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Pulumi.Delivery.Delivery;
-using Pulumi.Delivery.Delivery.Inputs;
+using Pulumi.Delivery;
+using Pulumi.Delivery.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
@@ -228,8 +228,8 @@ return await Deployment.RunAsync(() =>
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.delivery.delivery.*;
-import com.pulumi.delivery.delivery.inputs.*;
+import com.pulumi.delivery.*;
+import com.pulumi.delivery.inputs.*;
 import java.util.Map;
 
 public class App {
