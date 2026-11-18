@@ -29,7 +29,7 @@ Pulumi stores state in a _backend_ of your choosing. A backend is an API and sto
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
 {{% notes type="info" %}}
-Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/iac/concepts/secrets/).
+Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and secrets](/docs/iac/concepts/secrets/).
 
 This page covers the technical details of state management and backend configuration. To understand the benefits and features of Pulumi Cloud versus DIY backends, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/).
 {{% /notes %}}
@@ -87,7 +87,7 @@ After logging in, your credentials are recorded in the `~/.pulumi/credentials.js
 
 If you ever want to check what user is logged in, use the [`whoami` command](/docs/iac/cli/commands/pulumi_whoami/). To additionally see what backend is currently being used, pass the `--verbose` (or `-v`) flag:
 
-```bash
+```sh
 $ pulumi whoami -v
 User: <your-username>
 Backend URL: https://app.pulumi.com/<your-username>
@@ -124,7 +124,7 @@ $ pulumi login https://pulumi.acmecorp.com
 
 Everything works the same as with the standard Pulumi Cloud, except that Pulumi targets your private instance instead of the shared one hosted at `app.pulumi.com`.
 
-To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/).
+To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-hosted Pulumi Cloud](/docs/administration/self-hosting/).
 
 ## Using a DIY backend
 
@@ -146,7 +146,7 @@ pulumi login
 pulumi stack migrate file://~ my-app-production
 ```
 
-The command migrates the latest checkpoint and configuration. It re-encrypts secrets in the configuration and state with the target stack's secrets provider. The source backend state remains unchanged.
+The command migrates the latest [checkpoint](#checkpoints) (the most recent snapshot of the stack's state) and configuration. It re-encrypts secrets in the configuration and state with the target stack's secrets provider. The source backend state remains unchanged.
 
 Use `--target <org>/<project>/<stack>` to choose a different target stack name or location.
 
@@ -156,7 +156,7 @@ Use `--target <org>/<project>/<stack>` to choose a different target stack name o
 
 Pulumi's state records what your infrastructure looked like after the last `pulumi up` or `pulumi refresh`. When you run `pulumi preview` or `pulumi up`, Pulumi compares this recorded state against the configuration declared in your program to determine which changes need to be made. It does not query each resource directly from your cloud provider on every run.
 
-This means that if someone modifies a resource _outside_ of Pulumi (by editing it in the cloud provider's console, applying a change with a provider CLI, or by some other out-of-band means), that change is not automatically reflected in Pulumi's state. The next `pulumi up` or `pulumi preview` will not account for those changes, and may produce unexpected results including overwriting them.
+This means that if someone modifies a resource _outside_ of Pulumi (by editing it in the cloud provider's console, applying a change with a provider CLI, or by some other out-of-band means), that change is not automatically reflected in Pulumi's state. The next `pulumi up` or `pulumi preview` does not account for those changes, and can produce unexpected results, including overwriting them.
 
 ### Why Pulumi does not refresh automatically
 
@@ -214,7 +214,7 @@ Pulumi is designed to abstract state management away from you so that you can wo
 
 Pulumi supports importing resources that were already created outside of Pulumi, such as resources created using the cloud console, a cloud CLI or SDK, or even another infrastructure as code tool. Resource metadata is imported into your Pulumi state and source code is generated in your chosen language to match that state.
 
-To learn more about importing existing resources, see [Importing Infrastructure](/docs/iac/guides/migration/import/).
+To learn more about importing existing resources, see [Importing infrastructure](/docs/iac/guides/migration/import/).
 
 ### Checkpoints
 
@@ -232,11 +232,11 @@ A Pulumi "secret" can be used to store sensitive configuration values like datab
 
 A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically](/docs/iac/concepts/secrets/#secrets). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with Pulumi Cloud, a server-side HSM key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
 
-To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption](/docs/iac/concepts/secrets/#configuring-secrets-encryption).
+To learn more about available encryption providers and how to customize your stack's, see [Configuring secrets encryption](/docs/iac/concepts/secrets/#configuring-secrets-encryption).
 
 ### Exporting and importing state
 
-The `pulumi stack export` and `pulumi stack import` commands can be used to export the latest or a specific version of a stack's state. This can be used to inspect or even manually edit the contents for advanced use cases. For more information on usage, [refer to the CLI documentation](/docs/iac/cli/commands/pulumi_stack/).
+The `pulumi stack export` and `pulumi stack import` commands can be used to export the latest or a specific version of a stack's state. This can be used to inspect or even manually edit the contents for advanced use cases. For usage details, see the [`pulumi stack` command reference](/docs/iac/cli/commands/pulumi_stack/).
 
 ### Editing state manually
 
