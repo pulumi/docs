@@ -400,8 +400,8 @@ Each push that matches the trigger starts a [run](#runs), which takes the pushed
 
 The pipeline lives in a repository as a Pulumi project, and it declares exactly one `Pipeline` resource. You work with it in two ways:
 
-- **Register it** with `pulumi delivery register`. Pulumi Cloud stores the pipeline and listens for changes. One registered, its triggers start runs in Pulumi Cloud.
-- **Run it locally** with `pulumi up`. This is how you can iterate on your pipeline program from your local branch without needing to push your changes.
+- **Register it** with `pulumi delivery register`. Pulumi Cloud stores the pipeline and listens for changes. Once registered, its triggers start runs in Pulumi Cloud.
+- **Test it locally** with `pulumi up`. This is how you can iterate on your pipeline program from your local branch without needing to push your changes.
 
 ### Register the pipeline
 
@@ -409,11 +409,37 @@ To register the pipeline, run `pulumi delivery register` in the pipeline's proje
 
 Registering doesn't start a run. The command writes the pipeline's location in your repository to the stack's `delivery:source` config. Commit the updated config file so that Pulumi Cloud can find the program. Once registered, a push to the repository's default branch updates the pipeline.
 
-### Run the pipeline locally
-
-Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
-
 Registering also decides what the pipeline runs as: by default a service principal that Delivery creates for it, or a service principal or team that the program names. See [Pipeline identity](/docs/delivery/concepts/identity/).
+
+Before it stores the pipeline, registration checks that Pulumi Cloud can read the pipeline's repository through your organization's [version control integration](/docs/integrations/version-control/), and that the branch exists. If either check fails, the registration fails with one of these errors, and the pipeline isn't registered:
+
+| Error | What to do |
+| --- | --- |
+| `Pulumi Cloud cannot read the repository <repository>. Check the name of the repository, and give the <provider> integration of the organization access to it.` | Check the repository name in the stack's `delivery:source` config, and give the integration access to the repository. |
+| `The branch "<branch>" does not exist in <repository>.` | Push the branch, or change the branch in `delivery:source`. |
+| `Pulumi Cloud cannot read branch "<branch>" of <repository>. Check that the branch exists and that the <provider> integration of the organization has access to the repository.` | Pulumi Cloud couldn't tell which of the two problems above it is. Check both. |
+
+### Testing locally
+
+Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console, where the run is marked **Local**. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
+
+The stack updates and jobs of a local run run as whoever runs `pulumi up`, with that identity's permissions, and not as the pipeline's [identity](/docs/delivery/concepts/identity/).
+
+{{% notes type="warning" %}}
+Only these credentials can start a local run:
+
+- A [personal access token](/docs/administration/concepts/access-tokens/#personal-access-tokens), including the one `pulumi login` stores
+- An access token of a [service principal](/docs/administration/concepts/rbac/service-principals/) that you created
+- A [team access token](/docs/administration/concepts/access-tokens/#team-access-tokens)
+
+Pulumi Cloud refuses all other credentials, including organization access tokens, the service principal that Delivery creates for a pipeline, [OIDC issued tokens](/docs/administration/concepts/access-tokens/#oidc-issued-tokens), Pulumi Neo's credentials, and the `PULUMI_ACCESS_TOKEN` of a Delivery stack update or job or a Pulumi Deployments run. To test a pipeline from CI, use a service principal's token or a team token.
+{{% /notes %}}
+
+A local run differs from a run in Pulumi Cloud:
+
+- It never changes the registered pipeline. To change the pipeline that runs in Pulumi Cloud, register it or push to its branch.
+- Its release can't be redeployed, rolled back, or force-promoted, and downstream pipelines never read it.
+- It can't be retried, or canceled from the console. To stop it, stop `pulumi up`: the run ends as canceled, the stack updates and jobs that already started run to the end, and those that haven't started are canceled.
 
 ## Stages
 

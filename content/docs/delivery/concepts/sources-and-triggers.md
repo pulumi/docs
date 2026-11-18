@@ -235,7 +235,7 @@ A source without a `trigger` is still part of the release, but changes to it nev
 
 ## Other ways to start a run
 
-You can also start a run from **Start a run** in the Pulumi Cloud console, or through the REST API. You can locally run on a pipeline program by running `pulumi up` on the pipeline stack.
+You can also start a run from **Start a run** in the Pulumi Cloud console, or through the REST API. To [test a pipeline locally](/docs/delivery/concepts/#testing-locally), run `pulumi up` on the pipeline stack.
 
 To start a run through the REST API:
 
