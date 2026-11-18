@@ -50,7 +50,7 @@ Every decision about how to split (or not split) your infrastructure is a balanc
   smaller projects, each with its own reviewers and merge rules.
 
 * **Maintenance overhead.** Larger stacks take longer to preview and deploy. A stack with thousands of resources can be
-  slow even when only a handful of resources actually changed, because the engine still has to refresh and diff
+  slow even when only a handful of resources actually changed, because the engine still has to diff
   everything. Splitting reduces that wall-clock time, but each new stack adds its own coordination cost: more stack
   references to wire up, more pipelines to maintain, and more places to look when something breaks.
 
@@ -166,7 +166,7 @@ This layering tends to fall out of the tradeoffs naturally:
   product teams own their workloads — so you can grant access per layer.
 * **Maintenance overhead.** Each layer deploys on its own cadence. Foundational networking rarely changes and demands
   scrutiny when it does; workloads change daily. Keeping them separate means a routine workload deploy doesn't have to
-  refresh and diff the entire network.
+  diff the entire network.
 
 The layers correspond to lifecycle and ownership, not to individual cloud services. Resist the urge to give every cloud
 primitive its own stack — that is the micro-stacks pattern below, and it's rarely warranted.

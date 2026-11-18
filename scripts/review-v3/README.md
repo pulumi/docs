@@ -274,7 +274,7 @@ hasn't been applied on staging, so the first production deploy is its first
 real run.
 
 `--update-strip` stays enforcing-only: the ⛔ strip edits the author
-card, which is someone else's comment. External contributors (fork head repo — never the
+card and the reviewer brief, which are someone else's comments. External contributors (fork head repo — never the
 author's permission level, which is `none` for GitHub Apps like workprentice)
 skip `review`/`findings` per config — the approving reviewer's review is the review. The
 same holds for the PRs the review lane skips by policy, as long as they never
@@ -304,6 +304,14 @@ With blocking findings it reads "⛔ N item(s) block merge" and names the reply
 that answers them; with none, the card already says nothing blocks merge, so
 the strip reads "⏳ Merge is waiting on" the red or pending gate (a deploy or an ack is
 nothing the author can fix or answer), and points at the gate statuses.
+A gate nobody on the PR can clear carries `Gate.stuck` (today: the staging
+gate while the staging workflow is disabled). The author strip then says
+"🚧 Nothing on this card needs you, but merge is still blocked", with the
+reason and who can fix it, and the Sentinel writes a strip into the reviewer
+brief too: "🚧 Your approval won't unblock this merge on its own". The brief
+gets a strip only for stuck gates; everything else holding a merge is the
+author's or already on its way. On #22959 both cards read as good to go
+while the disabled workflow held the merge.
 
 **SLA sweep** (`sla-sweep.py`, `review-sla-sweep.yml`, cron every 2 h): its own
 switch is `REVIEW_V3_SLA` — the job runs only while it is `'1'` (a manual

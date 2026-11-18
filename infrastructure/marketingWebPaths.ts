@@ -39,9 +39,15 @@ export const marketingWebPaths = [
     // Exact paths: /gads* would also take the /gads/ redirect and the retired gads pages' redirects off S3.
     "/gads/infrastructure-as-code",
     "/gads/infrastructure-as-code/",
+    // One wildcard for every /try/ ad page: CloudFront caps behaviors per distribution, so a pair per page hit TooManyCacheBehaviors. Nothing here serves /try/.
+    "/try/*",
     // The old /testimonials/ page; S3 301s it here (scripts/redirects/love-redirects.txt).
     "/love",
     "/love/",
     "/love.md",
+    // Covers /releases/, /releases/changelog/**, both release pages, the
+    // RSS/JSON feeds, and the changelog entry images/videos. marketing-web
+    // 301s the old /releases/changelog/<slug>/ alias URLs at its own CDN.
+    "/releases*",
     "/sitemap-www-*",
 ];

@@ -133,7 +133,7 @@ Teams:
 
 **Definition:** Dated records of what shipped — one changelog entry per change, plus launch pages.
 
-- **Lives at:** `content/releases/`, `content/releases/changelog/`
+- **Lives at:** pulumi/marketing-web → `/releases/`
 - **Owns:** Marketing
 - **Contributes:** Eng/Product, Docs, Community Eng
 - **Consumes:** Existing and prospective users tracking product evolution
@@ -169,7 +169,7 @@ Teams:
 | Customers | The customer registry and their case studies | pulumi/marketing-web → `/customers/` | Marketing | Sales/CS, Community Eng | Buyers |
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + Community Eng | — | Community, prospects |
-| Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
+| Releases & changelog | Dated record of what shipped | pulumi/marketing-web → `/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
 | Templates | Runnable starting points | pulumi/marketing-web → `/dev/templates/` | Marketing | Eng/Product, Community Eng | Practitioners |
 | Example programs | Tested, embeddable code | `static/programs/` | Docs | Eng/Product, Community Eng | Practitioners |
 

@@ -2,6 +2,7 @@
 title: "Fully Automated AI Inference on AWS, Azure, and Google Cloud with Pulumi"
 allow_long_title: true
 date: 2026-06-30
+updated: 2026-11-17
 draft: false
 meta_desc: "A zero-touch Ollama GPU inference server on AWS, Azure, or Google Cloud as one Pulumi program, with OIDC credentials from Pulumi ESC and no static keys."
 feature_image: feature.png
@@ -131,7 +132,7 @@ values:
     ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
     ARM_OIDC_TOKEN: ${azure.login.oidc.token}
     # Google Cloud: read by the Pulumi Google Cloud provider
-    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
+    GOOGLE_CLOUD_PROJECT: my-project # project ID, not the numeric project number that gcp-login outputs
     GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
