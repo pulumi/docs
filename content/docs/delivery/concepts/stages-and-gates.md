@@ -775,6 +775,8 @@ When you resume the stage, the newest waiting release enters it, as it would hav
 
 The stage's page shows who paused it and when.
 
+<!-- TODO: Pausing and resuming aren't in the audit log yet (DLV-392). Once they are, say so here and in the rollback item. -->
+
 ### Rolling back, redeploying, and force-promoting
 
 Roll back, redeploy, and force-promote each start a new run that deploys one release to this one stage. The new run reuses the program commit, source commits, and recorded values of the run that first deployed that release, so it repeats what that release did rather than picking up anything newer. It skips the stage's gate and goes ahead of any normal runs waiting for the stage.
