@@ -1,5 +1,5 @@
 {
-  "applied": false,
+  "applied": true,
   "displayName": "",
   "name": "pci-dss-aws",
   "policies": [
