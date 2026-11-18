@@ -97,3 +97,12 @@ announcements:
     cta:
       label: Read the blog
       href: "/blog/pulumi-neo-security/"
+  - id: blog-everything-after-code-2026-11-Jp8wZ3
+    active: true
+    display: both
+    icon: rocket-launch
+    text: "**Introducing Pulumi Delivery and Pulumi Agents**: Agentic code to production, and back again."
+    cta:
+      label: Read the blog
+      href: "/blog/everything-after-code-as-code/"
+    dismissible: true
