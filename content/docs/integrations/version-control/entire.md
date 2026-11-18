@@ -10,7 +10,7 @@ menu:
         weight: 5
 ---
 
-Pulumi Cloud integrates with [Entire](https://entire.com) through the Pulumi plugin for Entire. Once you install the plugin and link it to your Pulumi organization, Pulumi runs previews on trails, deploys infrastructure on push, creates ephemeral review stacks, and reports the results to Entire as checks and deployments. In Entire, a trail is the equivalent of a pull request.
+Pulumi Cloud integrates with [Entire](https://entire.com) through the Pulumi plugin for Entire. Once you install the plugin and link it to your Pulumi organization, Pulumi runs previews on trails, deploys infrastructure on push, creates ephemeral review stacks, and reports the results to Entire as checks and deployments. Neo can also work in your Entire repositories and open trails for its changes. In Entire, a trail is the equivalent of a pull request.
 
 ## Installation and configuration
 
@@ -42,7 +42,7 @@ You can link one Entire installation to more than one Pulumi organization. Each 
 
 The integration card under **Settings** > **Version control** shows the Entire organization or project the plugin is installed on, and whether the installation is connected or suspended. While Entire suspends an installation, Pulumi doesn't run deployments for it.
 
-To remove the integration, select **Delete Integration** on the integration card. This disconnects your Pulumi organization from the installation and removes the deployment settings of every stack that uses it. The plugin stays installed in Entire, and Pulumi ignores its events for your organization. To uninstall the plugin, remove it in Entire, which disconnects every Pulumi organization that uses the installation.
+To remove the integration, open it under **Settings** > **Version control** and select **Remove integration**. This disconnects your Pulumi organization from the installation and removes the deployment settings of every stack that uses it. The plugin stays installed in Entire, and Pulumi ignores its events for your organization. To uninstall the plugin, remove it in Entire, which disconnects every Pulumi organization that uses the installation.
 
 ## Capabilities
 
@@ -89,17 +89,22 @@ Pulumi injects the following environment variables during Entire-triggered deplo
 
 ### Credentials
 
-When a deployment starts, Pulumi requests a short-lived token from Entire to check out the repository. The token is read-only and limited to the repository being deployed.
+When a deployment starts, Pulumi requests a short-lived token from Entire to check out the repository. The token is read-only and limited to the repository being deployed. [Neo](#neo) uses a token with the installation's permissions instead, so it can push branches, open trails, and create repositories.
 
 ### Pulumi Delivery
 
 [Pulumi Delivery](/docs/delivery/) pipelines can use Entire repositories as sources with `EntireSource`, start runs on pushes to them, and run pipeline programs stored in Entire. See [Sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 
+### Neo
+
+[Neo](/docs/ai/) works with the Entire repositories the plugin can access. It clones them, pushes branches, opens trails for its changes, and creates new repositories. Select an Entire repository when you start a task, or name one in your request.
+
+Neo creates repositories in the Entire project the plugin is installed on, so creating repositories requires an installation on a project.
+
 ## Limitations
 
 - **Trail comments**: Pulumi reports results as checks and deployments, not as trail comments.
 - **New project wizard and templates**: The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) can't create or target Entire repositories, and Entire repositories can't be used as [template sources](/docs/idp/concepts/organization-templates/).
-- **Neo**: [Neo](/docs/ai/) can't access Entire repositories.
 - **Renamed repositories**: Deployment settings store the repository's name, so renaming a repository in Entire stops its deployments until you update the stack's deployment settings.
 
 ## Troubleshooting
@@ -119,7 +124,11 @@ A failing Pulumi check blocks the trail if your Entire project requires it. Open
 
 ### Deployments don't appear in Entire
 
-Pulumi records deployments only after the installation grants the deployments permission. If checks appear but deployments don't, review the plugin's permissions in Entire.
+Pulumi records only updates, destroys, and review stacks as deployments in Entire. Previews appear as checks only. If an update or destroy shows in Pulumi Cloud but not in Entire, check that the integration is connected under **Settings** > **Version control**.
+
+### Neo can't push to an Entire repository
+
+If Neo reports that a push failed with `Token does not permit this request`, the installation hasn't granted Pulumi write access. Accept the Pulumi plugin's updated permissions in Entire, then ask Neo to retry.
 
 ## Learn more
 
