@@ -10,7 +10,7 @@ meta_desc: "Introducing Pulumi Agents: AI agents you can create and customize to
 feature_image: feature.png
 
 authors:
-    - pulumi-ai
+    - pulumi-ai-team
 
 tags:
     - product-launches

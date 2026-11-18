@@ -1,8 +1,0 @@
-id = "pulumi-ai"
-name = "Pulumi AI"
-title = "AI Team"
-company = "Pulumi"
-weight = 1
-
-status = "active"
-entity_type = "organization"
