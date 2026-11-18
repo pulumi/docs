@@ -52,6 +52,8 @@ The prefix has one of these formats:
 - `repo:<owner>@<owner-id>/<repo>@<repo-id>`: the [immutable subject claim](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims). Repositories created, renamed, or transferred after July 15, 2026 use this format by default.
 - `repo:<organization>/<repo>`: the previous format.
 
+The prefix doesn't include the trailing colon. When you use it in a policy, add `:` before the wildcard. For example, `repo:octo-org@123456/octo-repo@789012:*`.
+
 ## Organization tokens
 
 {{< pulumi-cloud "org-team-access-tokens" />}}
