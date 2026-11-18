@@ -32,9 +32,7 @@ Pulumi models cloud resources as source code, so changes to your infrastructure 
 
 ## Pulumi-native continuous delivery
 
-### Pulumi Delivery
-
-[Pulumi Delivery](/docs/delivery/) lets you write your release pipeline as a Pulumi program, in the same language as your infrastructure. Pulumi Cloud runs each release through the stages you define, in order: it updates stacks, runs jobs such as tests, and holds the release at [gates](/docs/delivery/concepts/stages-and-gates/) until someone approves it or an AI decision gate judges the change safe to continue. Because the pipeline is a Pulumi program, it's versioned and reviewed with your code, and you can build it with loops, functions, and conditionals instead of standalone pipeline files.
+[Pulumi Delivery](/docs/delivery/) lets you write your release pipeline as a Pulumi program, in the same language as your infrastructure. Pulumi Cloud runs each release through the stages you define, in order. The pipeline run updates stacks, runs jobs such as tests, and holds the release at [gates](/docs/delivery/concepts/stages-and-gates/) until someone approves it or an AI decision gate judges the change safe to continue. Because the pipeline is a Pulumi program, it's versioned and reviewed with your code, and you can build it with loops, functions, and conditionals.
 
 ![Pulumi Delivery inside Pulumi Cloud, promoting a release from your repository through dev, staging, and prod stages to your clouds](/images/docs/delivery-platform-diagram.svg)
 
@@ -43,12 +41,6 @@ To deploy your first release through `dev`, `staging`, and `prod`, see [Get star
 {{% notes type="info" %}}
 Pulumi Delivery is in public preview. Behavior, the SDK, and the REST API can change before general availability.
 {{% /notes %}}
-
-### Other Pulumi Cloud options
-
-- [Pulumi Deployments](/docs/deployments/) runs individual Pulumi operations on Pulumi-hosted infrastructure, triggered by git pushes, the CLI, or the API.
-- [Review Stacks](/docs/deployments/concepts/review-stacks/) are ephemeral environments created automatically for each pull request and destroyed when it closes.
-- The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) manages Pulumi stacks from within a Kubernetes cluster using a custom resource.
 
 ## The trunk-based development workflow
 
@@ -77,10 +69,6 @@ You can remove even that static secret with [OpenID Connect (OIDC)](/docs/admini
 [Pulumi ESC](/docs/esc/) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a CI/CD pipeline or a developer's machine, a single environment definition works in both places.
 
 ## Third-party CI/CD systems
-
-{{% notes %}}
-Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/).
-{{% /notes %}}
 
 If you already run a CI/CD system, Pulumi has guides for running in the following systems:
 
