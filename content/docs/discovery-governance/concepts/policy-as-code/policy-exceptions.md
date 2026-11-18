@@ -261,7 +261,7 @@ Each exception records:
 
 Each permission also needs access to every stack that the exception's resources belong to: read access to view or remove an exception, and write access to create or request one. This means a Builder can request exceptions only for stacks they can update. There's no separate permission to approve: the approval rule specifies the approvers.
 
-Custom roles and the `Member (legacy)` role don't receive these permissions automatically. Add them to grant those members access. For custom roles, see [RBAC scopes](/docs/administration/reference/rbac-scopes/org-settings/#pulumi-policies).
+Custom roles and the `Member (legacy)` role don't receive these permissions automatically. Add them to grant those members access. For custom roles, see [RBAC scopes](/docs/administration/reference/rbac-scopes/org-settings/#policies).
 
 ## Exceptions in a policy rollout
 

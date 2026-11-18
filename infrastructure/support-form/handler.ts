@@ -14,9 +14,9 @@
 // "support_request_conversation_failed") for observability.
 //
 // This endpoint's request and response shapes are published to agents in
-// layouts/index.llms.txt (rendered at /llms.txt). Change one here and change
-// it there in the same PR, or /llms.txt documents an API that no longer
-// exists.
+// content/docs/support/support-request-api.md (linked from /llms.txt). Change
+// one here and change it there in the same PR, or the docs describe an API
+// that no longer exists.
 
 import * as crypto from "crypto";
 import type { SupportConversation } from "./intercom";

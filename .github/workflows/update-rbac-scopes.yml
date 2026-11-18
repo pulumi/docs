@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
+      fix_notice: ${{ steps.fix-notice.outputs.notice }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -47,6 +48,15 @@ jobs:
         run: ./scripts/fetch-rbac-scopes.sh
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          FIX_NOTICE_FILE: ${{ runner.temp }}/fix-notice.txt
+      - name: Report what the sections file is missing
+        id: fix-notice
+        if: failure()
+        run: |
+          file="${RUNNER_TEMP}/fix-notice.txt"
+          if [[ -s "$file" ]]; then
+            echo "notice=$(paste -sd' ' "$file")" >> "$GITHUB_OUTPUT"
+          fi
       - name: git status
         run: git status && git diff
       - name: Commit changes
@@ -111,7 +121,10 @@ jobs:
         env:
           SLACK_CHANNEL: docs-ops
           SLACK_COLOR: "#F54242"
-          SLACK_MESSAGE: "RBAC scope update failure in pulumi/docs repo :meow_sad:"
+          SLACK_MESSAGE: >-
+            ${{ needs.update-rbac-scopes.outputs.fix_notice != ''
+              && format('RBAC scopes update failed. {0} Merge that change and rerun the workflow. Run: {1}/{2}/actions/runs/{3}', needs.update-rbac-scopes.outputs.fix_notice, github.server_url, github.repository, github.run_id)
+              || format('RBAC scopes update failed in pulumi/docs :meow_sad: Run: {0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) }}
           SLACK_USERNAME: docsbot
           SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

@@ -8,10 +8,9 @@
     click anywhere in the overlay but the video itself all close it. No
     parameters.
 
-    A native <dialog> rather than a hand-rolled overlay like the changelog modal
-    (partials/releases/changelog-modal.html): showModal() gives the top layer,
-    the focus trap, the inert background, Escape, and focus restoration for
-    free, and unlike that modal this one holds no prose, so it doesn't need to
+    A native <dialog> rather than a hand-rolled overlay: showModal() gives the
+    top layer, the focus trap, the inert background, Escape, and focus
+    restoration for free, and this one holds no prose, so it doesn't need to
     stay inside <main> for content styles to reach it.
 
     Do NOT put a display utility (flex/grid/block) on the <dialog> itself — it

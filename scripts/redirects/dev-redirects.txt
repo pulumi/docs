@@ -66,12 +66,12 @@ tutorials/glossary/managed-kubernetes/index.html|/dev/glossary/managed-kubernete
 tutorials/glossary/msft-aks/index.html|/dev/glossary/msft-aks/
 tutorials/glossary/nosql/index.html|/dev/glossary/nosql/
 
-tutorials/aws/index.html|/dev/browse/cloud/aws/
-tutorials/azure/index.html|/dev/browse/cloud/azure/
-tutorials/gcp/index.html|/dev/browse/cloud/google-cloud/
-tutorials/kubernetes/index.html|/dev/browse/cloud/kubernetes/
-tutorials/learn-pulumi/index.html|/dev/browse/collection/learn-pulumi/
-tutorials/pulumi-esc/index.html|/dev/browse/collection/pulumi-esc/
+tutorials/aws/index.html|/dev/cloud/aws/
+tutorials/azure/index.html|/dev/cloud/azure/
+tutorials/gcp/index.html|/dev/cloud/google-cloud/
+tutorials/kubernetes/index.html|/dev/cloud/kubernetes/
+tutorials/learn-pulumi/index.html|/dev/collection/learn-pulumi/
+tutorials/pulumi-esc/index.html|/dev/collection/pulumi-esc/
 
 templates/container-service/index.html|/dev/templates/container-service/
 templates/container-service/aws/index.html|/dev/templates/container-service/aws/

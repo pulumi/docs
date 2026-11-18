@@ -22,6 +22,11 @@
 #
 # Needs PyYAML. The workflow installs it; locally, either `pip install pyyaml`
 # or point PYTHON at an interpreter that already has it.
+#
+# If FIX_NOTICE_FILE is set and the API returned something
+# data/rbac_scope_sections.yaml doesn't cover, build-rbac-scopes.py writes what's
+# missing and how to fix it there, so the workflow can post it in its Slack
+# failure notice.
 
 set -euo pipefail
 

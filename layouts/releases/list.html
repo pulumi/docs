@@ -1,9 +1,0 @@
-{{ define "hero" }}
-{{ end }}
-
-{{ define "main" }}
-{{/* /releases/ — the compact list view. The expanded counterpart lives at
-     /releases/changelog/ (layouts/changelog/list.html); both share
-     layouts/partials/releases/changelog-index.html. */}}
-{{ partial "releases/changelog-index.html" (dict "releases" . "view" "list") }}
-{{ end }}
