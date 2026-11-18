@@ -1,6 +1,6 @@
 ---
 title: "Introducing Pulumi Delivery: your release pipeline as code"
-date: 2026-11-18T08:00:00-08:00
+date: 2026-11-18T05:00:00-08:00
 meta_desc: "Pulumi Delivery is in public preview. Write release pipelines in TypeScript, Python, Go, C#, Java, YAML, or HCL, with approval gates and AI risk review."
 feature_image: feature.png
 authors:

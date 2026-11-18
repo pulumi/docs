@@ -1,7 +1,7 @@
 ---
 title: "Introducing Pulumi Agents"
 
-date: 2026-11-18
+date: 2026-11-18T04:00:00-08:00
 
 draft: false
 
