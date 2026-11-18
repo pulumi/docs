@@ -2,6 +2,11 @@
 
 // Behavior order matters; invalidate-marketing-web-cache.yml reads this list from the stack output.
 export const marketingWebPaths = [
+    // The homepage. Exact paths: a wildcard here would also take every other
+    // top-level page this repo still serves off S3.
+    "/",
+    "/index.html",
+    "/index.md",
     "/dev*",
     // The Dev Center's root-relative CSS/JS/images; this repo serves its own from /css and /js.
     "/assets*",
@@ -50,4 +55,13 @@ export const marketingWebPaths = [
     // 301s the old /releases/changelog/<slug>/ alias URLs at its own CDN.
     "/releases*",
     "/sitemap-www-*",
+    // Hides every S3 object under /product/, so marketing-web 301s the old
+    // product/waitlist and product/private-previews stubs itself.
+    //
+    // Appended after /sitemap-www-* (not alphabetically, between /love.md and
+    // /sitemap-www-*) on purpose: pulumi/docs#22948 inserts /releases* at
+    // that same gap, and this placement keeps the two PRs' diffs from
+    // touching the same lines, so neither needs a merge conflict resolved
+    // against the other regardless of merge order.
+    "/product*",
 ];

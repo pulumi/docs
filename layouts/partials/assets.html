@@ -29,9 +29,8 @@
   CSS bundle selection. Marketing pages additionally load the marketing
   stylesheet on top of the default bundle.
 
-  In production, beasties extracts critical CSS from each page's stylesheets
-  and inlines it automatically. Do NOT manually inline CSS here — the full
-  stylesheets use @layer and unlayered inline styles will override them.
+  Do NOT manually inline CSS here — the full stylesheets use @layer and
+  unlayered inline styles will override them.
 -->
 {{ $nonMarketingSections := slice "docs" "registry" "blog" "providers" "ai" "authors" "tags" "legal" }}
 {{ $isMarketing := not (in $nonMarketingSections .Section) }}

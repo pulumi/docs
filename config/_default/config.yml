@@ -87,10 +87,8 @@ outputFormats:
 # in layouts/blog/rss.xml.
 outputs:
   home:
-    - HTML
     - JSON
     - llms
-    - markdown
     - sitemapindex
   section:
     - HTML

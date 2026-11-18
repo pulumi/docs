@@ -1,0 +1,30 @@
+# The /product/* pages below moved to pulumi/marketing-web, served from a /product*
+# CloudFront behavior. Only old aliases OUTSIDE /product/ can redirect from here — S3 never
+# sees a request under /product/ anymore, so marketing-web's own CloudFront function
+# (infra/www/viewer-request.ts in that repo) 301s any old alias still under /product/.
+
+# The Hugo /product/discovery-governance page (and its older /crossguard, /insights, and /pulumi-policies aliases).
+insights/index.html|/product/discovery-governance/
+pulumi-policies/index.html|/product/discovery-governance/
+crossguard/index.html|/product/discovery-governance/
+
+# The Hugo /product/secrets-management page (and its older /esc alias).
+esc/index.html|/product/secrets-management/
+
+# The Hugo /product/internal-developer-platforms page (and its older /solutions/platforms alias).
+solutions/platforms/index.html|/product/internal-developer-platforms/
+
+# The Hugo /product/neo page, now /product/agents (and its older /copilot and Pulumi Copilot docs aliases).
+neo/index.html|/product/agents/
+gads/neo/index.html|/product/agents/
+copilot/index.html|/product/agents/
+docs/ai/copilot/index.html|/product/agents/
+docs/pulumi-cloud/copilot/index.html|/product/agents/
+docs/intro/copilot/index.html|/product/agents/
+docs/intro/pulumi-cloud/copilot/index.html|/product/agents/
+
+# The Hugo /product/pulumi-deployments page, now /product/delivery.
+deployments/index.html|/product/delivery/
+
+# The Hugo /product/ overview page (and its older /cloud alias).
+cloud/index.html|/product/

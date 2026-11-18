@@ -192,11 +192,9 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "docs/packages";
     @import "marketing/product";
     @import "responsive-video";
-    @import "marketing/pulumi-deployments";
     @import "marketing/pulumi-up";
     @import "search";
     @import "section-nav";
-    @import "marketing/self-hosted";
     // NOTE: marketing/shape-backgrounds intentionally removed
     @import "marketing/signup";
     @import "marketing/workshop-signup";

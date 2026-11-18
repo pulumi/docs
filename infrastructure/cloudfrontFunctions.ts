@@ -53,7 +53,7 @@ export function getMarkdownNegotiationFunctionAssociation(): aws.types.input.clo
 // Unlike /docs/* — where every page emits an index.md artifact — the default
 // behavior serves many paths with no markdown variant, so this function rewrites
 // only an allowlist of prefixes known to emit index.md (via `outputs`/`cascade`
-// front matter in content/): the homepage, /what-is/, and /product/.
+// front matter in content/): /what-is/ and /product/.
 // Rewriting a path with no artifact would turn a valid HTML page into a 404 for
 // markdown-accepting clients, so extend the allowlist only together with the
 // corresponding Hugo output changes.
@@ -63,8 +63,7 @@ function handler(event) {
     var accept = request.headers['accept'] ? request.headers['accept'].value : '';
     var uri = request.uri;
 
-    var eligible = uri === '/' || uri === '/index.html' ||
-        uri === '/what-is.md' || uri === '/product.md' ||
+    var eligible = uri === '/what-is.md' || uri === '/product.md' ||
         uri.indexOf('/what-is/') === 0 ||
         uri.indexOf('/product/') === 0;
     if (!eligible) {
@@ -79,9 +78,7 @@ function handler(event) {
 
     // Accept: text/markdown content negotiation.
     if (accept.indexOf('text/markdown') !== -1) {
-        if (uri === '/') {
-            request.uri = '/index.md';
-        } else if (uri.endsWith('/index.html')) {
+        if (uri.endsWith('/index.html')) {
             request.uri = uri.replace(/index\\.html$/, 'index.md');
         } else if (uri.endsWith('/')) {
             request.uri = uri + 'index.md';
@@ -95,7 +92,7 @@ function handler(event) {
 const marketingMarkdownNegotiationFunction = new aws.cloudfront.Function("marketing-markdown-negotiation", {
     runtime: "cloudfront-js-2.0",
     code: marketingMarkdownNegotiationFunctionCode,
-    comment: "Serves index.md for the homepage, /what-is/, and /product/ via Accept: text/markdown or .md URL suffix.",
+    comment: "Serves index.md for /what-is/ and /product/ via Accept: text/markdown or .md URL suffix.",
 });
 
 export function getMarketingMarkdownNegotiationFunctionAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorFunctionAssociation {

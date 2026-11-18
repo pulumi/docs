@@ -707,14 +707,6 @@ public/css/bundle.{CSS_BUNDLE_ID}.css
 public/css/marketing.{CSS_BUNDLE_ID}.css
 ```
 
-5. **Critical CSS inlining**
-   - Uses [beasties](https://github.com/danielroe/beasties) to extract above-the-fold CSS and inline it into the HTML
-   - Runs after minification so it operates on final stylesheets
-   - Currently applied to the homepage only (`public/index.html`)
-   - Original CSS files are preserved (`pruneSource: false`); the full stylesheet is still loaded async
-
-**Script:** `scripts/inline-critical-css.js`
-
 #### JavaScript Bundling
 
 **Dependencies:**
@@ -846,9 +838,8 @@ Hugo processes 46+ content directories:
 
 - `/content/docs/` → Documentation
 - `/content/blog/` → Blog posts
-- `/content/product/` → Product pages
 
-> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. `/dev` (tutorials, templates, community examples, glossary), `/customers` (the customer board and case studies), and the `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` landing pages, the `/try/` Google Ads landing pages, the `/subscribe` newsletter page, the `/agent-start` page and its `/onboard.md` prompt, the `/love` quote wall (the old `/testimonials/` URL redirects there), and `/releases` (the releases list, changelog, and RSS/JSON feeds) are served the same way, from pulumi/marketing-web.
+> **Note:** content/registry.md is a single landing page file, not a content directory. The full registry application is served from the separate pulumi/registry repository via CloudFront origin routing. The homepage (`/`), `/dev` (tutorials, templates, community examples, glossary), `/customers` (the customer board and case studies), `/product` (the product overview and every remaining product page), and the `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, and `/gads/infrastructure-as-code` landing pages, the `/try/` Google Ads landing pages, the `/subscribe` newsletter page, the `/agent-start` page and its `/onboard.md` prompt, the `/love` quote wall (the old `/testimonials/` URL redirects there), and `/releases` (the releases list, changelog, and RSS/JSON feeds) are served the same way, from pulumi/marketing-web. The two product pages with no marketing-web equivalent, `/product/github-actions` and `/product/packages`, were retired outright: `scripts/redirects/product-pages-redirects.txt` 301s them to the docs guide and the registry that cover the same ground.
 
 Templates are in `/layouts/` with various shortcodes for:
 
@@ -1155,7 +1146,7 @@ Key points:
 
 **Triggers:** `workflow_run` when `Build and deploy` or `Build and deploy testing` completes successfully; manual `workflow_dispatch`.
 
-Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/dev`, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases` proxy hops to pulumi/marketing-web, and that `/testimonials/` redirects to `/love/`. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
+Checks key pages for HTTP 200 with a real body (a 200 that serves the 404 page counts as a failure), checks redirects, and checks the `/`, `/dev`, `/topics`, `/customers`, `/product`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases` proxy hops to pulumi/marketing-web, and that `/testimonials/` redirects to `/love/`, `/ai` redirects to `/product/agents/`, and `/deployments/` redirects to `/product/delivery/`. Posts to `#docs-ops` or `#docs-ops-test` on failure. See [Post-Deployment Health Checks](#post-deployment-health-checks).
 
 #### schedule-social.yml
 
@@ -1185,7 +1176,7 @@ Runs `make ci_update_search_index`, which indexes this repo's content and merges
 
 #### invalidate-marketing-web-cache.yml
 
-**Purpose:** Flush the pages pulumi/marketing-web serves (the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases`) from CloudFront when it deploys.
+**Purpose:** Flush the pages pulumi/marketing-web serves (the homepage at `/`, the Dev Center at `/dev`, `/community`, `/pricing`, the `/up` getting-started wizard, `/topics`, `/customers`, `/product`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases`) from CloudFront when it deploys.
 
 **Triggers:** `repository_dispatch` (`dev-deployed`) from pulumi/marketing-web; manual `workflow_dispatch`.
 
@@ -1538,7 +1529,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
-| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/dev`, `/community`, `/pricing`, `/up`, `/topics`, `/customers`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases` from CloudFront |
+| `invalidate-marketing-web-cache.yml` | Ship | `repository_dispatch`, manual | Flush `/`, `/dev`, `/community`, `/pricing`, `/up`, `/topics`, `/customers`, `/product`, `/pulumi-for-startups`, `/extend-trial`, `/confirmation`, `/gads/infrastructure-as-code`, the `/try/` Google Ads pages, `/subscribe`, `/agent-start`, `/onboard.md`, `/love`, and `/releases` from CloudFront |
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
@@ -1813,10 +1804,10 @@ Delivery: CloudWatch Logs infrastructure v2
 | /js/*.js | S3 Main | 1 year | Versioned assets |
 | /registry/* | Registry | 30 minutes | Dynamic content, origin-proxied |
 | /guides/* | Guides | 30 minutes | Dynamic content, origin-proxied |
-| Paths in `infrastructure/marketingWebPaths.ts` (/dev*, /assets*, /community, /pricing, /up, /topics*, /customers*, /pulumi-for-startups, /extend-trial, /confirmation*, /gads/infrastructure-as-code, the /try/ Google Ads pages, /subscribe, /agent-start, /onboard.md, /love, /releases*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
+| Paths in `infrastructure/marketingWebPaths.ts` (/, /index.html, /index.md, /dev*, /assets*, /community, /pricing, /up, /topics*, /customers*, /pulumi-for-startups, /extend-trial, /confirmation*, /gads/infrastructure-as-code, the /try/ Google Ads pages, /subscribe, /agent-start, /onboard.md, /love, /releases*, /product*) | pulumi/marketing-web | 30 minutes | Origin-proxied; cache key includes Accept for the origin's markdown negotiation |
 | /docs/* | S3 Main | 10 min | Content negotiation for Accept: text/markdown |
 | /docs/reference/pkg/dotnet/* | S3 Main | 10 min | CloudFront Function lowercases URI (viewer-request); Lambda@Edge handles redirects (origin-request) |
-| /ai | S3 Main | 1 week | 301 redirect to /product/neo/ (Lambda@Edge) |
+| /ai | S3 Main | 1 week | 301 redirect to /product/agents/ (Lambda@Edge) |
 | /ai/* | S3 Main | 1 week | 410 Gone (Lambda@Edge) |
 | /uploads/* | Uploads | 1 hour | User uploads (legacy forwardedValues for CORS) |
 | /*/rss.xml | S3 Main | 10 min | Syndication feeds (legacy forwardedValues for CORS) |
@@ -1888,11 +1879,11 @@ const edgeRedirects = new aws.lambda.Function("edge-redirects", {
 
 **Event Type:** origin-request
 
-**Purpose:** Redirect `/ai` to `/product/neo/` (301) and return 410 Gone for `/ai/*` subpaths
+**Purpose:** Redirect `/ai` to `/product/agents/` (301) and return 410 Gone for `/ai/*` subpaths
 
 **Applied To:** `/ai` and `/ai/*` paths
 
-**Why:** The /ai page has been replaced by /product/neo/; subpaths are permanently removed
+**Why:** The /ai page has been replaced by /product/agents/; subpaths are permanently removed
 
 #### CloudFront Functions
 
@@ -2249,13 +2240,13 @@ exports.handler = async (event) => {
     const request = event.Records[0].cf.request;
     const uri = request.uri;
 
-    // Redirect /ai or /ai/ to /product/neo/.
+    // Redirect /ai or /ai/ to /product/agents/.
     if (uri === '/ai' || uri === '/ai/') {
         return {
             status: '301',
             statusDescription: 'Moved Permanently',
             headers: {
-                location: [{ key: 'Location', value: '/product/neo/' }],
+                location: [{ key: 'Location', value: '/product/agents/' }],
                 'cache-control': [{ key: 'Cache-Control', value: 'max-age=604800' }],
             },
         };

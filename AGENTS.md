@@ -98,6 +98,7 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi/marketing-web) (`apps/www`, an Astro build with its own S3 bucket and CloudFront distribution). `infrastructure/index.ts` proxies the paths in `infrastructure/marketingWebPaths.ts` to that distribution, and `invalidate-marketing-web-cache.yml` flushes them from CloudFront when marketing-web deploys. To change one of these pages, edit it there:
 
+- **`/` (the homepage)**: built from `apps/www/src/content/section-pages/index.yaml`, served by the generic section-page route — same mechanism as `/subscribe` and `/agent-start` below. `content/_index.md` stays here, stripped to the fields Hugo still needs for `/index.json`, `/llms.txt`, and `/sitemap-index.xml`; Hugo no longer renders HTML or markdown for `/`.
 - **`/dev`**: the Dev Center (tutorials, templates, community examples, and the glossary). See below.
 - **`/community`**: the community landing page and `/community/puluminaries/`. `/community/team/*` (the author pages blog bylines link to) is still built here from `content/community/team/` and `data/team/`.
 - **`/pricing`**: the pricing page, built from `apps/www/src/data/pricing/`. This repo keeps only the generated `data/pulumi_editions.yaml` that docs callouts read (see "Edition data" below). Redirects under `/pricing/` still come from S3.
@@ -108,6 +109,7 @@ Some pulumi.com pages ship from [pulumi/marketing-web](https://github.com/pulumi
 - **`/subscribe`**: the newsletter signup page, built from `apps/www/src/content/section-pages/subscribe.yaml`. It replaces the HubSpot page at `info.pulumi.com/newsletter-subscribe`, which HubSpot redirects here. The footer's newsletter signup in `data/footer.yml` is a separate HubSpot form.
 - **`/agent-start`, `/onboard.md`**: the coding-agent onboarding page, built from `apps/www/src/content/section-pages/agent-start.yaml`, and the prompt it tells agents to fetch, served from `apps/www/src/data/onboard.md`. Edit the onboarding prompt there.
 - **`/gads/infrastructure-as-code`**: the Google Ads landing page, built from `apps/www/src/content/section-pages/gads/infrastructure-as-code.yaml`. The other Google Ads pages are retired; `scripts/redirects/gads-redirects.txt` 301s them to `/`, and `content/gads/_index.md` keeps `/gads/` itself redirecting to `/`.
+- **`/product`**: the product overview and every product page, built from `apps/www/src/content/section-pages/product/`. Proxied as a single `/product*` wildcard, so a new page there needs no change here. `scripts/redirects/product-pages-redirects.txt` 301s old aliases that land outside `/product/`; aliases still under `/product/` (like the retired `/product/github-actions` and `/product/packages` pages) are marketing-web's own CloudFront function to redirect, since S3 never sees those requests anymore. `content/product/` has nothing left to keep here (unlike the homepage, no site-wide Hugo output is tied to it) and is gone entirely.
 - **`/try/kubernetes`, `/try/go-iac`, `/try/dotnet-iac`, `/try/python-iac`, `/try/typescript-iac`, `/try/java-iac`**: Google Ads landing pages, built from `apps/www/src/content/section-pages/try/`. All of `/try/*` is proxied, as one CloudFront behavior, so new `/try/` pages need no change here. Nothing in this repo serves `/try/`.
 - **`/love`**: the "Engineers love Pulumi" quote wall, built from `apps/www/src/pages/love/` with its quotes in `apps/www/src/data/testimonials/love.yaml`. `scripts/redirects/love-redirects.txt` 301s the old `/testimonials/` URL to it.
 - **`/releases`**: the releases list, the expanded changelog, every changelog entry, both release pages, and the RSS and JSON feeds, built from `apps/www/src/content/changelog/` and `apps/www/src/content/releases/`. See `apps/www/docs/releases.md` there. Every URL stays the same, so no redirects were needed for the move.
@@ -289,24 +291,6 @@ When something needs dark-mode work, prefer the existing levers over hand-writte
 - **Use the semantic tokens.** Paint with `var(--docs-fg)`, `--docs-fg-muted`, `--docs-bg`, `--docs-bg-alt`, `--docs-surface`, `--docs-border`, `--docs-card`, `--docs-link`, `--docs-ring` rather than raw `--color-*` scales — they flip automatically. For selectors shared with non-docs pages, use the `var(--docs-TOKEN, ORIGINAL)` fallback form so light source files stay untouched.
 - **Lean on the automatic flips.** There are three. `--color-violet-primary` is re-pointed to `violet-300` in the dark block, so `text-violet-primary`, `bg-violet-primary`, `border-violet-primary`, and any `var(--color-violet-primary)` get dark mode for free (solid `.btn-primary` is the exception, and pins `violet-700`). `h1`–`h6` and `p` are flipped on the element itself, since `@layer base` sets their color directly. And a bare `border` / `border-t` picks up the dark hairline, because `*` re-points the preflight default border color. **Nothing else is automatic** — no other `--color-*` scale is remapped, so `text-gray-950`, `bg-white`, `bg-gray-50`, and an explicit `border-gray-200` (which beats the `*` default on specificity) all render identically in both modes and need their own `dark:` variant. Surfaces styled via Tailwind `@apply` (e.g. content `.btn-*` variants) carry no literal class either, and need their own dark override in `_docs-theme.scss`.
 - **Theme-aware images:** use the `layouts/partials/docs-logo.html` partial (light asset + optional `-on-dark.svg`), not a bare `<img>`, for any logo/mark whose colors don't read on a dark background. Masked icons in `_icons.scss` tint automatically; `background:url()` colored marks do not.
-
----
-
-## Homepage hero animation
-
-The homepage hero is one GSAP timeline driving a single inline SVG. It spans four files, and a change to any one of them usually needs a look at the others:
-
-| File | Role |
-|------|------|
-| `layouts/partials/template-partials/hero-animation/agent-loop.html` | the scene, authored in its finished state |
-| `theme/src/ts/hero-animation.ts` | the timeline — **read its header comment before editing** |
-| `data/hero_agent_loop.yaml` + `theme/scripts/gen-hero-text.mjs` | the code samples and the `pulumi up` stream |
-| `theme/src/scss/marketing/_hero-animation.scss` | the CSS-driven spinner, and the pending/idle states |
-
-- **`data/hero_agent_loop_generated.yaml` is generated — never hand-edit it.** Change the plain-text sources in `data/hero_agent_loop.yaml` and run `yarn --cwd theme gen:hero-text`. That data file also carries `dark_code`, the flag that picks the code panel's treatment (shiki `min-dark` on a violet-950 panel, or `min-light` on the translucent lavender one); the generator copies it into the generated file and the partial paints the panel from it, so the syntax colors and their background can't disagree.
-- **Text layout is geometry, not space glyphs.** The production build minifies HTML, which collapses whitespace inside `<tspan>`s, so every segment is anchored by an explicit `x` computed from its column. A text change can look right on `make serve` and still break on deploy — verify against a `--minify` build, not the dev server.
-- **The timeline loops, so verify passes 2 and 3.** Every loop-state bug this animation has had rendered a flawless first pass. `hero-animation.ts`'s header documents the loop contract — what `reset()` owns, why `gsap.killTweensOf` is dangerous here — and how to step the timeline headlessly, which is the only reliable way to see a later pass.
-- **The static markup is the `prefers-reduced-motion` rendering**, so it has to stay a correct finished frame. Geometry comes verbatim from the design's storyboard exports; take new values from those rather than hand-editing paths.
 
 ---
 

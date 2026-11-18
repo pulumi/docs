@@ -109,7 +109,7 @@ sections:
         description: |
           Give developers self-service infrastructure with approved patterns and policies enforced on every deployment. Use Neo to query your environments, diagnose failures, and handle routine tasks.
         cta_text: See Neo in action
-        cta_link: /product/neo/#video
+        cta_link: /product/agents/#video
 
   - type: testimonial
     quote: |
