@@ -790,10 +790,9 @@ public class App {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-```yaml
-name: shop-image
-runtime: yaml
+<!-- This program is tested verbatim in https://github.com/pulumi/dac-docker-build-playground/tree/main/doc-pipeline-patterns-yaml. Update both together. -->
 
+```yaml
 config:
   # Registry host, for example "ghcr.io".
   registry:
