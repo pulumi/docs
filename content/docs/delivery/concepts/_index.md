@@ -429,7 +429,7 @@ config:
 - `branch` is the branch the pipeline tracks. Pulumi Cloud runs the pipeline program from this branch, and a push to it updates the pipeline. It defaults to the repository's default branch.
 - `directory` is the pipeline's project directory, relative to the repository root.
 
-When the stack has no `delivery:source` config, `pulumi delivery register` detects `url` and `directory` from your git checkout. It doesn't record the branch you have checked out, so a pipeline you register from another branch still tracks the default branch. To track another branch, set `branch` and register again:
+When the stack has no `delivery:source` config, `pulumi delivery register` detects `url` and `directory` from your git checkout. Pipeline registration defaults to tracking the repository's default branch. To track another branch, set `branch` in your config and register again:
 
 ```bash
 pulumi config set --path delivery:source.branch demo/lambda-web
