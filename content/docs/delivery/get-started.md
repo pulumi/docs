@@ -293,8 +293,8 @@ In `Program.cs`:
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Delivery.Delivery;
-using Pulumi.Delivery.Delivery.Inputs;
+using Pulumi.Delivery;
+using Pulumi.Delivery.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
@@ -340,8 +340,8 @@ In `src/main/java/myproject/App.java`:
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.delivery.delivery.*;
-import com.pulumi.delivery.delivery.inputs.*;
+import com.pulumi.delivery.*;
+import com.pulumi.delivery.inputs.*;
 import java.util.Map;
 
 public class App {
