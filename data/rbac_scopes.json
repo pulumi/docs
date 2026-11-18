@@ -139,6 +139,51 @@
           ]
         },
         {
+          "name": "Delivery pipelines",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Continue a manual gate, and approve or reject approvals that name no approvers.",
+              "name": "pipeline:approve"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Cancel a pipeline run.",
+              "name": "pipeline:cancel"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Start a pipeline run.",
+              "name": "pipeline:dispatch"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Deploy a ready release to a pipeline stage without waiting for its gate.",
+              "name": "pipeline:force_promote"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Pause and resume a pipeline stage.",
+              "name": "pipeline:pause"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Deploy the current release of a pipeline stage again.",
+              "name": "pipeline:redeploy"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Retry a failed pipeline run.",
+              "name": "pipeline:retry"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Roll a pipeline stage back to an earlier release.",
+              "name": "pipeline:rollback"
+            }
+          ]
+        },
+        {
           "name": "Stack tags",
           "scopes": [
             {
@@ -462,25 +507,32 @@
           "name": "Agent pools",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create agent pool.",
               "name": "agent_pool:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete agent pool.",
               "name": "agent_pool:delete"
             },
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read agent pool.",
               "name": "agent_pool:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update agent pool.",
               "name": "agent_pool:update"
             }
@@ -490,12 +542,16 @@
           "name": "Audit logs",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Export audit logs.",
               "name": "audit_logs:export"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read audit logs.",
               "name": "audit_logs:read"
             }
@@ -505,17 +561,23 @@
           "name": "Change requests (approvals)",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create approval rules.",
               "name": "change_gate:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete approval rules.",
               "name": "change_gate:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update approval rules.",
               "name": "change_gate:update"
             }
@@ -527,7 +589,8 @@
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create Discovery account.",
               "name": "insights_account:create"
@@ -538,7 +601,9 @@
           "name": "Deployments",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Pause deployments.",
               "name": "deployments:pause"
             },
@@ -546,7 +611,8 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read deployments.",
               "name": "deployments:read"
@@ -555,13 +621,17 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "Read deployment usage.",
               "name": "deployments:read_usage"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Resume deployments.",
               "name": "deployments:resume"
             }
@@ -573,7 +643,8 @@
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create environment.",
               "name": "environment:create"
@@ -582,13 +653,16 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "List deleted environments.",
               "name": "environment:list_deleted"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Restore deleted environment.",
               "name": "environment:restore_deleted"
             },
@@ -596,7 +670,8 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "List tags across all environments.",
               "name": "environment_tags:list"
@@ -607,22 +682,30 @@
           "name": "Membership",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create invites.",
               "name": "invites:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read invites.",
               "name": "invites:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Add organization member.",
               "name": "org_member:add"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete organization member.",
               "name": "org_member:delete"
             },
@@ -630,40 +713,53 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "Read organization member.",
               "name": "org_member:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Set organization member admin.",
               "name": "org_member:set_admin"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update organization member.",
               "name": "org_member:update"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read which stacks, environments, and other entities a member can access.",
               "name": "org_member_access:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read organization requests.",
               "name": "org_requests:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update organization requests.",
               "name": "org_requests:update"
             },
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create service principal.",
               "name": "service_principal:create"
@@ -675,53 +771,63 @@
           "scopes": [
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create org-owned Neo automations.",
               "name": "agent_automations:create"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Delete org-owned Neo automations.",
               "name": "agent_automations:delete"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read org-owned Neo automations.",
               "name": "agent_automations:read"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Update org-owned Neo automations.",
               "name": "agent_automations:update"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create custom agents.",
               "name": "agent_definitions:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete custom agents.",
               "name": "agent_definitions:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update custom agents.",
               "name": "agent_definitions:update"
             },
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create Neo tasks.",
               "name": "agent_task:create"
@@ -732,37 +838,51 @@
           "name": "OIDC",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read authentication policies.",
               "name": "auth_policies:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update authentication policies.",
               "name": "auth_policies:update"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create OIDC issuer.",
               "name": "oidc_issuers:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete OIDC issuer.",
               "name": "oidc_issuers:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read OIDC issuers.",
               "name": "oidc_issuers:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Regenerate OIDC issuer thumbprints.",
               "name": "oidc_issuers:regenerate_thumbprints"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update OIDC issuers.",
               "name": "oidc_issuers:update"
             }
@@ -775,40 +895,53 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read the organization's version control integrations and the repositories and branches they can access.",
               "name": "integrations:read"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Install the Pulumi app on a self-hosted version control instance.",
               "name": "integrations:update"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read organization-level integration settings, such as Neo model providers.",
               "name": "org_integrations:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Set up, change, and remove the organization's integrations, such as version control and Neo integrations.",
               "name": "org_integrations:update"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin",
+                "Billing Manager"
+              ],
               "description": "Manage organization billing.",
               "name": "organization:billing"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Change the organization's identity provider, such as GitHub, GitLab, Bitbucket, or SAML.",
               "name": "organization:change_backend"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete organization.",
               "name": "organization:delete"
             },
@@ -816,23 +949,31 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "Read organization usage.",
               "name": "organization:read_usage"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Rename organization.",
               "name": "organization:rename"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Transfer organization stacks.",
               "name": "organization:transfer_stacks"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update organization.",
               "name": "organization:update"
             }
@@ -842,17 +983,23 @@
           "name": "Organization access tokens",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create organization access token.",
               "name": "org_token:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete organization access token.",
               "name": "org_token:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read organization access token.",
               "name": "org_token:read"
             }
@@ -862,22 +1009,30 @@
           "name": "Organization webhooks",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create organization webhook.",
               "name": "organization_webhook:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete organization webhook.",
               "name": "organization_webhook:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read organization webhook.",
               "name": "organization_webhook:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update organization webhook.",
               "name": "organization_webhook:update"
             }
@@ -889,13 +1044,16 @@
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create or request policy exceptions.",
               "name": "policy_exceptions:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Remove policy exceptions.",
               "name": "policy_exceptions:delete"
             },
@@ -903,18 +1061,23 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read policy exceptions.",
               "name": "policy_exceptions:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create policy groups.",
               "name": "policy_groups:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete policy groups.",
               "name": "policy_groups:delete"
             },
@@ -922,23 +1085,30 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read policy groups.",
               "name": "policy_groups:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update policy groups.",
               "name": "policy_groups:update"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create policy packs.",
               "name": "policy_pack:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete policy packs.",
               "name": "policy_pack:delete"
             },
@@ -946,13 +1116,16 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read policy packs.",
               "name": "policy_pack:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update policy packs.",
               "name": "policy_pack:update"
             },
@@ -960,14 +1133,16 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read policy results.",
               "name": "policy_results:read"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Update policy results.",
               "name": "policy_results:update"
@@ -979,14 +1154,16 @@
           "scopes": [
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Decrypt project.",
               "name": "project:decrypt"
             },
             {
               "defaultRoles": [
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Encrypt project.",
               "name": "project:encrypt"
@@ -1000,13 +1177,17 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "View resources dashboard.",
               "name": "resources:dashboard"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Index resources.",
               "name": "resources:index"
             },
@@ -1014,7 +1195,8 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Search resources.",
               "name": "resources:search"
@@ -1025,22 +1207,30 @@
           "name": "Roles",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create role.",
               "name": "role:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete role.",
               "name": "role:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read role.",
               "name": "role:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update role.",
               "name": "role:update"
             }
@@ -1053,13 +1243,17 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "Read SAML.",
               "name": "saml:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update SAML.",
               "name": "saml:update"
             }
@@ -1069,17 +1263,23 @@
           "name": "SCIM",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete SCIM.",
               "name": "scim:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read SCIM.",
               "name": "scim:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update SCIM.",
               "name": "scim:update"
             }
@@ -1091,18 +1291,23 @@
             {
               "defaultRoles": [
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Create stack.",
               "name": "stack:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "List deleted stacks.",
               "name": "stack:list_deleted"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Restore deleted stack.",
               "name": "stack:restore_deleted"
             }
@@ -1115,7 +1320,8 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "List the tags used across the organization's projects and stacks.",
               "name": "tags:read"
@@ -1126,27 +1332,37 @@
           "name": "Teams",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create GitHub team.",
               "name": "github_team:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create team.",
               "name": "team:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create team access token.",
               "name": "team:create_token"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete team.",
               "name": "team:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete team access token.",
               "name": "team:delete_token"
             },
@@ -1156,7 +1372,9 @@
               "name": "team:list"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "List team access tokens.",
               "name": "team:list_tokens"
             },
@@ -1164,13 +1382,17 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin",
+                "Billing Manager"
               ],
               "description": "Read team.",
               "name": "team:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update team.",
               "name": "team:update"
             }
@@ -1183,7 +1405,8 @@
               "defaultRoles": [
                 "Reader",
                 "Builder",
-                "Maintainer"
+                "Maintainer",
+                "Admin"
               ],
               "description": "Read templates.",
               "name": "templates:read"
@@ -1194,22 +1417,30 @@
           "name": "Template sources",
           "scopes": [
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Create template sources.",
               "name": "templates_source:create"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Delete template sources.",
               "name": "templates_source:delete"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Read template sources.",
               "name": "templates_source:read"
             },
             {
-              "defaultRoles": [],
+              "defaultRoles": [
+                "Admin"
+              ],
               "description": "Update template sources.",
               "name": "templates_source:update"
             }
@@ -1240,6 +1471,14 @@
     },
     {
       "added": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:import",
@@ -1265,6 +1504,14 @@
       "inherits": "Stack Read",
       "name": "Stack Write",
       "permissions": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:decrypt",
@@ -1307,6 +1554,14 @@
       "inherits": "Stack Write",
       "name": "Stack Admin",
       "permissions": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:decrypt",
@@ -1664,6 +1919,23 @@
         "tags:read",
         "team:read",
         "templates:read"
+      ]
+    },
+    {
+      "added": null,
+      "description": "Billing access.",
+      "entity": "global",
+      "id": "org-settings-billing",
+      "inherits": null,
+      "name": "Organization Settings Billing",
+      "permissions": [
+        "deployments:read_usage",
+        "org_member:read",
+        "organization:billing",
+        "organization:read_usage",
+        "resources:dashboard",
+        "saml:read",
+        "team:read"
       ]
     }
   ]

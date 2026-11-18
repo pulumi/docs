@@ -134,19 +134,27 @@
 
 - id: deployments
   name: Deployments
-  description: Pulumi Deployments configuration, including deployment settings, schedules, self-hosted runner pools, and pausing or resuming deployments.
+  description: Pulumi Deployments, including triggered deployments and Terraform runs, deployment settings, schedules, self-hosted runner pools, and pausing or resuming deployments.
   match:
     prefixes:
-      - deployment-runner-pool-
+      - deployment-
       - scheduled-deployment-
     events:
-      # These four wear a `stack-`/`organization-` prefix but are Deployments
-      # events, so they need exact rules to beat those prefixes.
-      - deployment-settings-role-updated
+      # These are Deployments events without a `deployment-` prefix, so they
+      # need exact rules (the last four also beat the `stack-`/`organization-`
+      # prefixes).
+      - terraform-run-triggered
       - organization-deployments-paused
       - organization-deployments-resumed
       - stack-deployments-paused
       - stack-deployments-resumed
+
+- id: delivery-pipelines
+  name: Delivery pipelines
+  description: Delivery pipeline runs, including dispatching runs, approving or rejecting gates, and force-promoting stages.
+  match:
+    prefixes:
+      - delivery-
 
 - id: environments
   name: Environments
