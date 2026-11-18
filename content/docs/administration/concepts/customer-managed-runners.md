@@ -107,7 +107,7 @@ This mode requires only a Docker daemon on the host, which makes it the simplest
 
 ### Kubernetes
 
-With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-runners) setting controls the pull policy of the agent image used by each runner Pod, not of your executor image. See [Executor image pull policy](#executor-image-pull-policy) for how to control the executor image.
+With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-runners) setting controls the pull policy of the agent image used by each runner Pod, not of your executor image. See [Executor image pull policy](#executor-image-pull-policy) for how to control the executor image. For the objects the agent creates for each job and the permissions it needs, see [Job objects and RBAC](#job-objects-and-rbac).
 
 This mode fits environments that already run Kubernetes and want the cluster to handle scheduling and resource limits. It also enables ephemeral, per-job runners: set [`single_run: true`](#configuration-reference) so the agent exits after one job, and drive it with a Kubernetes `Job` or `CronJob` so a fresh agent starts for each job.
 
@@ -347,6 +347,12 @@ The following Kubernetes-specific configuration options are available:
 # This does not set the pull policy of the executor image.
 # https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
 PULUMI_AGENT_IMAGE_PULL_POLICY: IfNotPresent
+
+# How the agent passes each job to its runner Pod.
+# One of: secret (recommended), prefer-secret (the default when unset), configmap.
+# Set as an environment variable on the agent Deployment.
+# See "Job credentials" below.
+PULUMI_AGENT_JOB_CREDENTIALS: secret
 ```
 
 #### Executor image pull policy
@@ -356,3 +362,46 @@ Each job runs in a worker Pod with two containers: the `copy-workflow-runner` in
 The executor image's pull policy is controlled by `imagePullPolicy` on the `pulumi-workflow` container in the worker Pod template. To keep an executor image on the node between deployments, set `imagePullPolicy: IfNotPresent` on that container. To force a fresh pull for every job, set `imagePullPolicy: Always`.
 
 For how to supply a worker Pod template to the agent, see [Pod Spec Configuration](https://github.com/pulumi/customer-managed-workflow-agent/blob/main/kubernetes/README.md#pod-spec-configuration) in the agent's Kubernetes README.
+
+#### Job objects and RBAC
+
+Starting with the agent release that adds `PULUMI_AGENT_JOB_CREDENTIALS`, the agent can pass each job to its runner Pod in one of two ways. In the ConfigMap flow, which earlier releases use, the agent passes each job to its Pod in a ConfigMap. In the Secret flow, the agent passes the job's credentials in a Secret that the Pod mounts, and the Pod fetches its job definition from Pulumi Cloud. [Job credentials](#job-credentials) describes how the agent chooses between them.
+
+In the Secret flow, the agent creates these objects in its namespace for each job:
+
+- A Pod named `pulumi-workflow-<suffix>`, where the suffix is five random letters, which runs the job.
+- A Secret named `pulumi-workflow-<suffix>-credentials`, which the Pod mounts read-only.
+- A Secret named `pulumi-workflow-<suffix>-registry`, only when the job's image needs registry credentials. The agent creates it in either flow, so these jobs need the `secrets` rule below either way.
+
+The Pod owns both Secrets, so Kubernetes deletes them with the Pod. The agent's service account needs a Role in the agent's namespace with these rules:
+
+```yaml
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/log", "configmaps"]
+    verbs: ["create", "get", "list", "watch", "update", "delete"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["create"]
+```
+
+Don't grant any other verb on Secrets: `delete` and `deletecollection` can return Secret contents. Keep the `configmaps` rule for the ConfigMap flow and earlier agent releases. Run the agent in a namespace of its own, as the install program does.
+
+Before you upgrade, check two things. First, your worker Pod template must not change the `pulumi-workflow` container's `command` or `args`, must not change the credentials volume or its mount, and must not mount anything else at or under `/mnt/pulumi/credentials`. In the Secret flow, the agent checks this and fails the job during setup. Second, if you use admission policies, they must allow the agent to create Secrets and allow job Pods to use `secret` volumes.
+
+#### Job credentials
+
+`PULUMI_AGENT_JOB_CREDENTIALS` on the agent Deployment selects how the agent passes each job to its runner Pod:
+
+- **`secret`** (recommended): always use the Secret flow. If the agent may not create Secrets, the job fails during setup. The install program sets this value.
+- **`prefer-secret`** (the default when unset, so that installs whose Role doesn't allow Secrets yet keep working): use the Secret flow when the agent may create Secrets, and otherwise the ConfigMap flow, with a warning in the deployment log on every job.
+- **`configmap`**: use the ConfigMap flow, with the same warning. Use it to go back to the earlier behavior without removing the `secrets` rule.
+
+Any other value fails the job during setup. Agent releases without this setting ignore it. The agent checks its permission with a `SelfSubjectAccessReview`, which Kubernetes allows through the default `system:basic-user` binding; if your cluster removed that binding, restore it.
+
+#### Upgrading to the Secret flow
+
+- **Install program:** if you pin `agentImage` to a version, set it to the new release. Then update your copy of the [install program](https://github.com/pulumi/customer-managed-workflow-agent/tree/main/kubernetes) and run `pulumi up`. It adds the `secrets` rule to the agent's Role, sets `PULUMI_AGENT_JOB_CREDENTIALS=secret`, and restarts the agent Pods.
+- **Your own manifests:** apply the `secrets` rule to the agent's Role first. If `PULUMI_AGENT_IMAGE` (set in the `agent-config` ConfigMap in manifests the install program renders) names a version tag, a digest or a mirror, set it to the new release next. Then set `PULUMI_AGENT_JOB_CREDENTIALS=secret` and the new agent image on the agent Deployment, and apply it.
+
+Then run a deployment: its log shows `Credentials Secret created` and no `ConfigMap created` line. For the full steps and rollback, see [Upgrading to the Secret-based job credentials](https://github.com/pulumi/customer-managed-workflow-agent/blob/main/kubernetes/README.md#upgrading-to-the-secret-based-job-credentials). To remove job ConfigMaps from earlier releases, and job Pods and Secrets left behind when the agent restarts during a job, see [Removing objects left by earlier jobs](https://github.com/pulumi/customer-managed-workflow-agent/blob/main/kubernetes/README.md#removing-objects-left-by-earlier-jobs) in the agent's Kubernetes README.
