@@ -20,6 +20,13 @@ Sitemap: https://www.pulumi.com/sitemap-www-index.xml
 
 Sitemap: https://www.pulumi.com/registry/sitemap.xml
 
+# www.pulumi.com (docs, product, pricing, and more), for agents:
+#   llms.txt index:    https://www.pulumi.com/llms.txt
+#   Home page:         https://www.pulumi.com/index.md
+#   Per-page markdown: drop the trailing slash and append `.md` to a /docs,
+#                      /product, /pricing, or /customers page URL
+#                      (/product/agents/ becomes /product/agents.md)
+
 # Dev Center, for agents:
 #   llms.txt index:    https://www.pulumi.com/dev/llms.txt
 #   Per-page markdown: append `.md` to any /dev detail URL
