@@ -417,13 +417,13 @@ Before it stores the pipeline, registration checks that Pulumi Cloud can read th
 | --- | --- |
 | `Pulumi Cloud cannot read the repository <repository>. Check the name of the repository, and give the <provider> integration of the organization access to it.` | Check the repository name in the stack's `delivery:source` config, and give the integration access to the repository. |
 | `The branch "<branch>" does not exist in <repository>.` | Push the branch, or change the branch in `delivery:source`. |
-| `Pulumi Cloud cannot read branch "<branch>" of <repository>. Check that the branch exists and that the <provider> integration of the organization has access to the repository.` | Pulumi Cloud couldn't tell which of the two problems above it is. Check both. |
+| `Pulumi Cloud cannot read branch "<branch>" of <repository>. Check that the branch exists and that the <provider> integration of the organization has access to the repository.` | Pulumi Cloud can't tell which of the two problems above applies. Check both. |
 
 ### Testing locally
 
 Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console, where the run is marked **Local**. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
 
-The stack updates and jobs of a local run run as whoever runs `pulumi up`, with that identity's permissions, and not as the pipeline's [identity](/docs/delivery/concepts/identity/).
+In a local run, stack updates and jobs execute as whoever started `pulumi up`, with that identity's permissions, and not as the pipeline's [identity](/docs/delivery/concepts/identity/).
 
 {{% notes type="warning" %}}
 Only these credentials can start a local run:
