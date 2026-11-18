@@ -121,7 +121,7 @@ var notes = new Agent("releaseNotes", new AgentArgs
 new Artifact("releaseSummary", new ArtifactArgs
 {
     Stage = prod,
-    Value = notes.Response.Apply(r => ((ImmutableDictionary<string, object>)r)["summary"]),
+    Value = notes.Response.Apply(r => ((System.Collections.Immutable.ImmutableDictionary<string, object>)r)["summary"]),
 });
 ```
 
