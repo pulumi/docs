@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.119.0",
+  "assemblyVersion": "3.120.0",
   "description": "Optional timeouts to supply in ."
 }
 </script>
@@ -195,6 +195,33 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/CustomTimeouts.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_CustomTimeouts_Read_" data-uid="Pulumi.CustomTimeouts.Read*"></a>
+  <h4 id="Pulumi_CustomTimeouts_Read" data-uid="Pulumi.CustomTimeouts.Read">Read</h4>
+  <div class="markdown level1 summary"><p>The optional read timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public TimeSpan? Read { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
     <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/CustomTimeouts.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_CustomTimeouts_Update_" data-uid="Pulumi.CustomTimeouts.Update*"></a>
@@ -221,12 +248,74 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Resources/CustomTimeouts.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_CustomTimeouts_FromStrings_" data-uid="Pulumi.CustomTimeouts.FromStrings*"></a>
+  <h4 id="Pulumi_CustomTimeouts_FromStrings_System_String_System_String_System_String_System_String_" data-uid="Pulumi.CustomTimeouts.FromStrings(System.String,System.String,System.String,System.String)">FromStrings(string?, string?, string?, string?)</h4>
+  <div class="markdown level1 summary"><p>Construct a <a class="xref" href="pulumi.customtimeouts.html">CustomTimeouts</a> from Go-style duration strings
+such as &quot;5m&quot;, &quot;1h30m&quot; or &quot;300ms&quot;. Null or empty values leave the field unset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static CustomTimeouts FromStrings(string? create = null, string? update = null, string? delete = null, string? read = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">create</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">update</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">delete</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">read</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.customtimeouts.html">CustomTimeouts</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.119.0</p>
+    <p class="sdk-version">Version 3.120.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>

@@ -40755,6 +40755,35 @@ references:
   isSpec: "True"
   fullName: Pulumi.CustomTimeouts.Delete
   nameWithType: CustomTimeouts.Delete
+- uid: Pulumi.CustomTimeouts.FromStrings(System.String,System.String,System.String,System.String)
+  name: FromStrings(string?, string?, string?, string?)
+  href: pulumi/pulumi.customtimeouts.html#Pulumi_CustomTimeouts_FromStrings_System_String_System_String_System_String_System_String_
+  commentId: M:Pulumi.CustomTimeouts.FromStrings(System.String,System.String,System.String,System.String)
+  name.vb: FromStrings(String, String, String, String)
+  fullName: Pulumi.CustomTimeouts.FromStrings(string?, string?, string?, string?)
+  fullName.vb: Pulumi.CustomTimeouts.FromStrings(String, String, String, String)
+  nameWithType: CustomTimeouts.FromStrings(string?, string?, string?, string?)
+  nameWithType.vb: CustomTimeouts.FromStrings(String, String, String, String)
+- uid: Pulumi.CustomTimeouts.FromStrings*
+  name: FromStrings
+  href: pulumi/pulumi.customtimeouts.html#Pulumi_CustomTimeouts_FromStrings_
+  commentId: Overload:Pulumi.CustomTimeouts.FromStrings
+  isSpec: "True"
+  fullName: Pulumi.CustomTimeouts.FromStrings
+  nameWithType: CustomTimeouts.FromStrings
+- uid: Pulumi.CustomTimeouts.Read
+  name: Read
+  href: pulumi/pulumi.customtimeouts.html#Pulumi_CustomTimeouts_Read
+  commentId: P:Pulumi.CustomTimeouts.Read
+  fullName: Pulumi.CustomTimeouts.Read
+  nameWithType: CustomTimeouts.Read
+- uid: Pulumi.CustomTimeouts.Read*
+  name: Read
+  href: pulumi/pulumi.customtimeouts.html#Pulumi_CustomTimeouts_Read_
+  commentId: Overload:Pulumi.CustomTimeouts.Read
+  isSpec: "True"
+  fullName: Pulumi.CustomTimeouts.Read
+  nameWithType: CustomTimeouts.Read
 - uid: Pulumi.CustomTimeouts.Update
   name: Update
   href: pulumi/pulumi.customtimeouts.html#Pulumi_CustomTimeouts_Update
