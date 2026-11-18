@@ -6,6 +6,7 @@ h1: "Deployment Permissions"
 aliases:
 - /docs/deployments/deployments/permissions/
 - /docs/pulumi-cloud/deployments/permissions/
+- /docs/deployments/guides/gated-deployments/
 menu:
   deployments:
     name: Permissions
@@ -20,36 +21,41 @@ This page explains how permissions work in Pulumi Deployments and how to configu
 This page mostly covers the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. For the GitHub credential that deployments from a GitHub-connected source receive, see [Version control credentials](#version-control-credentials). To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/)
 {{% /notes %}}
 
-## Default Deployment Permissions
+## How a deployment's permissions are determined
 
-By default, the permissions that are granted to a deployment depend on how the deployment is being invoked:
+Who a deployment runs as depends on the stack's [**Run as**](/docs/deployments/concepts/settings/pulumi-cloud-role/) setting and on your organization's [permission mode](/docs/administration/concepts/rbac/permission-modes/):
 
-- If the deployment is created via the **REST API** or by using the **Actions buttons** in the Pulumi Cloud console, it is granted the permissions of the user that has executed the action.
-- If a deployment is created because of a **`git push`** or a **pull request**, it uses an ephemeral stack token that has admin permissions on only the stack itself, but nothing else.
+- **A service principal or a team is selected.** Every deployment runs as that [service principal](/docs/administration/concepts/rbac/service-principals/), or as the team's service principal, with exactly its permissions. It doesn't matter who or what starts the deployment.
+- **Nothing is selected, in a permissive organization.** The permissions depend on how the deployment starts:
+    - If the deployment is created via the **REST API** or by using the **Actions buttons** in the Pulumi Cloud console, it is granted the permissions of the user that has executed the action.
+    - If a deployment is created because of a **`git push`**, a **pull request**, or a **schedule**, it runs as the organization's background runner, limited to the stack's deployment role if one is set, and otherwise to the organization's default role.
+- **Nothing is selected, in a restricted organization.** The deployment is refused. Every stack must select a service principal or a team.
+- **In the Free edition**, deployments always run as the organization's single member.
+
+The deployment's page shows the result, for example **Runs as service principal deploy-prod** or **Runs as the person who triggered it**.
 
 ## Version control credentials
 
-The Pulumi Cloud token described above is not the only credential a deployment can receive. When a deployment's source is connected through the [Pulumi GitHub app](/docs/integrations/version-control/github-app/), Pulumi also injects a `GITHUB_TOKEN` environment variable. This token is a GitHub App installation token with the installation's full scope, not a token limited to the source repository. It can reach every repository you granted the app and holds every permission the app holds, including write access to repository contents and workflows. Treat it as a broadly privileged credential. For the list of permissions and details on the token's lifetime, see [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments).
+The Pulumi Cloud identity a deployment runs as is not the only credential it receives. When a deployment's source is connected through the [Pulumi GitHub app](/docs/integrations/version-control/github-app/), Pulumi also injects a `GITHUB_TOKEN` environment variable. This token is a GitHub App installation token with the installation's full scope, not a token limited to the source repository. It can reach every repository you granted the app and holds every permission the app holds, including write access to repository contents and workflows. Treat it as a broadly privileged credential. For the list of permissions and details on the token's lifetime, see [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments).
 
 To give a deployment a narrower GitHub credential, set your own `GITHUB_TOKEN` in the stack's [environment variables](/docs/deployments/concepts/settings/environment-variables/), for example a fine-grained personal access token limited to the repositories the deployment needs. A value you set always overrides the one Pulumi provides. If you configure the source with your own personal access token, Pulumi uses that token as `GITHUB_TOKEN` instead.
 
-## Permissions Impact
+## Granting additional permissions
 
-The permission model has the following practical implications:
+The recommended way to control what a deployment can access is to run it as a [service principal](/docs/administration/concepts/rbac/service-principals/):
 
-- If your organization has default stack permissions set to `NONE`, then any deployment created by a `git push` or a pull request will not be able to access any [Stack References](https://www.pulumi.com/docs/iac/concepts/stacks/#stackreferences), and will fail if it tries to do so.
+1. Create a service principal, with no organization-wide role if the deployment only needs a few stacks and environments.
+1. Give it Stack Write on the stack, Stack Read on any stacks whose stack references the program reads, and Environment Open on any environments the stack uses, including environments imported transitively. Grant these on each stack's and environment's [access settings](/docs/administration/concepts/rbac/entities/#entity-access), or through a role.
+1. On the stack's **Settings** → **Deploy** page, select it under [**Run as**](/docs/deployments/concepts/settings/pulumi-cloud-role/), then select **Save**.
 
-- If your organization has default environment permissions set to `NONE`, then any deployment created by a `git push` or a pull request will not be able to access any [ESC Environments](https://www.pulumi.com/docs/esc/concepts/environments/) that are listed in the stack's configuration file.
+To manage organization resources such as teams, members, or OIDC issuers from a deployment, give the service principal a role that includes those permissions.
 
-## Granting Additional Permissions
+In permissive organizations, two older options remain:
 
-The recommended approach for granting additional permissions to deployments is through role assignment. To assign a role to a deployment, open your stack's **Settings** → **Deploy** page in Pulumi Cloud and choose one of your organization's roles from the **Pulumi Cloud role** dropdown, then select **Save**. See [Pulumi Cloud role](/docs/deployments/concepts/settings/pulumi-cloud-role/). Once a role is assigned, the deployment's stack token will inherit the permissions associated with that role, enabling access to stack references, environments, and organization resources as needed. Organization roles are managed through the [Roles section](/docs/administration/concepts/rbac/roles/).
+- **A deployment role.** Choose a role under **Run as** to limit automatic runs to that role's permissions. Deployment roles are being removed, so prefer a service principal or a team.
+- **A `PULUMI_ACCESS_TOKEN` environment variable** in the stack's deployment settings, set to an individual, team, or organization token. The deployment gets the permissions associated with the token, regardless of how it was created (REST API, `git push`, etc.). This can't be combined with a service principal or a team, and isn't available in restricted organizations.
 
-Alternatively, you can set the `PULUMI_ACCESS_TOKEN` environment variable to a token with the desired permissions in the stack's deployment settings.
-
-This token can be an individual, team, or organization token, and it will grant the deployment the permissions that are associated with the token. If this environment variable is set, it will be used regardless of how the deployment was created (REST API, `git push`, etc.).
-
-### Minimum Required Token Permissions
+### Minimum required token permissions
 
 If using an individual or team token, the token must have at minimum:
 
@@ -59,7 +65,7 @@ If using an individual or team token, the token must have at minimum:
 
 ## Using ESC with Deployments
 
-For enhanced security and simplified credential management, we recommend configuring your stack to use [Pulumi ESC](/docs/esc/) for cloud credentials and ensuring the Deployment has an appropriately scoped Pulumi token.
+For enhanced security and simplified credential management, we recommend configuring your stack to use [Pulumi ESC](/docs/esc/) for cloud credentials and ensuring the Deployment runs as an appropriately scoped service principal.
 
 This approach offers several advantages:
 
@@ -72,13 +78,10 @@ This approach offers several advantages:
 ### Configuring ESC for Deployments
 
 1. Create an ESC environment with the appropriate cloud provider credentials
-2. Reference this environment in your Pulumi stack configuration
-3. Create a Pulumi access token with the appropriate permissions (as described above)
-4. Add this token as the `PULUMI_ACCESS_TOKEN` environment variable in your deployment settings
+1. Reference this environment in your Pulumi stack configuration
+1. Give the [service principal](/docs/administration/concepts/rbac/service-principals/) the stack's deployments run as Environment Open on the environment, as described in [Granting additional permissions](#granting-additional-permissions)
 
 For more information on setting up ESC environments, see the [ESC documentation](/docs/esc/).
-
-Deployments has no native approval gate, but to require reviewer sign-off before a deployment runs you can work around this by adding an ESC Open approval ruleset to the environment that supplies its credentials. See [Requiring Approval Before a Deployment Runs](/docs/deployments/guides/gated-deployments/).
 
 You can use ESC with pre-run commands in Deployments by prefixing each command with `pulumi env run`. For example:
 

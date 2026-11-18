@@ -47,15 +47,18 @@ columns:
       - label: Infrastructure as code
         href: /product/infrastructure-as-code/
         track: footer-platform-iac
+      - label: Delivery as code
+        href: /product/delivery/
+        track: footer-platform-delivery
+      - label: AI infrastructure agent
+        href: /product/agents/
+        track: footer-platform-agents
       - label: Secrets & configuration
         href: /product/secrets-management/
         track: footer-platform-secrets
       - label: Discovery & governance
         href: /product/discovery-governance/
         track: footer-platform-insights
-      - label: AI infrastructure agent
-        href: /product/agents/
-        track: footer-platform-neo
       - label: Internal developer platform
         href: /product/internal-developer-platforms/
         track: footer-platform-idp

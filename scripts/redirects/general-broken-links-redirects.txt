@@ -1,4 +1,7 @@
 containers/index.html|/docs/integrations/clouds/kubernetes/
+docs/ai/agents/reference/index.html|/docs/reference/cloud-rest-api/neo/#post-apipreviewagentsorgnametasks
+docs/ai/coding-agents/handoff/index.html|/docs/ai/concepts/neo/neo-in-the-cli/#agent-handoff
+docs/ai/concepts/neo/instructions/custom-instructions.png|/docs/ai/agents/instructions/custom-instructions.png
 docs/guides/index.html|/docs/iac/
 docs/iac/guides/index.html|/docs/iac/
 docs/iac/guides/ai-integration/index.html|/docs/ai/guides/set-up-mcp-server/
@@ -110,3 +113,8 @@ blog/pulumi-copilot-rest/index.html|/docs/ai/
 # for exactly that reason; the blog links into them are now pointed straight at
 # /dev/examples/, where those guides actually live. The remaining Registry-side
 # breakage is tracked in pulumi/registry#12449.
+
+# Preserve image URLs from the agent preview and pull request guides.
+docs/ai/concepts/neo/previews/preview-prompt.png|/docs/ai/agents/previews/preview-prompt.png
+docs/ai/concepts/neo/previews/preview-output.png|/docs/ai/agents/previews/preview-output.png
+docs/ai/concepts/neo/pull-requests/pr-example.png|/docs/ai/agents/pull-requests/pr-example.png

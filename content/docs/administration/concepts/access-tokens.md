@@ -93,7 +93,7 @@ Team tokens are machine tokens scoped to the resources and permissions of a spec
 
 ### What team tokens can do
 
-A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/concepts/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
+A team token's effective permissions are the union of all [roles and entity access assigned to that team](/docs/administration/concepts/rbac/teams/), evaluated at the time of each request. In organizations on the permissive [permission mode](/docs/administration/concepts/rbac/permission-modes/), a team token also gets the organization-wide [default permissions](#organization-wide-role-settings) on stacks, environments, and cloud accounts. In restricted organizations, it gets only what its team was given. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
 As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
 
@@ -109,7 +109,7 @@ It appears as the actor wherever a team token acts, including:
 * The stack's update history.
 * The `actor` claim of [OIDC tokens issued by Pulumi ESC](/docs/esc/guides/configuring-oidc/).
 
-Service principals don't appear in the organization's member list and don't count toward its seats.
+Team service principals don't appear in the organization's member list or on the **Service Principals** tab, and don't count toward its seats.
 
 When a team token creates a stack, two grants are added:
 
@@ -141,7 +141,7 @@ Deleting a token immediately revokes its access. The token name is permanently r
 
 ## Permissions for tokens without a role {#organization-wide-role-settings}
 
-These settings decide the permissions of organization access tokens without a role.
+These settings decide the permissions of organization access tokens without a role. In organizations on the permissive [permission mode](/docs/administration/concepts/rbac/permission-modes/), team tokens get these permissions too, on top of their team's own access.
 
 | Setting | What it controls |
 |---------|------------------|

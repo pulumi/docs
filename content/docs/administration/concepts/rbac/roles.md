@@ -15,7 +15,7 @@ aliases:
 - /docs/deployments/access-management/rbac/roles/
 ---
 
-A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, or machine token) can access and what they can do with them. Roles allow you to apply [permission sets](/docs/administration/concepts/rbac/permission-sets) to a set of [entities](/docs/administration/concepts/rbac/entities) and assign this access to a principal.
+A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, service principal, or machine token) can access and what they can do with them. Roles allow you to apply [permission sets](/docs/administration/concepts/rbac/permission-sets) to a set of [entities](/docs/administration/concepts/rbac/entities) and assign this access to a principal.
 
 A role combines two kinds of access, both built from [scopes](/docs/administration/concepts/rbac/scopes) bundled into [permission sets](/docs/administration/concepts/rbac/permission-sets): **entity access** — permission sets applied to specific [entities](/docs/administration/concepts/rbac/entities) (stacks, environments, and accounts) to form entity access rules — and an **organization access level** built from org-wide permission sets (such as Standard, Read Only, or Billing) for [org-wide operations](/docs/administration/concepts/rbac/entities#organization-level-access). The completed role is then assigned to principals.
 
@@ -33,7 +33,7 @@ flowchart LR
     end
     EAR --> ROLE["Role"]
     OPS --> ROLE
-    ROLE --> PR["Assigned to principals<br/>(users, teams, tokens)"]
+    ROLE --> PR["Assigned to principals<br/>(users, teams, service principals, tokens)"]
 ```
 
 ## Built-in roles {#pulumi-defined-roles}
@@ -116,7 +116,7 @@ You can now assign this role to principals in your organization.
 
 ## Role assignment
 
-Roles can be assigned to organization access tokens, users, and teams. Effective permissions are the **union** of the user's organization role and all roles assigned to the teams they belong to (composability).
+Roles can be assigned to organization access tokens, users, teams, and service principals. Effective permissions are the **union** of the user's organization role and all roles assigned to the teams they belong to (composability).
 
 ### Organization access tokens
 
@@ -126,11 +126,17 @@ Follow the process to [create an organization token](/docs/administration/concep
 
 ### Users
 
-Each organization member has exactly **one** organization role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one. In editions with custom roles, an admin can assign any built-in or custom role; in other editions, members follow the default role or are admins or billing managers.
+Each organization member has exactly **one** organization role. Members follow the organization's [default role](/docs/administration/concepts/rbac/default-roles/) unless an admin assigns them another one. In editions with custom roles, an admin can assign any built-in or custom role; in other editions, the console lets an admin make a member an admin, and other members follow the default role.
+
+Anyone who can read a role can see which members and teams hold it.
 
 ### Teams
 
-When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (default or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role.
+When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (default or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role. A team can't be assigned the built-in `Admin` role.
+
+### Service principals
+
+A [service principal](/docs/administration/concepts/rbac/service-principals/) can hold any number of roles in editions with custom roles, and one organization-wide permission (None, Read, Write, or Admin) in other editions. It never follows the default role, so a service principal without a role has only the [entity access](/docs/administration/concepts/rbac/entities/#entity-access) it was granted.
 
 ## Best practices
 
@@ -139,6 +145,7 @@ When working with roles in Pulumi Cloud, consider these best practices:
 1. **Principle of least privilege**: Assign only the scopes necessary for users to perform their tasks.
 1. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
 1. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
+1. **Service principals for automation**: Run deployments as a [service principal](/docs/administration/concepts/rbac/service-principals/) with no organization-wide role and entity access on only the stacks and environments the work needs.
 1. **Stack ownership in automation**: When automation creates stacks with a machine token, have the run transfer stack ownership to a break-glass user or team, or remove the automatic [creator grant](/docs/administration/concepts/rbac/#creator-grants), so a long-lived token does not accumulate Stack Admin on every stack it has created.
 1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
 1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.

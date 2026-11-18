@@ -24,7 +24,7 @@ aliases:
 pulumi_cloud_feature: teams
 ---
 
-Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to stack-level permissions), so that members receive the union of the team's roles and their own user role.
+Pulumi Cloud offers role-based access control (RBAC) using teams. Teams let you give a group of users access to stacks, environments, and cloud accounts. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to access on individual entities), so that members receive the union of the team's roles and their own user role.
 
 ## Creating a Team{#creating-a-team}
 
@@ -59,10 +59,11 @@ To change a team member's role:
 
 ## Role assignments {#role-assignments}
 
-When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team entity access grants](#team-entity-access-grants) (stack-level access) and [Team access types](#team-access-types) (Team admin vs Team member).
+When your organization has custom roles enabled, teams can be assigned **roles** (default or custom). This is separate from [Team entity access grants](#team-entity-access-grants) (access on individual stacks, environments, and cloud accounts) and [Team access types](#team-access-types) (Team admin vs Team member).
 
 - Each team can have **multiple role assignments**. Members of the team receive the permissions from all of those roles in addition to their own [organization role](/docs/administration/concepts/rbac/roles#users).
-- To add or remove role assignments for a team, a user must hold a role that grants the `role:update` and `team:update` scopes — for example, an organization admin. Being a team admin is not sufficient on its own; a team admin without `role:update` access cannot modify role assignments. Team admins can, however, always manage the team's **Entity Access** grants directly, regardless of their role scopes.
+- To add or remove role assignments for a team, a user must hold the `team:update` scope, and either the `role:update` scope or the role being assigned. An organization admin can assign any role; a team admin without `role:update` can give the team only roles they hold themselves.
+- A team can't be assigned the built-in `Admin` role. To give a team broad access, assign it `Maintainer` or a custom role.
 - **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/concepts/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
 
 To manage role assignments for a team, navigate to the team's **Access** tab. The **Role assignments** section lists the roles currently assigned to the team; use **Add role** to assign an additional role.
@@ -83,9 +84,11 @@ permissions and role assignments granted to team members is managed in Pulumi Cl
 
 ## Team Entity Access Grants
 
-Team entity access grants allow team admins to manage their team's access to specific stacks, environments, and cloud accounts directly, without requiring org-level role management permissions. This makes it possible for teams to self-manage their own entity access while keeping broader role administration centralized.
+Teams can be granted access directly on specific stacks, environments, and cloud accounts, without a role. All team members receive the permission set the team holds on those entities.
 
-Teams can be granted direct access to stacks, environments, and cloud accounts. All team members receive access to those entities at the selected permission level.
+Team grants are managed where the access is: open the stack, environment, or cloud account's [access settings](/docs/administration/concepts/rbac/entities/#entity-access), select **Add Principal**, choose **Team**, and pick one of the built-in permission sets. The team's **Access** tab lists what the team was granted. Changing a team's access to an entity requires permission to change that entity's access.
+
+With the Pulumi Service provider, use [`TeamStackPermission`](/registry/packages/pulumiservice/api-docs/teamstackpermission/) and [`TeamEnvironmentPermission`](/registry/packages/pulumiservice/api-docs/teamenvironmentpermission/). To grant access to the Everyone team, use the team name `everyone`.
 
 ### Managing environment access via the REST API
 

@@ -25,7 +25,7 @@ The table below shows whether selected Pulumi Cloud features are available in se
 | [Drift detection](/docs/deployments/concepts/drift/) | Requires enablement | Off by default. Contact Pulumi support to turn it on. Scheduled drift runs and automatic remediation also need Deployments set up. You can always detect drift from the CLI with `pulumi refresh --preview-only`. |
 | [ESC approvals](/docs/esc/concepts/approvals/) | Available |  |
 | [Pulumi ESC](/docs/esc/) | Available |  |
-| [Pulumi Neo](/docs/ai/concepts/neo/) | Not available | Not available yet. Features built on Neo, such as Neo tasks, aren't available either. |
+| [Pulumi Neo](/docs/ai/agents/#start-with-neo) | Not available | Not available yet. Features built on Neo, such as Neo tasks, aren't available either. |
 | [Terraform module registry](/docs/integrations/terraform/module-registry/) | Not available | Not available yet, so modules can't be published to the registry or converted into Pulumi packages. |
 | [Terraform remote execution](/docs/integrations/terraform/remote-execution/) | Not available | Not available yet. Workspaces set to remote execution run locally instead. |
 | [Terraform state backend](/docs/integrations/terraform/state-backend/) | Requires configuration | Set `PULUMI_TFE_DOMAIN` to a hostname of its own, separate from `PULUMI_API_DOMAIN`, and use that hostname in place of `tf.pulumi.com`. |

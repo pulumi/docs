@@ -3,12 +3,14 @@ title: Integrations
 title_tag: Integrations | Pulumi Agents
 h1: Integrations
 meta_desc: Connect Pulumi Agents to repositories, cloud providers, monitoring tools, and issue trackers.
+aliases:
+- /docs/ai/neo/integrations/
 menu:
     ai:
         name: Integrations
-        parent: ai-home
+        parent: ai-agents
         identifier: ai-agents-integrations
-        weight: 40
+        weight: 70
 integration_groups:
     repositories:
         - name: GitHub
@@ -73,9 +75,21 @@ integration_groups:
 
 ---
 
+<script>
+// Redirect anchors that belonged to the MCP content formerly on this page.
+// The MCP integrations content moved to /docs/ai/integrations/external-mcp-servers/.
+(function() {
+  var mcpAnchors = ['what-you-can-do-with-mcp-integrations', 'enabling-an-mcp-integration', 'credential-storage', 'disabling-an-integration', 'how-integrations-work-at-task-time', 'per-task-control', 'if-an-integration-fails', 'configuration', 'atlassian-jira-and-confluence', 'datadog', 'honeycomb', 'linear', 'pagerduty', 'supabase'];
+  var anchor = window.location.hash.replace(/^#/, '');
+  if (anchor && mcpAnchors.indexOf(anchor) !== -1) {
+    window.location.replace('/docs/ai/integrations/external-mcp-servers/#' + anchor);
+  }
+})();
+</script>
+
 Connect the tools an agent needs to do its work, such as a repository for code changes or Datadog for an investigation. See [Permissions](/docs/ai/agents/permissions/#design-access-around-the-job) to choose the access to grant.
 
-Connections are shared across Neo and the agents you configure.
+Connections belong to your organization and can be used by more than one agent. Give each agent access to the connections it needs.
 
 ## Connect your tools
 
@@ -87,7 +101,7 @@ Connections are shared across Neo and the agents you configure.
 
 {{< integration-links "cloud" >}}
 
-For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ESC, then [connect the environment to a CLI tool](/docs/ai/integrations/cli-integrations/#setting-up-a-cli-integration).
+For AWS, Google Cloud, Azure, and Kubernetes, store the credential settings in [Pulumi ESC](/docs/esc/), then [connect the environment to a CLI tool](/docs/ai/integrations/cli-integrations/#setting-up-a-cli-integration).
 
 ### Monitoring and issue tracking
 
@@ -95,10 +109,6 @@ For AWS, Google Cloud, Azure, and Kubernetes, configure credentials in Pulumi ES
 
 ## Give an agent access
 
-Select MCP integrations in the [agent's configuration](/docs/ai/agents/configure/#connect-the-tools-it-needs). Edit that selection to add integrations connected later.
+After connecting a tool, [select it for the agent](/docs/ai/agents/configure/#select-integrations). Cloud CLI connections instead require [permission to open their ESC environments](/docs/ai/agents/permissions/#scope-pulumi-cloud-access). For Neo, see [CLI connection selection](/docs/ai/integrations/cli-integrations/#per-task-selection).
 
-CLI connections are available to the agent without a per-task selection. Its role must grant access to open the backing ESC environments. For Neo, access depends on your Pulumi Cloud permissions, and you can [select CLI connections for each task](/docs/ai/integrations/cli-integrations/#per-task-selection).
-
-Give the agent only the permissions it needs for its work. Selecting an integration does not restrict its credentials. See [Permissions](/docs/ai/agents/permissions/) for how to scope access.
-
-To work with an agent from Slack, see [Tasks and collaboration](/docs/ai/agents/tasks/). For automatic runs, see [Events and schedules](/docs/ai/agents/triggers/).
+The connected credentials determine what the agent can do in that system. Selecting an integration does not narrow those credentials; [configure their permissions](/docs/ai/agents/permissions/#scope-credentials-for-connected-tools) for the agent's work.

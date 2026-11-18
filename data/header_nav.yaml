@@ -27,11 +27,16 @@ items:
       - heading: Key capabilities
         columns: 2
         items:
-          - label: AI infrastructure agent
+          - label: Delivery as code
+            href: /product/delivery/
+            description: Multi-stack orchestration with deployments and approvals
+            icon: custom/pulumi-delivery
+            track: header-product-delivery
+          - label: Infrastructure agents
             href: /product/agents/
-            description: Meet Neo, our AI-powered infrastructure engineering agent
-            icon: custom/pulumi-neo
-            track: header-product-neo
+            description: Specialized agents that build, operate, and secure your cloud
+            icon: custom/pulumi-agents
+            track: header-product-agents
           - label: Secrets & configuration
             href: /product/secrets-management/
             description: Environments, secrets, and configuration management
@@ -39,7 +44,7 @@ items:
             track: header-product-secrets
           - label: Discovery & governance
             href: /product/discovery-governance/
-            description: Asset management, compliance remediation, and AI insights over the cloud
+            description: Cloud asset inventory, compliance, and remediation
             icon: custom/pulumi-insights
             track: header-product-insights
           - label: Internal developer platform
