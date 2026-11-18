@@ -67,7 +67,7 @@ Coding agents changed how much software gets written, and the frontier labs felt
 
 They'll hit the ones after it, too. A merge isn't the finish line. Every one of those changes still has to reach production and be run there. Today that work lives in hodgepodges of scripts, pipeline YAML, console clicks, manual approvals, and homegrown systems, all built on the assumption that a human clicking and copy-pasting on the critical path was fine. Those systems aren't just unfriendly to agents. They're agent-hostile. And once code is live, operations still runs on pages, dashboards, and toil.
 
-So agents write code at machine speed, and then it waits.
+The result: agents write code at machine speed, and then it waits.
 
 ## Why code is the answer
 
