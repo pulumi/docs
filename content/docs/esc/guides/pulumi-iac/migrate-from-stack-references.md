@@ -126,7 +126,7 @@ locals {
 
 {{< /chooser >}}
 
-The producer stack, `vpc-infra`, exports those values as [stack outputs](/docs/iac/concepts/stacks/#stack-outputs); nothing about the producer changes in this migration.
+The producer stack, `vpc-infra`, exports those values as [stack outputs](/docs/iac/concepts/stacks/#outputs); nothing about the producer changes in this migration.
 
 ## Read the outputs through pulumi-stacks
 
