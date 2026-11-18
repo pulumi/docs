@@ -783,7 +783,7 @@ Roll back, redeploy, and force-promote each start a new run that deploys one rel
 - **Redeploy** runs the stage's current release again, with the same commits and values as the run that first deployed it.
 - **Force-promote** moves a release into the stage without waiting for the stage's gate. The release must already have succeeded in every upstream stage, because the stage reads their outputs. Each force-promote is recorded in your organization's audit log.
 
-You can't roll back to, redeploy, or force-promote a release that came from [a local run](/docs/delivery/concepts/#run-the-pipeline-locally). When a stage's current release is local, the stage's page shows it as **Deployed now** with a **Local** label, alongside its **Last cloud release**. To replace a local release, roll back to or force-promote a cloud release.
+You can't roll back to, redeploy, or force-promote a release that came from [a local run](/docs/delivery/concepts/#run-locally). When a stage's current release is local, the stage's page shows it as **Deployed now** with a **Local** label, alongside its **Last cloud release**. To replace a local release, roll back to or force-promote a cloud release.
 
 <!-- TODO(launch): Link the pipeline:* stage-action permissions (pipeline:pause, pipeline:rollback, pipeline:redeploy, pipeline:force_promote) to the RBAC scope reference once the nightly scope sync adds them. -->
 <!-- TODO(launch): Once the Delivery REST API is publicly documented, add a "Stage actions with the REST API" subsection (POST .../delivery/stages/<stage>/{pause,resume,rollback,redeploy,promote}; rollback and promote take {"releaseNumber": <n>}; the run-starting ones return {"runNumber": <n>}) and link it to the API reference page. -->
