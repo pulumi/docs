@@ -183,7 +183,7 @@ pulumi new private/my-org/my-template
 pulumi new private/my-org/my-template@1.0.0
 ```
 
-**From the Pulumi Console:**
+**From the Pulumi Cloud console:**
 
 - Navigate to the Private Registry to browse templates
 - Select a template to view its README and metadata
@@ -210,7 +210,7 @@ You can configure GitHub or GitLab repositories as template sources for VCS-back
 VCS-backed templates require that your Pulumi account has an integration configured with your preferred VCS vendor.
 
 This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
-If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
+If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Select the button and accept the required permissions.
 
 Template source content itself is fetched using the Pulumi GitHub app, so the app must also be installed and connected to your Pulumi organization for GitHub-backed sources. See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
 
@@ -226,7 +226,7 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when creating private repositories; template source content is fetched using the Pulumi GitHub app.
 More specifically, this ensures that any repositories created on your behalf are created using your own GitHub user's permissions, rather than the (potentially broader) access granted to the Pulumi GitHub app.
 
-Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#vcs-authorization).
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Select the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#vcs-authorization).
 
 If you have OAuth App access restrictions enabled in your GitHub organization, you will also need to
 [approve the Pulumi OAuth app](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
