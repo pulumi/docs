@@ -61,7 +61,7 @@ At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too.
 
 ## What happens after the merge
 
-Frontier labs have made huge advances in agentic coding, code review, and everything up to the merge. Claude Code, Codex, and friends now write and test a growing share of the code we ship, and the labs felt it first. [Anthropic's monorepo](https://www.anthropic.com/research/redesigning-source-control) went from about 2,500 merges a day in May to over 30,000 by September. At OpenAI, where one engineer now has several changes ready for CI at once, [Git reliability at times fell below 90%](https://openai.com/index/scaling-git-at-openai/) under the load. Both rebuilt source control to keep up. And then it all stops at the pull request. Everything after the merge (provisioning, configuration, secrets, policy, and delivery) still runs on scripts, tickets, and waiting. Today's SDLC was designed for human hands working at human speed, and it has become the bottleneck.
+Frontier labs have made huge advances in agentic coding, code review, and everything up to the merge. Claude Code, Codex, and friends now write and test a growing share of the code we ship, and the labs felt it first. [Anthropic's monorepo](https://www.anthropic.com/research/redesigning-source-control) went from about 2,500 merges a day in May to over 30,000 by September. At OpenAI, where one engineer now has several changes ready for CI at once, [Git reliability at times fell below 90%](https://openai.com/index/scaling-git-at-openai/) under the load. Both rebuilt source control to keep up. And then it all stops at the pull request. Everything after the merge (provisioning, configuration, secrets, policy, and delivery) still runs on scripts, tickets, and waiting. Today's SDLC was designed for human hands working at human speed, and it has become the bottleneck. An agentic SDLC needs agentic delivery, too.
 
 We set out to answer a few questions. How does code get to production, and which gates does it pass through? Which of those gates need a human, and which can an agent handle? When something breaks in production, who responds, and how does the fix get back into the code? Pulumi Delivery and Pulumi Agents are our answers.
 
@@ -75,7 +75,7 @@ We've watched this play out on our own platform, where the share of infrastructu
 
 Working with customers, we've also seen where everything around IaC falls short. Delivery pipelines are still hodgepodges of scripts, manual configurations and approvals, YAML files, and homegrown systems. These approaches are agent-hostile, because we as an industry built them assuming humans clicking and copy-pasting on the critical path was okay. And once code is live, operations still runs on pages, dashboards, and manual toil.
 
-## Pulumi Delivery: your release process, in code
+## Pulumi Delivery: agentic delivery as code
 
 Pulumi Delivery puts your entire release process in code: stages, promotion and rollout policies, gates, jobs, and everything else between merge and production. As with infrastructure as code, you write it in TypeScript, Python, HCL, Go, C#, Java, or YAML, which is great for humans as well as agents. Software engineering suddenly applies, so you can test, share, and reuse pipeline definitions.
 
@@ -627,7 +627,7 @@ Here, a Datadog memory alert on the checkout service dispatches an incident inve
 
 Put Delivery and Agents together, and you get the whole loop. Gates in your pipelines can ask an agent, or a decision model like Jev, to score a deployment's risk. Low-risk changes promote themselves, region by region, with health checks at every stage. Risky ones wait for a person, who can approve right from Slack. Once in production, agents are dispatched by the signals your systems already emit, and their fixes come back through the pipeline, gated like every other change. Engineers and agents follow one path under one set of rules, and you set the autonomy slider wherever you're comfortable, from human in charge, to human in the loop, to full autonomy. No matter what, deterministic guardrails and audit trails are kept.
 
-## One system, one graph
+## One platform for the agentic SDLC
 
 All of this is built on the same platform as our core IaC, powered by one context graph, data model, and API across your applications and infrastructure. Pulumi knows which deploy changed which resources, what's running where, and what depends on what, so an agent investigating an alert starts with that context instead of guessing. And because it's one system, the same identity, RBAC, policies, and audit trail apply to the new products and the existing ones alike.
 
