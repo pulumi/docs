@@ -118,12 +118,13 @@ curl -s -X PATCH \
   }'
 ```
 
-Or equivalently using the `pulumi cloud api` command:
+Or equivalently using the [`pulumi api`](/docs/iac/cli/api/) command:
 
 ```bash
-pulumi cloud api PATCH \
-  /orgs/{orgName}/teams/{teamName} \
-  -- --body '{"addEnvironmentPermission":{"projectName":"{projectName}","envName":"{envName}","permission":"read"}}'
+pulumi api /api/orgs/{orgName}/teams/{teamName} \
+  -X PATCH \
+  -F orgName={orgName} -F teamName={teamName} \
+  --body '{"addEnvironmentPermission":{"projectName":"{projectName}","envName":"{envName}","permission":"read"}}'
 ```
 
 The valid permission values are:

@@ -86,12 +86,12 @@ curl -s -X POST \
   }'
 ```
 
-Or equivalently using the `pulumi cloud api` command:
+Or equivalently using the [`pulumi api`](/docs/iac/cli/api/) command:
 
 ```bash
-pulumi cloud api POST \
-  /orgs/{orgName}/assignments/list \
-  -- --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}"}'
+pulumi api /api/orgs/{orgName}/assignments/list \
+  -F orgName={orgName} \
+  --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}"}'
 ```
 
 Grant, change, or revoke access:
@@ -109,12 +109,12 @@ curl -s -X POST \
   }'
 ```
 
-Or equivalently using the `pulumi cloud api` command:
+Or equivalently using the `pulumi api` command:
 
 ```bash
-pulumi cloud api POST \
-  /orgs/{orgName}/assignments/update \
-  -- --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}","userId":"{userLogin}","permissionSetId":"{permissionSetId}"}'
+pulumi api /api/orgs/{orgName}/assignments/update \
+  -F orgName={orgName} \
+  --body '{"context":{"__type":"PermissionExpressionStack"},"id":"{stackId}","userId":"{userLogin}","permissionSetId":"{permissionSetId}"}'
 ```
 
 * `context.__type` is `PermissionExpressionStack`, `PermissionExpressionEnvironment`, or `PermissionExpressionInsightsAccount`.
