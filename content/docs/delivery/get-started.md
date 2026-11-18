@@ -524,8 +524,6 @@ Register the pipeline from the `delivery` directory:
 pulumi delivery register
 ```
 
-<!-- TODO(launch): Verified on 2026-11-17 with `PULUMI_DELIVERY_REGISTER=true pulumi up` (CLI v3.274.0-alpha, delivery 0.0.1-alpha.6), which is what `pulumi delivery register` runs (pulumi/pulumi#25729, not yet merged). Re-run with the released command, and check whether it still reports the stages as awaiting and exits with code 10. -->
-
 Registering tells Pulumi Cloud about the pipeline and writes the program's location in your repository to the `delivery:source` setting in `Pulumi.main.yaml`. It doesn't start a run, so the output lists each stage as waiting for one. Commit everything, including that config file, and push:
 
 ```bash
@@ -549,7 +547,7 @@ That's your first release. Every push to `main` from now on starts a new run, pi
 
 ## Next steps
 
-- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [run the pipeline locally](/docs/delivery/concepts/#run-the-pipeline-locally) while you iterate on it.
+- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [run the pipeline locally](/docs/delivery/concepts/#run-locally) while you iterate on it.
 - Require named approvers before `prod` with an [approval gate](/docs/delivery/concepts/stages-and-gates/#approval-gates).
 - Give each stage [cloud credentials](/docs/delivery/guides/cloud-credentials/) so it can deploy real infrastructure.
 - Add tests and smoke checks with the [pipeline patterns](/docs/delivery/guides/pipeline-patterns/) guide.
