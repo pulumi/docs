@@ -22,6 +22,8 @@ Pulumi Delivery is in public preview. Behavior, the SDK, and the REST API routes
 Pulumi Delivery needs Pulumi CLI v3.277.0 or later.
 {{% /notes %}}
 
+![Pulumi Delivery inside Pulumi Cloud, promoting a release from your repository through dev, staging, and prod stages to your clouds](/images/docs/delivery-platform-diagram.svg)
+
 ## An example pipeline
 
 This pipeline deploys an app from the `acme/shop` repository to `dev`, runs its tests, and then waits for someone to approve the release before it deploys to `prod`:
