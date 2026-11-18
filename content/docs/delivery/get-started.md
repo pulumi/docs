@@ -93,7 +93,7 @@ pulumi install
 ```bash
 mkdir delivery && cd delivery
 pulumi new go --name shop-delivery --stack main --yes
-go get github.com/pulumi/pulumi-delivery/sdk/go/delivery
+go get github.com/pulumi/pulumi-delivery/sdk
 ```
 
 {{% /choosable %}}
