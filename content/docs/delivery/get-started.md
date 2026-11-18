@@ -547,7 +547,7 @@ That's your first release. Every push to `main` from now on starts a new run, pi
 
 ## Next steps
 
-- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [test the pipeline locally](/docs/delivery/concepts/#testing-locally) while you iterate on it.
+- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [run the pipeline locally](/docs/delivery/concepts/#run-locally) while you iterate on it.
 - Require named approvers before `prod` with an [approval gate](/docs/delivery/concepts/stages-and-gates/#approval-gates).
 - Give each stage [cloud credentials](/docs/delivery/guides/cloud-credentials/) so it can deploy real infrastructure.
 - Add tests and smoke checks with the [pipeline patterns](/docs/delivery/guides/pipeline-patterns/) guide.
