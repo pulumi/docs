@@ -77,7 +77,7 @@ If you're in the GitHub organization but don't see anything in Pulumi, this is w
 
 ### Joining with your company Google account
 
-If your company uses Google Workspace and its Pulumi organization allows it, you can join that organization without an invitation. Your Pulumi account's email must be your company Google Workspace email, such as `you@example.com`. Personal Google accounts, including ones registered with a work email address, can't be used to join.
+If your company uses Google Workspace and its Pulumi organization allows it, you can join that organization without an invitation. Your Pulumi account's email must be your company Google Workspace email, such as `you@your-company.com`. Personal Google accounts, including ones registered with a work email address, can't be used to join.
 
 Pulumi offers you your company's organizations at these points:
 
@@ -86,8 +86,6 @@ Pulumi offers you your company's organizations at these points:
 - **When you create an organization.** On the create organization page, select **Join an existing organization**.
 
 If you didn't just sign in with Google, Pulumi Cloud asks you to confirm your company Google account first. This only confirms your email domain: it doesn't add Google as a way to sign in to Pulumi.
-
-<!-- TODO: screenshot of the "Join your team on Pulumi" page listing an organization to join. -->
 
 You join with the organization's [default role](/docs/administration/concepts/rbac/default-roles/), and its admins get an email. Joining an organization doesn't affect your other organizations.
 
@@ -115,7 +113,6 @@ Instead of inviting everyone, organization admins can let anyone with a company 
 
 Your organization can use this if:
 
-- It's on Essentials, Pro, or Enterprise, including during a free trial.
 - Pulumi manages its membership. Organizations backed by GitHub, GitLab, Bitbucket, or SAML add members through their identity provider instead.
 - Its [default role](/docs/administration/concepts/rbac/default-roles/) can't manage members. Everyone who joins this way gets the default role, so a default role that can add members or change roles would give admin-level access to anyone at your company.
 
@@ -124,8 +121,6 @@ To turn it on:
 1. Navigate to **Settings** > **Access management** and select the **Members** tab.
 1. Expand **Join with company Google sign-in** and select **Enable**.
 1. When prompted, sign in with the company Google Workspace account that has the same email as your Pulumi account. Its domain becomes the one colleagues can join from.
-
-<!-- TODO: screenshot of the "Join with company Google sign-in" card on the Members tab, turned on. -->
 
 An organization can allow one email domain. You get an email each time someone joins, and joins are recorded in the [audit log](/docs/administration/concepts/audit-logs/). Joining uses a seat like any other member, so people can't join once the organization has no seats left.
 
