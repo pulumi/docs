@@ -763,62 +763,30 @@ A gate with one manual rule takes an empty JSON object. For a gate with several 
 
 ## Stage actions
 
-A stage normally takes whichever release reaches it next. Stage actions let you step in when that isn't what you want: hold the stage where it is, put an earlier release back, deploy the current release again, or move a release in without waiting for its gate. You'll find them in the **Actions** menu on a stage's page in the Pulumi Cloud console. When an action isn't available, the menu says why.
+A stage normally takes whichever release reaches it next. Stage actions let you intervene when you need to, such as rolling back changes or pausing updates to that stage. You'll find them in the **Actions** menu on a stage's page in the Pulumi Cloud console or available via API.
 
-Stage actions need write access to the pipeline stack. Each action has its own permission, `pipeline:pause` (which covers resume too), `pipeline:rollback`, `pipeline:redeploy`, and `pipeline:force_promote`, so a custom role can grant some of them without the others. The tokens a pipeline run uses can't take stage actions.
+Stage actions use your permissions rather than the service principal that deploys the pipeline. To do them, you need write access to the pipeline stack.
 
 ### Pausing and resuming a stage
 
-Pause a stage when you need it to stay on its current release, for example while you investigate a problem in `prod`. No release enters a paused stage until someone resumes it. A run that's already deploying to the stage finishes, and runs that reach the stage while it's paused wait in its queue. Stage actions still work on a paused stage, so you can roll back, redeploy, or force-promote without resuming it first.
+Pause a stage when you need it to stay on its current release, for example while you investigate a problem in `prod`. No release enters a paused stage until someone resumes it. A run that's already deploying to the stage finishes, and runs that reach the stage while it's paused wait in its queue.
 
 When you resume the stage, the newest waiting release enters it, as it would have if the stage hadn't been paused.
-
-The stage's page shows who paused it and when.
 
 <!-- TODO: Pausing and resuming aren't in the audit log yet (DLV-392). Once they are, say so here and in the rollback item. -->
 
 ### Rolling back, redeploying, and force-promoting
 
-Roll back, redeploy, and force-promote each start a new run that deploys one release to this one stage. The new run reuses the program commit, source commits, and recorded values of the run that first deployed that release, so it repeats what that release did rather than picking up anything newer. It skips the stage's gate and goes ahead of any normal runs waiting for the stage.
+Roll back, redeploy, and force-promote each start a new run that deploys one release to this one stage. The new run reuses the program commit, source commits, and recorded values of the run that first deployed that release, so it repeats what that release did rather than picking up anything newer. It skips the stage's gate and takes priority over other runs waiting for the stage.
 
 - **Roll back** deploys a release that's older than the one the stage has now and that the stage already deployed successfully. A rollback also pauses the stage, so the newer release you rolled back from doesn't deploy over it. Resume the stage once you're ready for new releases. Keep in mind that a rollback restores everything in the older release, including any bugs that later releases fixed.
 - **Redeploy** runs the stage's current release again, with the same commits and values as the run that first deployed it.
 - **Force-promote** moves a release into the stage without waiting for the stage's gate. The release must already have succeeded in every upstream stage, because the stage reads their outputs. Each force-promote is recorded in your organization's audit log.
 
-If the stage deploys a different release before a stage-action run gets to it, the run fails rather than undoing that change. Check the stage, then start the action again.
-
 You can't roll back to, redeploy, or force-promote a release that came from [a local run](/docs/delivery/concepts/#run-the-pipeline-locally). When a stage's current release is local, the stage's page shows it as **Deployed now** with a **Local** label, alongside its **Last cloud release**. To replace a local release, roll back to or force-promote a cloud release.
 
-### Stage actions with the REST API
-
-Each stage action is also a REST API route. They all start with this prefix, where `<stage>` is the stage's name:
-
-```text
-POST /api/preview/stacks/<org>/<project>/<stack>/delivery/stages/<stage>/
-```
-
-| Action | Route | Body |
-| --- | --- | --- |
-| Pause | `.../pause` | None |
-| Resume | `.../resume` | None |
-| Roll back | `.../rollback` | `{"releaseNumber": <n>}` |
-| Redeploy | `.../redeploy` | None |
-| Force-promote | `.../promote` | `{"releaseNumber": <n>}` |
-
-For example, to roll `prod` back to release 3:
-
-```bash
-curl -X POST \
-    -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-    -H "Content-Type: application/json" \
-    -d '{"releaseNumber": 3}' \
-    https://api.pulumi.com/api/preview/stacks/acme/shop-delivery/main/delivery/stages/prod/rollback
-```
-
-Roll back, redeploy, and force-promote return the number of the run they start, as in `{"runNumber": 12}`.
-
-<!-- TODO(launch): Link the pipeline:* permissions to the RBAC scope reference once the nightly scope sync adds them. -->
-<!-- TODO(launch): Once the Delivery REST API is publicly documented, link these routes to its API reference page. -->
+<!-- TODO(launch): Link the pipeline:* stage-action permissions (pipeline:pause, pipeline:rollback, pipeline:redeploy, pipeline:force_promote) to the RBAC scope reference once the nightly scope sync adds them. -->
+<!-- TODO(launch): Once the Delivery REST API is publicly documented, add a "Stage actions with the REST API" subsection (POST .../delivery/stages/<stage>/{pause,resume,rollback,redeploy,promote}; rollback and promote take {"releaseNumber": <n>}; the run-starting ones return {"runNumber": <n>}) and link it to the API reference page. -->
 
 ## Artifacts
 
