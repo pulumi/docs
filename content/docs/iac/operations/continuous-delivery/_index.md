@@ -72,15 +72,7 @@ Alternatively, if you use Pulumi Cloud, [Pulumi ESC](/docs/esc/) can supply them
 
 {{< pulumi-cloud />}}
 
-Pulumi Cloud has several options for CI/CD workflows that can work alongside, and in some cases replace, the CI/CD system you already use. Which option fits best depends on how much you need to coordinate.
-
-### Pulumi Deployments
-
-[Pulumi Deployments](/docs/deployments/) runs Pulumi operations for individual stacks, either on your own or on Pulumi-managed runners. Deployments can be triggered by Git push events, [CLI commands](/docs/iac/cli/commands/pulumi_deployment/), the [REST API](/docs/reference/cloud-rest-api/deployments/), or on a schedule. With a connected repository, Deployments can run the trunk-based workflow described above: `pulumi preview` when a pull request is opened, and `pulumi up` when commits merge to a specified branch or a matching tag is pushed.
-
-### Review stacks
-
-[Review stacks](/docs/deployments/concepts/review-stacks/) are built on top of Pulumi Deployments, and create ephemeral Pulumi stacks for each pull request, allowing reviewers to exercise a change before it gets merged. Review stacks are destroyed automatically when pull requests close.
+Pulumi Cloud has several options for CI/CD workflows that can work alongside, and in some cases replace, the CI/CD system you already use. Which option fits best depends on how much you need to coordinate, from releases across many stacks to a single stack or pull request.
 
 ### Pulumi Delivery
 
@@ -91,6 +83,14 @@ Pulumi Cloud has several options for CI/CD workflows that can work alongside, an
 Delivery covers the merge and promote steps of the trunk-based workflow described earlier on this page. In the example above, a push to a `main` branch starts a run that deploys and tests a change to a `dev` stack before deploying it automatically to `staging`, then waits for human approval before deploying the same change to `prod`. Because the pipeline itself is a Pulumi program, you can build it with loops, functions, and conditionals, and it's versioned and reviewed along with the infrastructure and application code it delivers.
 
 To learn more about Pulumi Delivery, see [How Pulumi Delivery works](/docs/delivery/concepts/).
+
+### Pulumi Deployments
+
+[Pulumi Deployments](/docs/deployments/) is the foundation Delivery runs on, and you can use it directly to run Pulumi operations for individual stacks, either on your own or on Pulumi-managed runners. Deployments can be triggered by Git push events, [CLI commands](/docs/iac/cli/commands/pulumi_deployment/), the [REST API](/docs/reference/cloud-rest-api/deployments/), or on a schedule. With a connected repository, Deployments can run all three steps of the trunk-based workflow described earlier: `pulumi preview` when a pull request is opened, and `pulumi up` when commits merge to a specified branch or a matching tag is pushed.
+
+### Review stacks
+
+[Review stacks](/docs/deployments/concepts/review-stacks/) create ephemeral Pulumi stacks for every pull request of an associated source repository. Built on top of Pulumi Deployments, review stacks allow reviewers to exercise a change before it's merged, and they're destroyed automatically when pull requests close.
 
 ## Pulumi Kubernetes Operator
 
