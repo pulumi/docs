@@ -59,7 +59,9 @@ The best multi-cloud management platform depends on the job. Pulumi, Terraform, 
 
 <!--more-->
 
-"Multi-cloud management" has become a catch-all label. A search for it returns infrastructure as code (IaC) tools, run orchestrators, hybrid virtual machine managers, and cost dashboards in a single list, which makes comparison hard. This guide sorts 14 tools into the job each one does, compares them in one table, and spends time on the question most lists skip: what makes infrastructure portable across clouds, and what does not.
+Many organizations become multi-cloud without planning to. Flexera's [2026 State of the Cloud report](https://www.flexera.com/about-us/press-center/flexera-finds-cloud-value-is-rising-while-ai-waste-grows) found AWS running active enterprise workloads at 83% of organizations surveyed and Azure at 79%, and it attributes the continued rise in multi-cloud to mergers, SaaS sprawl, and decentralized teams more often than to deliberate strategy. The same survey puts 73% of organizations on hybrid estates.
+
+Once a second cloud shows up, someone has to decide how to manage it, and a search for "multi-cloud management" returns infrastructure as code (IaC) tools, run orchestrators, hybrid virtual machine managers, and cost dashboards in a single list. This guide sorts 14 tools into the job each one does, compares them in one table, and then takes on the question most lists skip: what makes infrastructure portable across clouds, and what does not.
 
 We build Pulumi, so Pulumi is on the list and we say where it fits and where it does not. Competitor details come from each vendor's public documentation and pricing pages, linked throughout. Where a price is not published, we say so.
 
@@ -86,15 +88,15 @@ Sort tools by job before comparing features. Two products in different categorie
 
 | Tool | Job | Where it works | How you define infrastructure | Open source | Public pricing | Best for |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pulumi | Provision, plus platform layer | AWS, Azure, Google Cloud, Kubernetes, SaaS, on-prem | TypeScript, Python, Go, C#, Java, YAML | Yes (SDK and engine) | Free, then Essentials $40/mo, Pro $400/mo, Enterprise from $2,000/mo | Teams that want real programming languages |
+| Pulumi | Provision, plus platform layer | AWS, Azure, Google Cloud, Kubernetes, SaaS, on-prem | TypeScript, Python, Go, C#, Java, YAML | Yes (SDK and engine) | Free, then Essentials $40/mo, Pro $400/mo, Enterprise by quote | Teams that want real programming languages |
 | Terraform / HCP Terraform | Provision, managed runs | Any cloud with a provider | HCL | Source-available (BSL) | Free tier up to 500 resources; paid by managed resources | Orgs standardized on Terraform |
 | OpenTofu | Provision | Terraform-compatible providers | HCL | Yes | Free | Terraform-style IaC under neutral governance |
-| Spacelift | Orchestrate | Terraform, OpenTofu, Pulumi, and others | Whatever the underlying tool uses | No | Free plan; paid by quote | Platform teams running several IaC tools |
+| Spacelift | Orchestrate | Terraform, OpenTofu, Pulumi, and others | Whatever the underlying tool uses | No | Free plan; Starter from $399/mo; Business and Enterprise by quote | Platform teams running several IaC tools |
 | Scalr | Orchestrate | Terraform and OpenTofu | HCL | No | Free to 50 runs/month, then per run | Teams that want per-run billing |
-| env zero | Orchestrate, self-service | Terraform, OpenTofu, and others | Whatever the underlying tool uses | No | Free tier (250 runs/month); paid by quote | Self-service environments with cost guardrails |
+| env zero | Orchestrate, self-service | Terraform, OpenTofu, and others | Whatever the underlying tool uses | No | Free tier (250 runs/month); paid by quote | Governed, expiring environments for developers |
 | Crossplane | Kubernetes control plane | AWS, Azure, Google Cloud via providers | Kubernetes YAML and compositions | Yes (CNCF graduated) | Free; commercial via Upbound | Kubernetes-centric platform teams |
 | HPE Morpheus Software | Hybrid self-service | VMs, containers, private and public cloud | Catalogs, blueprints, automation | No | Per-socket subscription | VMware-estate modernization |
-| CloudBolt | Hybrid self-service, FinOps | Hybrid and multi-cloud | Catalogs and blueprints | No | By quote | Governed self-service across estates |
+| CloudBolt | Hybrid self-service, FinOps | Hybrid and multi-cloud | Catalogs and blueprints | No | Paid plans by quote | Governed self-service across estates |
 | Ansible Automation Platform | Configuration and automation | Anything reachable by SSH or API | YAML playbooks | Core is open source | Subscription | Configuration and day-2 operations |
 | CloudHealth by Broadcom | FinOps | AWS, Azure, Google Cloud, hybrid | Not applicable | No | By quote | FinOps in Broadcom-aligned enterprises |
 | Flexera One | FinOps and ITAM | Public cloud, SaaS, on-prem | Not applicable | No | By quote | Unifying cloud cost and software assets |
@@ -107,13 +109,13 @@ Pricing details change often, so confirm against each vendor's pricing page befo
 
 ### Pulumi lets you define multi-cloud infrastructure in general-purpose languages
 
-[Pulumi](https://www.pulumi.com/) is an open source IaC platform where you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. One program and one state model can create resources in AWS, Azure, Google Cloud, Kubernetes, and SaaS providers, drawing on hundreds of packages in the [Pulumi Registry](https://www.pulumi.com/registry/). Because the code is a real language, you get loops, functions, tests, package managers, and IDE support.
+[Pulumi](/) is an open source IaC platform where you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. One program and one state model can create resources in AWS, Azure, Google Cloud, Kubernetes, and SaaS providers, drawing on hundreds of packages in the [Pulumi Registry](/registry/). Because the code is a real language, you get loops, functions, tests, package managers, and IDE support.
 
-Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pulumi.com/docs/esc/) for secrets and configuration, Pulumi Discovery for inventory and scanning across accounts and clouds, Pulumi Policies for policy as code, deployments, and Neo, an infrastructure agent that proposes changes and opens pull requests with human approval. Components and templates let platform teams publish reusable building blocks that developers consume as libraries.
+Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](/docs/esc/) for secrets and configuration, Pulumi Discovery for inventory and scanning across accounts and clouds, Pulumi Policies for policy as code, deployments, and Neo, an infrastructure agent that proposes changes and opens pull requests with human approval. Components and templates let platform teams publish reusable building blocks that developers consume as libraries.
 
 - **Strengths:** abstraction and testing in languages teams already know; one workflow across clouds; strong fit for AI coding agents that already work in those languages.
 - **Watch out for:** the module ecosystem is smaller than Terraform's, teams need some comfort with a programming language, and Pulumi Cloud pricing is credit-based, so size it before you commit.
-- **Pricing:** Free for one user; Essentials $40/month; Pro $400/month; Enterprise from $2,000/month, per the [pricing page](https://www.pulumi.com/pricing/).
+- **Pricing:** Free for one user; Essentials $40/month for up to 500 managed resources; Pro $400/month for up to 2,000; Enterprise by quote, per the [pricing page](/pricing/).
 - **Best for:** teams that want infrastructure in code they can test and reuse, with state, secrets, policy, and inventory in one place.
 
 ### Terraform and HCP Terraform have the largest provider and module ecosystem
@@ -126,7 +128,7 @@ Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pu
 
 ### OpenTofu is the vendor-neutral Terraform fork
 
-[OpenTofu](https://opentofu.org/) is a Linux Foundation project and a CNCF Sandbox project that forked Terraform in 2023 and keeps Terraform-style HCL workflows and provider compatibility. It is free and has no commercial owner.
+[OpenTofu](https://opentofu.org/) forked Terraform in 2023 under the Linux Foundation and keeps Terraform-style HCL workflows and provider compatibility. The CNCF [accepted it as a Sandbox project](https://www.cncf.io/projects/opentofu/) in April 2025. OpenTofu is free and has no commercial owner.
 
 - **Strengths:** neutral governance and familiar syntax for Terraform users.
 - **Watch out for:** still HCL, no first-party managed platform, and the ecosystem may diverge from Terraform over time.
@@ -134,14 +136,14 @@ Pulumi Cloud adds the platform layer: managed state, [Pulumi ESC](https://www.pu
 
 ## Orchestrate and govern IaC runs: Spacelift, Scalr, and env zero
 
-These tools sit above an IaC tool. They run plans and applies, enforce policy, detect drift, and manage access across teams. You still need an IaC tool underneath. Our [comparison of IaC orchestration platforms](https://www.pulumi.com/docs/iac/comparisons/tacos/) covers the category in more depth.
+These tools sit above an IaC tool. They run plans and applies, enforce policy, detect drift, and manage access across teams. You still need an IaC tool underneath. Our [comparison of IaC orchestration platforms](/docs/iac/comparisons/tacos/) covers the category in more depth.
 
 ### Spacelift supports many IaC tools behind one policy engine
 
-[Spacelift](https://spacelift.io/) orchestrates Terraform, OpenTofu, Pulumi, CloudFormation, Ansible, and Kubernetes workflows, with stack dependencies, drift detection, and a flexible policy engine. It has a free plan for small teams, and paid tiers (Starter, Starter Plus, Business, Enterprise) are [priced by quote](https://spacelift.io/pricing). Spacelift also publishes its own long list of multi-cloud tools, which is a useful second opinion. See our [Pulumi and Spacelift comparison](https://www.pulumi.com/docs/iac/comparisons/spacelift/) for how the two relate.
+[Spacelift](https://spacelift.io/) orchestrates Terraform, OpenTofu, Pulumi, CloudFormation, Ansible, and Kubernetes workflows, with stack dependencies, drift detection, and a flexible policy engine. Its [pricing page](https://spacelift.io/pricing) lists a free plan, a Starter plan from $399 per month with 10 users, and Business and Enterprise tiers by quote. Spacelift also publishes its own long list of multi-cloud tools, which is a useful second opinion. See our [Pulumi and Spacelift comparison](/docs/iac/comparisons/spacelift/) for how the two relate.
 
 - **Strengths:** multi-tool support and policy flexibility.
-- **Watch out for:** it adds a layer rather than replacing your IaC tool, and paid pricing requires a sales conversation.
+- **Watch out for:** it adds a layer on top of your IaC tool, and Business and Enterprise pricing requires a sales conversation.
 - **Best for:** platform teams that run several IaC tools and want one governed workflow.
 
 ### Scalr offers Terraform and OpenTofu runs with per-run pricing
@@ -150,9 +152,9 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 - **Strengths:** predictable billing for teams that dislike resource-based metering; free self-hosted agents.
 - **Watch out for:** focused on Terraform and OpenTofu, with a smaller footprint than Spacelift or HCP Terraform.
-- **Best for:** teams moving off resource-metered pricing that want simple run-based billing.
+- **Best for:** teams moving off resource-metered pricing that would rather pay per run.
 
-### env zero focuses on self-service environments with cost controls
+### env zero focuses on governed self-service environments
 
 [env zero](https://www.envzero.com/) (formerly env0) manages IaC deployments with self-service environments, guardrails and policies, and drift management across Terraform, OpenTofu, and other tools. Its [pricing page](https://www.envzero.com/pricing) lists a free tier with 250 runs per month and 30 active environments; paid plans are custom.
 
@@ -164,7 +166,7 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ### Crossplane turns cloud resources into Kubernetes-native APIs
 
-[Crossplane](https://www.crossplane.io/) lets platform teams define compositions that expose cloud resources as Kubernetes custom resources, then reconciles them continuously. It graduated in the CNCF in October 2025. Upbound offers a commercial platform built on it. See our [Pulumi and Crossplane comparison](https://www.pulumi.com/docs/iac/comparisons/crossplane/).
+[Crossplane](https://www.crossplane.io/) lets platform teams define compositions that expose cloud resources as Kubernetes custom resources, then reconciles them continuously. The CNCF [announced its graduation](https://www.cncf.io/announcements/2025/11/06/cloud-native-computing-foundation-announces-graduation-of-crossplane/) in November 2025, and Upbound sells a commercial platform built on it. See our [Pulumi and Crossplane comparison](/docs/iac/comparisons/crossplane/).
 
 - **Strengths:** continuous reconciliation and a natural fit for self-service platform APIs.
 - **Watch out for:** requires Kubernetes expertise and YAML composition skills, and debugging compositions has a learning curve.
@@ -172,7 +174,7 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ### GKE Enterprise manages Kubernetes fleets from Google Cloud
 
-[GKE Enterprise](https://cloud.google.com/kubernetes-engine/enterprise/docs) is the premium GKE edition that replaced the Anthos brand. It provides fleet management, configuration sync, and policy across GKE, Google Distributed Cloud, and attached clusters. Billing is per vCPU.
+[GKE Enterprise](https://cloud.google.com/kubernetes-engine/enterprise/docs) is the premium GKE edition that replaced the Anthos brand. It provides fleet management, configuration sync, and policy across GKE, Google Distributed Cloud, and attached clusters. Billing is per vCPU under management, per the [GKE pricing page](https://cloud.google.com/kubernetes-engine/pricing).
 
 - **Strengths:** deep integration with GKE and fleet-level policy.
 - **Watch out for:** scope is Kubernetes only and the center of gravity is Google Cloud.
@@ -190,7 +192,7 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ### CloudBolt adds governed self-service and FinOps for hybrid estates
 
-[CloudBolt](https://www.cloudbolt.io/) combines a cloud management platform with cost optimization features for hybrid and multi-cloud environments. Pricing is by quote.
+[CloudBolt](https://www.cloudbolt.io/) combines a cloud management platform with cost optimization features for hybrid and multi-cloud environments. Paid pricing is by quote.
 
 - **Strengths:** self-service with guardrails and cost visibility in one product.
 - **Watch out for:** pricing and some roadmap details require vendor conversations.
@@ -198,7 +200,7 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ### Ansible Automation Platform automates configuration and day-2 operations
 
-[Red Hat Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible) runs agentless automation against any environment reachable by SSH or API. It is strong for configuration management and operations, and weaker as a state-tracked provisioning tool.
+[Red Hat Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible) runs agentless automation against any environment reachable by SSH or API. Ansible is strong for configuration management and operations, and weaker as a state-tracked provisioning tool.
 
 - **Strengths:** a large content collection ecosystem and a gentle learning curve.
 - **Watch out for:** playbooks are procedural, so drift and resource lifecycle need extra care.
@@ -232,25 +234,25 @@ These tools sit above an IaC tool. They run plans and applies, enforce policy, d
 
 ## What actually makes multi-cloud infrastructure portable?
 
-IaC lowers the cost of moving between clouds. It does not remove it. Three things decide how portable a setup really is.
+All of these tools say they work across clouds, and the provisioning tools mean it literally: one program can target AWS and Azure. Targeting two clouds is not the same as being able to move a workload between them. IaC lowers the rewrite cost of a move, and three things decide how much work is left.
 
-1. **How infrastructure is defined.** If every resource is a provider-specific block, a move means rewriting each one. If you wrap provider resources in components with a stable interface, such as a "database" or "cluster" component, you swap the implementation behind the interface and keep the callers unchanged. Real programming languages make this pattern ordinary software engineering. Our [multi-cloud application walkthrough](https://www.pulumi.com/blog/multicloud-app/) shows the idea in code.
-1. **How state, secrets, and policy are managed.** If these live in one system with one workflow, changing clouds changes the resources and leaves the process intact. Policy written once and applied to every cloud keeps guardrails consistent, as described in [multi-cloud policy as code](https://www.pulumi.com/blog/multicloud-policy-as-code/).
-1. **Which services you depend on.** Managed databases, queues, identity systems, and machine learning services have different APIs and behavior on each cloud. Portable code does not make those equivalent.
+1. **How infrastructure is defined.** If every resource is a provider-specific block, a move means rewriting each one. If you wrap provider resources in components with a stable interface, such as a "database" or "cluster" component, you swap the implementation behind the interface and keep the callers unchanged. Real programming languages make this pattern ordinary software engineering. Our [multi-cloud application walkthrough](/blog/multicloud-app/) shows the idea in code.
+1. **How state, secrets, and policy are managed.** If these live in one system with one workflow, changing clouds changes the resources and leaves the process intact. Policy written once and applied to every cloud keeps guardrails consistent, as described in [multi-cloud policy as code](/blog/multicloud-policy-as-code/).
+1. **Which services you depend on.** Managed databases, queues, identity systems, and machine learning services have different APIs and behavior on each cloud, and a portable program still calls each one on its own terms.
 
 Data is the other hard limit. Moving terabytes between providers involves egress fees and downtime planning that no tool automates away. Treat portability as a way to reduce rewrite effort and negotiating risk, and plan data moves separately.
 
-If you are weighing a change of IaC tool as part of this, the [Pulumi and Terraform comparison](https://www.pulumi.com/docs/iac/comparisons/terraform/) walks through the technical differences and migration paths. Our roundup of [Terraform alternatives](https://www.pulumi.com/blog/best-terraform-alternatives/) covers the wider field.
+If you are weighing a change of IaC tool as part of this, the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/) walks through the technical differences and migration paths. Our roundup of [Terraform alternatives](/blog/best-terraform-alternatives/) covers the wider field.
 
 ## How do you choose the right multi-cloud management platform?
 
-Match the tool to the problem you have today:
+Start from the problem you have today, then add a layer only when a new problem appears:
 
 - **You need to define and change infrastructure across clouds:** choose an IaC tool. Pulumi suits teams that want languages and tests; Terraform suits teams that value the largest module ecosystem; OpenTofu suits teams that want neutral open source HCL.
 - **Many teams share IaC and you need guardrails, drift detection, and approvals:** add an orchestrator such as Spacelift, Scalr, or env zero, or use the policy and deployment features built into your IaC platform.
 - **Your platform is built on Kubernetes:** evaluate Crossplane, or Pulumi if you prefer defining those resources in code.
 - **You run large VM and private cloud estates:** look at HPE Morpheus or CloudBolt for self-service and governance, and Ansible for configuration.
-- **Finance asks where cloud spend goes:** add CloudHealth or Flexera One. Cost tools complement provisioning tools and do not replace them.
+- **Finance asks where cloud spend goes:** add CloudHealth or Flexera One alongside your provisioning tool.
 - **Most of your estate is one cloud with some extensions:** the provider's native option, such as Azure Arc or GKE Enterprise, may be enough.
 
 Avoid buying overlapping layers. A common failure is stacking an orchestrator, a cloud management platform, and a cost tool before the team has settled how it defines infrastructure.
@@ -259,9 +261,9 @@ Avoid buying overlapping layers. A common failure is stacking an orchestrator, a
 
 Public case studies show the scale teams reach:
 
-- **Supabase** manages roughly 80,000 Pulumi resources across 16 AWS regions, per its [case study](https://www.pulumi.com/case-studies/supabase/).
-- **Wiz** reports managing more than 1 million cloud resources with Pulumi, per its [case study](https://www.pulumi.com/case-studies/wiz/).
-- **Atlassian** reported cutting developer time spent on maintenance by more than 50%, per its [case study](https://www.pulumi.com/case-studies/atlassian/).
+- **Wiz** provisions Kubernetes clusters on every major cloud provider, in every region its customers use. Built on the Pulumi Automation API and Go SDK, the system runs thousands of stacks across more than 100 data centers and manages over a million cloud resources, per its [case study](/customers/wiz/).
+- **Supabase** manages roughly 80,000 Pulumi resources across 16 AWS regions, up from about 30,000 a year earlier, per its [case study](/customers/supabase/).
+- **Atlassian** reported cutting developer time spent on maintenance by more than 50%, per its [case study](/customers/atlassian/).
 
 ## Frequently asked questions
 
@@ -275,7 +277,7 @@ Multi-cloud means using services from more than one public cloud provider, such 
 
 ### Is Terraform a multi-cloud management tool?
 
-Terraform is a multi-cloud provisioning tool. It creates and changes resources on any cloud with a provider, using HCL. It is not a FinOps platform, a hybrid self-service catalog, or a Kubernetes fleet manager, so teams usually pair it with other tools for those jobs. Pulumi and OpenTofu fill the same provisioning role.
+Terraform is a multi-cloud provisioning tool. It creates and changes resources on any cloud with a provider, using HCL. Terraform does not track spend, run a hybrid self-service catalog, or manage Kubernetes fleets, so teams usually pair it with other tools for those jobs. Pulumi and OpenTofu fill the same provisioning role.
 
 ### Do I need a cloud management platform if I already use IaC?
 
@@ -287,7 +289,7 @@ Pulumi (SDK and engine), OpenTofu, Crossplane, and the core of Ansible are open 
 
 ### How do I control costs across multiple clouds?
 
-Start with tagging and allocation standards enforced through policy as code, then add a FinOps tool such as CloudHealth or Flexera One for reporting and forecasting. Orchestrators with environment guardrails, such as env zero, can also help limit spend. Provisioning tools help by making cost-relevant settings explicit and reviewable in code.
+Start with tagging and allocation standards enforced through policy as code, then add a FinOps tool such as CloudHealth or Flexera One for reporting and forecasting. Expiring environments in an orchestrator such as env zero stop forgotten test stacks from running up a bill. Provisioning tools help by making cost-relevant settings explicit and reviewable in code.
 
 ### Can AI agents manage multi-cloud infrastructure?
 
@@ -299,7 +301,7 @@ Moving the infrastructure definition is the easier part if you use components an
 
 ## Where to go next
 
-- Compare [Pulumi and Terraform](https://www.pulumi.com/docs/iac/comparisons/terraform/), [Pulumi and Crossplane](https://www.pulumi.com/docs/iac/comparisons/crossplane/), and [Pulumi and Spacelift](https://www.pulumi.com/docs/iac/comparisons/spacelift/).
-- Read the wider [infrastructure as code tools guide](https://www.pulumi.com/blog/infrastructure-as-code-tools/) and the [best policy as code tools](https://www.pulumi.com/blog/best-policy-as-code-tools/).
-- Browse providers in the [Pulumi Registry](https://www.pulumi.com/registry/).
+- Compare [Pulumi and Terraform](/docs/iac/comparisons/terraform/), [Pulumi and Crossplane](/docs/iac/comparisons/crossplane/), and [Pulumi and Spacelift](/docs/iac/comparisons/spacelift/).
+- Read the wider [infrastructure as code tools guide](/blog/infrastructure-as-code-tools/) and the [best policy as code tools](/blog/best-policy-as-code-tools/).
+- Browse providers in the [Pulumi Registry](/registry/).
 - [Sign up for Pulumi](https://app.pulumi.com/signup) and deploy your first stack across two clouds.
