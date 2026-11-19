@@ -446,6 +446,7 @@ A few next steps to keep the learning going:
 * Explore our [architecture templates](/dev/templates/) to bootstrap new HCL projects easily
 * Read up on [Terraform state](/docs/integrations/terraform/state-backend/), [remote execution](/docs/integrations/terraform/remote-execution/), and [Terraform modules](/docs/integrations/terraform/module-registry/) in Pulumi Cloud
 * Dive into [Pulumi and HCL](/docs/iac/languages-sdks/hcl/)
+* Compare the [best Terraform alternatives](/blog/best-terraform-alternatives/) if you are still deciding where to go next
 * Check out the [full set of features](/releases/terraform-state-backend-modules-hcl/) in this release
 
 We'd love for you to kick the tires on all of this and let us know what you think. If something seems missing or doesn't behave as you'd expect, [open an issue](https://github.com/pulumi/pulumi/issues), let us know in the [Pulumi Community Slack](https://slack.pulumi.com/), or [reach out](/contact/?form=sales) if you'd like to learn more.
