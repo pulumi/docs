@@ -449,6 +449,8 @@ exit 1
 
 `curl -fsS` makes an HTTP error return a non-zero exit code. When the job fails, its stage fails and later stages don't start. Fix the problem, then retry the run from its page in the Pulumi Cloud console.
 
+To hold a stage until an endpoint is healthy instead of failing it, use an [HTTP gate](/docs/delivery/concepts/stages-and-gates/#http-gates).
+
 ## Building container images
 
 Many pipelines deploy an application as a container image. Build the image once, in a build stage, and pass its digest to the stages that deploy it.

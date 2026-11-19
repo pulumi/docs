@@ -132,7 +132,7 @@ Pulumi Delivery doesn't detect cycles between stages. A run in a cycle waits unt
 
 A gate is a rule on a stage that defines when a pipeline can progress. A release can't enter the stage until the rule passes.
 
-Pulumi Delivery supports three kinds of gates, _manual_, _approval_, and _decision_, and you can combine them into one rule. All of them are set in the stage's `when` property. Anyone with permission to approve the pipeline's runs can continue a manual gate. An approval gate names the people or teams who must approve and how many approvals it needs, shows them a preview of the changes, and lets them reject the release. A decision gate has TypeSafe's Jev model evaluate that preview against questions you write, and rejects the release if the risk is higher than you allow.
+Pulumi Delivery supports four kinds of gates, _manual_, _approval_, _decision_, and _HTTP_, and you can combine them into one rule. All of them are set in the stage's `when` property. Anyone with permission to approve the pipeline's runs can continue a manual gate. An approval gate names the people or teams who must approve and how many approvals it needs, shows them a preview of the changes, and lets them reject the release. A decision gate has TypeSafe's Jev model evaluate that preview against questions you write, and rejects the release if the risk is higher than you allow. An HTTP gate calls a URL until the response matches an expression you write, such as a health check that returns `"ok"`.
 
 <!-- TODO(launch): Reconcile who can continue a manual gate: this paragraph says permission to approve runs, and the REST API section says write access to the pipeline stack. -->
 
@@ -578,9 +578,233 @@ If the stage's preview is larger than Jev's context window, the gate rejects the
 
 <!-- TODO(launch): Document recovery and diagnostics when the preview or the Jev evaluation is unavailable or fails. -->
 
+### HTTP gates
+
+An _HTTP gate_ holds a stage until an HTTP endpoint answers the way the pipeline expects. Use it with a health endpoint, a change-freeze calendar, an incident tool, or a feature-flag service. HTTP gates are available in every edition.
+
+This gate holds `prod` until the health endpoint returns status 200 with `"ok"` in the body. Pulumi Cloud checks every five minutes for up to two hours, and the `Authorization` header comes from a secret in the pipeline's config:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const config = new pulumi.Config();
+const healthToken = config.requireSecret("healthToken");
+
+const prod = new delivery.Stage("prod", {
+    pipeline,
+    from: [staging],
+    when: delivery.httpOutput({
+        url: "https://status.example.com/api/health",
+        headers: { Authorization: pulumi.interpolate`Bearer ${healthToken}` },
+        interval: "5m",
+        timeout: "2h",
+        successExpression: 'status == 200 && body.status == "ok"',
+    }),
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+config = pulumi.Config()
+health_token = config.require_secret("healthToken")
+
+prod = delivery.Stage(
+    "prod",
+    pipeline=pipeline,
+    from_=[staging],
+    when=delivery.RuleArgs(
+        kind="http",
+        url="https://status.example.com/api/health",
+        headers={"Authorization": pulumi.Output.format("Bearer {0}", health_token)},
+        interval="5m",
+        timeout="2h",
+        success_expression='status == 200 && body.status == "ok"',
+    ),
+)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+cfg := config.New(ctx, "")
+healthToken := cfg.RequireSecret("healthToken")
+
+prod, err := delivery.NewStage(ctx, "prod", &delivery.StageArgs{
+	Pipeline: pipeline,
+	From:     delivery.StageArray{staging},
+	When: delivery.RuleArgs{
+		Kind: pulumi.String("http"),
+		Url:  pulumi.String("https://status.example.com/api/health"),
+		Headers: pulumi.StringMap{
+			"Authorization": pulumi.Sprintf("Bearer %s", healthToken),
+		},
+		Interval:          pulumi.String("5m"),
+		Timeout:           pulumi.String("2h"),
+		SuccessExpression: pulumi.String(`status == 200 && body.status == "ok"`),
+	},
+})
+if err != nil {
+	return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var config = new Config();
+var healthToken = config.RequireSecret("healthToken");
+
+var prod = new Stage("prod", new StageArgs
+{
+    Pipeline = pipeline,
+    From = { staging },
+    When = new RuleArgs
+    {
+        Kind = "http",
+        Url = "https://status.example.com/api/health",
+        Headers =
+        {
+            ["Authorization"] = Output.Format($"Bearer {healthToken}"),
+        },
+        Interval = "5m",
+        Timeout = "2h",
+        SuccessExpression = "status == 200 && body.status == \"ok\"",
+    },
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var config = ctx.config();
+
+var prod = new Stage("prod", StageArgs.builder()
+    .pipeline(pipeline)
+    .from(staging)
+    .when(RuleArgs.builder()
+        .kind("http")
+        .url("https://status.example.com/api/health")
+        .headers(config.requireSecret("healthToken").applyValue(healthToken -> Map.of(
+            "Authorization", "Bearer " + healthToken)))
+        .interval("5m")
+        .timeout("2h")
+        .successExpression("status == 200 && body.status == \"ok\"")
+        .build())
+    .build());
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+config:
+  healthToken:
+    type: string
+    secret: true
+
+resources:
+  prod:
+    type: delivery:Stage
+    properties:
+      pipeline: ${pipeline}
+      from:
+        - ${staging}
+      when:
+        kind: http
+        url: https://status.example.com/api/health
+        headers:
+          Authorization: Bearer ${healthToken}
+        interval: 5m
+        timeout: 2h
+        successExpression: status == 200 && body.status == "ok"
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "healthToken" {
+  type      = string
+  sensitive = true
+}
+
+resource "delivery_stage" "prod" {
+  pipeline = delivery_pipeline.pipeline
+  from     = [delivery_stage.staging]
+  when = {
+    kind = "http"
+    url  = "https://status.example.com/api/health"
+    headers = {
+      Authorization = "Bearer ${var.healthToken}"
+    }
+    interval           = "5m"
+    timeout            = "2h"
+    success_expression = "status == 200 && body.status == \"ok\""
+  }
+}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+An HTTP rule takes these arguments:
+
+- `url` (required): The address to call. It must use `https` and can't contain credentials. Pulumi Cloud calls only public addresses, so private, loopback, link-local, and cloud-metadata addresses are refused. Redirects aren't followed.
+- `successExpression` (required): A [CEL](https://cel.dev) expression that returns a boolean. The gate passes when it's true. See [The success expression](#the-success-expression).
+- `method`: `GET` (the default), `POST`, `PUT`, `PATCH`, or `HEAD`.
+- `headers`: Request headers, up to 50. Values can be secret, which suits an `Authorization` header. You can't set headers that the HTTP client sets itself, such as `Host` and `Content-Length`.
+- `body`: The request body, up to 16 KiB. It can be secret.
+- `interval`: The time between checks, in whole seconds from `60s` to `1h`. The default is `1m`.
+- `requestTimeout`: The time allowed for one request, in whole seconds from `1s` to `20s`. The default is `10s`.
+- `timeout`: How long the gate may wait in total, counted from when the gate opens for a run, in whole seconds from `1m` to `7d` (write it as `168h` where a Go duration is needed). The default is `24h`, and it must be at least `interval`. When the timeout passes without a check passing, the run fails.
+- `name` and `description`: Text for the console, as for other rules.
+
+#### The success expression
+
+The expression can use three variables:
+
+- `status`: The HTTP status code, as an integer.
+- `headers`: The response headers, as a map from lower-case header name to value.
+- `body`: The parsed JSON if the response body is valid JSON, otherwise the body as a string. A response body larger than 64 KiB is an error.
+
+An expression can be up to 1,024 bytes. Some examples:
+
+| Expression | Passes when |
+| --- | --- |
+| `status == 200` | The endpoint returns 200. |
+| `status in [200, 204]` | The status is 200 or 204. |
+| `status == 200 && body.status == "ok"` | The status is 200 and the JSON field `status` is `"ok"`. |
+| `body.checks.all(c, c.status == "ok")` | Every item in `checks` has the status `"ok"`. |
+| `!body.checks.exists(c, c.status != "ok")` | No item in `checks` has another status. |
+| `size(body.items) >= 3` | The `items` list has at least three entries. |
+| `double(body.errors) / double(body.total) < 0.01` | The error rate is below 1 percent. |
+| `headers["content-type"].contains("json")` | The response is JSON. |
+
+Expressions support field and index access (`body.items[0]`, `headers["content-type"]`), `has()`, the `all` and `exists` macros, `&&`, `||`, `!`, the conditional `a ? b : c`, comparisons, `in` with a list of constants, `size()`, `contains()`, `startsWith()`, `endsWith()`, the conversions `int()`, `uint()`, `double()`, `bool()`, and `string()`, and arithmetic on numbers.
+
+Expressions don't support `map`, `filter`, `exists_one`, `matches` (regular expressions), string or list concatenation, timestamps, or durations. A comparison needs a plain value on at least one side, so `body.status == "ok"` works but `body.a == body.b` doesn't. Arithmetic needs numbers, so convert response fields first, as in the error-rate example.
+
+A field that's missing from the response makes the evaluation fail, and the gate keeps waiting. Guard optional fields with `has()`, as in `has(body.status) && body.status == "ok"`.
+
+Numbers in a JSON body are read as floating point. Integers above 2^53 lose precision, so return such values as strings and compare them as strings.
+
+#### How an HTTP gate behaves
+
+Pulumi Cloud calls the URL every `interval` until a check passes. A check that doesn't pass, or a request that fails, never fails the run by itself. The stage keeps waiting until a check passes or `timeout` ends the wait. If the timeout passes first, the run fails with a message that names the rule and the timeout, for example `The HTTP check "probe" did not pass within 24h`. The default of 24 hours keeps an old run from calling your endpoint forever. You can also cancel the run to stop waiting, and a newer run takes the place of an older one that is still waiting. A request can be repeated, so the endpoint must be safe to call more than once.
+
+In the Pulumi Cloud console, the gate shows the result of the last check: the status code and whether the check passed, or the reason it failed, such as a timeout or an address that isn't allowed. The console never shows the URL, headers, body, or expression. The rule's `name` and `description` are visible, so don't put secrets in them. If a header or the body is secret, the whole rule is a secret value, but its name and description stay visible.
+
 ### Combining rules
 
-You can also build composite rules that combine manual, approval, and decision gates. In the following example, the pipeline is paused until `<your-colleague>` approves _and_ someone continues the `dashboards` check:
+You can also build composite rules that combine manual, approval, decision, and HTTP gates. In the following example, the pipeline is paused until `<your-colleague>` approves _and_ someone continues the `dashboards` check:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
