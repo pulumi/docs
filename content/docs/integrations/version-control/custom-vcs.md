@@ -7,7 +7,7 @@ menu:
     integrations:
         name: Custom VCS
         parent: integrations-version-control
-        weight: 5
+        weight: 6
 aliases:
 - /docs/version-control/custom-vcs/
 ---
