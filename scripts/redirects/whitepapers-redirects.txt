@@ -1,0 +1,4 @@
+# /whitepapers and the security whitepaper moved to pulumi/marketing-web.
+why-pulumi/point-of-view/index.html|/whitepapers/
+security/pulumi-cloud-security-whitepaper/index.html|/whitepapers/pulumi-cloud-security/
+documents/whitepapers/pulumi-whitepaper-agentic-infrastructure-operating-model.pdf|/assets/whitepapers/agentic-infrastructure-operating-model.pdf
