@@ -198,7 +198,9 @@ example. Every readthrough finding is banked for the glow-up lane (see
 run.
 
 Everything else — `unverifiable` verdicts, low-confidence corrections,
-prose-quality findings, structural suggestions, **every readthrough finding**
+prose-quality findings, structural suggestions, HCL gaps
+(`docs-review:references:shared-criteria` §HCL as a Pulumi language; look for
+them on every page), **every readthrough finding**
 (`local_repair` and `reconception` alike), anything you'd phrase with
 "consider" — goes in the PR description's **Findings not applied** section
 (one line of reasoning each), not in the diff. That list is the

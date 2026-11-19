@@ -30,7 +30,7 @@
                         "description": "Unique within the file; convention <category>-<nn>."
                     },
                     "category": {
-                        "enum": ["factual-rot", "dead-link", "broken-code", "deprecated-product", "seo-thin", "ai-positioning", "frontmatter", "rendering"]
+                        "enum": ["factual-rot", "dead-link", "broken-code", "deprecated-product", "seo-thin", "ai-positioning", "hcl-positioning", "frontmatter", "rendering"]
                     },
                     "severity": { "enum": ["blocker", "major", "minor"] },
                     "summary": {

@@ -39,6 +39,7 @@ CATEGORIES = {
     "deprecated-product",
     "seo-thin",
     "ai-positioning",
+    "hcl-positioning",
     "frontmatter",
     "rendering",
 }
