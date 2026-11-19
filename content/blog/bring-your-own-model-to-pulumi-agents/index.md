@@ -1,7 +1,7 @@
 ---
-title: "Bring Your Own Model to Pulumi Agents"
+title: "Bring your own model to Pulumi Agents"
 date: 2026-11-18
-draft: true
+draft: false
 meta_desc: Use models from your organization's provider account with Pulumi Agents, and choose a provider for each agent in TypeScript or the Pulumi Cloud console.
 canonical_url: https://www.pulumi.com/docs/ai/concepts/neo/model-providers/
 feature_image: feature.png
