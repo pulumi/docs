@@ -14,4 +14,5 @@ menu:
 These pages cover running Discovery & governance day to day.
 
 - [Review policy findings](/docs/discovery-governance/operations/policy-findings/): Track violations, manage issues, and monitor compliance across stacks and discovered resources.
+- [Infrastructure Posture report](/docs/discovery-governance/operations/posture-report/): Get a monthly snapshot of how your stacks measure up against the Pulumi Best Practices policy packs.
 - [Run scans and policy evaluations on customer-managed runners](/docs/discovery-governance/operations/customer-managed-runners/): Run Discovery scans and audit policy evaluations on runners you host in your own infrastructure.
