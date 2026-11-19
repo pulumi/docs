@@ -10,7 +10,7 @@ Every Pulumi-hosted workshop or webinar is tracked by a **parent issue in Linear
 |---|---|
 | Team | `Marketing` (identifier prefix `MA-`) |
 | Project | The quarter's workshop project, named `Workshops (Q<n> <yy>)` — for example `Workshops (Q4 26)` for an event in October–December 2026. Pick the quarter of the **event date**, not today. Find it with `list_projects` (team `Marketing`, query `Workshops`). If that quarter's project doesn't exist yet, don't create one: ask in interactive mode, otherwise file into no project and flag it in the report. |
-| Label | `Workshop` (also used for webinars and livestreams) |
+| Label | `Workshops` (the label on every Q4 26 parent, for example MA-1045 and MA-1262; also used for webinars and livestreams) |
 | Due date | The event date (the earliest session for multi-session events) |
 | Status | `In Progress` once the docs work starts |
 | Assignee | Leave as is on an existing issue; on a new one, the person running the skill |
@@ -30,7 +30,7 @@ Older events (before Q4 2026) were tracked in GitHub (`pulumi/marketing#<n>`, fo
 ## Title and fields
 
 - **Title**: `[YYYY-MM-DD] <Session Title> (<presenter first names>)`. There's no colon after the date bracket. Several presenters are comma-separated (`(Adam, Engin, Mike Coleman)`); a multi-session event lists every date (`[2026-09-16 + 2026-10-14]`). The Linear title keeps Notion's capitalization even though the event page uses sentence case.
-- **Labels**: `Workshop`. Add `needs-design` only when a designer-made card was requested.
+- **Labels**: `Workshops`. Add `needs-design` only when a designer-made card was requested.
 
 ## Description blueprint
 
