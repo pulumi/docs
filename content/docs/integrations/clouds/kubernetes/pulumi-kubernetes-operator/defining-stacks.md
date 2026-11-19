@@ -27,7 +27,7 @@ The `Stack` specification can specify a commit SHA (`spec.commit`) or a branch r
 If a branch reference is specified, the operator will periodically poll the branch for any new commits
 and roll out updates as they are found. Use the `spec.resyncFrequencySeconds` field to set the polling frequency.
 
-Specify Git authentication options with the `spec.gitAuth` field.
+Specify Git authentication options with the `spec.gitAuth` field. See [Git authentication](#git-authentication) below.
 
 In the example below, we're creating a `Stack` for a Pulumi project called `kubernetes-ts-nginx` to deploy a simple [NGINX][nginx-stack] server to your cluster. Without any configuration, the [Kubernetes Provider][k8s-provider] uses the in-cluster Kubernetes context.
 
@@ -253,6 +253,47 @@ func main() {
 
 {{% /choosable %}}
 {{% /chooser %}}
+
+## Git authentication
+
+The operator needs read access to the repository.
+
+Put the credential in a `Secret`:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: git-auth
+stringData:
+  accessToken: ghp_example
+```
+
+Then reference it from one of `sshAuth`, `accessToken`, `githubApp`, or `basicAuth` under `spec.gitAuth`:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: my-app
+spec:
+  serviceAccountName: pulumi
+  stack: my-org/my-app/prod
+  projectRepo: https://github.com/example/app
+  branch: main
+  gitAuth:
+    accessToken:
+      type: Secret
+      secret:
+        name: git-auth
+        key: accessToken
+```
+
+On GitHub, a fine-grained token or a GitHub App needs the `Contents: Read-only` repository permission. A classic token needs the `repo` scope.
+
+See the [Stack CRD reference][stack-crd] for the full shape of each `gitAuth` option.
+
+[stack-crd]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/stacks.md#stackspecgitauth
 
 ## Using a Flux source
 
