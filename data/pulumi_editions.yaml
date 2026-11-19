@@ -31,9 +31,6 @@ features:
   - id: updates
     name: Updates
     min_edition: free
-  - id: concurrent-stack-updates
-    name: Concurrent stack updates
-    min_edition: free
   - id: restore-deleted-stacks
     name: Restore deleted stacks
     min_edition: pro
@@ -60,6 +57,12 @@ features:
     name: Organization templates in the Private Registry
     min_edition: pro
     hidden: true
+  - id: delivery-pipelines-price
+    name: Delivery pipelines
+    min_edition: free
+  - id: concurrent-stack-updates
+    name: Deployment concurrency
+    min_edition: free
   - id: cicd-integrations
     name: CI/CD integrations
     min_edition: free
@@ -197,7 +200,6 @@ features:
   - id: pulumi-agents
     name: Pulumi Agents
     min_edition: pro
-    hidden: true
   - id: neo
     name: Pulumi Neo
     min_edition: essentials
