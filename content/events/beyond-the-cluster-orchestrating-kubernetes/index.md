@@ -21,7 +21,7 @@ event_type: workshop
 
 # YouTube embed URL. When set, the event appears in "On-demand recordings".
 # When empty, it appears in "Upcoming events".
-youtube_url:
+youtube_url: https://www.youtube.com/embed/-DXhf0UsJrc
 
 # ISO 8601 datetime used for sorting and display.
 sortable_date: 2026-11-18T09:00:00.000-08:00
