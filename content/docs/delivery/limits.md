@@ -27,7 +27,8 @@ Pulumi Delivery enforces these limits on each pipeline and run:
 | Time limit of a stack update or job | 2 hours by default. Set `timeout` on a `Stacks` entry or `Job` to change it, from 5 minutes to 24 hours. |
 | Job outputs | 1 MiB |
 | HTTP gate interval | 60 seconds to 1 hour. The default is 1 minute. |
-| HTTP gate request timeout | 1 to 20 seconds. The default is 10 seconds. |
+| HTTP gate `requestTimeout` | 1 to 20 seconds. The default is 10 seconds. |
+| HTTP gate `timeout` | 1 minute to 7 days, and at least the interval. The default is 24 hours. |
 | HTTP gate request headers | 50 |
 | HTTP gate request body | 16 KiB |
 | HTTP gate response body | 64 KiB |

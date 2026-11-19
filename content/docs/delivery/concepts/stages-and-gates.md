@@ -582,7 +582,7 @@ If the stage's preview is larger than Jev's context window, the gate rejects the
 
 An _HTTP gate_ holds a stage until an HTTP endpoint answers the way the pipeline expects. Use it with a health endpoint, a change-freeze calendar, an incident tool, or a feature-flag service. HTTP gates are available in every edition.
 
-This gate holds `prod` until the health endpoint returns status 200 with `"ok"` in the body. Pulumi Cloud checks every five minutes, and the `Authorization` header comes from a secret in the pipeline's config:
+This gate holds `prod` until the health endpoint returns status 200 with `"ok"` in the body. Pulumi Cloud checks every five minutes for up to two hours, and the `Authorization` header comes from a secret in the pipeline's config:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -599,6 +599,7 @@ const prod = new delivery.Stage("prod", {
         url: "https://status.example.com/api/health",
         headers: { Authorization: pulumi.interpolate`Bearer ${healthToken}` },
         interval: "5m",
+        timeout: "2h",
         successExpression: 'status == 200 && body.status == "ok"',
     }),
 });
@@ -620,6 +621,7 @@ prod = delivery.Stage(
         url="https://status.example.com/api/health",
         headers={"Authorization": pulumi.Output.format("Bearer {0}", health_token)},
         interval="5m",
+        timeout="2h",
         success_expression='status == 200 && body.status == "ok"',
     ),
 )
@@ -642,6 +644,7 @@ prod, err := delivery.NewStage(ctx, "prod", &delivery.StageArgs{
 			"Authorization": pulumi.Sprintf("Bearer %s", healthToken),
 		},
 		Interval:          pulumi.String("5m"),
+		Timeout:           pulumi.String("2h"),
 		SuccessExpression: pulumi.String(`status == 200 && body.status == "ok"`),
 	},
 })
@@ -670,6 +673,7 @@ var prod = new Stage("prod", new StageArgs
             ["Authorization"] = Output.Format($"Bearer {healthToken}"),
         },
         Interval = "5m",
+        Timeout = "2h",
         SuccessExpression = "status == 200 && body.status == \"ok\"",
     },
 });
@@ -690,6 +694,7 @@ var prod = new Stage("prod", StageArgs.builder()
         .headers(config.requireSecret("healthToken").applyValue(healthToken -> Map.of(
             "Authorization", "Bearer " + healthToken)))
         .interval("5m")
+        .timeout("2h")
         .successExpression("status == 200 && body.status == \"ok\"")
         .build())
     .build());
@@ -717,6 +722,7 @@ resources:
         headers:
           Authorization: Bearer ${healthToken}
         interval: 5m
+        timeout: 2h
         successExpression: status == 200 && body.status == "ok"
 ```
 
@@ -739,6 +745,7 @@ resource "delivery_stage" "prod" {
       Authorization = "Bearer ${var.healthToken}"
     }
     interval           = "5m"
+    timeout            = "2h"
     success_expression = "status == 200 && body.status == \"ok\""
   }
 }
@@ -756,7 +763,8 @@ An HTTP rule takes these arguments:
 - `headers`: Request headers, up to 50. Values can be secret, which suits an `Authorization` header. You can't set headers that the HTTP client sets itself, such as `Host` and `Content-Length`.
 - `body`: The request body, up to 16 KiB. It can be secret.
 - `interval`: The time between checks, in whole seconds from `60s` to `1h`. The default is `1m`.
-- `timeout`: The time allowed for one request, in whole seconds from `1s` to `20s`. The default is `10s`.
+- `requestTimeout`: The time allowed for one request, in whole seconds from `1s` to `20s`. The default is `10s`.
+- `timeout`: How long the gate may wait in total, counted from when the gate opens for a run, in whole seconds from `1m` to `7d` (write it as `168h` where a Go duration is needed). The default is `24h`, and it must be at least `interval`. When the timeout passes without a check passing, the run fails.
 - `name` and `description`: Text for the console, as for other rules.
 
 #### The success expression
@@ -790,7 +798,7 @@ Numbers in a JSON body are read as floating point. Integers above 2^53 lose prec
 
 #### How an HTTP gate behaves
 
-Pulumi Cloud calls the URL every `interval` until a check passes. A check that doesn't pass never fails the run. The stage keeps waiting, and you cancel the run to stop waiting. A request can be repeated, so the endpoint must be safe to call more than once.
+Pulumi Cloud calls the URL every `interval` until a check passes. A check that doesn't pass, or a request that fails, never fails the run by itself. The stage keeps waiting until a check passes or `timeout` ends the wait. If the timeout passes first, the run fails with a message that names the rule and the timeout, for example `The HTTP check "probe" did not pass within 24h`. The default of 24 hours keeps an old run from calling your endpoint forever. You can also cancel the run to stop waiting, and a newer run takes the place of an older one that is still waiting. A request can be repeated, so the endpoint must be safe to call more than once.
 
 In the Pulumi Cloud console, the gate shows the result of the last check: the status code and whether the check passed, or the reason it failed, such as a timeout or an address that isn't allowed. The console never shows the URL, headers, body, or expression. The rule's `name` and `description` are visible, so don't put secrets in them. If a header or the body is secret, the whole rule is a secret value, but its name and description stay visible.
 
