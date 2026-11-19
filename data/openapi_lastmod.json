@@ -171,8 +171,8 @@
       "lastmod": "2026-09-15"
     },
     "VCS Integrations": {
-      "hash": "29c5eed049195cb6fd5158bf0908ccf7220608e64a06e3bd34c7bcced4b61688",
-      "lastmod": "2026-11-04"
+      "hash": "2b478b021eb18a0ee8b97554efd6a5ad96c085e2389329431dc033e59e647549",
+      "lastmod": "2026-11-19"
     },
     "Webhooks": {
       "hash": "fda2095a9c22c0543987a16f6d43dc3ccb2535a8e163f4e38b6b119bb0c29d7d",
@@ -405,8 +405,8 @@
       "hash": "36e1f7036fefadc0a3a47ea32a7aa9e179acf4677baaeac19d88c1f596fd8455"
     },
     "AgentTask": {
-      "hash": "d17c0c88763713691a8db031813f450fa1988dfba6e1baafe73133c1ab32c623",
-      "lastmod": "2026-11-18"
+      "hash": "4d4d37c4aad0a3a445c54954e2b3f83fe7b039167ce8c7abc6cf970812a51fbe",
+      "lastmod": "2026-11-19"
     },
     "AgentTaskIntegrationRef": {
       "hash": "b05a08fca109dbfd03a0975e1a7dd6fd63b4946c794a6603c617893bd2248539",
@@ -1154,6 +1154,9 @@
     "CloudSetupResult": {
       "hash": "b347c3df4bebafc0dcaa2cc943b133566f95990d79f717695b84e221757e2a09"
     },
+    "CompleteEntireSetupRequest": {
+      "hash": "4e9816f90e53859ac1dc5951880585a012abe77d2dc9803368391d5c43c7bcb1"
+    },
     "CompleteOAuthRequest": {
       "hash": "086f36a0f9fbe09a7b842f0fe541bc8d68cd7e9f169ba5ab4c502ceab884d663"
     },
@@ -1427,8 +1430,8 @@
       "hash": "050ec83065878ebba2cbcaac0897aa5fd936e2bf5d3b9ebc4b47d611ee304c9c"
     },
     "DeploymentSettings": {
-      "hash": "4dfa59960b3f0abeccf2dac408acdfab9f9fca0cb45ce6dcdbaaf7b394f91b8a",
-      "lastmod": "2026-11-04"
+      "hash": "9945eb0206da8ab736f86d8001dff218ba3fc4f3edb0ea31b8eb5b7d56abc8d0",
+      "lastmod": "2026-11-19"
     },
     "DeploymentSettingsGitHub": {
       "hash": "5ea0431c1f2ab78564df240efb7303af5f7ee4d7e2c89f82e4f6f83bc02be6f2",
@@ -1443,8 +1446,8 @@
       "lastmod": "2026-09-15"
     },
     "DeploymentSettingsVCS": {
-      "hash": "8f4b06fed015ddf99fed915f3f3dec57bef71082a10ba59c1d5a64e64f22943c",
-      "lastmod": "2026-11-04"
+      "hash": "98d932d5074137ffe3cfe28425506645b62963344e937d06aab8a3a87dd5d5ee",
+      "lastmod": "2026-11-19"
     },
     "DeploymentSettingsVCSAzureDevOps": {
       "hash": "da380829228c80871bd9b20455861d09337e57e3c686fba44c7ee002b4b7d5c0"
@@ -1456,6 +1459,9 @@
     "DeploymentSettingsVCSCustom": {
       "hash": "257ac3ca660712f10a06a4a6eb4339fbd8d4a1c54dfa01faa6fbf19f42c09723",
       "lastmod": "2026-05-13"
+    },
+    "DeploymentSettingsVCSEntire": {
+      "hash": "210f179ba7a1057a7b75700d6d59a28bd3cbd34fef9b6512d0f603758be037a4"
     },
     "DeploymentSettingsVCSGitHub": {
       "hash": "e339775a9d28d26fc2147c36f8b9a2673dd874fb74dc448d3f57bb34cef875a1",
@@ -1533,6 +1539,12 @@
     "EngineEvent": {
       "hash": "375148692ff80075b8d84d3105604b8c013e597781ca1c0638a9d9b61c7a1f65",
       "lastmod": "2026-09-15"
+    },
+    "EntireIntegrationDetails": {
+      "hash": "c943c4556b1a63f88de532b10f101118f420c7872ee48812d893dfaab7f0e4e8"
+    },
+    "EntireSetupResponse": {
+      "hash": "14046c6e2a89ea9ae17c3cfc3cb3546af924016719e92e68eb7fc9038fe836c0"
     },
     "EntityAssignment": {
       "hash": "89a3a307f9ae43dbc2e1e8a4652987eb6824b82c002b8e4863b4da0c6da2608c"
@@ -1969,8 +1981,8 @@
       "lastmod": "2026-09-15"
     },
     "GraphQueryMeta": {
-      "hash": "2cdef44956c36ceb0076c9150fc2adb02b512d01021e8aac053802df2dfe79bd",
-      "lastmod": "2026-09-15"
+      "hash": "4421fa59789db24abe151ae3c2926f304851158775032b5aa90c5a49026db1ad",
+      "lastmod": "2026-11-19"
     },
     "GraphQueryPage": {
       "hash": "ae755999cf5423ebec00be4160241f1efb4198f7c62e9837e7f2dd218d0221a5",
@@ -1989,16 +2001,19 @@
       "lastmod": "2026-09-18"
     },
     "GraphQueryScope": {
-      "hash": "784e2ee0feb4a4d76cc87d34847e509b7aabefd984f02a2c6f56a3ea203a9c5f",
-      "lastmod": "2026-09-15"
+      "hash": "a9014cceadfe547c4de53201b87c4e05602d9349f8db1d7c83df253bdabf0d3c",
+      "lastmod": "2026-11-19"
+    },
+    "GraphQueryScopeStage": {
+      "hash": "31e8af0339cce7bc496c296add46c7ba305b719c095e8b45d10083d203e68ba5"
     },
     "GraphSchemaEdgeType": {
       "hash": "05b0177e991ff246263cba718b662279ef0b7e6b4d49aa61f967f791aff67431",
       "lastmod": "2026-08-27"
     },
     "GraphSchemaLimits": {
-      "hash": "ccb52274e6b8419a2af0bc7fa47ad8b950b85eb9cd97ccd86b21cc0527b7db06",
-      "lastmod": "2026-09-15"
+      "hash": "1b552111f6cec4d25f7bdf471886db3e59268889a02a99de1c6d958868fd18d9",
+      "lastmod": "2026-11-19"
     },
     "GraphSchemaNodeType": {
       "hash": "94feb9db5dfe2c76d5d981a2cd5abe6d302c3762bbf696d624af7037f6b7b295",
@@ -2174,6 +2189,9 @@
     "ListDriftRunsResponse": {
       "hash": "d99ad877ba35318e5ea224cd9b9af94c307d9b094f711e8ebbb42cc64fb0cca2",
       "lastmod": "2026-09-15"
+    },
+    "ListEntireIntegrationsResponse": {
+      "hash": "43badc7df6e20c08b95feeb898a52b068daba89432a54227bbe90b540546f2cd"
     },
     "ListEnvironmentReferrersResponse": {
       "hash": "4a1a10ec9ee1c039e9b40eccd0e8c1c9e8ab1209ff9876f4e9b4302548c021e3"
@@ -2488,8 +2506,8 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "7e54d546ec89a793a029a00d1919db80789e0d573af4d42184650aee2b50caa9",
-      "lastmod": "2026-11-18"
+      "hash": "8f09dd3469434253e10356989edfd1277bb877e20e932da7ff407dde6f5a165c",
+      "lastmod": "2026-11-19"
     },
     "OrganizationMember": {
       "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
@@ -3415,8 +3433,8 @@
       "hash": "74a0092584a66fce1199ed27f4897a5024381d713ac3776ace8b7586f4dbb31a"
     },
     "VCSIntegrationSummary": {
-      "hash": "a8f78856ad8958e82b269c62b880b07dfd60d817b96460987f35c5fb9f635112",
-      "lastmod": "2026-11-04"
+      "hash": "485bc750990e8c1562eb9198405650ccb44dc94dc78d6be5680b455bdb4b75de",
+      "lastmod": "2026-11-19"
     },
     "VCSRepo": {
       "hash": "e1aba8c1d0ea96d4decd5c56dad3d8f43501c676401fc95e90d7c6139f3edd1e",
