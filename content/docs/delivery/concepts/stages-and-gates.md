@@ -786,6 +786,8 @@ Expressions don't support `map`, `filter`, `exists_one`, `matches` (regular expr
 
 A field that's missing from the response makes the evaluation fail, and the gate keeps waiting. Guard optional fields with `has()`, as in `has(body.status) && body.status == "ok"`.
 
+Numbers in a JSON body are read as floating point. Integers above 2^53 lose precision, so return such values as strings and compare them as strings.
+
 #### How an HTTP gate behaves
 
 Pulumi Cloud calls the URL every `interval` until a check passes. A check that doesn't pass never fails the run. The stage keeps waiting, and you cancel the run to stop waiting. A request can be repeated, so the endpoint must be safe to call more than once.
