@@ -65,7 +65,7 @@
             "assertions": [
                 "Run is in go-live mode: no new or modified event bundle, no branch, no PR created or previewed",
                 "Checks PR state with gh (PR #22665 merged) instead of assuming it",
-                "Checks the live URL returns 200 and that the page carries the HubSpot form id d0eaf526-3014-42af-a500-c084afea0e40",
+                "Checks the live URL returns 200 and that the HubSpot form id d0eaf526-3014-42af-a500-c084afea0e40 is on the page: in the live HTML, or, because the event ran on 2026-11-18, in the frontmatter on master, without treating the 'This event has passed' state as a failed check",
                 "Finds the existing Luma event (pulumi-ckv1) and reports it already public; no new Luma event and no visibility change previewed",
                 "Previews setting the Notion schedule row's Live? to Yes without changing its title, date, time, presenter, or stage",
                 "Leaves MA-1034 (Workshop link on /events page) alone because it is already Done",

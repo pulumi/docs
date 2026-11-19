@@ -157,11 +157,11 @@ The tracking issue is the team's view of progress, so keep it current at each mi
 
 Run this when the docs PR has merged: on a rerun of `/create-event <MA-n>` in update mode, with `--go-live`, or when the user says the page is live. Every step is idempotent, so skip the ones that are already done.
 
-1. **Check, don't assume.** `gh pr view <n> --json state,mergedAt` must say `MERGED`, `https://www.pulumi.com/events/<slug>/` must return 200, and for a gated page the HTML must contain the `hubspot_form_id`. If any check fails, stop and report which one; nothing below runs.
+1. **Check, don't assume.** `gh pr view <n> --json state,mergedAt` must say `MERGED`, and `https://www.pulumi.com/events/<slug>/` must return 200. For a gated page whose event is still upcoming, the HTML must also contain the `hubspot_form_id`. Once the event has started, the page replaces the form with "This event has passed" after the next build. For a past event, check instead that the frontmatter on `master` carries the ID, and say in the report that the event already ran. If any check fails, stop and report which one; nothing below runs.
 1. **Luma**: if the event is `private`, switch it to `public` (`luma_update_event` with `visibility: public`). Interactive runs confirm first. If the Linear parent's Luma attachment title names the old visibility ("… (private)"), re-attach the same URL with the new title.
 1. **Notion**: set the schedule row's `Live?` to `Yes` and update its links (§Notion schedule row).
 1. **"Workshop link on /events page"**: mark it `Done`, attach the live URL as a link, and comment with the URL and the Luma link.
-1. **"HubSpot form and Lists" and "SF campaign …"**: mark each `Done` when the live page carries its ID, with a one-line comment naming the ID. Leave them open if the page doesn't have the ID.
+1. **"HubSpot form and Lists" and "SF campaign …"**: mark each `Done` when the page on `master` carries its ID (and, for an upcoming event, the live HTML renders the form), with a one-line comment naming the ID. Leave them open if the page doesn't have the ID.
 1. **Deliverables**: if no comment there already says the page is live, comment with the `#register` URL so the invite can link to it.
 1. **Parent**: one comment summarizing what went live (page, Luma) and what's still open on the sub-issues.
 

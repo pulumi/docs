@@ -123,7 +123,7 @@ Skip when `notion.page` is empty and a search (`notion-search` on the title in t
 
 ### 11. Go-live (only when `run.mode: go-live`)
 
-Steps 1–5 and 7 don't apply; the bundle is already on master. Run `references/linear-issue.md` §Going live in order, starting with its checks: merged PR, HTTP 200, and the form id in the HTML. A failed check stops the pass, and the report says which one failed. Then: Luma to public, Notion `Live?` to `Yes` with the links updated, close "Workshop link on /events page" with the live URL, close the HubSpot and SF sub-issues whose IDs the live page carries, a register-link comment on Deliverables, and a summary comment on the parent. Skip whatever is already done. Dry-run → every write goes into `linear-preview.md`.
+Steps 1–5 and 7 don't apply; the bundle is already on master. Run `references/linear-issue.md` §Going live in order, starting with its checks: merged PR, HTTP 200, and the form id (in the live HTML for an upcoming event, in the frontmatter on `master` once the event has passed). A failed check stops the pass, and the report says which one failed. Then: Luma to public, Notion `Live?` to `Yes` with the links updated, close "Workshop link on /events page" with the live URL, close the HubSpot and SF sub-issues whose IDs the live page carries, a register-link comment on Deliverables, and a summary comment on the parent. Skip whatever is already done. Dry-run → every write goes into `linear-preview.md`.
 
 ### 12. Report
 
