@@ -1,20 +1,20 @@
 ---
-title_tag: "Infrastructure Posture Report | Pulumi Policies"
-meta_desc: Get a monthly Infrastructure Posture report that checks every stack in your organization against the Pulumi Best Practices policy packs.
-title: Infrastructure Posture report
-h1: Infrastructure Posture report
+title_tag: "Infrastructure posture report | Pulumi Policies"
+meta_desc: Get a monthly Infrastructure posture report that checks every stack in your organization against the Pulumi Best Practices policy packs.
+title: Infrastructure posture report
+h1: Infrastructure posture report
 menu:
   discovery-governance:
-    name: Infrastructure Posture report
+    name: Infrastructure posture report
     parent: dg-operations
     weight: 15
 ---
 
 {{< pulumi-cloud >}}
-The Infrastructure Posture report is available in the Pro and Enterprise editions.
+The Infrastructure posture report is available in the Pro and Enterprise editions.
 {{< /pulumi-cloud >}}
 
-The Infrastructure Posture report is a monthly snapshot of how your organization's stacks measure up against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against those packs and summarizes what it found: how many resources were evaluated, how many have no findings, and which issues affect the most resources.
+The Infrastructure posture report is a monthly snapshot of how your organization's stacks measure up against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against those packs and summarizes what it found: how many resources were evaluated, how many have no findings, and which issues affect the most resources.
 
 The scan is read-only. It changes nothing in your infrastructure or your stacks, and it uses no new credentials. You don't need to assign the packs to a policy group first.
 

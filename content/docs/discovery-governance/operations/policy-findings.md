@@ -29,7 +29,7 @@ Policy Findings provides a centralized view for managing compliance across your 
 1. **Compliance tab:** Shows policy-centric view for auditing and compliance reporting
 1. **Issues tab:** Provides tools for triaging, assigning, and resolving policy issues
 
-For a monthly snapshot of how every stack measures up against the Pulumi Best Practices policy packs, see the [Infrastructure Posture report](/docs/discovery-governance/operations/posture-report/).
+For a monthly snapshot of how every stack measures up against the Pulumi Best Practices policy packs, see the [Infrastructure posture report](/docs/discovery-governance/operations/posture-report/).
 
 ## Accessing Policy Findings
 
