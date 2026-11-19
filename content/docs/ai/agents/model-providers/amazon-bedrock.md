@@ -45,7 +45,7 @@ Copy the **Issuer**, **Subject**, and **Audience** shown in the Pulumi form. The
     }
     ```
 
-1. Give the role permission to invoke the models you use. The **OpenAI Responses** format also needs `bedrock:InvokeModel` on the account's `project/default` resource:
+1. Give the role permission to invoke the models you use. Include `project/default` if this role serves **OpenAI Responses** requests. If the role serves only **Anthropic Messages** or **OpenAI Chat Completions**, you can omit that resource.
 
     ```json
     {

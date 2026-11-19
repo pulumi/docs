@@ -39,8 +39,6 @@ Choose the guide for the account that serves your model. For example, if you use
 | <span id="amazon-bedrock-with-workload-identity"></span><span id="amazon-bedrock"></span>[Amazon Bedrock](/docs/ai/agents/model-providers/amazon-bedrock/) | Anthropic Messages, OpenAI Chat Completions, OpenAI Responses | [Workload identity](/docs/ai/agents/model-providers/amazon-bedrock/#create-the-iam-role) |
 | <span id="custom-endpoint"></span><span id="custom-anthropic-compatible-endpoint"></span>[Custom endpoint](/docs/ai/agents/model-providers/custom-endpoint/) | Anthropic Messages, OpenAI Chat Completions, OpenAI Responses | One or more authentication headers |
 
-Pulumi regularly evaluates Pulumi Agents on Claude Opus and Claude Sonnet models. Agents also run on OpenAI models and on other models your provider serves, but quality, speed, and cost can differ. The console shows a note when a provider's default model is not one Pulumi evaluates.
-
 ## Models
 
 For every provider except Anthropic, choose the models the agent uses:
@@ -118,6 +116,6 @@ When you [update an agent through the REST API](/docs/reference/cloud-rest-api/n
 
 Your provider bills you for model requests it serves. Set budgets and rate limits in your provider account to control that spend. Pulumi's [usage limits](/docs/ai/concepts/neo/usage-limits/) apply only to requests billed by Pulumi.
 
-Pulumi bills time spent running tools and commands on Pulumi-hosted workers separately as [workflow minutes](/pricing/).
+For agent worker charges, see **What are workflow minutes?** in the [pricing FAQ](/pricing/#faq).
 
 <span id="next-steps"></span>
