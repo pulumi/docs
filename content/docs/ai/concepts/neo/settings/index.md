@@ -4,6 +4,7 @@ title_tag: Organization AI settings
 h1: Organization AI settings
 meta_desc: Control organization AI access, configure agent model providers and integrations, and set Neo task defaults.
 aliases:
+- /docs/ai/agents/administration/
 - /docs/ai/settings/
 - /docs/ai/neo/settings/
 menu:
@@ -32,7 +33,13 @@ menu:
 })();
 </script>
 
+<span id="organization-settings"></span>
+
 Open your organization's **Agent Settings** in Pulumi Cloud to enable AI features, connect model providers and tools, and set defaults for Neo tasks. Organization administrators manage these settings. Each member manages their own [task notifications](#notifications).
+
+<span id="agents-your-team-creates"></span>
+
+To change one agent's instructions, role, or integrations, [edit its saved configuration](/docs/ai/agents/manage/#change-saved-configuration).
 
 ## AI access {#neo-access}
 
@@ -62,7 +69,7 @@ For spending controls, see [Agent usage limits](/docs/ai/concepts/neo/usage-limi
 
 {{< pulumi-cloud "neo-byok" />}}
 
-Use the **Model provider** tab to [connect a model provider](/docs/ai/concepts/neo/model-providers/) and set the organization default.
+Use the **Model provider** tab to [connect a model provider](/docs/ai/agents/model-providers/) and set the organization default.
 
 ## Instructions and slash commands
 
@@ -92,6 +99,8 @@ Choose **Review**, **Balanced**, or **Auto**. See [permission and approval modes
 ![Task mode configuration](task-mode.png)
 
 <span id="task-mode-best-practices"></span>
+
+<span id="personal-preferences"></span>
 
 ## Notifications
 
