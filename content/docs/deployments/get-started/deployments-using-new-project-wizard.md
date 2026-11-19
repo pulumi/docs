@@ -29,7 +29,7 @@ Select "Use a template" if you'd like to create a fully featured project, or sel
 For this guide, select the `random-typescript` template. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/deployments/guides/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
 
 In order to use templates you will need to authorize Pulumi with your VCS provider so that it can clone private repositories as template sources and commit new code for your projects.
-Click the button and accept the required permissions if you would like to use templates.
+Select the button and accept the required permissions if you would like to use templates.
 
 {{% notes type="info" %}}
 If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/concepts/organization-templates/) for your organization, you will be able to choose from your organization's custom templates in a later step.
