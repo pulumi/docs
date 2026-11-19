@@ -59,12 +59,24 @@ If your shell can't find `pulumi`, open a new terminal. If that doesn't help, se
 
 {{< details "Other ways to install on macOS" >}}
 
-**Binary download:** Download the archive for your Mac, extract it, and move the files in its `pulumi` folder to a directory on your `PATH`.
+**Manual installation**
 
-<p>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">Apple silicon (arm64)</a>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">Intel (x64)</a>
-</p>
+1. Download the archive for your Mac: <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">Apple silicon (arm64)</a> <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">Intel (x64)</a>
+1. From the directory you downloaded it to, extract the archive and move its files to `~/.pulumi/bin`:
+
+   ```bash
+   $ tar -xzf pulumi-*.tar.gz
+   $ mkdir -p ~/.pulumi/bin
+   $ mv pulumi/* ~/.pulumi/bin/
+   ```
+
+1. Add `~/.pulumi/bin` to your `PATH` in your shell profile, which is `~/.zshrc` for the default macOS shell:
+
+   ```bash
+   $ echo 'export PATH=$PATH:$HOME/.pulumi/bin' >> ~/.zshrc
+   ```
+
+1. Open a new terminal and run `pulumi version`.
 
 **Homebrew core formula:** Use Homebrew's own `pulumi` formula if you'd rather not add the Pulumi tap:
 
@@ -127,12 +139,17 @@ If your shell can't find `pulumi`, open a new terminal. If that doesn't help, se
    <pre class="chroma"><code class="language-bash" data-lang="bat" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
 </div>
 
-**Binary download:** Download the zip file and extract it to `C:\`. The zip contains a `pulumi` folder, so this creates `C:\pulumi\bin`. Add `C:\pulumi\bin` to your `PATH` in **System Properties** > **Advanced** > **Environment Variables**.
+**Manual installation**
 
-<p>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">x64</a>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-arm64.zip">arm64</a>
-</p>
+1. Download the zip file: <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">x64</a> <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-arm64.zip">arm64</a>
+1. From the folder you downloaded it to, extract it to `C:\` in PowerShell. The zip contains a `pulumi` folder, so this creates `C:\pulumi\bin`:
+
+   ```powershell
+   > Expand-Archive pulumi-*.zip -DestinationPath C:\
+   ```
+
+1. Add `C:\pulumi\bin` to your `PATH`. In **System Properties** > **Advanced** > **Environment Variables**, select **Path** under **User variables**, then select **Edit** > **New**.
+1. Open a new terminal and run `pulumi version`.
 
 {{< /details >}}
 
@@ -158,12 +175,24 @@ If your shell can't find `pulumi`, open a new terminal. If that doesn't help, se
 
 {{< details "Other ways to install on Linux" >}}
 
-**Binary download:** Download the archive, extract it, and move the files in its `pulumi` folder to a directory on your `PATH`.
+**Manual installation**
 
-<p>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">x64</a>
-<a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-arm64.tar.gz">arm64</a>
-</p>
+1. Download the archive: <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">x64</a> <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-arm64.tar.gz">arm64</a>
+1. From the directory you downloaded it to, extract the archive and move its files to `~/.pulumi/bin`:
+
+   ```bash
+   $ tar -xzf pulumi-*.tar.gz
+   $ mkdir -p ~/.pulumi/bin
+   $ mv pulumi/* ~/.pulumi/bin/
+   ```
+
+1. Add `~/.pulumi/bin` to your `PATH` in your shell profile. For bash:
+
+   ```bash
+   $ echo 'export PATH=$PATH:$HOME/.pulumi/bin' >> ~/.bashrc
+   ```
+
+1. Open a new terminal and run `pulumi version`.
 
 {{< /details >}}
 
@@ -185,7 +214,10 @@ pulumi new</code></pre>
 
 `pulumi new` asks you to log in to [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) first, which stores your stack's [state](/docs/iac/concepts/state-and-backends/). You can start on the Free edition without a credit card. To keep state somewhere else, such as your local disk or an S3 bucket, [log in to a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) before you run `pulumi new`.
 
+### Guides and resources
+
 {{< link-cards >}}
+{{< link-card title="Follow the get-started guide" href="/up/" icon="rocket-launch" wide="true" >}}Pick a template, set up your language and cloud credentials, and deploy it step by step, or hand the steps to your coding agent.{{< /link-card >}}
 {{< link-card title="Browse templates" href="/dev/templates/" icon="blueprint" >}}Start from a ready-made project for your cloud and language.{{< /link-card >}}
 {{< link-card title="Find a provider" href="/registry/" icon="package" >}}Resources for AWS, Azure, Google Cloud, Kubernetes, and more, with credential setup for each.{{< /link-card >}}
 {{< link-card title="Follow a tutorial" href="/dev/tutorials/" icon="list-checks" >}}Build and deploy real infrastructure step by step on your cloud.{{< /link-card >}}
@@ -214,7 +246,7 @@ Upgrade Pulumi the same way you installed it.
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port-update">$ sudo port selfupdate && sudo port upgrade pulumi</code></pre>
 </div>
 
-**Install script or binary download:** Run the install script again, or download the new archive and replace the files you installed.
+**Install script or manual installation:** Run the install script again, or repeat the manual installation steps with the new archive.
 
 {{% /choosable %}}
 
@@ -232,7 +264,7 @@ Upgrade Pulumi the same way you installed it.
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco-upgrade">&gt; choco upgrade pulumi</code></pre>
 </div>
 
-**Installer, install script, or binary download:** Run the new installer or the install script again, or download the new zip file and replace the files you installed.
+**Installer, install script, or manual installation:** Run the new installer or the install script again, or repeat the manual installation steps with the new zip file.
 
 {{% /choosable %}}
 
@@ -244,7 +276,7 @@ Upgrade Pulumi the same way you installed it.
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-upgrade">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
 </div>
 
-**Binary download:** Download the new archive and replace the files you installed.
+**Manual installation:** Repeat the manual installation steps with the new archive.
 
 {{% /choosable %}}
 
@@ -306,6 +338,37 @@ winget and Chocolatey only have released versions. For a dev build, use the inst
 
 <hr class="my-10">
 
+## Install Pulumi skills for your coding agent
+
+[Pulumi skills](/docs/ai/concepts/agent-skills/) are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work with most coding agents, including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. Once they're installed, your coding agent can follow Pulumi's workflows and code patterns for common infrastructure tasks.
+
+### Claude Code plugin marketplace
+
+In Claude Code, the plugin marketplace is the quickest way to install:
+
+```bash
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration      # Install migration skills
+claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
+claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
+```
+
+You can install all plugin groups or choose only the ones you need.
+
+### Other coding agents
+
+For Cursor, GitHub Copilot, VS Code, Codex, Gemini CLI, and other coding agents, use the universal [Agent Skills](https://agentskills.io) CLI. The universal installer does not read plugin marketplace manifests, so install each end-user skill group:
+
+```bash
+npx skills add pulumi/agent-skills/pulumi --skill '*'
+npx skills add pulumi/agent-skills/migration --skill '*'
+npx skills add pulumi/agent-skills/delegation --skill '*'
+```
+
+You can also connect your coding agent to the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
+
+<hr class="my-10">
+
 ## Troubleshooting
 
 ### `pulumi: command not found`
@@ -320,7 +383,7 @@ If your shell can't find `pulumi` after you install it, open a new terminal so i
 | Install script (Windows) | `%USERPROFILE%\.pulumi\bin` |
 | winget or the installer (MSI) | Added to your `PATH` automatically. Open a new terminal. |
 | Chocolatey | `$($env:ChocolateyInstall)\lib\pulumi\tools\Pulumi\bin` |
-| Binary download | The directory you moved the files to, or `C:\pulumi\bin` on Windows |
+| Manual installation | `~/.pulumi/bin` on macOS and Linux, `C:\pulumi\bin` on Windows |
 
 ### New version warning
 
@@ -362,37 +425,6 @@ These are the minimums for typical use. Larger programs and programs that use ma
 
 <hr class="my-10">
 
-## Install Pulumi skills for your coding agent
-
-[Pulumi skills](/docs/ai/concepts/agent-skills/) are structured knowledge packages that follow the open [Agent Skills](https://agentskills.io) specification. They work with most coding agents, including Claude Code, GitHub Copilot, Cursor, VS Code, Codex, and Gemini CLI. Once they're installed, your coding agent can follow Pulumi's workflows and code patterns for common infrastructure tasks.
-
-### Claude Code plugin marketplace
-
-In Claude Code, the plugin marketplace is the quickest way to install:
-
-```bash
-claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration      # Install migration skills
-claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
-claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
-```
-
-You can install all plugin groups or choose only the ones you need.
-
-### Other coding agents
-
-For Cursor, GitHub Copilot, VS Code, Codex, Gemini CLI, and other coding agents, use the universal [Agent Skills](https://agentskills.io) CLI. The universal installer does not read plugin marketplace manifests, so install each end-user skill group:
-
-```bash
-npx skills add pulumi/agent-skills/pulumi --skill '*'
-npx skills add pulumi/agent-skills/migration --skill '*'
-npx skills add pulumi/agent-skills/delegation --skill '*'
-```
-
-You can also connect your coding agent to the [Pulumi MCP server](/docs/ai/guides/set-up-mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
-
-<hr class="my-10">
-
 ## Uninstall Pulumi
 
 Uninstall Pulumi the same way you installed it.
@@ -419,7 +451,7 @@ If you use a local DIY backend at its default location, the `.pulumi` folder in 
 
 **Install script:** Delete the `.pulumi` folder in your home directory. Then remove the `# add Pulumi to the PATH` line and the `export PATH` line after it from your shell profile, such as `~/.zshrc` or `~/.bashrc`.
 
-**Binary download:** Delete the files you installed.
+**Manual installation:** Delete the `.pulumi` folder in your home directory, and remove the `export PATH` line you added to your shell profile.
 
 {{% /choosable %}}
 
@@ -441,7 +473,7 @@ If you use a local DIY backend at its default location, the `.pulumi` folder in 
 
 **Install script:** Delete the `.pulumi` folder in your home directory. Then remove `%USERPROFILE%\.pulumi\bin` from your user `PATH` in **System Properties** > **Advanced** > **Environment Variables**.
 
-**Binary download:** Delete the folder you extracted Pulumi to, and remove it from your `PATH`.
+**Manual installation:** Delete `C:\pulumi`, and remove `C:\pulumi\bin` from your user `PATH`.
 
 {{% /choosable %}}
 
@@ -449,7 +481,7 @@ If you use a local DIY backend at its default location, the `.pulumi` folder in 
 
 **Install script:** Delete the `.pulumi` folder in your home directory. Then remove the `# add Pulumi to the PATH` line and the `export PATH` line after it from your shell profile, such as `~/.zshrc` or `~/.bashrc`.
 
-**Binary download:** Delete the files you installed.
+**Manual installation:** Delete the `.pulumi` folder in your home directory, and remove the `export PATH` line you added to your shell profile.
 
 {{% /choosable %}}
 
