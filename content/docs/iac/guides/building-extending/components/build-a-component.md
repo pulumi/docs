@@ -183,7 +183,7 @@ Python class properties are typically written in lowercase with words separated 
 
 Note that argument struct fields must be *serializable* and use `pulumi.*Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
-Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema for a component will have translated property names. In our example `IndexContent` will become `indexContent` in the schema. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
+Go struct fields are typically written in title case, with the first letter capitalized and capital letters used to separate words, however properties in the [Pulumi package schema](https://www.pulumi.com/docs/iac/guides/building-extending/packages/schema/) are usually written in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case), with the first letter in lowercase and capital letters used to separate words. To follow these conventions, the inferred schema takes each property name from the field's `pulumi` struct tag, not from the Go field name. In our example, the tag `pulumi:"indexContent"` gives the `IndexContent` field the schema name `indexContent`. When using a component, the property names will follow the conventions of that language, for example if we use our component from TypeScript, we would refer to `indexContent`, but if we use it from Go, we would use `IndexContent`.
 
 {{% /choosable %}}
 
@@ -838,7 +838,7 @@ type MyComponentArgs struct {
 
 **Optional vs required**
 
-Use the `,optional` tag suffix. Pointer types like `*string` also signal optionality but the `,optional` tag is the canonical pattern.
+Use the `,optional` tag suffix. Pointer types like `*string` don't make a field optional in the schema; only the `,optional` tag does.
 
 **Unsupported types**
 
@@ -959,7 +959,7 @@ Every input field must carry `@Import(name = "fieldName")` from `com.pulumi.core
 
 **Optional vs required**
 
-The analyzer checks `@Import(required = ...)` first. If `required` is missing, it falls back to inspecting the field type — `Optional<T>` or a `@Nullable`-annotated field is optional; otherwise the field is required.
+The analyzer treats an `Optional<T>` field as optional. Otherwise it reads `@Import(required = ...)`; because `required` defaults to `false`, a field is optional unless it sets `required = true`.
 
 **Unsupported types**
 
@@ -1286,7 +1286,7 @@ class MyComponent extends ComponentResource {
 {{% notes type="warning" %}}
 Always set `parent` when creating resources inside a component. Omitting it causes the following problems:
 
-- **Resource graph**: Child resources won't appear under the component in `pulumi preview` and the Pulumi Console, making the resource hierarchy unclear.
+- **Resource graph**: Child resources won't appear under the component in `pulumi preview` and the Pulumi Cloud console, making the resource hierarchy unclear.
 - **Provider inheritance**: Child resources won't automatically inherit provider configuration (such as region or credentials) passed to the component via the `providers` option.
 - **Dependency tracking**: Other resources that depend on the component won't automatically wait for un-parented resources to finish creating, which can cause race conditions or incomplete deployments.
 {{% /notes %}}
@@ -1451,13 +1451,13 @@ The call to `registerOutputs` typically happens at the very end of the component
 The `registerOutputs` call serves two purposes:
 
 1. **Marks the component as fully constructed**: It signals to the Pulumi engine that the component resource has finished registering all its child resources and should be considered complete.
-1. **Saves outputs to state**: It saves the component's output properties to the state file so they appear in the Pulumi Console and CLI.
+1. **Saves outputs to state**: It saves the component's output properties to the state file so they appear in the Pulumi Cloud console and CLI.
 
 {{% notes type="warning" %}}
 Always call `registerOutputs`, even when you have no outputs to register (pass an empty object). Without this call:
 
 - Resource [hooks](/docs/iac/concepts/resources/options/hooks/) such as `afterCreate` will not fire on the component. Hooks are often used for security, compliance, or notification logic, so silently skipping them can be harmful.
-- The component will appear as "creating..." in the CLI and Pulumi Console until the entire deployment completes, rather than when the component itself finishes.
+- The component will appear as "creating..." in the CLI and Pulumi Cloud console until the entire deployment completes, rather than when the component itself finishes.
 - The component's output properties will not be saved to the state file. (Child resource state is unaffected.)
 {{% /notes %}}
 
