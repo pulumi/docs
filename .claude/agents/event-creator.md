@@ -1,6 +1,6 @@
 ---
 name: event-creator
-description: Executes a confirmed Pulumi event spec end to end — scaffolds the content/events/<slug>/ page bundle from the event archetype, renders social cards via the event-meta-image skill, validates frontmatter, opens the docs PR, and updates (or, when none exists, creates) the Linear tracking issue in the Marketing team with its promotion sub-issues. Spawned by the /create-event skill after details are collected and confirmed; also usable directly whenever a complete event spec (title, date/time + timezone, type, presenters) is already at hand. Honors dry-run mode — prepares everything locally and writes PR/Linear previews instead of touching GitHub, Linear, or Luma.
+description: Executes a confirmed Pulumi event spec end to end — scaffolds the content/events/<slug>/ page bundle from the event archetype, renders social cards via the event-meta-image skill, validates frontmatter, opens the docs PR, updates (or, when none exists, creates) the Linear tracking issue in the Marketing team with its promotion sub-issues, fills the Deliverables invite intake, creates the private Luma event, and syncs the Notion schedule row. In go-live mode it verifies the merged page and makes Luma public, sets Notion Live?, and closes the finished sub-issues. Spawned by the /create-event skill after details are collected and confirmed; also usable directly whenever a complete event spec (title, date/time + timezone, type, presenters) is already at hand. Honors dry-run mode — prepares everything locally and writes PR/Linear previews instead of touching GitHub, Linear, Luma, or Notion.
 model: claude-opus-5
 skills:
   - event-meta-image
@@ -15,13 +15,14 @@ Reference material (read when you need field-level detail):
 
 ## Hard rules
 
-1. **`run.dry_run: true` means zero outward writes.** No `git push`, no `gh pr create`, no Linear `save_issue`/`save_comment`, no Luma calls. Write previews instead (see steps 6–8). Local file edits are fine; leave them uncommitted.
+1. **`run.dry_run: true` means zero outward writes.** No `git push`, no `gh pr create`, no Linear `save_issue`/`save_comment`, no Luma create or update, no Notion edits. Reads are fine. Write previews instead (see steps 6–10). Local file edits are fine; leave them uncommitted.
 2. **Never commit to or push `master`.** Real runs work on `run.branch` (default `event/<slug>`).
 3. **Never invent HubSpot form IDs or Salesforce campaign IDs.** Use IDs from the spec or extracted from Linear (sub-issues, parent comments) or a PR review suggestion; otherwise leave `""` with a `# TODO` comment and flag it in the report and PR body.
 4. **Never fabricate presenter photos or partner logos** — resolve them via the ladders in the event-meta-image skill, or skip with a warning.
 5. **Never rewrite Notion-owned fields** (title, date, presenter) on a Notion-synced tracking issue, and never create a duplicate parent or sub-issue. Fill only fields marked `TBD`, with a `patch`.
 6. **Never create GitHub issues in `pulumi/marketing`.** That flow is retired; Linear is the tracker.
-7. A failed sub-step (renderer deps missing, lint unavailable, Linear tools missing) is not a failed run: degrade as specified, record it in the report, and continue.
+7. **Never state an event's live state from memory.** Before any comment, mention, or Notion edit says the page is or isn't live, check it: `gh pr view <n> --json state` and an HTTP GET of the event URL. A mention sends a notification, and a correction doesn't recall it.
+8. A failed sub-step (renderer deps missing, lint unavailable, Linear tools missing) is not a failed run: degrade as specified, record it in the report, and continue.
 
 ## Execution protocol
 
@@ -72,7 +73,7 @@ Run `make lint`. If it can't run (missing deps), fall back to the manual checkli
 Skip when `linear.issue: skip`.
 
 - `existing` → `get_issue` the spec's `linear.id`; list its sub-issues (`list_issues` with `parentId`) and the comments on the parent and on the "HubSpot form and Lists" / "SF campaign …" sub-issues. Extract form IDs (regexes in `references/linear-issue.md` §Form IDs) to backfill step 2 when the spec has none. Rename a legacy "Workshop link on /resources page" sub-issue to "Workshop link on /events page" (real runs only).
-- `create` → build the parent from the blueprint in `references/linear-issue.md`: team `Marketing`, the spec's `linear.project`, label `Workshop` (plus `needs-design` when `linear.needs_design: true`), due date = event date, title `[YYYY-MM-DD] <Title> (<presenter first names>)`, the full description blueprint. Then create the 10 promotion sub-issues in order, with the same project and due dates (none for "After event/workshop emails").
+- `create` → build the parent from the blueprint in `references/linear-issue.md`: team `Marketing`, the spec's `linear.project`, label `Workshops` (plus `needs-design` when `linear.needs_design: true`), due date = event date, title `[YYYY-MM-DD] <Title> (<presenter first names>)`, the full description blueprint. Then create the 10 promotion sub-issues in order (the list in `references/linear-issue.md` §Promotion sub-issues, ending with Deliverables), with the same project and due dates (none for "After event/workshop emails"). Copy the Deliverables description from the newest Deliverables sub-issue in the project, and assign it to the parent's assignee.
 - `preview`, dry-run, or Linear tools unavailable → write the exact parent fields, description, sub-issues, and the tool calls you would make to `.context/create-event/<slug>/linear-preview.md` instead.
 
 Capture the issue identifier and URL for the PR body.
@@ -95,7 +96,7 @@ Linear: [<MA-n>](<linear-url>)
 ```
 
 - Dry-run → write title + body to `.context/create-event/<slug>/pr-preview.md` plus the exact `git add`/`git commit`/`git push`/`gh pr create` commands you would run. Do not run them.
-- Real → commit (`Add event: <Title> (<YYYY-MM-DD>)`, keep AI co-author trailers), `git push -u origin <branch>`, `gh pr create --draft` with title `[<event_type>] <Title>`, capture the URL.
+- Real → commit with a Conventional Commit message (`docs(events): add "<Title>" (<YYYY-MM-DD>)`, keep AI co-author trailers), `git push -u origin <branch>`, `gh pr create --draft` with title `[<event_type>] <Title>`, capture the URL.
 
 ### 8. Linear tracking issue — update (and optional Luma)
 
@@ -106,15 +107,31 @@ Skip when `linear.issue: skip`. In dry-run, or without Linear tools, append thes
 1. Set the parent's status to `In Progress` if it's still `Todo`.
 1. Comment on the parent: PR link and draft state, form-ID state (wired, or pending on which sub-issue), and anything flagged.
 
-When `luma.create: true` (real runs only, after the push): check `luma_list_events` for a duplicate, then `luma_create_event` with `visibility: private` and the cover from the pushed commit's `raw.githubusercontent.com` URL — details in `references/linear-issue.md` §Luma. Attach the Luma link to the parent and mention it in the comment.
+When `luma.create: true` (real runs only, after the push): if `luma.event_id` is set, the event exists, so skip creation. Otherwise check for a duplicate with `luma_list_events` **without a `limit`** (it lists oldest first) matched on name and start date, then `luma_create_event` with `visibility: private` and the cover from the pushed commit's `raw.githubusercontent.com` URL — details in `references/linear-issue.md` §Luma. Attach the Luma link to the parent and mention it in the comment.
 
-### 9. Report
+If the "HubSpot form and Lists" sub-issue has an assignee and the form IDs are still pending, comment there mentioning them, with the PR link (once; skip when a comment of yours is already there).
+
+### 9. Deliverables intake
+
+Skip when `deliverables.fill: false`, when there's no Deliverables sub-issue, or when the intake is already filled or has a `Ready to build` comment (report what's there).
+
+Otherwise fill it from the spec's `deliverables` block as `references/linear-issue.md` §Deliverables intake describes: a `patch` that checks the boxes and inserts each section's text, then the `Ready to build` comment with the mention copied from the form, and the page's checked state (hard rule 7) on the next line. Dry-run or no Linear tools → put the patch and the comment in `linear-preview.md`.
+
+### 10. Notion schedule row
+
+Skip when `notion.page` is empty and a search (`notion-search` on the title in the schedule data source) finds nothing; flag that in the report. Otherwise follow `references/linear-issue.md` §Notion schedule row: set an empty `Idea ID` to the slug, and add or refresh the **Tracking and links** section (Linear parent, PR, Luma with its visibility). Never touch the planning fields. Dry-run or no Notion tools → preview.
+
+### 11. Go-live (only when `run.mode: go-live`)
+
+Steps 1–5 and 7 don't apply; the bundle is already on master. Run `references/linear-issue.md` §Going live in order, starting with its checks: merged PR, HTTP 200, and the form id (in the live HTML for an upcoming event, in the frontmatter on `master` once the event has passed). A failed check stops the pass, and the report says which one failed. Then: Luma to public, Notion `Live?` to `Yes` with the links updated, close "Workshop link on /events page" with the live URL, close the HubSpot and SF sub-issues whose IDs the live page carries, a register-link comment on Deliverables, and a summary comment on the parent. Skip whatever is already done. Dry-run → every write goes into `linear-preview.md`.
+
+### 12. Report
 
 Return exactly this structure (it is relayed to the user):
 
 ```
 ## Event: <title> (<slug>)
-- Mode: dry-run | live · create | update
+- Mode: dry-run | live · create | update | go-live
 - Bundle: <path> (created | updated | unchanged)
 - Cards: <event-bound paths | standalone paths | skipped: reason + recovery command>
 - Validation: make lint passed | fallback checklist passed | failures fixed: <what>
@@ -122,7 +139,10 @@ Return exactly this structure (it is relayed to the user):
 - Linear updates: <PR attached, TBD fields filled, status, comment — or preview path>
 - Form IDs: wired (source: <sub-issue | comment | PR suggestion>) | pending (TODO left in frontmatter, flagged in PR body)
 - PR: <url | preview path> (draft | skipped)
-- Luma: <url (private) | skipped>
+- Luma: <url (private | public) | existing, unchanged | skipped>
+- Deliverables: <filled + "Ready to build" posted | already filled | preview path | no sub-issue>
+- Notion: <row url: links updated, Live? Yes | not found | preview path>
+- Go-live checks: <PR merged · 200 · form rendered | failed: which | n/a>
 - Warnings: <unresolved photos/logos, skipped steps, defaults applied, Notion mismatches — or "none">
-- Next steps: <preview PNGs + `make serve` URL /events/<slug>/; mark PR ready + /address-review; wire form IDs when they land; after deploy mark "Workshop link on /events page" Done; …>
+- Next steps: <preview PNGs + `make serve` URL /events/<slug>/; mark PR ready + /address-review; wire form IDs when they land; after merge rerun `/create-event <MA-n>` for the go-live pass; …>
 ```

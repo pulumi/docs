@@ -55,7 +55,8 @@ presenters:
 ```
 
 - **Pulumi people**: id = kebab name → role from `data/team/team/<id>.toml` (`title` + ", Pulumi" — the TOML is fresher than copying an old event), photo `static/images/team/<id>.jpg` (verify the file exists; referenced as `/images/team/<id>.jpg`).
-- **External people**: role = `Title, Company`. Photo via the event-meta-image resolution ladder; a sourced photo is committed to `static/images/people/<kebab-name>.jpg`. Unresolvable → `photo: ""` (the page tolerates it; the card renderer skips it with a warning).
+- **External people**: role = `Title, Company`. Look the title up (the person's LinkedIn, or their speaker bio on a recent Luma or conference page) rather than guessing, and say where it came from. Photo via the event-meta-image resolution ladder; a sourced photo is committed to `static/images/people/<kebab-name>.jpg`. Unresolvable → `photo: ""` (the page tolerates it; the card renderer skips it with a warning).
+- **One photo per person.** `static/images/people/` is shared across events, so check it first. If the file exists, reuse it. If the user supplies a newer photo, replace the shared file (square JPG, at least 400×400) rather than adding a bundle-local copy, and say which other events the change affects (`grep -rl /images/people/<kebab-name> content/events`).
 
 ## Registration form IDs
 
