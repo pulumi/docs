@@ -10,7 +10,7 @@ menu:
         weight: 5
 ---
 
-Pulumi Cloud integrates with [Entire](https://entire.com) through the Pulumi plugin for Entire. Once you install the plugin and link it to your Pulumi organization, Pulumi runs previews on trails, deploys infrastructure on push, creates ephemeral review stacks, and reports the results to Entire as checks and deployments. Neo can also work in your Entire repositories and open trails for its changes. In Entire, a trail is the equivalent of a pull request.
+Pulumi Cloud integrates with [Entire](https://entire.com) through the Pulumi plugin for Entire. Once you install the plugin and link it to your Pulumi organization, Pulumi runs previews on trails, deploys infrastructure on push, creates ephemeral review stacks, and reports the results to Entire as checks and deployments. Pulumi Agents can also work in your Entire repositories and open trails for its changes. In Entire, a trail is the equivalent of a pull request.
 
 ## Installation and configuration
 
@@ -89,17 +89,17 @@ Pulumi injects the following environment variables during Entire-triggered deplo
 
 ### Credentials
 
-When a deployment starts, Pulumi requests a short-lived token from Entire to check out the repository. The token is read-only and limited to the repository being deployed. [Neo](#neo) uses a token with the installation's permissions instead, so it can push branches, open trails, and create repositories.
+When a deployment starts, Pulumi requests a short-lived token from Entire to check out the repository. The token is read-only and limited to the repository being deployed. [Pulumi Agents](#pulumi-agents) uses a token with the installation's permissions instead, so it can push branches, open trails, and create repositories.
 
 ### Pulumi Delivery
 
 [Pulumi Delivery](/docs/delivery/) pipelines can use Entire repositories as sources with `EntireSource`, start runs on pushes to them, and run pipeline programs stored in Entire. See [Sources and triggers](/docs/delivery/concepts/sources-and-triggers/).
 
-### Neo
+### Pulumi Agents
 
-[Neo](/docs/ai/) works with the Entire repositories the plugin can access. It clones them, pushes branches, opens trails for its changes, and creates new repositories. Select an Entire repository when you start a task, or name one in your request.
+[Pulumi Agents](/docs/ai/) works with the Entire repositories the plugin can access. It clones them, pushes branches, opens trails for its changes, and creates new repositories. Select an Entire repository when you start a task, or name one in your request.
 
-Neo creates repositories in the Entire project the plugin is installed on, so creating repositories requires an installation on a project.
+Pulumi Agents creates repositories in the Entire project the plugin is installed on, so creating repositories requires an installation on a project.
 
 ## Limitations
 
@@ -126,9 +126,9 @@ A failing Pulumi check blocks the trail when the repository's gate for the Pulum
 
 Pulumi records only updates, destroys, and review stacks as deployments in Entire. Previews appear as checks only. If an update or destroy shows in Pulumi Cloud but not in Entire, check that the integration is connected under **Settings** > **Version control**.
 
-### Neo can't push to an Entire repository
+### Pulumi Agents can't push to an Entire repository
 
-If Neo reports that a push failed with `Token does not permit this request`, the installation hasn't granted Pulumi write access. Accept the Pulumi plugin's updated permissions in Entire, then ask Neo to retry.
+If Pulumi Agents reports that a push failed with `Token does not permit this request`, the installation hasn't granted Pulumi write access. Accept the Pulumi plugin's updated permissions in Entire, then ask it to retry.
 
 ## Learn more
 
