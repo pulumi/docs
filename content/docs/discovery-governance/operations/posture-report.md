@@ -8,8 +8,11 @@ menu:
     name: Infrastructure Posture report
     parent: dg-operations
     weight: 15
-pulumi_cloud_feature: policy-enforcement
 ---
+
+{{< pulumi-cloud >}}
+The Infrastructure Posture report is available in the Pro and Enterprise editions.
+{{< /pulumi-cloud >}}
 
 The Infrastructure Posture report is a monthly snapshot of how your organization's stacks measure up against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against those packs and summarizes what it found: how many resources were evaluated, how many have no findings, and which issues affect the most resources.
 
