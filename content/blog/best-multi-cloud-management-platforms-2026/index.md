@@ -1,6 +1,6 @@
 ---
 title: "Best Multi-Cloud Management Platforms in 2026"
-date: 2026-10-23
+date: 2026-11-20
 draft: false
 meta_desc: "The best multi-cloud management platforms in 2026, grouped by job: Pulumi, Terraform, OpenTofu, Spacelift, Scalr, env zero, Crossplane, Morpheus, and more."
 authors:
