@@ -26,7 +26,7 @@ To link an Entire installation, you need permission to manage your Pulumi organi
 
 If you start the installation from Entire instead, Entire sends you to the same page in Pulumi Cloud, where you choose the Pulumi organization to link before you select **Link installation**.
 
-Pulumi receives events from Entire through the plugin, so there are no webhooks to configure. To change which repositories Pulumi can access, edit the plugin's installation in Entire.
+Pulumi receives events from Entire through the plugin, so there are no webhooks to configure. You choose the repositories Pulumi can access when you install the plugin. To change them later, manage the plugin's installation from the project's **Plugins** page in Entire.
 
 ### Repository identifiers
 
@@ -50,7 +50,7 @@ To remove the integration, open it under **Settings** > **Version control** and 
 
 Pulumi reports each preview, update, and destroy to Entire as a check on the commit, with a link to the deployment in Pulumi Cloud. Each stack and operation gets its own check.
 
-Entire can block a trail from merging while a check is failing. If you don't want Pulumi's checks to block merges, configure the required checks in your Entire project.
+Entire can block a trail from merging while a check is failing. Merge gates are set per repository under **Settings** > **Gates** in Entire. When the Pulumi plugin's gate lists no required checks, any failing Pulumi check blocks the merge. To block only on some stacks or operations, list those checks under **Required checks**, or turn the gate off.
 
 ### Deployments
 
@@ -120,7 +120,7 @@ If deployments aren't triggering on push or trail events:
 
 ### Trail is blocked from merging
 
-A failing Pulumi check blocks the trail if your Entire project requires it. Open the check's link to see the failed deployment in Pulumi Cloud, or change the required checks in your Entire project.
+A failing Pulumi check blocks the trail when the repository's gate for the Pulumi plugin is on. Open the check's link to see the failed deployment in Pulumi Cloud, or change the gate under the repository's **Settings** > **Gates** in Entire.
 
 ### Deployments don't appear in Entire
 
@@ -133,4 +133,4 @@ If Neo reports that a push failed with `Token does not permit this request`, the
 ## Learn more
 
 - [Pulumi Deployments](/docs/deployments/concepts/): the deployment engine this integration triggers.
-- [Version control integrations](/docs/integrations/version-control/): the same capabilities on GitHub, GitLab, Bitbucket, and Azure DevOps.
+- [Version control integrations](/docs/integrations/version-control/): Pulumi's integrations with GitHub, GitLab, Bitbucket, Azure DevOps, and other providers.
