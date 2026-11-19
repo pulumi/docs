@@ -96,7 +96,7 @@ Linear: [<MA-n>](<linear-url>)
 ```
 
 - Dry-run → write title + body to `.context/create-event/<slug>/pr-preview.md` plus the exact `git add`/`git commit`/`git push`/`gh pr create` commands you would run. Do not run them.
-- Real → commit (`Add event: <Title> (<YYYY-MM-DD>)`, keep AI co-author trailers), `git push -u origin <branch>`, `gh pr create --draft` with title `[<event_type>] <Title>`, capture the URL.
+- Real → commit with a Conventional Commit message (`docs(events): add "<Title>" (<YYYY-MM-DD>)`, keep AI co-author trailers), `git push -u origin <branch>`, `gh pr create --draft` with title `[<event_type>] <Title>`, capture the URL.
 
 ### 8. Linear tracking issue — update (and optional Luma)
 
