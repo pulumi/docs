@@ -657,7 +657,7 @@ html[data-theme="dark"] body.section-docs {
         background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
     }
 
-    pre:not(.mermaid, pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) {
+    pre:not(.mermaid, :where(pulumi-chooser[type="language"]:not([option-style="none"])) *, .example-program *, .code-chrome *, .code-tabbed *) {
         border: 1px solid var(--chrome-border);
     }
 
