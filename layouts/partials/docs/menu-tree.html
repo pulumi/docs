@@ -114,7 +114,7 @@
                         {{- if $currentMenuItem.URL }}
                             {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
                             {{- if $overviewPage }}
-                                {{- $overviewLabel := "Introduction" }}
+                                {{- $overviewLabel := $overviewPage.Params.menu_overview_label | default "Introduction" }}
                                 {{- if $overviewPage.Params.docs_home }}
                                     {{- $overviewLabel = "Overview" }}
                                 {{- end }}

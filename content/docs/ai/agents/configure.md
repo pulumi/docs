@@ -89,11 +89,11 @@ In **Default mode**, choose **Manual**, **Balanced**, or **Auto** to control whe
 
 {{< pulumi-cloud "neo-byok" />}}
 
-If your organization has [connected its own model providers](/docs/ai/concepts/neo/model-providers/), the form shows a **Model** setting. Keep **Org default** selected to follow the organization's default provider, or select **Claude** for Pulumi's built-in models or a saved provider by name.
+If your organization has [connected its own model providers](/docs/ai/agents/model-providers/), the form shows a **Model** setting. Keep **Org default** selected to follow the organization's default provider, or select **Claude** for Pulumi's built-in models or a saved provider by name.
 
-For a provider that supports it, **Thinking** sets how much effort the agent's models spend on reasoning. Choose **Default** to use the model's default thinking level, or select **Low**, **Medium**, or **High**. For OpenAI Responses providers, the default option is labeled **Provider default** and uses the provider's configured thinking level. See [Choose a model for an agent](/docs/ai/concepts/neo/model-providers/#choose-a-model-for-an-agent).
+For a provider that supports it, **Thinking** sets how much effort the agent's models spend on reasoning. Choose **Default** to use the model's default thinking level, or select **Low**, **Medium**, or **High**. For OpenAI Responses providers, the default option is labeled **Provider default** and uses the provider's configured thinking level. See [Choose a model for an agent](/docs/ai/agents/model-providers/#choose-a-model-for-an-agent).
 
-Changing these settings requires permission to manage your organization's integrations. See [Model providers](/docs/ai/concepts/neo/model-providers/) for provider setup and model options.
+Changing these settings requires permission to manage your organization's integrations. See [Model providers](/docs/ai/agents/model-providers/) for provider setup and model options.
 
 ## Choose how the agent starts
 

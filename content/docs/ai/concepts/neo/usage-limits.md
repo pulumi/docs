@@ -9,14 +9,14 @@ aliases:
 menu:
     ai:
         name: Usage limits
-        parent: ai-agents-administration
-        weight: 20
+        parent: ai-agents
+        weight: 85
         identifier: ai-usage-limits
 ---
 
 Set a monthly limit for model usage billed by Pulumi. The organization limit applies to Neo tasks and tasks run by agents your team creates. Per-member limits apply only to Neo tasks.
 
-Requests served through [bring your own key (BYOK)](/docs/ai/concepts/neo/model-providers/) do not count toward these limits and can continue after a limit is reached. Set budgets and rate limits with your model provider to control BYOK spend.
+Requests served through [your own model provider](/docs/ai/agents/model-providers/) can continue after you reach a Pulumi usage limit. To control spending on those requests, set budgets and rate limits with your provider.
 
 These limits cover Neo tokens, the billing unit for model usage. They do not cover the time an agent spends running tools and commands on Pulumi-hosted machines, which is billed separately as [workflow minutes](/pricing/).
 
