@@ -47,7 +47,7 @@ The access settings list everyone who was granted access on the entity:
 
 * The **Owner**, the member or team that created the entity or was made its owner, has full access. Select **Reassign** to hand ownership to someone else.
 * Members, teams, and service principals with a grant appear with their permission set.
-* On some stacks, people are listed as a **Collaborator**. These are members who were given access to the stack before this page existed. They keep the access they had, shown as Stack Read, Stack Write, or Stack Admin, and you can remove them like anyone else. To change what a collaborator can do, add them again with **Add Principal** and choose a permission set.
+* On some stacks, people are listed as a **Collaborator**. These are members who were given access to the stack before this page existed. They keep the access they had, shown as Stack Read, Stack Write, or Stack Admin, and you can remove them like anyone else. To change what a collaborator can do, remove them, then add them again with **Add Principal** and choose a permission set.
 
 Organization admins have full access through their role and aren't listed unless they also hold a grant. A member's page lists the stacks, environments, and cloud accounts they were granted under **Access**.
 

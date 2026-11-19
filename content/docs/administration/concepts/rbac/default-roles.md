@@ -51,7 +51,7 @@ Switching the organization to the restricted [permission mode](/docs/administrat
 
 ## Moving from the Member role {#moving-from-member}
 
-This section applies to organizations created before November 2026. Organizations created since then start on `Builder` and never had a `Member` role.
+This section applies to organizations that had a `Member` role, which Pulumi Cloud replaced in November 2026. Newer organizations never had one.
 
 Before November 2026, members who weren't admins or billing managers shared one configurable role, `Member`. Pulumi Cloud replaced it with Reader, Builder, and Maintainer, and nobody gained or lost permissions in the move:
 
