@@ -5,6 +5,8 @@ meta_desc: "Pulumi Delivery is in public preview. Write release pipelines in Typ
 feature_image: feature.png
 authors:
     - daniel-perlovsky
+    - florian-stadler
+    - claire-gaestel
 tags:
     - continuous-delivery
     - pulumi-cloud
