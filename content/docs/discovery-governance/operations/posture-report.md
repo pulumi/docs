@@ -1,6 +1,6 @@
 ---
 title_tag: "Infrastructure posture report | Pulumi Policies"
-meta_desc: Get a monthly Infrastructure posture report that checks every stack in your organization against the Pulumi Best Practices policy packs.
+meta_desc: Get a monthly infrastructure posture report that checks every stack in your organization against the Pulumi Best Practices policy packs.
 title: Infrastructure posture report
 h1: Infrastructure posture report
 menu:
@@ -11,10 +11,10 @@ menu:
 ---
 
 {{< pulumi-cloud >}}
-The Infrastructure posture report is available in the Pro and Enterprise editions.
+The infrastructure posture report is available in the Pro and Enterprise editions.
 {{< /pulumi-cloud >}}
 
-The Infrastructure posture report is a monthly snapshot of how your organization's stacks measure up against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against those packs and summarizes what it found: how many resources were evaluated, how many have no findings, and which issues affect the most resources.
+The infrastructure posture report is a monthly snapshot of how your organization's stacks measure up against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against those packs and summarizes what it found: how many resources were evaluated, how many have no findings, and which issues affect the most resources.
 
 The scan is read-only. It changes nothing in your infrastructure or your stacks, and it uses no new credentials. You don't need to assign the packs to a policy group first.
 
