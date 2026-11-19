@@ -2398,3 +2398,72 @@ def test_old_status_comments_are_removed_and_quotes_are_left_alone():
     gh = StubGh(pr=pr_meta(), files=[docs_file_substantive()], comments=[bot, dup, quote])
     assert sentinel.remove_status_comments(gh, comments=[bot, dup, quote]) == 2
     assert sorted(gh.deleted) == [5, 6]
+
+
+def _self_accept_case(reviews, actor="author", at="2026-11-19T20:39:12.608009Z"):
+    st = review_state.empty_state()
+    st["high_water"] = 3
+    st = review_state.set_disposition(st, "F1", "fixed", actor="update-lane")
+    for fid in ("F2", "F3"):
+        st = review_state.set_disposition(
+            st, fid, "accepted", actor=actor, note="No reason given.",
+            now=sentinel._parse_ts(at))
+    card = author_card([("F1", "must"), ("F2", "answer"), ("F3", "answer")], state=st)
+    return StubGh(pr=pr_meta(author="author"), files=[docs_file_substantive()],
+                  comments=[card, brief_comment()], reviews=reviews)
+
+
+def _approved_at(user, at):
+    return dict(approval(user), submitted_at=at)
+
+
+def test_an_approval_from_before_the_authors_accept_does_not_clear_the_findings():
+    """pulumi/docs#23048: the author accepted six open questions with
+    `/update-review accept`, which moves them to the reviewer brief's ⚠️
+    list for the reviewer to weigh. The only approval predated the accept,
+    so no reviewer had seen them, yet G2 read "every finding answered" and
+    the PR merged a minute later."""
+    v = sentinel.evaluate(_self_accept_case([_approved_at("guild", "2026-11-19T20:35:42Z")]), CONFIG)
+    g = _gate(v, "findings")
+    assert g.status == "red"
+    assert "F2, F3" in g.message
+    assert v.conclusion == "failure"
+    assert v.blocking_ids == []
+    desc = next(s for s in sentinel.gate_statuses(v) if s["context"] == "Sentinel / findings")
+    assert desc["state"] == "failure"
+    assert desc["description"] == "Waiting on a reviewer's approval after the author accepted F2 F3"
+    assert sentinel.SELF_ACCEPT_WAITING in sentinel._author_strip_line(v)
+    assert sentinel._brief_strip_line(v) == ""
+
+
+def test_an_approval_after_the_authors_accept_clears_the_findings():
+    v = sentinel.evaluate(_self_accept_case([
+        _approved_at("guild", "2026-11-19T20:35:42Z"),
+        _approved_at("guild", "2026-11-19T20:41:00Z"),
+    ]), CONFIG)
+    g = _gate(v, "findings")
+    assert g.status == "ok"
+    assert "`guild` approved after the author accepted F2 F3" in g.message
+
+
+def test_only_a_qualifying_approval_after_the_accept_counts():
+    late = "2026-11-19T20:41:00Z"
+    for reviews in (
+        [_approved_at("author", late)],
+        [dict(_approved_at("randomer", late), author_association="NONE")],
+        [dict(_approved_at("eon[bot]", late), user={"login": "eon[bot]", "type": "Bot"})],
+        [approval("guild")],  # no submitted_at: unreadable, so it doesn't count
+        [_approved_at("guild", late),
+         {"state": "CHANGES_REQUESTED", "user": {"login": "guild", "type": "User"},
+          "commit_id": HEAD, "author_association": "MEMBER", "submitted_at": "2026-11-19T20:42:00Z"}],
+    ):
+        v = sentinel.evaluate(_self_accept_case(reviews), CONFIG)
+        assert _gate(v, "findings").status == "red", reviews
+
+
+def test_findings_a_reviewer_accepted_need_no_second_approval():
+    """Only the author's own accepts wait on a reviewer. An accept from
+    anyone else is already a second person's call."""
+    v = sentinel.evaluate(_self_accept_case([], actor="guild"), CONFIG)
+    assert _gate(v, "findings").status == "ok"
+    assert _gate(v, "findings").message == "every finding answered"
