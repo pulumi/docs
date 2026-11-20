@@ -13,15 +13,15 @@ tags:
 category: product
 ---
 
-Your team can run Pulumi Agents on models you already use through your organization’s provider account. You can use OpenAI models through your OpenAI account or models available in your AWS account through Amazon Bedrock.
+Pulumi Agents can now run on the models your team already uses. Model requests go through your organization’s provider account, so your provider bills you directly.
 
 <!--more-->
 
-You can connect Anthropic, OpenAI, Google (for Gemini models), Azure Foundry, Amazon Bedrock, or a compatible endpoint. Your provider bills you directly for model requests your agents make through that account.
+In Pulumi Cloud, open your organization’s **Agent Settings** and select **Model provider**. Choose **Add model provider** to connect OpenAI, Amazon Bedrock, Anthropic, Google (for Gemini models), Azure Foundry, or a compatible endpoint.
 
-In Pulumi Cloud, open your organization’s **Agent Settings**. Under **Model provider**, choose **Add model provider**. Give the connection a name, select your provider, and enter its connection details. When you select **Save**, Pulumi sends a test request to each model you configured.
+Name the connection and enter the details for your provider. When you select **Save**, Pulumi sends a test request to each model you configured.
 
-If you define your agents in TypeScript, use the connection name in your Pulumi program. Here, `openai-platform` is the name of a saved connection. The infrastructure review agent uses the model configured on that connection.
+Use that name when you define an agent in TypeScript. This infrastructure review agent uses the model configured on the `openai-platform` connection.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
