@@ -6,7 +6,7 @@ meta_desc: Use models from your organization's provider account with Pulumi Agen
 canonical_url: https://www.pulumi.com/docs/ai/concepts/neo/model-providers/
 feature_image: feature.png
 authors:
-    - mark-huber
+    - pulumi-ai-team
 tags:
     - ai
     - pulumi-cloud
