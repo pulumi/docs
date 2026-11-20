@@ -1,6 +1,7 @@
 ---
 title: About
-meta_desc: At Pulumi, we help engineers ship infrastructure faster with Infrastructure as Code in general-purpose languages.
+title_tag: About Us, the AI-Native Infrastructure as Code Company
+meta_desc: Pulumi is the AI-native infrastructure as code platform. Teams use Python, TypeScript, Go, C#, and Java to build, deploy, and manage cloud infrastructure.
 type: page
 layout: about
 menu:
