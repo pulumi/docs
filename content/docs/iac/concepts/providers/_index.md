@@ -518,7 +518,7 @@ resource "aws_lb_listener" "listener" {
 
 {{% notes type="info" %}}
 Explicit providers don't automatically inherit configuration values set on the default
-provider of the same type. In this example, if `aws:profile`, `aws:assumeRole`, or
+provider of the same type. In this example, if `aws:profile`, `aws:assumeRoles`, or
 `aws:allowedAccountIds` were set in stack configuration for the default AWS provider, the
 `useast1` explicit provider would still need those same values passed to it directly; it
 starts from an empty configuration rather than copying the default provider's settings.
