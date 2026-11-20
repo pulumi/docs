@@ -449,4 +449,4 @@ Because the agent registers task definitions with content-hashed family names, i
 
 - The executor image must be pullable by the task's execution role. Inline registry credentials on the executor image aren't supported.
 - Fargate provides no Docker daemon, so jobs that build container images need a rootless builder or an external build service.
-- Fargate doesn't cache images between tasks, so every job pulls its executor image. To shorten start times, use a smaller executor image, an [ECR pull through cache](https://docs.aws.amazon.com/AmazonECR/latest/userguide/pull-through-cache.html), or SOCI-indexed images.
+- Fargate doesn't cache images between tasks, so every job pulls its executor image. You may be able to shorten start times, use a smaller executor image, an [ECR pull through cache](https://docs.aws.amazon.com/AmazonECR/latest/userguide/pull-through-cache.html), or SOCI-indexed images.
