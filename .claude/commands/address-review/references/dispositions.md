@@ -78,7 +78,7 @@ Knowingly shipping with the finding standing. Always available, never free.
 
 - The note must say *why*, in terms someone reading the PR later can evaluate: "house voice — we say 'simply' in tutorials deliberately", not "won't fix".
 - For a 🚨 blocker, also post the reason as a PR comment. A blocker accepted silently reads to the scraper as `ignored_outstanding`, and to a maintainer as an oversight.
-- This is the disposition to use when the user says "just merge it." One `/update-review accepting all open findings as-is: <their reason>` comment records it across every open finding (the update lane flags it `bulk`). That is the honest ledger entry. Each accepted row moves to the reviewer brief's ⚠️ list, where the approver sees it.
+- This is the disposition to use when the user says "just merge it." One `/update-review accepting all open findings as-is: <their reason>` comment records it across every open finding (the update lane flags it `bulk`). That is the honest ledger entry. Each accepted row moves to the reviewer brief's ⚠️ list, where the approver sees it. When the PR's author accepts, the Sentinel's findings gate holds until a reviewer approves after the accept, so tell the user an existing approval has to be given again.
 
 ## `not-applicable`
 
