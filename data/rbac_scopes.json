@@ -139,6 +139,51 @@
           ]
         },
         {
+          "name": "Delivery pipelines",
+          "scopes": [
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Continue a manual gate, and approve or reject approvals that name no approvers.",
+              "name": "pipeline:approve"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Cancel a pipeline run.",
+              "name": "pipeline:cancel"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Start a pipeline run.",
+              "name": "pipeline:dispatch"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Deploy a ready release to a pipeline stage without waiting for its gate.",
+              "name": "pipeline:force_promote"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Pause and resume a pipeline stage.",
+              "name": "pipeline:pause"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Deploy the current release of a pipeline stage again.",
+              "name": "pipeline:redeploy"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Retry a failed pipeline run.",
+              "name": "pipeline:retry"
+            },
+            {
+              "defaultPermissionSet": "Stack Write",
+              "description": "Roll a pipeline stage back to an earlier release.",
+              "name": "pipeline:rollback"
+            }
+          ]
+        },
+        {
           "name": "Stack tags",
           "scopes": [
             {
@@ -1240,6 +1285,14 @@
     },
     {
       "added": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:import",
@@ -1265,6 +1318,14 @@
       "inherits": "Stack Read",
       "name": "Stack Write",
       "permissions": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:decrypt",
@@ -1307,6 +1368,14 @@
       "inherits": "Stack Write",
       "name": "Stack Admin",
       "permissions": [
+        "pipeline:approve",
+        "pipeline:cancel",
+        "pipeline:dispatch",
+        "pipeline:force_promote",
+        "pipeline:pause",
+        "pipeline:redeploy",
+        "pipeline:retry",
+        "pipeline:rollback",
         "policy_results:update",
         "stack:cancel_update",
         "stack:decrypt",

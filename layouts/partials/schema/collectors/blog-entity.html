@@ -1,15 +1,7 @@
 {{/* Returns BlogPosting entity for @graph */}}
 
-{{/* Get content for analysis */}}
-{{ $content := .Content | plainify }}
-{{ $wordCount := $content | countwords }}
-{{ if not $wordCount }}
-  {{ $wordCount = 500 }}
-{{ end }}
-
-{{/* Calculate reading time */}}
-{{ $readTime := div $wordCount 200 }}
-{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+{{ $wordCount := partialCached "blog/prose-word-count.html" . .Path }}
+{{ $readTime := partial "blog/reading-time.html" . }}
 
 {{/* articleSection from the post's category (display name from
      data/blog_categories.yaml); posts without one fall back to "Blog". */}}

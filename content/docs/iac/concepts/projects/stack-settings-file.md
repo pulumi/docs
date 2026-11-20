@@ -39,7 +39,7 @@ The `secretsprovider` attribute specifies which secrets provider to use for encr
 - `default`: Uses Pulumi Cloud's default encryption
 - `passphrase`: Uses a local passphrase for encryption
 - `awskms://alias/my-key`: Uses AWS KMS with the specified key
-- `azurekeyvault://vault-name/key-name`: Uses Azure Key Vault
+- `azurekeyvault://vault-name.vault.azure.net/keys/key-name`: Uses Azure Key Vault
 - `gcpkms://projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key`: Uses Google Cloud KMS
 - `hashivault://my-secret-path`: Uses HashiCorp Vault
 

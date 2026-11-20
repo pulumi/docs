@@ -179,8 +179,8 @@ func main() {
 
 ```csharp
 using Pulumi;
-using Pulumi.Delivery.Delivery;
-using Pulumi.Delivery.Delivery.Inputs;
+using Pulumi.Delivery;
+using Pulumi.Delivery.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
@@ -228,8 +228,8 @@ return await Deployment.RunAsync(() =>
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.delivery.delivery.*;
-import com.pulumi.delivery.delivery.inputs.*;
+import com.pulumi.delivery.*;
+import com.pulumi.delivery.inputs.*;
 import java.util.Map;
 
 public class App {
@@ -400,7 +400,7 @@ Each push that matches the trigger starts a [run](#runs), which takes the pushed
 
 The pipeline lives in a repository as a Pulumi project, and it declares exactly one `Pipeline` resource. You work with it in two ways:
 
-- **Register it** with `pulumi delivery register`. Pulumi Cloud stores the pipeline and listens for changes. One registered, its triggers start runs in Pulumi Cloud.
+- **Register it** with `pulumi delivery register`. Pulumi Cloud stores the pipeline and listens for changes. Once registered, its triggers start runs in Pulumi Cloud.
 - **Run it locally** with `pulumi up`. This is how you can iterate on your pipeline program from your local branch without needing to push your changes.
 
 ### Register the pipeline
@@ -409,11 +409,21 @@ To register the pipeline, run `pulumi delivery register` in the pipeline's proje
 
 Registering doesn't start a run. The command writes the pipeline's location in your repository to the stack's `delivery:source` config. Commit the updated config file so that Pulumi Cloud can find the program. Once registered, a push to the repository's default branch updates the pipeline.
 
-### Run the pipeline locally
+You can specify what service principal or team the pipeline runs as on registration. See [Pipeline identity](/docs/delivery/concepts/identity/).
 
-Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
+Registration checks that Pulumi Cloud can read the pipeline's repository through your organization's [version control integration](/docs/integrations/version-control/), and that the branch exists. If either check fails, the registration fails.
 
-Registering also decides what the pipeline runs as: by default a service principal that Delivery creates for it, or a service principal or team that the program names. See [Pipeline identity](/docs/delivery/concepts/identity/).
+### Run locally
+
+Run `pulumi up` on the pipeline stack to start a run from your checked out branch. The pipeline program runs on your machine, and the stack updates and jobs run in Pulumi Cloud at the latest pushed commit of their sources. The command waits for the run to end and prints a link to it in the Pulumi Cloud console, where the run is marked **Local**. A stack update or job that hasn't changed since your last `pulumi up` doesn't run again.
+
+The stack updates and jobs of a local run use your identity, not the pipeline's [identity](/docs/delivery/concepts/identity/).
+
+A local run differs from a run in Pulumi Cloud:
+
+- It never changes the registered pipeline. To change the pipeline that runs in Pulumi Cloud, register it or push to its branch.
+- Its release can't be redeployed, rolled back, or force-promoted, and downstream pipelines never read it.
+- It can't be retried, or canceled from the console.
 
 ## Stages
 

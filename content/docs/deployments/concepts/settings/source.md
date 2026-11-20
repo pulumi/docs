@@ -17,7 +17,7 @@ The **Source** determines where a deployment gets the Pulumi program it runs. In
 
 Select a connected integration to deploy from a repository it manages. Every integration exposes the same source fields, though the repository identifier format varies by provider:
 
-- **Repository** (required): the repository to deploy from. The format depends on the provider — for example `owner/repo` for GitHub, `group/project` for GitLab, `workspace/repo` for Bitbucket, and `organization/project/repository` for Azure DevOps.
+- **Repository** (required): the repository to deploy from. The format depends on the provider — for example `owner/repo` for GitHub, `group/project` for GitLab, `workspace/repo` for Bitbucket, `organization/project/repository` for Azure DevOps, and `project/repo` for Entire.
 - **Branch** (required): the branch to deploy.
 - **Pulumi.yaml folder**: the path, relative to the repository root, to the directory that contains your `Pulumi.yaml`. Leave it blank when the project lives at the repository root.
 

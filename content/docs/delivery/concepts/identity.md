@@ -22,11 +22,20 @@ A pipeline runs as one of these:
 | A [team](#running-as-a-team) | The `Pipeline` sets `servicePrincipal.teamName` | The pipeline stack only |
 | The [organization's admin](#the-free-edition) | Organizations on the Free edition | None needed |
 
+## The Free edition
+
+An organization on the Free edition has a single member, its admin, so its pipelines run as that admin, with the admin's access. There's nothing to set up: no service principal is created, there's no **Identities** tab, and the program can't set `servicePrincipal`.
+
+Moving between editions changes what a pipeline runs as:
+
+- **From Free to another edition.** A pipeline registered on the Free edition has no identity of its own yet. Register it again to give it one.
+- **From another edition to Free.** Pipelines run as the organization's admin from then on, in place of the service principal or team they ran as before. Review what your pipelines deploy before you move.
+
 ## The generated service principal
 
 When you register a pipeline whose program names no identity, Delivery creates a [service principal](/docs/administration/concepts/rbac/service-principals/) for it, named `Delivery <project> <stack>` after the pipeline stack. It has no role and doesn't follow your organization's default role, so it can reach only what it's granted.
 
-Each time a person registers the pipeline, Delivery grants the service principal:
+Each time you register the pipeline, Delivery grants the service principal:
 
 - Stack Write on the pipeline stack.
 - Stack Write on every stack that a `Stacks` resource targets.
@@ -46,7 +55,7 @@ The generated service principal belongs to its pipeline. It appears on the organ
 
 ## Running as your own service principal
 
-To decide the pipeline's access yourself, create a [service principal](/docs/administration/concepts/rbac/service-principals/#creating-a-service-principal), give it the access the pipeline needs, and name it in the `Pipeline` resource. The value is the service principal's ID or its login (`service-principal:<ID>`), not its display name.
+To decide the pipeline's access yourself, create a [service principal](/docs/administration/concepts/rbac/service-principals/#creating-a-service-principal), give it the access the pipeline needs, and name it in the `Pipeline` resource. The value is the service principal's ID or its login (`service-principal:<ID>`), not its display name. To find the login, navigate to **Settings** > **Access management**, select the **Service Principals** tab, and open the service principal: the login is the last part of the page's address.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -236,7 +245,13 @@ resource "delivery_pipeline" "shop" {
 
 Set `userId` or `teamName`, not both.
 
-Registration gives the team write access to the pipeline stack, unless the team already has it. Delivery doesn't give a team access to target stacks, because that would widen the access of every member of the team. Give the team access to each target stack, upstream pipeline, and environment the pipeline uses.
+Registration gives the team write access to the pipeline stack, unless the team already has it. Delivery grants a team nothing else, because access given to a team reaches every member of the team. If the team doesn't already have it, give the team:
+
+- Write access to every stack that a `Stacks` resource targets.
+- Read access to the pipeline stack of every upstream pipeline that a `PipelineSource` reads.
+- Environment Open on every environment those stacks import.
+
+Grant these from each stack's or environment's [access settings](/docs/administration/concepts/rbac/entities/#entity-access), as you would for any team.
 
 In an organization on the permissive [permission mode](/docs/administration/concepts/rbac/permission-modes/), a pipeline that runs as a team also gets the organization-wide default permissions, as [team access tokens](/docs/administration/concepts/access-tokens/#team-access-tokens) do. In a restricted organization, it gets only the team's roles and access.
 
@@ -244,7 +259,7 @@ If the team is deleted, the pipeline's work fails until you name another identit
 
 ## Who can choose the identity
 
-Only `pulumi delivery register`, run by a person, can set or change what a pipeline runs as, so that the checks below apply to that person. A pushed commit that changes the identity fails until someone registers the pipeline.
+You set or change what a pipeline runs as by running `pulumi delivery register` yourself, and the checks below apply to you. A push can't do it: a pushed commit that changes the identity fails until someone registers the pipeline.
 
 To add a service principal or a team to a pipeline, you need:
 
@@ -255,12 +270,6 @@ To add a service principal or a team to a pipeline, you need:
 Changing the identity of a pipeline that already has one, including back to the generated service principal, also requires permission to change who has access to the pipeline stack.
 
 The pipeline's **Settings** > **Identities** tab lists the service principals and teams the pipeline has been registered with, and who added each one. Anyone who can update the pipeline stack can start runs as these identities, and anyone who can push to the branch that holds the pipeline program can change what those runs deploy. Protect that branch as you would the stacks the pipeline can reach.
-
-## The Free edition
-
-In an organization on the Free edition, every pipeline runs as the organization's admin. No service principal is created, there's no **Identities** tab, and the program can't set `servicePrincipal`.
-
-A pipeline registered while the organization was on the Free edition has no identity after the organization moves to another edition. Register it again to give it one.
 
 ## Credentials in stack updates and jobs
 

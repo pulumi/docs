@@ -17,7 +17,7 @@ aliases:
 
 A role in Pulumi Cloud is the primary way to define what resources a principal (user, team, service principal, or machine token) can access and what they can do with them. Roles allow you to apply [permission sets](/docs/administration/concepts/rbac/permission-sets) to a set of [entities](/docs/administration/concepts/rbac/entities) and assign this access to a principal.
 
-A role combines two kinds of access, both built from [scopes](/docs/administration/concepts/rbac/scopes) bundled into [permission sets](/docs/administration/concepts/rbac/permission-sets): **entity access** — permission sets applied to specific [entities](/docs/administration/concepts/rbac/entities) (stacks, environments, and accounts) to form entity access rules — and an **organization access level** built from org-wide permission sets (such as Standard, Read Only, or Billing) for [org-wide operations](/docs/administration/concepts/rbac/entities#organization-level-access). The completed role is then assigned to principals.
+A role combines two kinds of access, both built from [scopes](/docs/administration/concepts/rbac/scopes) bundled into [permission sets](/docs/administration/concepts/rbac/permission-sets): **entity access** — permission sets applied to specific [entities](/docs/administration/concepts/rbac/entities) (stacks, environments, and accounts) to form entity access rules — and an **organization access level** built from org-wide permission sets (such as Standard or Read Only) for [org-wide operations](/docs/administration/concepts/rbac/entities#organization-level-access). The completed role is then assigned to principals.
 
 ```mermaid
 flowchart LR
@@ -29,7 +29,7 @@ flowchart LR
     end
     subgraph OA["Organization-wide access"]
         direction LR
-        OSC["Scopes<br/>(e.g. stack:create,<br/>organization:billing)"] --> OPS["Permission sets<br/>(e.g. Standard,<br/>Read Only, Billing)"]
+        OSC["Scopes<br/>(e.g. stack:create,<br/>organization:billing)"] --> OPS["Permission sets<br/>(e.g. Standard,<br/>Read Only)"]
     end
     EAR --> ROLE["Role"]
     OPS --> ROLE
@@ -120,9 +120,9 @@ Roles can be assigned to organization access tokens, users, teams, and service p
 
 ### Organization access tokens
 
-[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) can be assigned exactly **one** role (default or custom) that defines the token's permissions across the organization.
+[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) can be assigned exactly **one** role (built-in or custom) that defines the token's permissions across the organization.
 
-Follow the process to [create an organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token), then choose a default or custom role to assign to the token. The token's access is limited to the permissions of that role within your organization.
+Follow the process to [create an organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token), then choose a built-in or custom role to assign to the token. The token's access is limited to the permissions of that role within your organization.
 
 ### Users
 
@@ -132,7 +132,7 @@ Anyone who can read a role can see which members and teams hold it.
 
 ### Teams
 
-When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (default or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role. A team can't be assigned the built-in `Admin` role.
+When your organization has custom roles enabled, [teams can have role assignments](/docs/administration/concepts/rbac/teams#role-assignments): **one or more** roles (built-in or custom). Team members receive the **union** of their own user role and all roles assigned to the teams they belong to. So team role assignments add on top of each member's baseline role. A team can't be assigned the built-in `Admin` role.
 
 ### Service principals
 

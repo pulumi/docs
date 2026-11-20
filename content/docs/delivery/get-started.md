@@ -12,7 +12,7 @@ menu:
 aliases: []
 ---
 
-<!-- TODO: Replace the project setup in this guide with a Delivery `pulumi new` template once it's published (for example, `pulumi new delivery-typescript`). The template should create the pipeline program, add the Delivery package, and create the pipeline stack, so the separate `pulumi package add delivery` step and the hand-written program go away. Match the template's source and variable names. -->
+<!-- TODO: Replace the project setup in this guide with a Delivery `pulumi new` template once it's published (for example, `pulumi new delivery-typescript`). The template should create the pipeline program, add the Delivery package, and create the pipeline stack, so the separate SDK install step and the hand-written program go away. Match the template's source and variable names. -->
 
 In this guide, you'll write a pipeline that deploys an app through three environments, `dev`, `staging`, and `prod`, and pauses before `prod` until you tell it to continue. You'll register the pipeline with Pulumi Cloud, push a commit, and watch the release move through each stage. From then on, every push to `main` starts a new run.
 
@@ -74,7 +74,7 @@ The pipeline program is a Pulumi project of its own, written in any Pulumi langu
 ```bash
 mkdir delivery && cd delivery
 pulumi new typescript --name shop-delivery --stack main --yes
-pulumi package add delivery
+npm install @pulumi/delivery
 ```
 
 {{% /choosable %}}
@@ -83,7 +83,8 @@ pulumi package add delivery
 ```bash
 mkdir delivery && cd delivery
 pulumi new python --name shop-delivery --stack main --yes
-pulumi package add delivery
+echo "pulumi_delivery" >> requirements.txt
+pulumi install
 ```
 
 {{% /choosable %}}
@@ -92,7 +93,7 @@ pulumi package add delivery
 ```bash
 mkdir delivery && cd delivery
 pulumi new go --name shop-delivery --stack main --yes
-pulumi package add delivery
+go get github.com/pulumi/pulumi-delivery/sdk
 ```
 
 {{% /choosable %}}
@@ -101,7 +102,7 @@ pulumi package add delivery
 ```bash
 mkdir delivery && cd delivery
 pulumi new csharp --name shop-delivery --stack main --yes
-pulumi package add delivery
+dotnet add package Pulumi.Delivery
 ```
 
 {{% /choosable %}}
@@ -110,7 +111,16 @@ pulumi package add delivery
 ```bash
 mkdir delivery && cd delivery
 pulumi new java --name shop-delivery --stack main --yes
-pulumi package add delivery
+```
+
+Then add the Delivery SDK to the `dependencies` in `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.pulumi</groupId>
+    <artifactId>delivery</artifactId>
+    <version>0.1.0</version>
+</dependency>
 ```
 
 {{% /choosable %}}
@@ -145,7 +155,7 @@ pulumi stack init main
 
 {{< /chooser >}}
 
-`pulumi package add delivery` writes a `packages` entry to `Pulumi.yaml`. Keep that entry, because Pulumi Cloud reads it to install the Delivery SDK for each run.
+In a language with an SDK, the install step adds the Delivery SDK to the project's dependency file, such as `package.json` or `requirements.txt`. In YAML, `pulumi package add delivery` writes a `packages` entry to `Pulumi.yaml`. Commit that file, because Pulumi Cloud installs the package from it for each run. An HCL program names the provider in its `required_providers` block.
 
 Now replace the program that `pulumi new` created with the pipeline. The program declares the repository as a source, three stages in order, and the `app` stack each stage updates:
 
@@ -293,8 +303,8 @@ In `Program.cs`:
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Delivery.Delivery;
-using Pulumi.Delivery.Delivery.Inputs;
+using Pulumi.Delivery;
+using Pulumi.Delivery.Inputs;
 
 return await Deployment.RunAsync(() =>
 {
@@ -340,8 +350,8 @@ In `src/main/java/myproject/App.java`:
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.delivery.delivery.*;
-import com.pulumi.delivery.delivery.inputs.*;
+import com.pulumi.delivery.*;
+import com.pulumi.delivery.inputs.*;
 import java.util.Map;
 
 public class App {
@@ -514,8 +524,6 @@ Register the pipeline from the `delivery` directory:
 pulumi delivery register
 ```
 
-<!-- TODO(launch): Verified on 2026-11-17 with `PULUMI_DELIVERY_REGISTER=true pulumi up` (CLI v3.274.0-alpha, delivery 0.0.1-alpha.6), which is what `pulumi delivery register` runs (pulumi/pulumi#25729, not yet merged). Re-run with the released command, and check whether it still reports the stages as awaiting and exits with code 10. -->
-
 Registering tells Pulumi Cloud about the pipeline and writes the program's location in your repository to the `delivery:source` setting in `Pulumi.main.yaml`. It doesn't start a run, so the output lists each stage as waiting for one. Commit everything, including that config file, and push:
 
 ```bash
@@ -539,7 +547,7 @@ That's your first release. Every push to `main` from now on starts a new run, pi
 
 ## Next steps
 
-- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [run the pipeline locally](/docs/delivery/concepts/#run-the-pipeline-locally) while you iterate on it.
+- Learn how [pipelines, runs, and releases](/docs/delivery/concepts/) fit together, and how to [run the pipeline locally](/docs/delivery/concepts/#run-locally) while you iterate on it.
 - Require named approvers before `prod` with an [approval gate](/docs/delivery/concepts/stages-and-gates/#approval-gates).
 - Give each stage [cloud credentials](/docs/delivery/guides/cloud-credentials/) so it can deploy real infrastructure.
 - Add tests and smoke checks with the [pipeline patterns](/docs/delivery/guides/pipeline-patterns/) guide.

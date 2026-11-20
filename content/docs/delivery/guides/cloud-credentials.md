@@ -232,7 +232,7 @@ Because credentials come from each stack's config file, each stack can get its o
 
 A `Stacks` update runs as the [pipeline's identity](/docs/delivery/concepts/identity/), which must be allowed to open the environment. If it isn't, the update fails.
 
-Delivery never grants access to environments. Whether the pipeline runs as the service principal Delivery generates for it, a service principal you manage, or a team, give that identity Environment Open on each environment that the pipeline stack and the target stacks import, from the environment's [access settings](/docs/administration/concepts/rbac/entities/#entity-access). Your own access isn't enough.
+Delivery does not implicitly grant access to environments. Whether the pipeline runs as the service principal Delivery generates for it, a service principal you manage, or a team, give that identity Environment Open on each environment that the pipeline stack and the target stacks import, from the environment's [access settings](/docs/administration/concepts/rbac/entities/#entity-access). Your own access isn't enough.
 
 ## Next steps
 

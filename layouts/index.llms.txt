@@ -35,7 +35,14 @@ If you are an AI agent or programmatic consumer, start here. Each docs page link
 
 This llms.txt covers www.pulumi.com, which includes:
 
-- [Product](https://www.pulumi.com/product.md): Pulumi Cloud platform overview and capabilities
+- [Product](https://www.pulumi.com/product.md): Every Pulumi product in one place: infrastructure as code, secrets and configuration, release pipelines, agents, and policy
+  - [Pulumi IaC](https://www.pulumi.com/product/infrastructure-as-code.md): Write infrastructure in TypeScript, Python, Go, C#, Java, or YAML and deploy to any cloud, with previews and tests before anything changes
+  - [Pulumi ESC](https://www.pulumi.com/product/secrets-management.md): Pulumi ESC pulls secrets and configuration from every vault and cloud into one place, with short-lived credentials and the same access controls everywhere
+  - [Pulumi Agents](https://www.pulumi.com/product/agents.md): Work with Neo, set up agents that investigate incidents, drift, and failed deployments on their own, or use Pulumi with your own coding agent
+  - [Pulumi Delivery](https://www.pulumi.com/product/delivery.md): Write your release pipeline as a Pulumi program, and Pulumi Delivery runs each release through your stages and approval gates
+  - [Discovery & governance](https://www.pulumi.com/product/discovery-governance.md): Find every resource across your clouds, audit it against CIS, NIST, and PCI DSS, and block non-compliant changes before they deploy
+  - [Pulumi IDP](https://www.pulumi.com/product/internal-developer-platforms.md): Give engineers self-service infrastructure through golden paths built from your components, templates, and policies
+  - [Self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted.md): Run Pulumi Cloud in your own cloud account, data center, or air-gapped network, including inside a FedRAMP authorization boundary
 - [Get started](https://www.pulumi.com/up/): Guided first project for any cloud and language
 - [Pricing](https://www.pulumi.com/pricing.md): Pulumi Cloud editions and pricing ({{ delimit $editionNames ", " }})
 - [Pulumi Registry](https://www.pulumi.com/registry.md): Documentation for hundreds of cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`

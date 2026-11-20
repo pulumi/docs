@@ -40,7 +40,7 @@ A component can live anywhere code lives: defined inline in a Pulumi program, sh
 For example, the [AWSx](/registry/packages/awsx/) package contains many components, including:
 
 - `awsx.ec2.Vpc` — creates a complete VPC with subnets, route tables, and gateways preconfigured to AWS best practices.
-- `awsx.ecs.FargateService` — creates an ECS service with a load balancer and all required networking.
+- `awsx.ecs.FargateService` — creates an ECS service for Fargate and, optionally, its task definition.
 - `awsx.ecr.Repository` — creates an ECR repository with image scanning and lifecycle policies.
 
 Your organization might publish a package that contains components like:
@@ -430,7 +430,7 @@ This tree makes it clear that a single `awsx:ec2:Vpc` component encapsulates mul
 
 ### Resource options and component resources
 
-Resource options passed to a component resource do not always behave the same as they do for custom resources. For example, the `provider` option has no effect on a component—use `providers` instead to pass explicit provider configuration to a component's child resources. For a complete list of which options apply to component resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
+Resource options passed to a component resource do not always behave the same as they do for custom resources. For example, a `provider` set on a component is inherited only by child resources from the same package—use `providers` instead to pass explicit provider configuration to child resources that span multiple packages. For a complete list of which options apply to component resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
 
 If you have existing cloud infrastructure you'd like to bring under management as a component, see [program-first (bulk) import](/docs/iac/guides/migration/import/#approach-2-program-first-bulk-import), which generates an import file for a component and all of its child resources in one step.
 

@@ -52,7 +52,7 @@ To manage organization resources such as teams, members, or OIDC issuers from a 
 
 In permissive organizations, two older options remain:
 
-- **A deployment role.** Choose a role under **Run as** to limit automatic runs to that role's permissions. Deployment roles are being removed, so prefer a service principal or a team.
+- **A deployment role.** Choose a role under **Run as** to limit automatic runs to that role's permissions. Deployment roles are being deprecated, so prefer a service principal or a team.
 - **A `PULUMI_ACCESS_TOKEN` environment variable** in the stack's deployment settings, set to an individual, team, or organization token. The deployment gets the permissions associated with the token, regardless of how it was created (REST API, `git push`, etc.). This can't be combined with a service principal or a team, and isn't available in restricted organizations.
 
 ### Minimum required token permissions

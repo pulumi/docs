@@ -27,7 +27,7 @@ The **Service Principals** tab lists every service principal in your organizatio
 |------|------------|------------|
 | User-defined | A member of your organization | You: name, roles, and entity access. |
 | Delivery pipeline | Pulumi Cloud, for each [Pulumi Delivery](/docs/delivery/concepts/identity/) pipeline that names no identity of its own | Delivery. It gets access to the pipeline's stacks when you register the pipeline, you can grant it more, and it's deleted with the pipeline stack. |
-| Neo agent | Pulumi Cloud, for each [custom agent](/docs/ai/agents/) | The agent's settings. Deleting the agent removes its service principal and its access. |
+| Pulumi Agent | Pulumi Cloud, for each [custom agent](/docs/ai/agents/) | The agent's settings. Deleting the agent removes its service principal and its access. |
 
 Every team also has a service principal that its [team access tokens](/docs/administration/concepts/access-tokens/#how-team-tokens-are-identified) authenticate as. It follows the team's access and isn't listed on this tab.
 

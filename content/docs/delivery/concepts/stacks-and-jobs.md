@@ -28,7 +28,7 @@ const services = new delivery.Stacks("services", {
     stage: dev,
     stacks: {
         api: { stack: "shop-api/dev", source: repo, directory: "api" },
-        worker: { stack: "shop-worker/dev", source: repo, directory: "worker", timeout: 1800 },
+        worker: { stack: "shop-worker/dev", source: repo, directory: "worker", timeout: "30m" },
     },
 });
 ```
@@ -42,7 +42,7 @@ services = delivery.Stacks(
     stage=dev,
     stacks={
         "api": {"stack": "shop-api/dev", "source": repo, "directory": "api"},
-        "worker": {"stack": "shop-worker/dev", "source": repo, "directory": "worker", "timeout": 1800},
+        "worker": {"stack": "shop-worker/dev", "source": repo, "directory": "worker", "timeout": "30m"},
     },
 )
 ```
@@ -55,7 +55,7 @@ services, err := delivery.NewStacks(ctx, "services", &delivery.StacksArgs{
 	Stage: dev,
 	Stacks: delivery.StacksEntryMap{
 		"api":    delivery.StacksEntryArgs{Stack: pulumi.String("shop-api/dev"), Source: repo, Directory: pulumi.String("api")},
-		"worker": delivery.StacksEntryArgs{Stack: pulumi.String("shop-worker/dev"), Source: repo, Directory: pulumi.String("worker"), Timeout: pulumi.Int(1800)},
+		"worker": delivery.StacksEntryArgs{Stack: pulumi.String("shop-worker/dev"), Source: repo, Directory: pulumi.String("worker"), Timeout: pulumi.String("30m")},
 	},
 })
 if err != nil {
@@ -73,7 +73,7 @@ var services = new Stacks("services", new StacksArgs
     Stacks =
     {
         ["api"] = new StacksEntryArgs { Stack = "shop-api/dev", Source = repo, Directory = "api" },
-        ["worker"] = new StacksEntryArgs { Stack = "shop-worker/dev", Source = repo, Directory = "worker", Timeout = 1800 },
+        ["worker"] = new StacksEntryArgs { Stack = "shop-worker/dev", Source = repo, Directory = "worker", Timeout = "30m" },
     },
 });
 ```
@@ -86,7 +86,7 @@ var services = new Stacks("services", StacksArgs.builder()
     .stage(dev)
     .stacks(Map.of(
         "api", StacksEntryArgs.builder().stack("shop-api/dev").source(repo).directory("api").build(),
-        "worker", StacksEntryArgs.builder().stack("shop-worker/dev").source(repo).directory("worker").timeout(1800).build()))
+        "worker", StacksEntryArgs.builder().stack("shop-worker/dev").source(repo).directory("worker").timeout("30m").build()))
     .build());
 ```
 
@@ -108,7 +108,7 @@ resources:
           stack: shop-worker/dev
           source: ${repo}
           directory: worker
-          timeout: 1800
+          timeout: 30m
 ```
 
 {{% /choosable %}}
@@ -127,7 +127,7 @@ resource "delivery_stacks" "services" {
       stack     = "shop-worker/dev"
       source    = delivery_git_hub_source.repo
       directory = "worker"
-      timeout   = 1800
+      timeout   = "30m"
     }
   }
 }
@@ -357,9 +357,7 @@ A resource outside Delivery that uses a job's output waits for the job to finish
 
 `environment` sets environment variables for the stack update or job, such as cloud credentials. Unlike `config`, it accepts secret values, and they stay secret.
 
-`timeout` sets the maximum run time. On a `Stacks` entry, it's a number of seconds, and the default is 7200 (2 hours). See [Limits](/docs/delivery/limits/) for the allowed range.
-
-<!-- TODO(launch): The provider schema types a Job's `timeout` as a Go duration string (such as `30m`) and says it isn't applied in the private preview. Confirm its behavior for the public preview and document it here. -->
+`timeout` sets the maximum run time of a `Stacks` entry or a job. It's a duration such as `30m` or `1h30m`, in whole seconds, and the default is 2 hours. See [Limits](/docs/delivery/limits/) for the allowed range.
 
 `preRunCommands` is a list of bash commands that run in the project directory before the main command. For a `Stacks` entry, they run after `pulumi install` and before `pulumi up`. For a job, they run before the job's command. Each command runs separately, so environment changes don't carry over between them.
 

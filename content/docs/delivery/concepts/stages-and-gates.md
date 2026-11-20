@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi Delivery stages and gates
-meta_desc: Order promotion between environments with Pulumi Delivery stages, hold a release at a gate until someone approves it, and publish artifacts from a stage.
+meta_desc: Order promotion between environments with Pulumi Delivery stages, hold a release at a gate, pause or roll back a stage, and publish artifacts from a stage.
 title: Stages and gates
 h1: Stages and gates
 menu:
@@ -760,6 +760,33 @@ Any credential with write access to the pipeline stack can continue a manual gat
 A gate with one manual rule takes an empty JSON object. For a gate with several manual rules, pass the rule's name in `condition`, as in `{"condition": "dashboards"}`.
 
 <!-- TODO(launch): Once the Delivery REST API is publicly documented, link this example to its API reference page. -->
+
+## Stage actions
+
+A stage normally takes whichever release reaches it next. Stage actions let you intervene when you need to, such as rolling back changes or pausing updates to that stage. You'll find them in the **Actions** menu on a stage's page in the Pulumi Cloud console or available via API.
+
+Stage actions use your permissions rather than the service principal that deploys the pipeline. To do them, you need write access to the pipeline stack.
+
+### Pausing and resuming a stage
+
+Pause a stage when you need it to stay on its current release, for example while you investigate a problem in `prod`. No release enters a paused stage until someone resumes it. A run that's already deploying to the stage finishes, and runs that reach the stage while it's paused wait in its queue.
+
+When you resume the stage, the newest waiting release enters it, as it would have if the stage hadn't been paused.
+
+<!-- TODO: Pausing and resuming aren't in the audit log yet (DLV-392). Once they are, say so here and in the rollback item. -->
+
+### Rolling back, redeploying, and force-promoting
+
+Roll back, redeploy, and force-promote each start a new run that deploys one release to this one stage. The new run reuses the program commit, source commits, and recorded values of the run that first deployed that release, so it repeats what that release did rather than picking up anything newer. It skips the stage's gate and takes priority over other runs waiting for the stage.
+
+- **Roll back** deploys a release that's older than the one the stage has now and that the stage already deployed successfully. A rollback also pauses the stage, so the newer release you rolled back from doesn't deploy over it. Resume the stage once you're ready for new releases. Keep in mind that a rollback restores everything in the older release, including any bugs that later releases fixed.
+- **Redeploy** runs the stage's current release again, with the same commits and values as the run that first deployed it.
+- **Force-promote** moves a release into the stage without waiting for the stage's gate. The release must already have succeeded in every upstream stage, because the stage reads their outputs. Each force-promote is recorded in your organization's audit log.
+
+You can't roll back to, redeploy, or force-promote a release that came from [a local run](/docs/delivery/concepts/#run-locally). When a stage's current release is local, the stage's page shows it as **Deployed now** with a **Local** label, alongside its **Last cloud release**. To replace a local release, roll back to or force-promote a cloud release.
+
+<!-- TODO(launch): Link the pipeline:* stage-action permissions (pipeline:pause, pipeline:rollback, pipeline:redeploy, pipeline:force_promote) to the RBAC scope reference once the nightly scope sync adds them. -->
+<!-- TODO(launch): Once the Delivery REST API is publicly documented, add a "Stage actions with the REST API" subsection (POST .../delivery/stages/<stage>/{pause,resume,rollback,redeploy,promote}; rollback and promote take {"releaseNumber": <n>}; the run-starting ones return {"runNumber": <n>}) and link it to the API reference page. -->
 
 ## Artifacts
 

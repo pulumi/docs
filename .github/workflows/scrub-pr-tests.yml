@@ -1,0 +1,30 @@
+name: scrub-pr tests
+
+# Runs scripts/scrub-pr.test.sh, which drives scripts/scrub-pr.sh against a stub gh.
+# The script is break-glass and rarely run for real, so this is what catches a
+# regression before the day it's needed.
+on:
+  pull_request:
+    paths:
+      - 'scripts/scrub-pr.sh'
+      - 'scripts/scrub-pr.test.sh'
+      - '.github/workflows/scrub-pr-tests.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scrub-pr-tests-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run scrub-pr test suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Run suite
+        run: bash scripts/scrub-pr.test.sh

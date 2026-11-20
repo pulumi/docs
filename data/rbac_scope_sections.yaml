@@ -58,6 +58,8 @@ entities:
         match: { groups: [Stack deployments] }
       - name: Stack deployment schedules
         match: { groups: [Stack deployment schedules] }
+      - name: Delivery pipelines
+        match: { groups: [Delivery pipelines] }
       - name: Stack tags
         match: { groups: [Stack tags] }
       - name: Stack webhooks

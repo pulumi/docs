@@ -1,0 +1,16 @@
+{{- $title := .Get "title" -}}
+{{- $href := .Get "href" -}}
+{{- $icon := .Get "icon" -}}
+{{- $span := cond (eq (printf "%v" (.Get "wide")) "true") "sm:col-span-2" "" -}}
+{{- if not (and $title $href) -}}
+    {{- errorf "link-card requires 'title' and 'href' parameters: %s" .Position -}}
+{{- end -}}
+<a href="{{ $href }}" class="card card-hover flex gap-4 p-5 no-underline hover:no-underline {{ $span }}">
+    {{- with $icon }}
+    {{ partial "icon.html" (dict "name" . "class" "mt-0.5 size-6 shrink-0 text-violet-primary") }}
+    {{- end }}
+    <span class="flex flex-col gap-1">
+        <span class="font-semibold tracking-tight text-gray-950 dark:text-white">{{ $title }}</span>
+        <span class="body-sm text-pretty text-gray-700 dark:text-gray-300">{{ .Inner | markdownify }}</span>
+    </span>
+</a>

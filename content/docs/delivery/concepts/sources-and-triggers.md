@@ -23,6 +23,7 @@ Delivery has one source resource per version control provider. Each takes a `rep
 | `GitLabSource` | `group/subgroup/repo`, the full path |
 | `BitbucketSource` | `workspace/repo` |
 | `AzureDevOpsSource` | `org/project/repo` |
+| `EntireSource` | `project/repo` |
 
 Pulumi Cloud uses your organization's [version control integration](/docs/integrations/version-control/) to interact with your source code provider. You'll need to give that integration access to every repository you use in your pipelines, including the repository containing the pipeline program itself.
 
@@ -235,7 +236,7 @@ A source without a `trigger` is still part of the release, but changes to it nev
 
 ## Other ways to start a run
 
-You can also start a run from **Start a run** in the Pulumi Cloud console, or through the REST API. You can locally run on a pipeline program by running `pulumi up` on the pipeline stack.
+You can also start a run from **Start a run** in the Pulumi Cloud console, or through the REST API. To [run a pipeline locally](/docs/delivery/concepts/#run-locally), run `pulumi up` on the pipeline stack.
 
 To start a run through the REST API:
 

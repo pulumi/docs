@@ -1,0 +1,3 @@
+{{- $prose := replaceRE `(?s)<pre\b.*?</pre>` "" .Content -}}
+{{- $words := $prose | plainify | countwords -}}
+{{- return $words -}}
