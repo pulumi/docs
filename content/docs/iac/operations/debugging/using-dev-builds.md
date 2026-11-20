@@ -69,7 +69,7 @@ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
 
 {{% /chooser %}}
 
-For more installation options, see the [download and install documentation](/docs/install/#installing-dev-releases).
+For more installation options, see the [download and install documentation](/docs/install/#install-a-specific-version-or-a-dev-build).
 
 ### Language SDKs
 

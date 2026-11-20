@@ -1,4 +1,9 @@
-<details>
-    <summary>{{ (.Get 0) | markdownify }}</summary>
-    {{ .Inner | markdownify }}
+<details class="card group my-6 overflow-hidden bg-white dark:bg-docs-card">
+<summary class="flex cursor-pointer list-none items-center gap-2 bg-gray-50 px-4 py-2 text-sm font-medium select-none dark:bg-gray-950 [&::-webkit-details-marker]:hidden">
+{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold" "class" "size-3.5 shrink-0 text-gray-700 dark:text-gray-300 transition-transform group-open:rotate-90") }}
+{{ (.Get 0) | markdownify }}
+</summary>
+<div class="p-4 [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+{{ .Inner | markdownify }}
+</div>
 </details>
