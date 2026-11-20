@@ -54,11 +54,12 @@ Anything no flag controls runs the same code on self-hosted as on Pulumi Cloud, 
 
 ### Direct LaunchDarkly checks
 
-The generator parses `pulumi-service` for calls that read a LaunchDarkly flag, including the service-wide helpers in `featureflag/flags.go`, `featureflags.Enabled` and its variants from `pkg/featureflags`, and flags passed as plain strings, and records each default. A default of `IsSelfHostedEnterprise()` counts as `true`, because that's what it returns on self-hosted. The raw report lists every check with its default, whether it's on or off on self-hosted, the row it affects, and where it's called.
+The generator parses `pulumi-service` for calls that read a LaunchDarkly flag, and records each default. That covers the LaunchDarkly client's methods, the wrappers that pass a flag through to it (such as `CheckFlagEnabled` on organizations), the service-wide helpers in `pkg/featureflags/launch_darkly.go`, `featureflags.Enabled` and its variants, and flags passed as plain strings. A default of `IsSelfHostedEnterprise()` counts as `true`, because that's what it returns on self-hosted. The raw report lists every check with its default, whether it's on or off on self-hosted, the row it affects, and where it's called.
 
 - A flag already attached to a `features.go` entry marks that entry `N` when a check defaults to `false`.
 - Any other flag needs an entry in `self-hosted-parity.json`, keyed by its `LDKey...` constant (or the flag string if there's no constant). Give it a `marketing_name` to show it as its own row, add it to another entry's `feature_keys` to make that row `N` (as Dependency Caching and Terraform Module Registry do), or set `include_in_table: false` for operational and rollout flags.
 - New flags show as **Not mapped** in the raw report until someone classifies them.
+- A check that doesn't gate the row on self-hosted, such as one inside a feature self-hosted doesn't run, can be left out of the row's status with `ignore_checks` on the row's entry. The raw report still lists it, marked as ignored.
 
 ## Configuration
 
@@ -77,6 +78,7 @@ Controls the internal summary. Entries are keyed by feature key (`PulumiFeature.
 | `default_eta` | ETA for a new row. ETAs already in the generated internal summary are kept on regeneration. |
 | `notes` | Internal notes. Used as the ETA for rows that aren't `Y` and have no ETA. |
 | `gate` | Makes a hand-maintained row for a capability no flag controls. Describes what controls it, such as `none (configuration only)`. Set `status` and `summary` alongside it. |
+| `ignore_checks` | Direct LaunchDarkly checks of the row's flags to leave out of its status, as a list of `{"file", "reason"}`. Each names a file in `pulumi-service`, not a line, so it survives edits, and needs a reason. An entry that matches no check prints a warning so it gets cleaned up. |
 
 Example of a combined row:
 
