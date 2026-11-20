@@ -22,19 +22,18 @@ The supported way to do this is with Pulumi Deployments: configure the downstrea
 
 ## The recommended pattern
 
-Trigger each downstream stack from the upstream stack's `update_succeeded` event, using Pulumi Deployments. There are two supported ways to wire this up:
+Trigger each downstream stack from the upstream stack's `update_succeeded` event, using a [deployment webhook destination](#deployment-webhook-destinations) for each upstream → downstream edge.
 
-1. [Deployment webhook destinations](#deployment-webhook-destinations) — declare one webhook per upstream → downstream edge.
-2. [The Pulumi Auto Deploy package](#pulumi-auto-deploy) — declare the whole dependency graph and let it manage the webhooks for you.
+If you'd rather update a set of dependent stacks together, in order, as one release, use [Pulumi Delivery](/docs/delivery/). A Delivery `Stacks` resource [orders stack updates by their stack references](/docs/delivery/concepts/stacks-and-jobs/#stacks), so you don't wire up a webhook per edge.
 
 These dependencies usually follow one of two patterns:
 
 - **Layered infrastructure within an environment:** stacks in the same environment build on one another — a `network` stack feeds a `database` stack and a `cluster` stack, which in turn feed an `app` stack. Updating a lower layer cascades to the layers above it.
 - **Promoting a change across environments:** the same layer flows from one environment to the next — updating `network/dev` promotes to `network/staging`, which promotes to `network/prod`.
 
-Both patterns are directed acyclic graphs, and either approach below can express them.
+Both patterns are directed acyclic graphs.
 
-Both approaches require that every stack you want to deploy automatically is configured with [deployment settings](/docs/deployments/concepts/settings/), since the trigger runs the target stack through Pulumi Deployments.
+Every stack you want to deploy automatically must be configured with [deployment settings](/docs/deployments/concepts/settings/), since the trigger runs the target stack through Pulumi Deployments.
 
 The examples on this page use the [Pulumi Service provider](/registry/packages/pulumiservice/) and Pulumi IaC to manage these webhooks declaratively, which is the recommended approach — your dependency wiring lives in code, is reviewed, and stays in sync with the rest of your infrastructure. You can also configure the same webhooks through the [Pulumi Cloud console](/docs/deployments/concepts/webhooks/) or the [REST API](/docs/reference/cloud-rest-api/webhooks/) if you prefer.
 
@@ -202,9 +201,9 @@ func main() {
 {{% choosable language yaml %}}
 
 ```yaml
-name: auto-deploy-demo
+name: dependent-stacks-demo
 runtime: yaml
-description: A simple auto-deploy example
+description: Trigger dependent stack updates with deployment webhooks
 resources:
   databaseWebhook:
     type: pulumiservice:Webhook
@@ -239,9 +238,9 @@ resources:
 `Pulumi.yaml`:
 
 ```yaml
-name: auto-deploy-demo
+name: dependent-stacks-demo
 runtime: hcl
-description: A simple auto-deploy example
+description: Trigger dependent stack updates with deployment webhooks
 ```
 
 `main.tf`:
@@ -284,379 +283,13 @@ The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulu
 
 {{< /chooser >}}
 
-### Pulumi Auto Deploy
-
-The [Pulumi Auto Deploy](/registry/packages/auto-deploy) package lets you declaratively express dependencies between stacks in a Pulumi program and manages the necessary deployment webhooks for you. Because you describe the graph as a set of `downstreamRefs`, Auto Deploy keeps the wiring consistent and acyclic as your dependencies grow — you don't hand-maintain one webhook per edge.
-
-{{% notes type="info" %}}
-The Pulumi Auto Deploy package is currently in preview.
-{{% /notes %}}
-
-The following example models the layered-infrastructure pattern: a `network` stack feeds a `database` stack and a `cluster` stack, both of which feed an `app` stack. Each `AutoDeployer` names a stack and lists the stacks that should update when it changes.
-
-```mermaid
-flowchart TD
-    network --> database
-    network --> cluster
-    database --> app
-    cluster --> app
-```
-
-{{< chooser language "typescript,python,go,csharp,yaml,hcl" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import * as autodeploy from "@pulumi/auto-deploy";
-import * as pulumi from "@pulumi/pulumi";
-
-// Layered infrastructure in a single environment: network -> database, cluster -> app.
-// Updating a stack automatically updates every stack downstream of it via a webhook
-// that triggers Pulumi Deployments.
-
-const organization = pulumi.getOrganization();
-const stack = "prod";
-
-// The application sits at the top of the graph and has no downstream stacks.
-export const app = new autodeploy.AutoDeployer("app", {
-    organization,
-    project: "app",
-    stack,
-    downstreamRefs: [],
-});
-
-// The database and the cluster each feed the application.
-export const database = new autodeploy.AutoDeployer("database", {
-    organization,
-    project: "database",
-    stack,
-    downstreamRefs: [app.ref],
-});
-
-export const cluster = new autodeploy.AutoDeployer("cluster", {
-    organization,
-    project: "cluster",
-    stack,
-    downstreamRefs: [app.ref],
-});
-
-// The network underpins everything; updating it updates the database and the cluster.
-export const network = new autodeploy.AutoDeployer("network", {
-    organization,
-    project: "network",
-    stack,
-    downstreamRefs: [database.ref, cluster.ref],
-});
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-using System.Collections.Generic;
-using System.Linq;
-using Pulumi;
-using AutoDeploy = Pulumi.AutoDeploy;
-
-// Layered infrastructure in a single environment: network -> database, cluster -> app.
-// Updating a stack automatically updates every stack downstream of it via a webhook
-// that triggers Pulumi Deployments.
-
-return await Deployment.RunAsync(() =>
-{
-    var organization = "pulumi";
-    var stack = "prod";
-
-    // The application sits at the top of the graph and has no downstream stacks.
-    var app = new AutoDeploy.AutoDeployer("app", new()
-    {
-        Organization = organization,
-        Project = "app",
-        Stack = stack,
-        DownstreamRefs = new[] {},
-    });
-
-    // The database and the cluster each feed the application.
-    var database = new AutoDeploy.AutoDeployer("database", new()
-    {
-        Organization = organization,
-        Project = "database",
-        Stack = stack,
-        DownstreamRefs = new[] { app.Ref },
-    });
-
-    var cluster = new AutoDeploy.AutoDeployer("cluster", new()
-    {
-        Organization = organization,
-        Project = "cluster",
-        Stack = stack,
-        DownstreamRefs = new[] { app.Ref },
-    });
-
-    // The network underpins everything; updating it updates the database and the cluster.
-    var network = new AutoDeploy.AutoDeployer("network", new()
-    {
-        Organization = organization,
-        Project = "network",
-        Stack = stack,
-        DownstreamRefs = new[]
-        {
-            database.Ref,
-            cluster.Ref,
-        },
-    });
-
-});
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import pulumi
-import pulumi_auto_deploy as auto_deploy
-
-# Layered infrastructure in a single environment: network -> database, cluster -> app.
-# Updating a stack automatically updates every stack downstream of it via a webhook
-# that triggers Pulumi Deployments.
-
-organization = pulumi.get_organization()
-stack = "prod"
-
-# The application sits at the top of the graph and has no downstream stacks.
-app = auto_deploy.AutoDeployer("app",
-    organization=organization,
-    project="app",
-    stack=stack,
-    downstream_refs=[])
-# The database and the cluster each feed the application.
-database = auto_deploy.AutoDeployer("database",
-    organization=organization,
-    project="database",
-    stack=stack,
-    downstream_refs=[app.ref])
-cluster = auto_deploy.AutoDeployer("cluster",
-    organization=organization,
-    project="cluster",
-    stack=stack,
-    downstream_refs=[app.ref])
-# The network underpins everything; updating it updates the database and the cluster.
-network = auto_deploy.AutoDeployer("network",
-    organization=organization,
-    project="network",
-    stack=stack,
-    downstream_refs=[
-        database.ref,
-        cluster.ref,
-    ])
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-auto-deploy/sdk/go/autodeploy"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	// Layered infrastructure in a single environment: network -> database, cluster -> app.
-	// Updating a stack automatically updates every stack downstream of it via a webhook
-	// that triggers Pulumi Deployments.
-
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		organization := "pulumi"
-		stack := "prod"
-		// The application sits at the top of the graph and has no downstream stacks.
-		app, err := autodeploy.NewAutoDeployer(ctx, "app", &autodeploy.AutoDeployerArgs{
-			Organization:   pulumi.String(organization),
-			Project:        pulumi.String("app"),
-			Stack:          pulumi.String(stack),
-			DownstreamRefs: pulumi.StringArray{},
-		})
-		if err != nil {
-			return err
-		}
-		// The database and the cluster each feed the application.
-		database, err := autodeploy.NewAutoDeployer(ctx, "database", &autodeploy.AutoDeployerArgs{
-			Organization: pulumi.String(organization),
-			Project:      pulumi.String("database"),
-			Stack:        pulumi.String(stack),
-			DownstreamRefs: pulumi.StringArray{
-				app.Ref,
-			},
-		})
-		if err != nil {
-			return err
-		}
-		cluster, err := autodeploy.NewAutoDeployer(ctx, "cluster", &autodeploy.AutoDeployerArgs{
-			Organization: pulumi.String(organization),
-			Project:      pulumi.String("cluster"),
-			Stack:        pulumi.String(stack),
-			DownstreamRefs: pulumi.StringArray{
-				app.Ref,
-			},
-		})
-		if err != nil {
-			return err
-		}
-		// The network underpins everything; updating it updates the database and the cluster.
-		_, err = autodeploy.NewAutoDeployer(ctx, "network", &autodeploy.AutoDeployerArgs{
-			Organization: pulumi.String(organization),
-			Project:      pulumi.String("network"),
-			Stack:        pulumi.String(stack),
-			DownstreamRefs: pulumi.StringArray{
-				database.Ref,
-				cluster.Ref,
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-name: auto-deploy-demo
-runtime: yaml
-description: Layered infrastructure with automatic dependent-stack updates
-variables:
-  stack: prod
-resources:
-  # The application sits at the top of the graph and has no downstream stacks.
-  app:
-    type: auto-deploy:AutoDeployer
-    properties:
-      organization: ${pulumi.organization}
-      project: app
-      stack: ${stack}
-      downstreamRefs: []
-  # The database and the cluster each feed the application.
-  database:
-    type: auto-deploy:AutoDeployer
-    properties:
-      organization: ${pulumi.organization}
-      project: database
-      stack: ${stack}
-      downstreamRefs:
-        - ${app.ref}
-  cluster:
-    type: auto-deploy:AutoDeployer
-    properties:
-      organization: ${pulumi.organization}
-      project: cluster
-      stack: ${stack}
-      downstreamRefs:
-        - ${app.ref}
-  # The network underpins everything; updating it updates the database and the cluster.
-  network:
-    type: auto-deploy:AutoDeployer
-    properties:
-      organization: ${pulumi.organization}
-      project: network
-      stack: ${stack}
-      downstreamRefs:
-        - ${database.ref}
-        - ${cluster.ref}
-```
-
-{{% /choosable %}}
-
-{{% choosable language hcl %}}
-
-`Pulumi.yaml`:
-
-```yaml
-name: auto-deploy-demo
-runtime: hcl
-description: Layered infrastructure with automatic dependent-stack updates
-```
-
-`main.tf`:
-
-```hcl
-terraform {
-  required_providers {
-    auto-deploy = {
-      source = "pulumi/auto-deploy"
-    }
-  }
-}
-
-locals {
-  stack = "prod"
-}
-
-# Layered infrastructure in a single environment: network -> database, cluster -> app.
-# Updating a stack automatically updates every stack downstream of it via a webhook
-# that triggers Pulumi Deployments.
-
-# The application sits at the top of the graph and has no downstream stacks.
-resource "auto-deploy_auto_deployer" "app" {
-  organization    = pulumi.organization
-  project         = "app"
-  stack           = local.stack
-  downstream_refs = []
-}
-
-# The database and the cluster each feed the application.
-resource "auto-deploy_auto_deployer" "database" {
-  organization    = pulumi.organization
-  project         = "database"
-  stack           = local.stack
-  downstream_refs = [auto-deploy_auto_deployer.app.ref]
-}
-
-resource "auto-deploy_auto_deployer" "cluster" {
-  organization    = pulumi.organization
-  project         = "cluster"
-  stack           = local.stack
-  downstream_refs = [auto-deploy_auto_deployer.app.ref]
-}
-
-# The network underpins everything; updating it updates the database and the cluster.
-resource "auto-deploy_auto_deployer" "network" {
-  organization    = pulumi.organization
-  project         = "network"
-  stack           = local.stack
-  downstream_refs = [
-    auto-deploy_auto_deployer.database.ref,
-    auto-deploy_auto_deployer.cluster.ref,
-  ]
-}
-```
-
-The `pulumi/` prefix on the source selects the native Pulumi provider. Run `pulumi install` after you add the `required_providers` block. The package name becomes the resource-type prefix, so the hyphen in `auto-deploy` carries through to both the `required_providers` key and the resource type.
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-## Choosing between the two approaches
-
-Both approaches use the same underlying mechanism — a deployment webhook that runs the downstream stack when the upstream stack's update succeeds. Choose based on how you prefer to manage the wiring:
-
-- **Deployment webhook destinations** give you explicit, per-edge control. They are a good fit when you have a small number of dependencies or want to manage each webhook individually.
-- **The Pulumi Auto Deploy package** lets you declare the whole dependency graph in one place and manages the webhooks for you. It is a good fit when you have many stacks or a graph that changes over time, and declaring the graph in one place makes it easier to keep acyclic.
-
 ## Avoiding duplicate fires and re-trigger loops
 
 The most common problems people hit when cascading deployments are the same stack deploying several times for a single upstream change, or two stacks re-triggering each other indefinitely. The supported pattern avoids both when you follow these rules:
 
 - **Filter on a single terminal event.** Trigger on `update_succeeded` only. A single deployment emits several events over its lifecycle — `deployment_queued`, `deployment_started`, and finally `update_succeeded` — so subscribing to more than one event kind (or to lifecycle events instead of the terminal one) causes the downstream stack to fire multiple times per upstream change.
 - **Target the downstream stack's deployment directly.** Use the built-in **Deployment** webhook destination, which calls the Create Deployment API of a specific stack. This is a directed edge with a known endpoint, unlike a generic HTTP webhook pointed at custom automation that runs `pulumi up` and can fan out to more work than you intended.
-- **Keep the dependency graph acyclic.** Never let stack A trigger stack B while stack B triggers stack A, whether directly or through a longer chain. A cycle means each update triggers the next one forever. Model your stacks as a directed acyclic graph (DAG); declaring the whole graph in one place with the [Pulumi Auto Deploy package](#pulumi-auto-deploy) helps you keep this shape.
+- **Keep the dependency graph acyclic.** Never let stack A trigger stack B while stack B triggers stack A, whether directly or through a longer chain. A cycle means each update triggers the next one forever. Model your stacks as a directed acyclic graph (DAG).
 
 ## What to avoid: the naive webhook workaround
 
@@ -666,7 +299,7 @@ A tempting shortcut is to attach a generic webhook to the upstream stack that po
 - **Re-trigger in loops,** because custom automation has no built-in awareness of the dependency graph and nothing stops a downstream update from triggering the upstream one again.
 - **Duplicate deployment logic outside Pulumi,** reimplementing credentials, source configuration, and settings that [deployment settings](/docs/deployments/concepts/settings/) already manage.
 
-Use a [deployment webhook destination](#deployment-webhook-destinations) or the [Pulumi Auto Deploy package](#pulumi-auto-deploy) instead. Both run the target stack through Pulumi Deployments with its saved settings, so the trigger stays scoped to one deployment per upstream change.
+Use a [deployment webhook destination](#deployment-webhook-destinations) instead. It runs the target stack through Pulumi Deployments with its saved settings, so the trigger stays scoped to one deployment per upstream change.
 
 ## Triggering with custom or one-off settings
 
@@ -678,4 +311,4 @@ A deployment webhook runs the target stack with its existing [deployment setting
 - [Deployment webhooks](/docs/deployments/concepts/webhooks/#deployment-webhooks) — the webhook and event-filtering reference.
 - [Deployment settings](/docs/deployments/concepts/settings/) — required on any stack you deploy automatically.
 - [Stack references](/docs/iac/concepts/stacks/#stackreferences) — how downstream stacks consume upstream outputs.
-- [Pulumi Auto Deploy package](/registry/packages/auto-deploy) — declarative dependent-stack updates.
+- [Pulumi Delivery](/docs/delivery/) — update dependent stacks in order as part of a release.
