@@ -1,0 +1,11 @@
+id = "jonathan-davenport"
+name = "Jonathan Davenport"
+title = "Senior Cloud Architect, Professional Services"
+company = "Pulumi"
+weight = 1
+
+status = "active"
+
+[social]
+github = "jdavredbeard"
+linkedin = "jonathan-davenport-a17b427"
