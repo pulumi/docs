@@ -1,10 +1,12 @@
 ---
-title: "Self-Verifying AI Agents: Vercel's Agent-Browser in the Ralph Wiggum Loop"
-title_tag: "Self-Verifying AI Agents with Agent-Browser"
+title: "Vercel's agent-browser: Self-Verifying AI Agents in the Ralph Wiggum Loop"
+title_tag: "Vercel agent-browser: Browser CLI for AI Coding Agents"
 allow_long_title: true
 date: 2026-01-20
+updated: 2026-11-20
+faq_schema: true
 draft: false
-meta_desc: "Vercel's agent-browser uses 82% less context than Playwright MCP. I tested both on the same six browser tests to see how they compare."
+meta_desc: "agent-browser is Vercel's browser automation CLI for AI coding agents. Learn how to install it, how snapshot refs work, and how it compares to Playwright MCP."
 authors:
     - engin-diri
 tags:
@@ -30,6 +32,8 @@ social:
 In my [previous post about the Ralph Wiggum technique](/blog/how-ralph-wiggum-built-a-serverless-saas-with-pulumi/), Claude Code built a complete serverless URL shortener on AWS. The setup included [Playwright MCP](https://github.com/microsoft/playwright-mcp) for end-to-end testing. It worked. But I kept wondering if there was something better for AI-driven browser automation. Then Vercel released [agent-browser](https://github.com/vercel-labs/agent-browser), and I had to try it.
 
 <!--more-->
+
+agent-browser is an open source command-line tool from Vercel Labs that lets AI coding agents drive a real browser using compact page snapshots and element references. In the Ralph Wiggum loop, Claude Code builds the app, Pulumi deploys it, and agent-browser verifies the deployed result so the agent can fix failures and test again.
 
 ## Why browser automation matters for AI coding
 
@@ -100,7 +104,7 @@ curl -o .claude/skills/agent-browser/SKILL.md \
   https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md
 ```
 
-The skill gives Claude Code better context than just running `agent-browser --help`.
+The skill gives Claude Code better context than just running `agent-browser --help`. If you want the same pattern for infrastructure work, [Pulumi Agent Skills](/docs/ai/concepts/agent-skills/) install Pulumi guidance into your coding agent the same way.
 
 Unlike Playwright MCP, there's no server configuration. Agent-browser runs as a standalone CLI that Claude Code invokes directly through bash.
 
@@ -333,3 +337,25 @@ Pulumi provisions the infrastructure your coding agent builds and tests, so a si
 **Playwright MCP** fits when you need the advanced stuff: network interception, PDF generation, multi-tab workflows, or sophisticated synchronization. It's also the right choice if you have existing Playwright test suites. If the full MCP schema feels heavy, [Playwright skills](https://github.com/lackeyjb/playwright-skill) offer a lighter wrapper.
 
 Start with agent-browser for AI validation loops. Move to Playwright when you outgrow it.
+
+## Frequently asked questions
+
+### What is agent-browser?
+
+agent-browser is an open source CLI from Vercel Labs that gives AI coding agents browser automation through shell commands. Instead of returning large page dumps, it returns compact snapshots with element references such as `@e1`, which the agent uses to click and type. That keeps each step small and leaves more context for the task.
+
+### How do I install agent-browser?
+
+Run `npm install -g agent-browser && agent-browser install`. The first command installs the CLI and the second downloads a bundled browser, so no separate browser install is needed. For Claude Code, copy or download the official `SKILL.md` into `.claude/skills/agent-browser`, as shown in the installation section above.
+
+### How does agent-browser compare to Playwright MCP?
+
+On the same six browser tests, agent-browser used 5,455 characters of output against 31,117 for Playwright MCP, an 82.5% reduction. Playwright MCP remains the better fit for network interception, PDF generation, multi-tab workflows, and existing Playwright test suites. agent-browser suits long autonomous sessions where context budget matters.
+
+### Does agent-browser work with Claude Code?
+
+Yes. Claude Code invokes agent-browser through bash and picks up the official skill from `.claude/skills`. There is no MCP server to configure. Skills follow a shared format, so the same approach works in other coding agents that support them. See [Pulumi Agent Skills](/blog/pulumi-agent-skills/) for how skills are used with infrastructure.
+
+### How does agent-browser fit into a Pulumi infrastructure loop?
+
+The agent writes the application and infrastructure code, runs `pulumi up` to deploy, then uses agent-browser to test the live endpoint. Failures go back to the agent, which fixes the code and redeploys. To hand infrastructure changes to an agent with policy guardrails, see [Pulumi Agents](/docs/ai/agents/).
