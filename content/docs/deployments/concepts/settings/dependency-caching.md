@@ -1,21 +1,21 @@
 ---
-title_tag: "Dependency Caching | Pulumi Deployments"
+title_tag: "Dependency caching | Pulumi Deployments"
 meta_desc: Speed up Pulumi Deployments by caching downloaded dependencies between runs on Pulumi-managed workflow runners
-title: "Dependency Caching"
-h1: "Dependency Caching"
+title: "Dependency caching"
+h1: "Dependency caching"
 menu:
   deployments:
-    name: Dependency Caching
+    name: Dependency caching
     parent: deployments-concepts-settings
     identifier: deployments-concepts-settings-dependency-caching
     weight: 90
 ---
 
-When using Pulumi-managed workflow runners, you can speed up deployments with dependency caching.
+When using Pulumi-managed workflow runners, you can speed up deployments with dependency caching. Cache entries belong to individual stacks.
 
 Dependency caching covers more than your language packages. A cache entry bundles three things a deployment would otherwise download every run: your language dependencies (including the Pulumi SDKs, which are cached as ordinary package-manager packages), the Pulumi [resource plugins](/docs/iac/concepts/plugins/) your program uses, and any [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). In practice the plugins are usually the largest and slowest to fetch, so caching them is where most of the time savings come from.
 
-The mechanism is straightforward. On the first deployment, the runner detects these items — using your lock files for the language dependencies — archives them, and stores the archive in blob storage. On later deployments, the runner pulls that archive down and unpacks it, saving the time it would otherwise spend downloading everything again. When your dependencies change, the runner invalidates the old cache and creates a new one.
+When caching is enabled, the runner uses lock files and package-manager cache paths to calculate a cache key. Updates, refreshes, destroys (unless the stack is deleted afterward), and drift remediation can save new entries in blob storage. Later deployments of the same stack can restore those entries instead of downloading the dependencies again. Changed lock files or package-manager cache paths select a different key, which needs its own entry.
 
 {{% notes type="info" %}}
 Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/administration/concepts/customer-managed-runners/#not-supported-on-customer-managed-runners), because you already control the lifetime and contents of those runners.
@@ -34,13 +34,15 @@ Dependency caching is not available on stacks backed by Terraform state.
 Both the setting and the cache entries are scoped to a single stack, so stacks in the same project can have caching enabled and disabled independently:
 
 - A stack with caching **disabled** runs no cache steps at all. It neither reads nor writes any cache entries.
-- A stack with caching **enabled** reads and writes its own cache entries, keyed by the contents of its lock files.
-- Identical lock files do not make one stack reuse another stack's cache. A new stack always starts cold, even when another stack in the same project deploys the same program with the same lock file, and it populates its own cache on its first deployment.
+- A stack with caching **enabled** restores its own cache entries, keyed by its lock file contents and package-manager cache paths. Operations that can save entries populate the cache.
+- Identical lock files do not make one stack reuse another stack's cache. A new stack always starts cold, even when another stack in the same project deploys the same program with the same lock file.
 - Disabling caching on a stack does not delete anything. [Clearing the cache](#clearing-the-cache) is a separate action that works at the project level.
+
+Previews and drift-detection runs can restore existing entries, but they do not save new ones. To populate an entry, run an update, refresh, destroy that retains the stack, or drift remediation.
 
 ## What gets cached
 
-In addition to the dependencies below, every cache entry includes the downloaded Pulumi plugins (`~/.pulumi/plugins`) and policy packs (`~/.pulumi/policies`). Language SDKs are not handled specially — they are cached as part of your normal package manager dependencies.
+For supported runtimes, the cache collects the language dependency paths below, plus the Pulumi plugin and policy directories when present. Those directories default to `~/.pulumi/plugins` and `~/.pulumi/policies`. If `PULUMI_HOME` is set, the cache uses its `plugins` and `policies` subdirectories instead. Missing directories are skipped. Language SDKs use the normal package manager cache paths rather than a separate SDK cache.
 
 | Runtime | Detected using | Cached directories |
 |---------|----------------|--------------------|
@@ -62,7 +64,7 @@ A few constraints are worth knowing before you turn caching on:
 - **For pip, the virtual environment must be named `venv`.** A virtual environment named `.venv` or `env` is not cached.
 - **For Node.js**, a `packageManager` field in `package.json` determines the package manager. Without that field, Pulumi infers it from the lock file, and multiple lock files cause caching to be skipped.
 - **Custom executor images must include your package manager.** Pulumi asks the package manager (`npm`, `yarn`, `pnpm`, `uv`, or `poetry`) where its cache lives, so the binary has to be on the `PATH`. If it isn't, caching is skipped. See [Deployment execution environment](/docs/deployments/guides/custom-images/).
-- **Overriding `PULUMI_HOME` disables plugin caching.** The plugin and policy paths are fixed at `~/.pulumi`, so if you point `PULUMI_HOME` elsewhere with a custom environment variable, those directories are not cached. Your language dependencies are still cached.
+- **Plugin and policy paths follow `PULUMI_HOME`.** If you override it, the cache captures its `plugins` and `policies` subdirectories when present. Without an override, the cache uses `~/.pulumi`. `PULUMI_HOME` is not part of the cache key, so if you change it after entries have been saved, [clear the cache](#clearing-the-cache) to capture plugins and policies at the new paths.
 
 ## Verifying and troubleshooting
 
@@ -73,9 +75,9 @@ In the **Restore cache** step:
 | Log line | What it means |
 |----------|---------------|
 | `Detected project runtime: python` | Pulumi identified the runtime. |
-| `Calculated cache entry with key pip-<hash>...` | Pulumi computed the cache key from your lock file. |
+| `Calculated cache entry with key pip-<hash>...` | Pulumi computed the cache key from your lock file and package-manager cache paths. |
 | `Decompressing and extracting cache...` followed by `Cache restored successfully` | **Cache hit.** Dependencies were restored. |
-| `No cache to restore, skipping...` | **Cache miss.** Either this is the first deployment, or your lock file changed. |
+| `No cache to restore, skipping...` | **Cache miss.** No entry exists for this key. This can happen on the first deployment, after only previews or drift-detection runs, when lock files or package-manager cache paths change, or after entries are cleared or evicted. |
 | `Skipping caching step: <reason>` | **Nothing was cached.** The reason explains why — usually an unsupported runtime or a missing or ambiguous lock file. |
 
 In the **Save cache** step:
@@ -92,18 +94,18 @@ If a deployment isn't getting faster, the most common cause is a `Skipping cachi
 
 ## Clearing the cache
 
-Pulumi invalidates the cache automatically whenever your lock files change, so clearing it by hand is rarely necessary. If you need to force a cold rebuild, you can:
+Changed lock files or package-manager cache paths select a different cache key, so clearing the cache by hand is rarely necessary. If you need to force a cold rebuild, you can:
 
 - **Pulumi Cloud**: use the **Clear cache** action on the stack's **Deployments** page.
 - **REST API**: send `DELETE /api/stacks/{organization}/{project}/{stack}/deployments/cache`.
 
-Both clear the cache for the **entire project**, not just the selected stack. Every stack in the project will rebuild its cache on its next deployment.
+Both actions clear cache entries for **all stacks in the project**. Each stack must populate its own entries again.
 
 ## Limits and constraints
 
 - Cache entries are scoped per stack. Stacks do not share entries with each other, even within the same project and with identical lock files, and caches are never shared between organizations.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
-- Cache keys are matched exactly. Unlike some CI systems, there is no partial or fallback key match, so any change to a lock file produces a completely cold cache.
+- Cache keys are matched exactly, with no partial or fallback key match. Changed lock files or package-manager cache paths select another key. That key produces a miss unless an entry already exists for it.
 - Caches that go unread for roughly a month are evicted. A cache in regular use stays warm.
-- The **Save cache** step does not run when a `destroy` operation is configured to delete the stack afterward.
+- The **Save cache** step does not run for previews or drift detection, or when a `destroy` operation deletes the stack afterward.
