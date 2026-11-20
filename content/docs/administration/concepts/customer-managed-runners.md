@@ -1,4 +1,4 @@
-g---
+---
 title: Customer-managed runners
 title_tag: Customer-managed runners | Pulumi Cloud
 meta_desc: Run Pulumi Deployments, Discovery scans, and audit policy evaluations on runners you host in your own infrastructure.
