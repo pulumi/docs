@@ -204,23 +204,22 @@ If your shell can't find `pulumi`, open a new terminal. If that doesn't help, se
 
 ## Next steps
 
-Create your first project. In an empty directory, run `pulumi new` and pick a template for your cloud and language. Templates need that language's runtime installed, such as Node.js or Python. See [Languages & SDKs](/docs/iac/languages-sdks/) for what each one needs.
+After you download, run `pulumi new` in an empty directory, and choose a template for your cloud and language of choice:
 
 <div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-next-steps-new">mkdir my-project
-cd my-project
-pulumi new</code></pre>
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-next-steps-new">$ mkdir my-project; cd my-project
+$ pulumi new</code></pre>
 </div>
 
-`pulumi new` asks you to log in to [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) first, which stores your stack's [state](/docs/iac/concepts/state-and-backends/). You can start on the Free edition without a credit card. To keep state somewhere else, such as your local disk or an S3 bucket, [log in to a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) before you run `pulumi new`.
+By default, you'll be prompted to sign into [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/), the default [backend](/docs/iac/concepts/state-and-backends/) for the Pulumi CLI. Pulumi Cloud is completely free for individuals and manages your IaC state, secrets, and configuration automatically. To manage your state on your own, see [using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
 ### Guides and resources
 
 {{< link-cards >}}
-{{< link-card title="Follow the get-started guide" href="/up/" icon="rocket-launch" wide="true" >}}Pick a template, set up your language and cloud credentials, and deploy it step by step, or hand the steps to your coding agent.{{< /link-card >}}
-{{< link-card title="Browse templates" href="/dev/templates/" icon="blueprint" >}}Start from a ready-made project for your cloud and language.{{< /link-card >}}
-{{< link-card title="Find a provider" href="/registry/" icon="package" >}}Resources for AWS, Azure, Google Cloud, Kubernetes, and more, with credential setup for each.{{< /link-card >}}
-{{< link-card title="Follow a tutorial" href="/dev/tutorials/" icon="list-checks" >}}Build and deploy real infrastructure step by step on your cloud.{{< /link-card >}}
+{{< link-card title="Get started with Pulumi" href="/up/" icon="rocket-launch" wide="true" >}}Choose a template, set up cloud credentials, and deploy your first project step by step, or hand the steps to your coding agent of choice.{{< /link-card >}}
+{{< link-card title="Start with a template" href="/dev/templates/" icon="blueprint" >}}Choose from dozens of ready-made starter projects for common cloud architectures.{{< /link-card >}}
+{{< link-card title="Browse the Registry" href="/registry/" icon="package" >}}Browse AWS, Azure, Google Cloud, Kubernetes, and hundreds of clouds and services.{{< /link-card >}}
+{{< link-card title="Follow a tutorial" href="/dev/tutorials/" icon="list-checks" >}}Learn Pulumi hands-on by building and deploying real cloud infrastructure.{{< /link-card >}}
 {{< link-card title="Explore Pulumi Cloud" href="/docs/iac/concepts/pulumi-cloud/" icon="cloud" >}}Manage state, secrets, access control, policies, and drift detection for your team.{{< /link-card >}}
 {{< /link-cards >}}
 
