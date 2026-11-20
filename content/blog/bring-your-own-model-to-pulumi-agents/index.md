@@ -13,15 +13,13 @@ tags:
 category: product
 ---
 
-Pulumi Agents can now run on the models your team already uses. Model requests go through your organization’s provider account, so your provider bills you directly.
+You can now run Pulumi Agents on the models your team already uses. Connect your organization’s model provider account, and your provider bills you directly for the requests your agents make. You can use that connection across your organization or give an individual agent its own choice of model.
 
 <!--more-->
 
-In Pulumi Cloud, open your organization’s **Agent Settings** and select **Model provider**. Choose **Add model provider** to connect OpenAI, Amazon Bedrock, Anthropic, Google (for Gemini models), Azure Foundry, or a compatible endpoint.
+Pulumi Agents supports OpenAI, Amazon Bedrock, Anthropic, Google (for Gemini models), Azure Foundry, and compatible endpoints. To connect one, open **Agent Settings** in Pulumi Cloud. Under **Model provider**, choose **Add model provider**, select your provider, and enter a name and connection details. Select **Save** to test the connection.
 
-Name the connection and enter the details for your provider. When you select **Save**, Pulumi sends a test request to each model you configured.
-
-Use that name when you define an agent in TypeScript. This infrastructure review agent uses the model configured on the `openai-platform` connection.
+Once you’ve named a connection, you can use it in code. Here, `modelProvider: "openai-platform"` tells the infrastructure review agent to use the model your team configured on that connection.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,4 +34,4 @@ new pulumiservice.api.agents.Definition("infra-review", {
 });
 ```
 
-To use a provider as your organization’s default for new tasks, choose **Set as default**. To select one for an individual agent, set `modelProvider` in code or choose **Model** when you create or edit the agent in the console. For the connection details each provider requires, see the [model provider guide](/docs/ai/concepts/neo/model-providers/).
+In the console, choose **Set as default** to use a connection for new tasks that follow your organization’s default. To choose one for an individual agent, use the **Model** setting when you create or edit it. The [model provider guide](/docs/ai/agents/model-providers/) has the connection details for each provider.
