@@ -64,6 +64,9 @@
       "hash": "e15dc9ea390a58c9fbae2e34a11b549a7729e45b038954d999c00672add50246",
       "lastmod": "2026-09-15"
     },
+    "Delivery": {
+      "hash": "906b724c036bf32c65b88044e36a79edeb1cb4db65174ac31145c886c91c6be4"
+    },
     "DeploymentRunners": {
       "hash": "b723bcd786e2356e63fa062699c0eeb2f8431f0dccd903baf943a2387cbe00f6",
       "lastmod": "2026-05-13"
@@ -77,8 +80,8 @@
       "lastmod": "2026-09-15"
     },
     "InsightsAccounts": {
-      "hash": "1b692122f46e0366e36279a1da5e0a492fafe86fbcf686c9fd2916914161db9a",
-      "lastmod": "2026-11-17"
+      "hash": "27c6c153803a6c3ed03674a2258d35340b3809062eb3e2dd72fe5061e45454b9",
+      "lastmod": "2026-11-20"
     },
     "Invites": {
       "hash": "9249557f7703ec26c429fa082e2071471661301ca6366ff683c585b31655b3e7",
@@ -1381,6 +1384,162 @@
     "DeletedStack": {
       "hash": "7115b48a62a137799ae7114fffd550ae6f2f070b9a32ed619b41dbbf198e82ce",
       "lastmod": "2026-09-15"
+    },
+    "DeliveryAction": {
+      "hash": "ac780c32e344d5c958bfdce72c7321352f8c81ec70b320834d7d7b1f15f04356"
+    },
+    "DeliveryActionResult": {
+      "hash": "0f991d470ccad1c8f0a61ef8b5e83cd5871cb1a457bfda7491fd47e7dd653c6c"
+    },
+    "DeliveryApproval": {
+      "hash": "a1e5b8f37ae6971e81a1f3466510051d024ee1e965aa718d4ac9ab461985ad86"
+    },
+    "DeliveryApprovalList": {
+      "hash": "93a4ac794e59a6e6b88d60cdb353a177c8ee2fcc1eea1a4ff97cc0a9a45b1848"
+    },
+    "DeliveryAttempt": {
+      "hash": "295a4b83ded5b83b0cd8ee2fabfe578470467e7ad257f5a47da5b896b908e7cc"
+    },
+    "DeliveryChangeEntry": {
+      "hash": "a4fe11b8baa1132e0d22ff95a4fde54cbeb3d7bf051932238aef2935c258a3c9"
+    },
+    "DeliveryChangeSummary": {
+      "hash": "68cb4f29e680520898c80f25b4aa12f1cbc366bf1b61b99ab3f1ad5309cd5f63"
+    },
+    "DeliveryCommit": {
+      "hash": "6db4bf099f6090ef724d9b2133f9885ebf1fc728e02ed5421b688e73b26fd76a"
+    },
+    "DeliveryCondition": {
+      "hash": "cc76d9f781cfcec0f5aabc920028f7a6f3a958753f44d8892a200fcf6a4b9c9c"
+    },
+    "DeliveryConditionChip": {
+      "hash": "3f61d63962c6f8a51919b3dd73c162a9530401373a01ce910836641e46498fc6"
+    },
+    "DeliveryDeployment": {
+      "hash": "49e56e93cb38cdf2bd0f9df4880e4ca045fd787ddcbf8311eb2a3bdf8491ab32"
+    },
+    "DeliveryDispatchRequest": {
+      "hash": "227acf1990201a7961d5be6ddd35fb148786ebc7a5f3458d9089d7795f0bbc05"
+    },
+    "DeliveryDispatchResponse": {
+      "hash": "e6e15c9860e97125e43d2780517d2b63d0a7e498292f1a8d4082152ae1c17d20"
+    },
+    "DeliveryDispatchSource": {
+      "hash": "ae70ba1af3066dcc54fa4a52fe6ecca453953122ba7dee3c7a9e553d001405ee"
+    },
+    "DeliveryEdge": {
+      "hash": "93ef0edd79a0fa339621c6ce3816b4c6f4ccf1de580476423722047f587879cf"
+    },
+    "DeliveryGate": {
+      "hash": "f96c795cd8703608691aeb2105bbdb3f6c28642e1024120bd22aae180c0d021d"
+    },
+    "DeliveryGateActionRequest": {
+      "hash": "7dc936f333d31d9277d0e180a6c1dcaecd16ff5223242993dbd86ce86388ee6d"
+    },
+    "DeliveryGateActionResponse": {
+      "hash": "ccde6df671f252ccb296d70eef054a1f7c78e187e23814aae7c55004d7fe3a35"
+    },
+    "DeliveryGateDetail": {
+      "hash": "4dce2a00758f79513832e49677e509bbb3c3bf8bcd7bb9218792c2f8b626bdb4"
+    },
+    "DeliveryLocalUpdate": {
+      "hash": "4e92e12c572910959305f41b140de58ce8bea498f9f07bb651cdc3cc11b1e4ca"
+    },
+    "DeliveryMember": {
+      "hash": "7c4a1a1391b7e4249a07bf474c49aad7035f924b65fbde8d1e7043b7bf844c4a"
+    },
+    "DeliveryMemberGroup": {
+      "hash": "b66ce4f56823cdac7ed437252a008758bf0ca8b9972420985e20e4a21c18605d"
+    },
+    "DeliveryPass": {
+      "hash": "4d87b4d9aee7b5b00d72a5e4baa194e479516322b40bd2980a9a36ada31f59c4"
+    },
+    "DeliveryProgram": {
+      "hash": "ce3acf498f8541d42668ff89123b4f20d76b922ec3b74d4e1c878c3024e621ea"
+    },
+    "DeliveryProgramList": {
+      "hash": "9c127fc1e91dc45b06dc8ade9ba7472705294d99c56b6591de0bb551d763003a"
+    },
+    "DeliveryProgramRow": {
+      "hash": "1547425391de903bfdb47dba511e4b68740e0953e4e97efb146366949d0d0503"
+    },
+    "DeliveryProgramRowStage": {
+      "hash": "85ca1e3e3fc77e3681b083006e7754707fc3c0d2c74d0f75b3974ed4bba45d36"
+    },
+    "DeliveryRegistrationEntry": {
+      "hash": "725d23da4cd426b994013b7caebf451b51b31a786a335356089ac4be189cab82"
+    },
+    "DeliveryRegistrationInfo": {
+      "hash": "b0ae4c95f3bfb7ac1c410a69bfbcf1119630d5aba3984c36cdb218c6b7ef7230"
+    },
+    "DeliveryRelease": {
+      "hash": "495edb469dc6f6481c2a8cb819b67a01d4c80662d02994038985b3801aaf6862"
+    },
+    "DeliveryReleaseDetail": {
+      "hash": "ae93fbf6fa72c5c2fb56eeb0987adfef4e8a7bf2bbebad2e8ea1409d9560480e"
+    },
+    "DeliveryReleaseList": {
+      "hash": "9b96690591d146370faef44fe7793e57461e97f642727407cc9585b64b45f3c3"
+    },
+    "DeliveryReleaseSource": {
+      "hash": "6733ba408af866a4f04b5d2b99476858c2e94f9752a571bf3f8c4fb565e3fb01"
+    },
+    "DeliveryRollout": {
+      "hash": "bfce7d9c7698d48d9083b42ca128223d5fefb7245425be12c0a307839634ac45"
+    },
+    "DeliveryRuleNode": {
+      "hash": "7ed445dff46dbe6a1ea3920ea34b4347ff0ce6384cbfa3bddb6ac3de3abd60f8"
+    },
+    "DeliveryRun": {
+      "hash": "8a3fa829bfcdc10eb0607de2c16f2d28894e534b7aedd72a33ab6bb0903f1e45"
+    },
+    "DeliveryRunActions": {
+      "hash": "72e343b8442dd91321b65fd35909bbf172946b14e2f21d21382dbcd492c453a4"
+    },
+    "DeliveryRunArtifacts": {
+      "hash": "cafa84cf7115ca5880291951ed1f6aef901ca6d16655a6296ffe09e60fc11e26"
+    },
+    "DeliveryRunList": {
+      "hash": "8dbe926cfcf63f971500833159fc97a99abcc7411fe703bf8586ddb5a9415339"
+    },
+    "DeliveryRunStage": {
+      "hash": "02f7c069eb8fb91a2459c92cb7f695e7efa320f53aac62efa9ee5acc326a9ed3"
+    },
+    "DeliveryRunStageSummary": {
+      "hash": "be492602eae28193a274747b67ce4415a04ce6378293bd9530bc43ace965e7ed"
+    },
+    "DeliveryRunSummary": {
+      "hash": "3afb869c1867f2583bbb4077f18ae14e7c8d7fd9b66b1c0c3857278f28c31045"
+    },
+    "DeliverySourceRef": {
+      "hash": "4b5b1230ffc5023529fc83f31ce04b37d4d2166b6efbefb178b8df370ad42a6c"
+    },
+    "DeliveryStackRef": {
+      "hash": "5b098ae5c68fe280e9bfff9b768166e18105046db336b452f6a00ebf8fcbb083"
+    },
+    "DeliveryStageActionRequest": {
+      "hash": "0235b6a4e106c7a706bceca42c3271479952027cf9685c6b17b17f87aa554832"
+    },
+    "DeliveryStageGate": {
+      "hash": "38dd0d97b0fbd782a992bb32aafb1a42405d4aabcc036ea1fed4b706ee9ae2c3"
+    },
+    "DeliveryStageMember": {
+      "hash": "7e142c08d985a958da26fc965c4e5b54b863fc57880f5120407cdf330524c38b"
+    },
+    "DeliveryStageRun": {
+      "hash": "e8dcea47ded8377f0e34807c0110810dea9b6fdb99c885dc9f64c01c134849cb"
+    },
+    "DeliveryStageSummary": {
+      "hash": "5ae4114ae28659c693dd7e94ebbd6c7c856eaf3caecfad6a69c48fe482d86beb"
+    },
+    "DeliveryStatus": {
+      "hash": "409779c2f2a3a832d45ee0eace4ae34aa1c1325efb423586e4e781d842e4e92a"
+    },
+    "DeliverySummary": {
+      "hash": "4d6cc6d82cc2e320340e3d8712fe6ecabe6e797632ac7c42752ad1b330c7d14a"
+    },
+    "DeliveryValue": {
+      "hash": "f18b603d2f7543a6c232ba43548d9ce90fd5e4036b2502fc7711cf4df31bfbd8"
     },
     "DeploymentAgentMetadata": {
       "hash": "b343d3f3f82907bd89bab158120c0ef5d0dc352a61f4bc7cd6221cff75f584c4",
