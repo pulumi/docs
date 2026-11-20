@@ -173,7 +173,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to list environments: %v", err)
 	}
-	fmt.Println("Current environments:", envs) // Output: map[env1:{env1} env2:{env2}]
+	fmt.Println("Current environments:", envs) // Output: [env1 env2]
 
 	// Remove an environment from the stack's configuration.
 	err = stack.RemoveEnvironment(ctx, "env1")
@@ -187,7 +187,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to list environments: %v", err)
 	}
-	fmt.Println("Updated environments:", envs) // Output: map[env2:{env2}]
+	fmt.Println("Updated environments:", envs) // Output: [env2]
 }
 ```
 
