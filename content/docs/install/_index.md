@@ -49,19 +49,42 @@ Install Pulumi with [Homebrew](https://brew.sh/):
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos">$ brew install pulumi/tap/pulumi</code></pre>
 </div>
 
-Check that it worked:
+Verify the installation:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-version">$ pulumi version</code></pre>
 </div>
 
-If your shell can't find `pulumi`, open a new terminal. If that doesn't help, see [`pulumi: command not found`](#pulumi-command-not-found).
+If the command isn't found, see [Troubleshooting](#pulumi-command-not-found).
 
 {{< details "Other ways to install on macOS" >}}
+
+**Community Homebrew**
+
+Use the [community-supported formula](https://formulae.brew.sh/formula/pulumi) if you don't have the Pulumi tap:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-community">$ brew install pulumi</code></pre>
+</div>
+
+**MacPorts**
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port">$ sudo port install pulumi</code></pre>
+</div>
+
+**Install script**
+
+The script installs Pulumi to `~/.pulumi/bin` and adds it to your `PATH`, or tells you how when it can't:
+
+<div class="highlight">
+   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+</div>
 
 **Manual installation**
 
 1. Download the archive for your Mac: <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">Apple silicon (arm64)</a> <a class="btn btn-secondary" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">Intel (x64)</a>
+
 1. From the directory you downloaded it to, extract the archive and move its files to `~/.pulumi/bin`:
 
    ```bash
@@ -78,62 +101,44 @@ If your shell can't find `pulumi`, open a new terminal. If that doesn't help, se
 
 1. Open a new terminal and run `pulumi version`.
 
-**Homebrew core formula:** Use Homebrew's own `pulumi` formula if you'd rather not add the Pulumi tap:
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-brew-community">$ brew install pulumi</code></pre>
-</div>
-
-**[MacPorts](https://www.macports.org/)**
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-port">$ sudo port install pulumi</code></pre>
-</div>
-
-**Install script:** The script installs Pulumi to `~/.pulumi/bin` and adds it to your `PATH`, or tells you how when it can't:
-
-<div class="highlight">
-   <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos-install-script">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
-</div>
-
 {{< /details >}}
 
 {{% /choosable %}}
 
 {{% choosable os windows %}}
 
-Install Pulumi with the [Windows Package Manager](https://learn.microsoft.com/windows/package-manager/winget/) (winget), which comes with Windows 11 and recent versions of Windows 10:
+Install Pulumi with the [Windows Package Manager](https://learn.microsoft.com/windows/package-manager/winget/):
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows">&gt; winget install --exact --id Pulumi.Pulumi</code></pre>
 </div>
 
-This runs the Pulumi installer (MSI), which installs Pulumi for all users and adds it to your `PATH`. Windows asks you to approve the installation. If you don't have administrator rights, use the install script under **Other ways to install on Windows** instead.
-
-Check that it worked:
+Verify the installation:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-windows-version">&gt; pulumi version</code></pre>
 </div>
 
-If your shell can't find `pulumi`, open a new terminal. If that doesn't help, see [`pulumi: command not found`](#pulumi-command-not-found).
+If the command isn't found, see [Troubleshooting](#pulumi-command-not-found).
 
 {{< details "Other ways to install on Windows" >}}
 
-**Installer (MSI):** Download the installer and run it. It installs Pulumi for all users and adds it to your `PATH`.
+**Installer (MSI)**
 
-<p>
-<a class="btn btn-secondary" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">x64</a>
+Download the installer for your machine: <a class="btn btn-secondary" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">x64</a>
 <a class="btn btn-secondary" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-arm64.msi">arm64</a>
-</p>
 
-**[Chocolatey](https://chocolatey.org):** Run this from an administrator shell:
+**Chocolatey**
+
+Run the following from an administrator shell:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
 </div>
 
-**Install script:** The script installs Pulumi to `%USERPROFILE%\.pulumi\bin` for your user account only, so it doesn't need administrator rights. Run it from a command prompt (`cmd.exe`):
+**Install script**
+
+The script installs Pulumi to `%USERPROFILE%\.pulumi\bin` for your user account only, so it doesn't need administrator rights. Run it from a command prompt (`cmd.exe`):
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bat" data-track="install-pulumi-windows-install-script">&gt; @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
@@ -163,15 +168,13 @@ Install Pulumi with the install script:
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
 </div>
 
-The script installs Pulumi to `~/.pulumi/bin` and adds it to your `PATH`, or tells you how when it can't.
-
-Check that it worked:
+Verify the installation:
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux-version">$ pulumi version</code></pre>
 </div>
 
-If your shell can't find `pulumi`, open a new terminal. If that doesn't help, see [`pulumi: command not found`](#pulumi-command-not-found).
+If the command isn't found, see [Troubleshooting](#pulumi-command-not-found).
 
 {{< details "Other ways to install on Linux" >}}
 
