@@ -255,7 +255,7 @@ Fields can be repeated for multiple exclusions: `-name:foo -name:bar` excludes a
 All terms are implicitly combined with a logical `AND`, but terms can also be combined with `OR`.
 For example, `foo OR bar` returns resources that would normally match `foo` as well as resources that would normally match `bar`.
 
-Precedence is simple left-to-write, so `foo bar OR baz` is interpreted as `(foo AND bar) OR baz`. Parentheses are strongly recommended when combining terms with OR to prevent unexpected results. In this case, you can query for `foo (bar OR baz)` if your intent is to match `bar` or `baz`.
+Precedence is simple left-to-right, so `foo bar OR baz` is interpreted as `(foo AND bar) OR baz`. Parentheses are strongly recommended when combining terms with OR to prevent unexpected results. In this case, you can query for `foo (bar OR baz)` if your intent is to match `bar` or `baz`.
 
 Parentheses and `OR` can be combined with negation, exact matches, and field queries like so:
 
@@ -266,7 +266,7 @@ Parentheses and `OR` can be combined with negation, exact matches, and field que
 The `created` and `modified` fields can be queried for a range of values with `>`, `>=`, `<`, `<=`, and `[a to b]`.
 The `[a to b]` form is inclusive on both sides.
 
-For example, resources modified within the first quarter of 2023 (requires CLI 3.XX):
+For example, resources modified within the first quarter of 2023:
 
 > modified:[2023-01-01 to 2023-03-31]
 
@@ -297,7 +297,7 @@ For example, to query for a key containing spaces inside of an output object nam
 
 To query properties nested within arrays, the index can be omitted from the property path or `[*]` can be used. Resources are returned if any element in the array matches. Querying a specific array index (like `[0]`) is not supported.
 
-An output of `{"foo": [{"bar": "baz"]}` can be queried with:
+An output of `{"foo": [{"bar": "baz"}]}` can be queried with:
 
 > .foo[*].bar:baz
 
