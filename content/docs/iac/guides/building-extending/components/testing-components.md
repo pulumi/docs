@@ -101,8 +101,8 @@ This makes invalid configurations impossible to compile or deploy, removing the 
 ***Example:** A custom policy in TypeScript that enforces the allowed instance sizes*
 
 ```typescript
-policy.resourceOfType("aws:ec2/instance:Instance", (args, reportViolation) => {
-    if (!["t3.micro", "t3.small"].includes(args.props.instanceType)) {
+validateResourceOfType(aws.ec2.Instance, (instance, args, reportViolation) => {
+    if (!["t3.micro", "t3.small"].includes(instance.instanceType)) {
         reportViolation("Only t3.micro and t3.small are allowed.");
     }
 });
