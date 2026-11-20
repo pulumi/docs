@@ -137,7 +137,7 @@ runtime:
 | Option | Description |
 | - | - |
 | `nodeargs` | Arguments to pass to `node` when running the plugin. |
-| `packagemanager` | Package manager to use for installing dependencies: `npm` (default), `pnpm`, `yarn` or `bun`. |
+| `packagemanager` | Package manager to use for installing dependencies: `auto` (default), `npm`, `pnpm`, `yarn` or `bun`. |
 
 #### Python runtime options
 
@@ -200,7 +200,7 @@ runtime: nodejs
 requiredPulumiVersion: ">=3.100.0"
 ```
 
-## Related topics
+## Learn more
 
 - [Providers](/docs/iac/concepts/providers/) - Learn more about resource plugins (providers)
 - [How Pulumi works](/docs/iac/guides/basics/how-pulumi-works/) - Understand how plugins fit into Pulumi's architecture
