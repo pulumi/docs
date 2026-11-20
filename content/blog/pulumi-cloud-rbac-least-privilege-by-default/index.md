@@ -2,7 +2,7 @@
 title: "Least privilege by default: what's new in Pulumi Cloud RBAC"
 date: 2026-11-18
 draft: false
-meta_desc: "Pulumi Cloud adds built-in roles, sharing of a single stack, service principals for deployments, and a restricted mode that new organizations start in."
+meta_desc: "Pulumi Cloud adds built-in roles, sharing of a single stack, service principals for automation, and a restricted mode that new organizations start in."
 feature_image: feature.png
 authors:
     - boris-schlosser
@@ -12,6 +12,7 @@ tags:
     - security
     - pulumi-cloud
     - deployments
+    - continuous-delivery
     - features
 category: product
 schema_type: auto
@@ -36,35 +37,35 @@ social:
     twitter: |
         Pulumi Cloud RBAC now starts from least privilege.
 
-        Built-in Reader, Builder, and Maintainer roles. Sharing a single stack or environment. Service principals to run your deployments. And a restricted mode for new organizations.
+        Built-in Reader, Builder, and Maintainer roles. Sharing a single stack or environment. Service principals to run your pipelines. And a restricted mode for new organizations.
 
         Here's what changed.
     linkedin: |
-        More people touch infrastructure than a few years ago, and a growing share of changes comes from pipelines and coding agents. That raises two questions more often: who should be able to change this, and what is this automation allowed to do?
+        Security works best when the secure choice is also the convenient one. More people touch infrastructure than a few years ago, and a growing share of changes comes from pipelines and coding agents. It should be simple to give each of them the access they need and nothing more.
 
-        Security works best when the secure choice is also the convenient one. Over the last few weeks, we reworked access control in Pulumi Cloud around that idea:
+        Over the last few weeks, we reworked access control in Pulumi Cloud around that idea:
 
         - Three new built-in roles, Reader, Builder, and Maintainer. Every organization has a default role its members follow.
         - Anyone who manages a stack, an environment, or a cloud account can share it with a teammate or a team, right from its Access settings.
-        - Service principals give automation its own identity. A stack's deployments can run as one, so every run has the same access no matter who starts it.
+        - Service principals give automation its own identity. A Pulumi Delivery pipeline or a stack's deployments can run as one, so every run has the same access no matter who starts it.
         - New organizations start in a restricted mode, where automation gets only the access you gave it.
 
         Existing organizations keep working as they do today and can opt in when they're ready. Here's how each piece works.
     bluesky: |
-        Pulumi Cloud RBAC now starts from least privilege: built-in Reader, Builder, and Maintainer roles, sharing a single stack or environment, service principals to run your deployments, and a restricted mode for new organizations.
+        Pulumi Cloud RBAC now starts from least privilege: built-in Reader, Builder, and Maintainer roles, sharing a single stack or environment, service principals to run your pipelines, and a restricted mode for new organizations.
 
         Here's what changed.
 ---
 
-Access control in [Pulumi Cloud](/docs/administration/concepts/rbac/) now starts from least privilege. Every organization gets three new built-in roles, you can share a single stack or environment with a teammate from the page you're already on, and automation gets an identity of its own: service principals to run your deployments. New organizations start in a restricted mode, where automation gets only the access you gave it.
+Access control in [Pulumi Cloud](/docs/administration/concepts/rbac/) now starts from least privilege. Every organization gets three new built-in roles, you can share a single stack or environment with a teammate, and you can create service principals to give your automated workloads their own identity.
 
 <!--more-->
 
 ## Why change how access works?
 
-Teams use Pulumi Cloud differently than they did a few years ago. Organizations are larger, more people outside the platform team touch infrastructure, and a growing share of changes comes from pipelines and coding agents instead of someone at a terminal.
+Protecting your infrastructure is central to how we build Pulumi Cloud, and access control has to keep up with how teams work. Organizations are larger, more people outside the platform team touch infrastructure, and a growing share of changes comes from pipelines and coding agents, which need to be governed as carefully as the people they work for.
 
-That raises two questions more often than before: who should be able to change this, and what is this automation allowed to do? Security works best when the secure choice is also the convenient one, so we set out to make both questions quick to answer and precise access quick to set up. The changes below make the narrow, deliberate choice the default one.
+Security works best when the secure choice is also the convenient one. It should be simple to give people, agents, and automation the access they need and nothing more. The changes below make the narrow, deliberate choice the default one.
 
 ## Three new built-in roles
 
@@ -73,49 +74,64 @@ Every organization now has three new built-in roles, alongside Admin and Billing
 | Role | What members can do |
 |------|---------------------|
 | Reader | See the organization's stacks, environments, and cloud accounts. |
-| Builder | Everything a Reader can, plus create their own and manage what they create. |
-| Maintainer | Everything a Builder can, plus change everyone else's. |
+| Builder | Everything a Reader can, plus create stacks, environments, and cloud accounts, and manage the ones they create. |
+| Maintainer | Everything a Builder can, plus change every stack, environment, and cloud account in the organization. |
 
-One of them is the organization's [default role](/docs/administration/concepts/rbac/default-roles/), the role members get unless an admin gives them a different one. Change the default, and everyone who follows it moves with it.
+One of them is the organization's [default role](/docs/administration/concepts/rbac/default-roles/), the role members have unless an admin assigns them a different one. New organizations start on Builder: people create and manage their own infrastructure, and get access to everyone else's when someone decides they should. Existing organizations were moved to the built-in role that matches what their members could already do, so nobody gained or lost access.
 
-New organizations start on Builder: people create and manage their own infrastructure, and get access to everyone else's when someone decides they should. Existing organizations were moved to the built-in role that matches what their members could already do, so nobody gained or lost access.
+When an admin changes the default role, every member who follows it moves to the new role, and members who were assigned a role keep theirs.
 
 ## Share one stack with one person
 
 Giving one person access to one thing now takes a few seconds. Every stack, environment, and cloud account has **Access** settings: select **Add Principal**, pick a teammate, pick what they can do, and you're done.
 
-Teams are granted access in the same place, so one list shows everyone who can reach a stack. Every organization also has an [Everyone team](/docs/administration/concepts/rbac/teams/#the-everyone-team) that always contains all of its members, for the things the whole organization should see.
+Teams are granted access in the same place, so a single list shows everyone who can reach that stack, environment, or cloud account. Every organization also has an [Everyone team](/docs/administration/concepts/rbac/teams/#the-everyone-team) that always contains all of its members, for the things the whole organization should see.
 
 ## Service principals: an identity for automation
 
-A [service principal](/docs/administration/concepts/rbac/service-principals/) is an identity for work that isn't done by a person. You create it, name it, and give it access the same way you would a teammate. It starts with only what you give it, so it can be as narrow as a single stack.
+Automation in Pulumi Cloud has traditionally borrowed its access: a deployment could run with the permissions of whoever started it, or with an access token stored in its settings. That works without any setup, but it makes it hard to say what a given deployment can reach, and the same deployment can behave differently depending on who starts it.
 
-## Deployments run as who you choose
+A [service principal](/docs/administration/concepts/rbac/service-principals/) is an identity for work that isn't done by a person. You create it, name it, and give it access the same way you would a teammate:
 
-The first place to use a service principal is [Pulumi Deployments](/docs/deployments/concepts/). A stack's deployment settings now have a **Run as** setting. Select a service principal, or a team, and every deployment of that stack runs with that identity's access, whether it is started by a person, a git push, or as part of a schedule.
+- **It starts with nothing.** A service principal doesn't follow the organization's default role. It has only the roles and access you give it, so it can be as narrow as a single stack and the environments that stack imports.
+- **You grant access where you already do.** Add a service principal from the same **Access** settings you use to share a stack, environment, or cloud account with a teammate, or assign it a role for the whole organization.
+- **It can't be used to get around your own access.** Admins, Maintainers, and Builders can create service principals, and can only give one the roles they could grant themselves.
+- **It shows up by name.** In the audit logs, a service principal is the actor of everything it does, so you can tell which automation made a change.
+
+Pulumi Cloud also creates service principals where it runs work for you: each [Pulumi Delivery](/docs/delivery/) pipeline and each [custom agent](/docs/ai/agents/) gets one of its own.
+
+## Pipelines run as who you choose
+
+We recently [introduced Pulumi Delivery](/blog/introducing-pulumi-delivery/), which lets you write your release pipeline as a Pulumi program. Every Delivery pipeline [runs as one identity](/docs/delivery/concepts/identity/). The person who starts a run, approves a gate, or pushes a commit doesn't lend the run their own access.
+
+By default, Delivery generates a service principal for each pipeline and gives it access to the stacks the pipeline works with and nothing else. To decide the access yourself, name a service principal you created, or a team, in the pipeline program:
+
+```typescript
+const pipeline = new delivery.Pipeline("shop", {
+    servicePrincipal: { userId: "service-principal:0b6f1c2e-5d3a-4f7b-9c1d-2e8a7b6c5d4f" },
+});
+```
 
 ```mermaid
 flowchart LR
-    A["Console or REST API"] --> D["Deployment"]
-    B["git push or pull request"] --> D
-    C["Schedule"] --> D
-    D -->|runs as| SP["Service principal<br/>deploy-prod"]
-    SP --> S["Access to<br/>this stack"]
-    SP --> E["Access to<br/>its environments"]
+    A["git push"] --> R["Delivery run"]
+    B["A person starts<br/>or promotes a run"] --> R
+    R -->|runs as| SP["Service principal<br/>Delivery shop prod"]
+    SP --> S["Access to the stacks<br/>the pipeline deploys"]
+    SP --> E["Access to the<br/>environments you grant"]
 ```
 
-- **Runs are predictable.** A deployment that works when you start it also works when a schedule starts it overnight, because it's the same identity both times.
-- **The access is yours to decide.** The deployment can reach what you gave its service principal and nothing else.
-- **It's visible.** Each deployment's page shows who it ran as.
+- **Runs are predictable.** A run that works when you start it also works when a push starts it overnight, because it's the same identity both times.
+- **The access is yours to decide.** The pipeline can reach what its service principal was given and nothing else.
+- **It's visible.** The pipeline's settings list the service principals and teams it has been registered with, and who added each one.
+
+[Pulumi Deployments](/docs/deployments/concepts/) works the same way. A stack's deployment settings now have a **Run as** setting: select a service principal, or a team, and every deployment of that stack runs with that identity's access, whether it is started by a person, a git push, or a schedule.
 
 ## Restricted by default for new organizations
 
-These pieces come together in the organization's [permission mode](/docs/administration/concepts/rbac/permission-modes/):
+New organizations are created in the restricted [permission mode](/docs/administration/concepts/rbac/permission-modes/), where automation gets only the access you explicitly gave it. Every stack's deployments run as a service principal or a team, and a team access token gets its team's access and nothing more.
 
-- In **permissive** mode, automation that runs on behalf of your organization can get broader access than you explicitly gave it. This is how organizations have always worked.
-- In **restricted** mode, it gets only the access you explicitly gave it. Every stack's deployments run as a service principal or a team.
-
-New organizations are created in restricted mode. Existing organizations stay permissive until an admin switches them, and the console spells out what the switch changes before you confirm.
+Existing organizations keep working the way they always have, with automation that can get broader access than it was given, until an admin switches them to restricted. The console spells out what the switch changes before you confirm.
 
 ## Manage it as code
 
@@ -137,16 +153,16 @@ resources:
 
 Nothing changes until you choose to change it. Your members kept their access when the built-in roles arrived, your custom roles and teams work as before, and your deployments keep running the way they do today.
 
-When you're ready to tighten things, this order works well:
+To move an existing organization to least privilege, take these steps in order:
 
 1. **Pick a default role.** For most organizations, that's Builder.
-1. **Give each stack you deploy a service principal** with access to what that stack needs.
-1. **Switch to the restricted permission mode** once every deployed stack has one. The [permission modes documentation](/docs/administration/concepts/rbac/permission-modes/#before-you-switch-to-restricted) has a short checklist, and you can switch back if something was missed.
+1. **Give each stack that uses Pulumi Deployments a service principal** with access to what that stack needs.
+1. **Switch to the restricted permission mode** once each of those stacks has one. The [permission modes documentation](/docs/administration/concepts/rbac/permission-modes/#before-you-switch-to-restricted) has a short checklist, and you can switch back if something was missed.
 
 ## Next steps
 
 All of this is available today. The documentation notes where a feature depends on your edition.
 
 - Read how [default roles](/docs/administration/concepts/rbac/default-roles/) and [access on individual stacks](/docs/administration/concepts/rbac/entities/#entity-access) work.
-- Create a [service principal](/docs/administration/concepts/rbac/service-principals/) and select it under [Run as](/docs/deployments/concepts/settings/pulumi-cloud-role/) in a stack's deployment settings.
+- Create a [service principal](/docs/administration/concepts/rbac/service-principals/), then name it in a [Delivery pipeline](/docs/delivery/concepts/identity/) or select it under [Run as](/docs/deployments/concepts/settings/pulumi-cloud-role/) in a stack's deployment settings.
 - Share feedback in the [Pulumi Community Slack](https://slack.pulumi.com/) or on [GitHub](https://github.com/pulumi/pulumi-cloud-requests/issues).
