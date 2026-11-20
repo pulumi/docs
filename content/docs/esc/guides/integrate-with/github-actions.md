@@ -16,11 +16,11 @@ aliases:
 
 ## Pulumi ESC GitHub Action
 
-The [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action) allows you to run ESC commands in your GitHub Actions workflows or inject secrets and configuration into your GitHub Actions workflows.
+The [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action) injects secrets and configuration from a Pulumi ESC environment into your GitHub Actions workflows.
 
-- Minimally, the GitHub action will download the Pulumi CLI, which provides the `pulumi env` commands. If a `version` is specified, that version will be downloaded.
-- Optionally, if an `environment` is passed in as an input, the action will inject all environment variables (specifically the keys under `values.environmentVariables` and projected files under `values.files`) from the environment into the current action/workflow environment.
-- If specific keys are passed in using the `keys` input - only those keys will be injected into the GitHub Workflow.
+- The action opens the environment you name in the required `environment` input and injects its environment variables (the keys under `values.environmentVariables`) into the current workflow. For each value under `values.files`, the action writes a temporary file and sets an environment variable of the same name to the file's path.
+- To inject only some of the variables, list them in the `export-environment-variables` input. The default is to inject all of them.
+- The action does not install the Pulumi CLI. If a later step runs `pulumi` commands, add the [`pulumi/actions`](https://github.com/pulumi/actions) action to install it.
 
 ## Authentication
 
@@ -44,7 +44,7 @@ Then include a `pulumi/auth-actions` step before any ESC action steps:
 
 ```yaml
 - name: Authenticate with Pulumi Cloud
-  uses: pulumi/auth-actions@v1
+  uses: pulumi/auth-actions@v2
   with:
     organization: your-org
     requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -60,6 +60,8 @@ As an alternative to OIDC, you can authenticate with a long-lived [Pulumi access
 env:
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
+
+The action does not read credentials saved by an earlier `pulumi login` step, so set the token with the environment variable or with the action's `pulumi-access-token` input.
 
 Long-lived access tokens are simpler to set up but require you to manage token rotation and ensure the token has appropriate permissions for your workflow.
 
@@ -82,12 +84,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Authenticate with Pulumi Cloud
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
-      - name: Install and inject ESC environment variables
-        uses: pulumi/esc-action@v3
+      - name: Inject ESC environment variables
+        uses: pulumi/esc-action@v4
         with:
           environment: 'tinyco/someProject/myEnv'
       - name: Verify environment variables were injected
@@ -101,7 +103,7 @@ jobs:
 ## Use cases
 
 - **Injecting secrets into GitHub Actions**: The GitHub Action can be used to inject secrets into GitHub Actions workflows, allowing you to dynamically access your secrets from ESC as they are needed, rather than storing them in GitHub Secrets as long-lived static secrets. This allows you to leverage many of ESC's key features, such as automatic secret rotation and short-lived dynamic credentials and secrets and prevents secret sprawl.
-- **Running ESC commands in GitHub Actions**: The GitHub Action can be used to run any arbitrary ESC commands in GitHub Actions workflows, beyond just injecting secrets. This allows you to use ESC as part of your CI/CD pipeline and create, update, or open environments automatically as part of your workflow.
+- **Running ESC commands in GitHub Actions**: To run `pulumi env` commands in a workflow, install the Pulumi CLI with [`pulumi/actions`](https://github.com/pulumi/actions) and authenticate as described above. This lets you use ESC as part of your CI/CD pipeline and create, update, or open environments automatically as part of your workflow.
 
 ## Importing secrets from GitHub Actions
 
@@ -123,9 +125,9 @@ jobs:
     name: Export GitHub secrets to ESC
     steps:
       - name: Install Pulumi CLI
-        uses: pulumi/esc-action@v3
+        uses: pulumi/actions@v7
       - name: Authenticate with Pulumi Cloud
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
