@@ -1,6 +1,6 @@
 ---
 title: "Least privilege by default: what's new in Pulumi Cloud RBAC"
-date: 2026-11-18
+date: 2026-11-23
 draft: false
 meta_desc: "Pulumi Cloud adds built-in roles, sharing of a single stack, service principals for automation, and a restricted mode that new organizations start in."
 feature_image: feature.png
@@ -63,7 +63,7 @@ Access control in [Pulumi Cloud](/docs/administration/concepts/rbac/) now starts
 
 ## Why change how access works?
 
-Protecting your infrastructure is central to how we build Pulumi Cloud, and access control has to keep up with how teams work. Organizations are larger, more people outside the platform team touch infrastructure, and a growing share of changes comes from pipelines and coding agents, which need to be governed as carefully as the people they work for.
+Protecting your infrastructure is central to how we build Pulumi Cloud, and access control has to keep up with how teams work. More people outside the platform team touch infrastructure, and a growing share of changes comes from pipelines and coding agents, which need to be governed as carefully as the people they work for.
 
 Security works best when the secure choice is also the convenient one. Giving people, agents, and automation the access they need, and nothing more, shouldn't take extra work. The changes below make the narrow, deliberate choice the default one.
 
@@ -88,8 +88,6 @@ Giving one person access to one thing now takes a few seconds. Every stack, envi
 Teams are granted access in the same place, so a single list shows everyone who has been granted access to that stack, environment, or cloud account. Every organization also has an [Everyone team](/docs/administration/concepts/rbac/teams/#the-everyone-team) that always contains every member, for the things the whole organization should see.
 
 ## Service principals: an identity for automation
-
-Automation in Pulumi Cloud has traditionally borrowed its access: a deployment could run with the permissions of whoever started it, or with an access token stored in its settings. That works without any setup, but it makes it hard to say what a given deployment can reach, and the same deployment can behave differently depending on who starts it.
 
 A [service principal](/docs/administration/concepts/rbac/service-principals/) is an identity for work that isn't done by a person. You create it, name it, and give it access the same way you would a teammate:
 
