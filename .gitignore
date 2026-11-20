@@ -262,3 +262,6 @@ assets/images/generated/
 # Playwright MCP session artifacts (browser snapshots written into the repo root).
 .playwright-mcp/
 .pytest_cache/
+
+# Generated per-symbol stubs for the Python SDK reference (tools/pydocgen)
+/tools/pydocgen/source/*/api/
