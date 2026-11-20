@@ -17,7 +17,7 @@ Your team can run Pulumi Agents on models you already use through your organizat
 
 <!--more-->
 
-You can connect Anthropic, OpenAI, Azure Foundry, Amazon Bedrock, or a compatible endpoint. Your provider bills you directly for model requests your agents make through that account.
+You can connect Anthropic, OpenAI, Google (for Gemini models), Azure Foundry, Amazon Bedrock, or a compatible endpoint. Your provider bills you directly for model requests your agents make through that account.
 
 In Pulumi Cloud, open your organization’s **Agent Settings**. Under **Model provider**, choose **Add model provider**. Give the connection a name, select your provider, and enter its connection details. When you select **Save**, Pulumi sends a test request to each model you configured.
 
