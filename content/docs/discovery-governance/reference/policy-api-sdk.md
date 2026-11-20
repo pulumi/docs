@@ -104,6 +104,9 @@ The [Pulumi Cloud (pulumiservice) provider](/registry/packages/pulumiservice/) i
 | Resource | Description |
 | --- | --- |
 | [`PolicyGroup`](/registry/packages/pulumiservice/api-docs/policygroup/) | Apply policy packs to a set of stacks or cloud accounts in your organization. Supports `audit` and `preventative` enforcement modes. |
+| [`PolicyPack`](/registry/packages/pulumiservice/api-docs/policypack/) | Publish a policy pack from a local source directory to Pulumi Cloud. Changing the source content publishes a new version. |
+| [`PolicyGroupStackAttachment`](/registry/packages/pulumiservice/api-docs/api/policygroupstackattachment/) | Add a single stack to a policy group, including a default policy group, without taking ownership of the group. |
+| [`PolicyGroupInsightsAccountAttachment`](/registry/packages/pulumiservice/api-docs/api/policygroupinsightsaccountattachment/) | Add a single cloud account to a policy group, including a default policy group, without taking ownership of the group. |
 
 ### Functions
 
