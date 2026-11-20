@@ -492,4 +492,4 @@ If you want strongly typed SDKs for your Terraform modules, you can generate the
 
 This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Providers are bridged into Pulumi, resource options are translated or handled directly in the Pulumi HCL interpreter, and modules are components... in any language.
 
-If you want to try it yourself, start with the [get-started guide](/docs/integrations/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.
+If you are still comparing [Terraform alternatives](/blog/best-terraform-alternatives/), that guide covers the main options. If you want to try this yourself, start with the [get-started guide](/docs/integrations/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.
