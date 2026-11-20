@@ -11,7 +11,7 @@
 //
 // Templates (all from the Figma "Social assets — banners" file):
 //   - "title"      — centered title on the LIGHT brand field (migrate, partner,
-//     topics, whitepapers). Simple frame.
+//     topics). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
 //     description) — docs and blog term pages.
 //   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
@@ -61,8 +61,8 @@ const OG_TEMPLATE_VERSION = "6"
 //   events r2: byline measured/fitted rather than -webkit-line-clamp'd (it used
 //     to be sliced mid-glyph), 3-line budget on square/portrait, names-only
 //     byline on square.
-//   title r2: optional violet label pill between the logo and the title (the
-//     whitepapers section uses it); unlabelled title cards are unchanged.
+//   title r2: optional violet label pill between the logo and the title;
+//     unlabelled title cards are unchanged.
 //   title r3: more clearance between the logo and the label pill.
 const TEMPLATE_REVISION = { events: 2, title: 3 }
 
@@ -82,13 +82,11 @@ const menuLabels = once(() => {
 
 // Shared shape for the plain centered-title sections (what-is + the small
 // marketing sections). They differ only in name and recursion.
-const titleSection = (name, recursive, label) => ({
+const titleSection = (name, recursive) => ({
   name,
   template: "title",
   recursive,
-  // `label` is the optional violet pill above the title, naming the kind of
-  // page. Omit it for sections whose title already says what the page is.
-  fields: (fm) => ({ title: clean(fm.title), label }),
+  fields: (fm) => ({ title: clean(fm.title) }),
   valid: (f) => !!f.title,
 })
 
@@ -100,7 +98,6 @@ const SECTIONS = [
   titleSection("migrate", true),
   titleSection("partner", true),
   titleSection("topics", true),
-  titleSection("whitepapers", false, "Whitepaper"),
   {
     name: "docs",
     template: "info",
