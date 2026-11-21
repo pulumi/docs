@@ -109,7 +109,7 @@ jobs:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: org-name/stack-name
@@ -171,7 +171,7 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:team
           scope: team:<team-slug>
 
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: org-name/stack-name
@@ -231,7 +231,7 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:personal
           scope: user:<pulumi-username>
 
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: org-name/stack-name

@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: my-org/my-app/dev
