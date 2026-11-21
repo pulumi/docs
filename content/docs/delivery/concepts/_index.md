@@ -407,11 +407,38 @@ The pipeline lives in a repository as a Pulumi project, and it declares exactly 
 
 To register the pipeline, run `pulumi delivery register` in the pipeline's project directory.
 
-Registering doesn't start a run. The command writes the pipeline's location in your repository to the stack's `delivery:source` config. Commit the updated config file so that Pulumi Cloud can find the program. Once registered, a push to the repository's default branch updates the pipeline.
+Registering doesn't start a run. The command writes the pipeline's location in your repository to the stack's `delivery:source` config. Commit the updated config file so that Pulumi Cloud can find the program. Once registered, a push to the branch the pipeline tracks updates the pipeline. See [Choose the branch the pipeline tracks](#choose-the-branch-the-pipeline-tracks).
 
 You can specify what service principal or team the pipeline runs as on registration. See [Pipeline identity](/docs/delivery/concepts/identity/).
 
 Registration checks that Pulumi Cloud can read the pipeline's repository through your organization's [version control integration](/docs/integrations/version-control/), and that the branch exists. If either check fails, the registration fails.
+
+#### Choose the branch the pipeline tracks
+
+The stack's `delivery:source` config says where the pipeline program lives:
+
+```yaml
+config:
+  delivery:source:
+    url: https://github.com/acme/shop
+    branch: main
+    directory: delivery
+```
+
+- `url` is the repository's clone URL. It's required.
+- `branch` is the branch the pipeline tracks. Pulumi Cloud runs the pipeline program from this branch, and a push to it updates the pipeline. It defaults to the repository's default branch.
+- `directory` is the pipeline's project directory, relative to the repository root.
+
+When the stack has no `delivery:source` config, `pulumi delivery register` detects `url` and `directory` from your git checkout. Pipeline registration defaults to tracking the repository's default branch. To track another branch, set `branch` in your config and register again:
+
+```bash
+pulumi config set --path delivery:source.branch demo/lambda-web
+pulumi delivery register
+```
+
+`delivery:source.branch` is different from the `branch` on a [repository source](/docs/delivery/concepts/sources-and-triggers/#repository-sources). A source's `branch` is the code the pipeline deploys and the branch whose pushes trigger runs. `delivery:source.branch` is where the pipeline program itself lives.
+
+To see which branch a registered pipeline tracks, open the pipeline in the Pulumi Cloud console and select **Settings** > **Program**.
 
 ### Run locally
 
