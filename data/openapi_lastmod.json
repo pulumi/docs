@@ -38,8 +38,8 @@
   },
   "tags": {
     "AI": {
-      "hash": "27d9d5b19fa519272901450f016ccead7d64b5650b901f0a25ce29f5b60c2a7b",
-      "lastmod": "2026-09-25"
+      "hash": "6ba307801abaf0f8121e06846737ab6d877f224df2b1325bbba7f40dd5cdd87a",
+      "lastmod": "2026-11-21"
     },
     "AI Agents": {
       "hash": "15db67efefd7d12da741feb54b44090a65274c83edc27a521a5afe062ce53882",
@@ -1530,7 +1530,8 @@
       "hash": "e8dcea47ded8377f0e34807c0110810dea9b6fdb99c885dc9f64c01c134849cb"
     },
     "DeliveryStageSummary": {
-      "hash": "5ae4114ae28659c693dd7e94ebbd6c7c856eaf3caecfad6a69c48fe482d86beb"
+      "hash": "3dfd43c383978079a0ee4d0e491a11b6953dc33d32471b64dc0357bfc3f0beb5",
+      "lastmod": "2026-11-21"
     },
     "DeliveryStatus": {
       "hash": "409779c2f2a3a832d45ee0eace4ae34aa1c1325efb423586e4e781d842e4e92a"
@@ -2665,8 +2666,8 @@
       "lastmod": "2026-10-29"
     },
     "OrganizationFeatures": {
-      "hash": "8f09dd3469434253e10356989edfd1277bb877e20e932da7ff407dde6f5a165c",
-      "lastmod": "2026-11-19"
+      "hash": "27334a23c0d6fe360c8319d6ef6e56e3f7dd29eff384e9810a506d681b20d51b",
+      "lastmod": "2026-11-21"
     },
     "OrganizationMember": {
       "hash": "63580abab554fb9a2782c1471b6ebafc55c5d78f3cb323452095db640a968fef",
