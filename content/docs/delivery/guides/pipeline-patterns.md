@@ -365,7 +365,7 @@ public class App {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-Pulumi YAML has no functions, so declare each stage's resources separately:
+Pulumi YAML doesn't support user-defined functions, so declare each stage's resources separately:
 
 ```yaml
 name: shop-delivery
