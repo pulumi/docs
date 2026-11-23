@@ -33,6 +33,8 @@
 #     (registry package id `pulumiservice`), and renaming it is a product/IA
 #     decision with URL-alias consequences, outside this lint rule's remit.
 #   - "IAS": the retired Insights acronym.
+#   - "DaC": the retired Delivery as Code acronym (-> Pulumi Delivery). Fixed
+#     replacement, but short and all-caps, so flag-only like IAS.
 #
 # Intentionally NOT mirrored here (see the brand-vale-sync skill's
 # "intentionally unmirrored" rule): bare "Insights" and bare "Copilot". Both
@@ -50,3 +52,4 @@ ignorecase: false
 tokens:
   - '\bPulumi Service\b(?!s\b)(?!\s+[Pp]rovider\b)'
   - '\bIAS\b'
+  - '\bDaC\b'

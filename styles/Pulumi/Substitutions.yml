@@ -45,3 +45,7 @@ swap:
   '\blanguage-native packages\b': native language packages
   '\bself-managed backend\b': DIY backend
   '\bself-managed backends\b': DIY backends
+  '\bsignal gate\b': manual gate
+  '\bsignal gates\b': manual gates
+  '\bprebuilt agent\b': pre-built agent
+  '\bprebuilt agents\b': pre-built agents
