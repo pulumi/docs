@@ -43,7 +43,7 @@ This new evaluation mode for IaC stacks is designed to unlock policy adoption at
 
 This new mechanism runs against the last known successfully deployed state of your IaC Stacks as recorded by Pulumi Cloud.
 
-* **Evaluation is triggered automatically** after a successful `pulumi up` or when a policy pack attached to the stack is updated.
+* **Evaluation is triggered automatically** when a stack is added to an audit policy group, after a successful `pulumi up`, or when a policy pack attached to the stack is updated.
 * **Results are unified** into the same **Policy Findings hub** you use today, giving you a single pane of glass for all preventative and audit policy findings.
 
 ## How to Get Started
@@ -58,7 +58,7 @@ You can enable audit scans for your IaC stacks by adding them to an **[Audit Pol
 
 {{< video title="Setting up Stack Audit Policy" src="stack-audit-policy.mp4" autoplay="true" loop="true" >}}
 
-The next time any of the selected stacks completes a `pulumi up`, a post-deployment evaluation will be automatically triggered, and the results will populate in the Policy Findings hub.
+Pulumi evaluates the selected stacks' last deployed state right away, without a new `pulumi up`, and the results populate in the Policy Findings hub. After that, each successful `pulumi up` triggers a new post-deployment evaluation.
 
 {{< notes type="info" >}}
 Audit policy scans consume workflow minutes from your Pulumi Cloud plan. Each scan counts toward your monthly quota based on the complexity and number of resources evaluated. See pricing documentation for details.
