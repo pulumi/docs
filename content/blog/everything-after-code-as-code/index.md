@@ -18,6 +18,9 @@ category: product
 related_posts:
     - introducing-pulumi-delivery
     - introducing-pulumi-agents
+    - bring-your-own-model-to-pulumi-agents
+    - the-agentic-infrastructure-era
+    - self-driving-infrastructure-pulumi-jev
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
@@ -53,7 +56,7 @@ social:
 
 *Introducing Pulumi Delivery and Pulumi Agents: agentic code to production, and back again.*
 
-At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too. This year, the share of infrastructure operations on Pulumi done by agents went from zero in January to over 40% in October. Anything expressed as code (infrastructure, policy, configuration) is something an agent can work on. Today we're extending that to everything after the merge with two launches: Pulumi Delivery, which lets you and your agents write delivery pipelines as code, and Pulumi Agents, customizable agents that watch your running systems and act when something goes wrong. Together, they take agentic code to production, and back again. I honestly can't remember a launch since Pulumi 1.0 that our customers and team have been this excited about.
+At Pulumi, we like code. A lot. And we aren't the only ones: agents like it too. This year, the share of infrastructure operations on Pulumi done by agents went from zero in January to over 40% in October. Anything expressed as code (infrastructure, policy, configuration) is something an agent can work on. [Today we're extending that](/releases/pulumi-agents-and-delivery/) to everything after the merge with two launches: [Pulumi Delivery](/product/delivery/), which lets you and your agents write delivery pipelines as code, and [Pulumi Agents](/product/agents/), customizable agents that watch your running systems and act when something goes wrong. Together, they take agentic code to production, and back again. I honestly can't remember a launch since Pulumi 1.0 that our customers and team have been this excited about.
 
 <!--more-->
 
@@ -85,7 +88,7 @@ Working with customers, we've also seen where everything around IaC falls short.
 
 ## Pulumi Delivery: agentic delivery as code
 
-Pulumi Delivery puts your entire release process in code: stages, promotion and rollout policies, gates, jobs, and everything else between merge and production. As with infrastructure as code, you write it in TypeScript, Python, HCL, Go, C#, Java, or YAML, which is great for humans as well as agents. Software engineering suddenly applies, so you can test, share, and reuse pipeline definitions.
+[Pulumi Delivery](/product/delivery/) puts your entire release process in code: stages, promotion and rollout policies, gates, jobs, and everything else between merge and production. As with infrastructure as code, you write it in TypeScript, Python, HCL, Go, C#, Java, or YAML, which is great for humans as well as agents. Software engineering suddenly applies, so you can test, share, and reuse pipeline definitions.
 
 Because Delivery extends Pulumi's core model, pipelines share its type system, policy engine, stack and resource dependencies, secrets, and state. And it runs what you already have, including Pulumi, Terraform, OpenTofu, Ansible, and open-ended jobs. It works alongside the CI you already use for build and test, picking up at the merge.
 
@@ -623,7 +626,7 @@ Your app and its network ship together through one pipeline, whether a person or
 
 ## Pulumi Agents: from production back to code
 
-Delivery gets code to production. But what happens when alarms start firing? That's where Pulumi Agents comes in. Provision engineering and infrastructure agents that monitor your running systems, react to events from PagerDuty, Datadog, Sentry, and Honeycomb, or run on a schedule. Start with the agents Pulumi provides for incident investigation, drift, cost, upgrades, and security remediation, or define your own in code, with your own prompts, skills, integrations, and triggers. Bring any agent you like: Neo, our infrastructure agent, or Claude Code, Codex, and OpenCode, on Pulumi's models or your own keys.
+Delivery gets code to production. But what happens when alarms start firing? That's where [Pulumi Agents](/product/agents/) comes in. Provision engineering and infrastructure agents that monitor your running systems, react to events from PagerDuty, Datadog, Sentry, and Honeycomb, or run on a schedule. Start with the agents Pulumi provides for incident investigation, drift, cost, upgrades, and security remediation, or define your own in code, with your own prompts, skills, integrations, and triggers. Bring any agent you like: Neo, our infrastructure agent, or Claude Code, Codex, and OpenCode, on Pulumi's models or your own keys.
 
 Every agent gets its own identity, a least-privilege role, and short-lived credentials from Pulumi ESC. Agents never change production directly. Any change an agent wants to make arrives as a pull request with a deterministic plan, checked against the same policies as your engineers' changes.
 
@@ -643,7 +646,7 @@ Put Delivery and Agents together, and you get the whole loop. Gates in your pipe
 
 All of this is built on the same platform as our core IaC, powered by one context graph, data model, and API across your applications and infrastructure. Pulumi knows which deploy changed which resources, what's running where, and what depends on what, so an agent investigating an alert starts with that context instead of guessing. And because it's one system, the same identity, RBAC, policies, and audit trail apply to the new products and the existing ones alike.
 
-We think this is what the agentic SDLC looks like after the merge. Pulumi Delivery and Pulumi Agents are available today in public preview in every edition of Pulumi Cloud, including Free. For the full tour of each product, read the companion posts:
+We think this is what the agentic SDLC looks like after the merge. Pulumi Delivery and Pulumi Agents are [available today](/releases/pulumi-agents-and-delivery/) in public preview in every edition of Pulumi Cloud, including Free. For the full tour of each product, read the companion posts:
 
 [**Read the blog**: Introducing Pulumi Delivery &rarr;](/blog/introducing-pulumi-delivery/)
 
