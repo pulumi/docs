@@ -40,8 +40,8 @@ var environment = new service.Environment("testing-environment", {
     `values:
     myKey1: "myValue1"
     myNestedKey:
-    myKey2: "myValue2"
-    myNumber: 1`
+      myKey2: "myValue2"
+      myNumber: 1`
   )
 })
 ```
