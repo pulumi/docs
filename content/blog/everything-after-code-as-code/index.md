@@ -646,7 +646,7 @@ Put Delivery and Agents together, and you get the whole loop. Gates in your pipe
 
 All of this is built on the same platform as our core IaC, powered by one context graph, data model, and API across your applications and infrastructure. Pulumi knows which deploy changed which resources, what's running where, and what depends on what, so an agent investigating an alert starts with that context instead of guessing. And because it's one system, the same identity, RBAC, policies, and audit trail apply to the new products and the existing ones alike.
 
-We think this is what the agentic SDLC looks like after the merge. Pulumi Delivery and Pulumi Agents are [available today](/releases/pulumi-agents-and-delivery/) in public preview in every edition of Pulumi Cloud, including Free. For the full tour of each product, read the companion posts:
+We think this is what the agentic SDLC looks like after the merge. Pulumi Delivery and Pulumi Agents are [available today](/releases/pulumi-agents-and-delivery/) in public preview. Delivery is available in every edition of Pulumi Cloud, including Free. For the full tour of each product, read the companion posts:
 
 [**Read the blog**: Introducing Pulumi Delivery &rarr;](/blog/introducing-pulumi-delivery/)
 
