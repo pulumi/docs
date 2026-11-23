@@ -37,6 +37,10 @@ sections:
     heading: Deployments & Workflows
     description: Cloud-hosted deployments, drift detection, state management, and automation.
     link: /docs/deployments/
+  - icon: pulumi-delivery
+    heading: Delivery
+    description: Write release pipelines as Pulumi programs that promote changes through stages, stacks, jobs, and approval gates.
+    link: /docs/delivery/
   - icon: pulumi-secrets
     heading: Secrets & Configuration
     description: Centralized secrets and configuration management with environments.
