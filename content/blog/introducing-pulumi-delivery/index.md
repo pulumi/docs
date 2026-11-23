@@ -14,8 +14,12 @@ tags:
     - releases
 category: product
 schema_type: auto
-# TODO: Add slugs once the umbrella launch post and the Pulumi Agents post have final slugs.
-related_posts: []
+related_posts:
+    - everything-after-code-as-code
+    - introducing-pulumi-agents
+    - self-driving-infrastructure-pulumi-jev
+    - the-agentic-infrastructure-era
+    - pulumi-context-api
 
 # Social media copy: auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
@@ -44,7 +48,7 @@ social:
 
 Coding agents have made writing software faster than shipping it. The bottleneck is now everything after the code: release pipelines full of bespoke scripts, console steps, and hand-run promotions that slow teams down and don't scale.
 
-Today, we're introducing Pulumi Delivery, available in public preview. With Delivery, you define how a change moves from development through staging to production in the same languages you already use for infrastructure: TypeScript, Python, Go, HCL, YAML, and more. Your pipeline becomes a Pulumi program, so it gets the same policies and review process as the rest of your infrastructure, whether a person or an agent wrote the change.
+Today, [we're introducing Pulumi Delivery](/releases/pulumi-agents-and-delivery/), available in public preview. With Delivery, you define how a change moves from development through staging to production in the same languages you already use for infrastructure: TypeScript, Python, Go, HCL, YAML, and more. Your pipeline becomes a Pulumi program, so it gets the same policies and review process as the rest of your infrastructure, whether a person or an agent wrote the change.
 
 <!--more-->
 
@@ -418,9 +422,7 @@ screenshot of a gate showing the score and the reviewer's reasoning (delivery-ri
 
 ## Turn production signals into reviewed fixes
 
-Delivery can also react to the observability tools you already have, including PagerDuty, Honeycomb, Sentry, and Datadog. When a signal points to a problem in production, an agent can prepare a fix and open a pull request under your policies. That fix then moves through the same pipeline as any other change, with the same gates at every stage. Agents get a fast path to production that's also the governed one.
-
-<!-- TODO: Link "an agent" to the Pulumi Agents launch post once its slug is final. -->
+Delivery can also react to the observability tools you already have, including PagerDuty, Honeycomb, Sentry, and Datadog. When a signal points to a problem in production, [an agent](/blog/introducing-pulumi-agents/) can prepare a fix and open a pull request under your policies. That fix then moves through the same pipeline as any other change, with the same gates at every stage. Agents get a fast path to production that's also the governed one.
 
 ## Get started with Pulumi Delivery
 <!-- TODO: Link to getting started instead of docs.  -->
