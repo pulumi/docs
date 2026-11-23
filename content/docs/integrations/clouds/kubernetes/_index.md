@@ -45,17 +45,14 @@ Use a cloud provider package to create and manage Kubernetes clusters on your pr
 
 The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) enables Kubernetes users to create a Pulumi `Stack` as a first-class API resource, with a controller that drives updates to success. This lets you build CI/CD and automation into your clusters and manage infrastructure alongside your Kubernetes workloads. See the [GitHub repository](https://github.com/pulumi/pulumi-kubernetes-operator) for source and releases.
 
-## Architecture templates
+## Tutorials, templates, and examples
 
-[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+The [Pulumi Dev Center](/dev/cloud/kubernetes/) collects hands-on Kubernetes content, filterable by language and topic:
 
-Start new Kubernetes projects from a pre-built template:
-
-- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/)
-- [Kubernetes cluster on Azure](/dev/templates/kubernetes/azure/)
-- [Kubernetes cluster on Google Cloud](/dev/templates/kubernetes/gcp/)
-- [Helm chart on Kubernetes](/dev/templates/kubernetes-application/helm-chart/)
-- [Web application on Kubernetes](/dev/templates/kubernetes-application/web-application/)
+- [Tutorials](/dev/browse/?type=tutorial&cloud=kubernetes) — step-by-step guides to building on Kubernetes with Pulumi.
+- [Templates](/dev/browse/?type=template&cloud=kubernetes) — ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a project.
+- [Examples](/dev/browse/?type=example&cloud=kubernetes) — complete Pulumi programs you can read, run, and adapt.
+- [Workshops](/dev/browse/?type=workshop&cloud=kubernetes) — instructor-led workshops, live and on demand.
 
 ## Secrets & configuration (ESC)
 

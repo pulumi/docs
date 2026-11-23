@@ -33,24 +33,17 @@ Pulumi provides several packages for Azure. For core infrastructure, Azure Nativ
 - [Docker](/registry/packages/docker/) — build and push Docker images to Azure Container Registry or other registries.
 - [Kubernetes](/registry/packages/kubernetes/) — deploy application workloads to AKS or any Kubernetes cluster.
 
-## Architecture templates
+## Tutorials, templates, and examples
 
-[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+The [Pulumi Dev Center](/dev/cloud/azure/) collects hands-on Azure content, filterable by language and topic:
 
-Start new Azure projects from a pre-built template:
-
-- [Container service on Azure](/dev/templates/container-service/azure/) — containerized service on Azure Container Apps or App Service.
-- [Serverless application on Azure](/dev/templates/serverless-application/azure/) — Azure Functions with supporting resources.
-- [Static website on Azure](/dev/templates/static-website/azure/) — storage-account static site with CDN.
-- [Virtual machine on Azure](/dev/templates/virtual-machine/azure/) — Azure VM with configurable networking.
-- [Kubernetes cluster on Azure](/dev/templates/kubernetes/azure/) — Azure Kubernetes Service (AKS) cluster ready for workloads.
+- [Tutorials](/dev/browse/?type=tutorial&cloud=azure) — step-by-step guides to building on Azure with Pulumi.
+- [Templates](/dev/browse/?type=template&cloud=azure) — ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a project.
+- [Examples](/dev/browse/?type=example&cloud=azure) — complete Pulumi programs you can read, run, and adapt.
+- [Workshops](/dev/browse/?type=workshop&cloud=azure) — instructor-led workshops, live and on demand.
 
 ## Guides
 
-Hands-on infrastructure as code guides for building on Azure with Pulumi.
-
-- [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/) — compare Azure Native and Azure Classic.
-- [Convert ARM templates to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/) — migrate existing ARM templates.
 - [Azure DevOps CI/CD](/docs/iac/operations/continuous-delivery/azure-devops/) — drive Pulumi stack updates from Azure DevOps pipelines.
 
 ## Secrets & configuration (ESC)
