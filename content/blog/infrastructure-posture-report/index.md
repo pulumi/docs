@@ -1,11 +1,12 @@
 ---
-title: "Introducing the infrastructure posture report"
+title: "New Pulumi Best Practices posture report"
 date: 2026-11-30
 draft: false
-meta_desc: "The infrastructure posture report checks every stack against Pulumi Best Practices each month and shows where your risks are. Turn it on in one click."
+meta_desc: "The infrastructure posture report checks every IaC-managed stack against Pulumi Best Practices each month and shows where your risks are. Enable in one click."
 feature_image: feature.png
 authors:
     - tatiana-cooke
+    - tom-king
 tags:
     - policy-as-code
     - governance
@@ -32,11 +33,11 @@ social:
     twitter: |
         How does your infrastructure measure up against Pulumi Best Practices?
 
-        The new infrastructure posture report checks every stack in your organization once a month and shows where the risks are. One click to turn it on, in the Pro and Enterprise editions.
+        The new infrastructure posture report checks every stack in your organization once a month and shows where the risks are. Enable now to understand more about possible risks.
     linkedin: |
-        Teams often ask us how their infrastructure measures up against Pulumi's best practices. Answering that used to mean setting up policy packs and policy groups before you saw a single result.
+        Teams often ask us how their infrastructure measures up against Pulumi's best practices. We've made it even easier to scan your infrastructure for risk with a simple configuration flow for this posture report.
 
-        The infrastructure posture report answers it first. Once a month, Pulumi Cloud scans the latest state of every stack in your organization against the Pulumi Best Practices policy packs for AWS, Azure, and Google Cloud. The report shows findings by severity, how many of your resources have no findings, and which issues affect the most resources.
+        If you opt in, once a month Pulumi Cloud scans the latest state of every stack in your organization against the Pulumi Best Practices policy packs for AWS, Azure, and Google Cloud. The report shows findings by severity, the share of your resources impacted by these findings, and which issues affect the most resources.
 
         The scan is read-only and needs no new credentials. An organization admin turns it on with one click in the Pulumi Cloud console.
 
@@ -44,7 +45,7 @@ social:
     bluesky: |
         How does your infrastructure measure up against Pulumi Best Practices?
 
-        The new infrastructure posture report checks every stack once a month and shows where the risks are. One click to turn it on, in the Pro and Enterprise editions of Pulumi Cloud.
+        The new infrastructure posture report checks every stack in your organization once a month and shows where the risks are. Enable now to understand more about possible risks.
 ---
 
 Pulumi IaC lets you define your cloud resources in code, and [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) checks those resources against policy as code, so you can see where your security and compliance stand. Today we're adding the infrastructure posture report: a monthly snapshot of how every stack in your organization measures up against the Pulumi Best Practices policy packs. An organization admin turns it on with one click in the Pulumi Cloud console, and it's available in the Pro and Enterprise editions.
