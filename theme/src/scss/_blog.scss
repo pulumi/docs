@@ -68,8 +68,7 @@
 // the link whose section is currently in view. The `!` is required: this file
 // compiles into @layer components, and the link's own text-service-black lives
 // in the later utilities layer, which wins regardless of specificity.
-[data-blog-toc] a.is-active,
-[data-section-toc] a.is-active {
+[data-blog-toc] a.is-active {
     @apply text-violet-primary!;
 }
 

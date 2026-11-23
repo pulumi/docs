@@ -2,7 +2,7 @@
 title: Bring your own model provider
 title_tag: Bring your own model provider for Pulumi Agents
 h1: Bring your own model provider
-meta_desc: Run Pulumi Agents on models from your own Anthropic, OpenAI, Azure Foundry, or Amazon Bedrock account, or from any compatible endpoint.
+meta_desc: Run Pulumi Agents on models from your own Anthropic, OpenAI, Google, Azure Foundry, or Amazon Bedrock account, or from any compatible endpoint.
 menu:
     ai:
         name: Model providers
@@ -35,6 +35,7 @@ Choose the guide for the account that serves your model. For example, if you use
 | --- | --- | --- |
 | <span id="anthropic"></span>[Anthropic](/docs/ai/agents/model-providers/anthropic/) | Anthropic Messages | API key |
 | <span id="openai"></span>[OpenAI](/docs/ai/agents/model-providers/openai/) | OpenAI Chat Completions, OpenAI Responses | API key |
+| <span id="google"></span>[Google](/docs/ai/agents/model-providers/google/) | OpenAI Chat Completions | API key |
 | <span id="azure-foundry-with-workload-identity"></span><span id="azure-foundry"></span>[Azure Foundry](/docs/ai/agents/model-providers/azure-foundry/) | Anthropic Messages, OpenAI Chat Completions, OpenAI Responses | API key or [workload identity](/docs/ai/agents/model-providers/azure-foundry/#configure-workload-identity) |
 | <span id="amazon-bedrock-with-workload-identity"></span><span id="amazon-bedrock"></span>[Amazon Bedrock](/docs/ai/agents/model-providers/amazon-bedrock/) | Anthropic Messages, OpenAI Chat Completions, OpenAI Responses | [Workload identity](/docs/ai/agents/model-providers/amazon-bedrock/#create-the-iam-role) |
 | <span id="custom-endpoint"></span><span id="custom-anthropic-compatible-endpoint"></span>[Custom endpoint](/docs/ai/agents/model-providers/custom-endpoint/) | Anthropic Messages, OpenAI Chat Completions, OpenAI Responses | One or more authentication headers |

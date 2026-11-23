@@ -139,6 +139,8 @@ jobs:
           check_endpoint "/what-is/" "What-is landing (redirects to /topics/)"
           check_endpoint "/topics/" "Topics landing"
           check_endpoint "/customers/" "Customers landing"
+          check_endpoint "/whitepapers/" "Whitepapers landing"
+          check_endpoint "/state-of-agentic-infrastructure/" "State of agentic infrastructure report"
           check_endpoint "/love/" "Wall of love"
           check_endpoint "/product/" "Product landing"
           check_endpoint "/releases/" "Releases landing"
@@ -308,6 +310,9 @@ jobs:
           check_redirect "/tutorials/" "/dev/tutorials/" "Tutorials redirect"
           check_redirect "/templates/" "/dev/templates/" "Templates redirect"
           check_redirect "/testimonials/" "/love/" "Testimonials redirect"
+          check_redirect "/security/pulumi-cloud-security-whitepaper/" "/whitepapers/pulumi-cloud-security/" "Security whitepaper redirect"
+          check_redirect "/whitepapers/point-of-view/" "/whitepapers/" "Retired whitepaper redirect"
+          check_redirect "/documents/whitepapers/pulumi-whitepaper-agentic-infrastructure-operating-model.pdf" "/assets/whitepapers/agentic-infrastructure-operating-model\\.pdf" "Whitepaper PDF redirect"
           check_redirect "/ai" "/product/agents/" "AI redirect"
           check_redirect "/deployments/" "/product/delivery/" "Deployments redirect"
 
