@@ -203,6 +203,7 @@ features:
   - id: neo
     name: Pulumi Neo
     min_edition: essentials
+    hidden: true
   - id: neo-cli
     name: Neo in the CLI
     min_edition: essentials
