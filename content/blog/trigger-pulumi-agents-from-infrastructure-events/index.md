@@ -74,7 +74,7 @@ The first failure starts the task immediately. The 30-second window lets subsequ
 
 ## Configure and deploy
 
-Use a Pulumi project named `deployment-agents` to manage the agent and automation. Select a stack for that project in the same Pulumi Cloud organization as `checkout/prod`.
+Create a TypeScript project named `deployment-agents` with `pulumi new typescript --name deployment-agents`, and put both code snippets above in its `index.ts`. Select a stack for that project in the same Pulumi Cloud organization as `checkout/prod`.
 
 1. **Find the role ID.** With a Pulumi account that can list roles in your organization, run the command below. Replace `YOUR_ORG` with the organization name. The output lists each role’s name and ID. Copy the ID of the role you’ve granted read access to `checkout/prod`.
 
