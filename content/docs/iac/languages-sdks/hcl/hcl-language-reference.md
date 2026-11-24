@@ -305,15 +305,15 @@ resource "aws_instance" "web" {
   pulumi {
     name                      = "web-primary"
     parent                    = module.my_component
-    additional_secret_outputs = ["password"]
+    additional_secret_outputs = [password_data]
     protect                   = true
     retain_on_delete          = true
     deleted_with              = aws_vpc.main
-    replace_on_changes        = ["ami"]
+    replace_on_changes        = [ami]
     replace_with              = [aws_instance.replacement]
-    hide_diffs                = ["user_data"]
+    hide_diffs                = [user_data]
     import_id                 = "i-1234567890abcdef0"
-    aliases                   = ["old-name"]
+    aliases                   = [{ name = "old-name" }]
     version                   = "6.0.0"
     plugin_download_url       = "https://example.com/plugins"
   }
@@ -326,15 +326,15 @@ The `pulumi` block accepts exactly the following attributes:
 | - | - | - |
 | `name`                      | string       | Override the Pulumi logical name. |
 | [`parent`](/docs/iac/concepts/resources/options/parent/) | reference | Parent resource for component hierarchy. |
-| [`additional_secret_outputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) | list(string) | Output properties to encrypt in state. |
+| [`additional_secret_outputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) | list of attribute references | Output properties to encrypt in state. |
 | [`protect`](/docs/iac/concepts/resources/options/protect/) | bool | Mark the resource protected in state; deleting it requires unprotecting first. |
 | [`retain_on_delete`](/docs/iac/concepts/resources/options/retainondelete/) | bool | Keep the cloud resource when removed from the program. |
 | [`deleted_with`](/docs/iac/concepts/resources/options/deletedwith/) | reference | Cascade deletion when the referenced resource is deleted. |
 | [`replace_with`](/docs/iac/concepts/resources/options/replacewith/) | list | Resources whose replacement triggers replacement of this one. |
-| [`hide_diffs`](/docs/iac/concepts/resources/options/hidediffs/) | list(string) | Property paths whose diffs should not be displayed. |
-| [`replace_on_changes`](/docs/iac/concepts/resources/options/replaceonchanges/) | list(string) | Property paths that force replacement when changed. |
+| [`hide_diffs`](/docs/iac/concepts/resources/options/hidediffs/) | list of attribute references | Property paths whose diffs should not be displayed. |
+| [`replace_on_changes`](/docs/iac/concepts/resources/options/replaceonchanges/) | list of attribute references | Property paths that force replacement when changed. |
 | [`import_id`](/docs/iac/concepts/resources/options/import/) | string | Cloud resource ID to import. |
-| [`aliases`](/docs/iac/concepts/resources/options/aliases/) | list | Alternative names for this resource (used during renames). |
+| [`aliases`](/docs/iac/concepts/resources/options/aliases/) | list | Previous identities of this resource, such as `{ name = "old-name" }`. A string is read as a full URN. |
 | [`env_var_mappings`](/docs/iac/concepts/resources/options/envvarmappings/) | expression | Environment variable remappings for the provider. |
 | [`version`](/docs/iac/concepts/resources/options/version/) | string | Provider plugin version. |
 | `plugin_download_url`       | string       | URL to download the provider plugin from. |
