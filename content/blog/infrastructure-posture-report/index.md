@@ -48,7 +48,7 @@ social:
         The new infrastructure posture report checks every stack in your organization once a month and shows where the risks are. Enable now to understand more about possible risks.
 ---
 
-Pulumi IaC lets you define your cloud resources in code, and [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) checks those resources against policy as code, so you can see where your security and compliance stand. Today we're adding the infrastructure posture report: a monthly snapshot of how every stack in your organization measures up against the Pulumi Best Practices policy packs. An organization admin turns it on with one click in the Pulumi Cloud console, and it's available in the Pro and Enterprise editions.
+Pulumi IaC lets you define your cloud resources in code, and [Pulumi Policies](/docs/discovery-governance/concepts/policy-as-code/) checks those resources against policy as code, so you can see where your security and compliance stand. Today we're adding a pre-configured infrastructure posture report: a monthly snapshot of how every stack in your organization measures up against the Pulumi Best Practices policy packs. An organization admin can turn it on with one click in the Pulumi Cloud console, and it's available in the Pro and Enterprise editions.
 
 <!--more-->
 
@@ -56,29 +56,27 @@ Pulumi IaC lets you define your cloud resources in code, and [Pulumi Policies](/
 
 Teams often ask us some version of the same question: how does our infrastructure measure up against Pulumi's best practices?
 
-Until now, getting an answer took some setup. You chose policy packs, created a policy group, added stacks to it, and waited for the evaluations to run. That's the right path once you're ready to enforce policy, but it's a lot to ask when all you want is to know where you stand. The posture report gives you that answer before you've configured anything.
+Until now, getting an answer took some setup. We've made it even simpler to opt-in and learn more about how your infrastructure aligns with Pulumi Best Practices policies. The posture report is structured to highlight areas that warrant further investigation, and use Pulumi Agents to investigate and remediate issues. It summarizes policy findings against Pulumi's own best practices, which makes it a great starting point for a conversation about infrastructure risk.
 
 ## What does the report check?
 
-Once a month, Pulumi Cloud scans the latest state of every stack in your organization against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs for AWS, Azure, and Google Cloud. You don't need to add the packs to a policy group first.
+Once a month, Pulumi Cloud scans the latest state of every IaC stack in your organization against the [Pulumi Best Practices](/docs/discovery-governance/guides/pre-built-policy-packs/) policy packs for AWS, Azure, and Google Cloud.
 
-The scan is read-only. It changes nothing in your infrastructure or your stacks, and it uses no new credentials.
-
-Two limits are worth knowing up front. The report covers resources managed in Pulumi stacks, so it doesn't include discovered resources that Pulumi IaC doesn't manage yet. And it summarizes policy findings against Pulumi's own best practices, which makes it a starting point for a conversation about risk and not a compliance audit.
+The scan is read-only. It changes nothing in your infrastructure or your stacks, and it uses no new credentials. The report covers resources managed in Pulumi stacks, so it doesn't include discovered resources that Pulumi IaC doesn't manage yet. 
 
 ## What's in the report?
 
 Each report opens with what the scan covered: the stacks and resources it evaluated, and any stacks it couldn't evaluate. From there, it answers three questions:
 
 - **How many findings are there, and how serious are they?** A finding is one resource failing one policy. The report counts findings by severity.
-- **How much of your infrastructure is in good shape?** Coverage is the percentage of evaluated resources with no findings.
+- **How much of your infrastructure is in good shape?** Coverage is calculated using the percentage of evaluated resources with no findings.
 - **Where should you start?** Top issues group findings by policy and resource family, such as every `aws:s3` resource that fails the same policy. Groups are ranked by severity, then by how many resources they affect.
 
-Each report is a snapshot. It doesn't change as you resolve findings, and from your second report on, you can see what changed since the month before. Past reports are kept for a year, and you can export any report as a CSV or a PDF to share with people who don't sign in to Pulumi Cloud.
+Each report is a snapshot. It doesn't change as you resolve findings, which means you can use it as a baseline to compare findings month over month. Past reports are kept for a year, and you can export any report as a CSV or a PDF to share with people who don't sign in to Pulumi Cloud.
 
 ## How do you turn it on?
 
-Nothing is scanned until you opt in. To turn on the report:
+To turn on the report:
 
 1. Navigate to **Governance** > **Posture report** in the Pulumi Cloud console.
 1. Review the preview, which shows how many stacks the scan covers and which packs it checks them against.
@@ -86,15 +84,15 @@ Nothing is scanned until you opt in. To turn on the report:
 
 The first scan starts right away, and the report appears on the page when it finishes. After that, a new report arrives by the 1st of every month, and admins are notified in the console and by email when it's ready.
 
-Organization admins turn the report on and off, and turning it on is recorded in your [audit logs](/docs/administration/concepts/audit-logs/). Once it's on, members who can already read policy results, stacks, and cloud accounts across the organization can see it. If the report isn't for you, an admin can turn it off at any time from the same page.
+Organization admins turn the report on and off, and turning it on is recorded in your [audit logs](/docs/administration/concepts/audit-logs/). Once it's on, members who can already read policy results, stacks, and cloud accounts across the organization can see it. If the report isn't for you, an admin can turn it off at any time from the same page. Turning off the report will prevent further scans in subsequent months.
 
 ## How do you go from a monthly snapshot to continuous monitoring?
 
-A monthly report tells you where you stand. It doesn't tell you when something new goes wrong on a Tuesday.
+A monthly report tells you where you stand, but won't catch changes or issues on an ongoing basis.
 
-When you want that, select **Enable monitoring** on the report. This creates a Pulumi Best Practices audit [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) that evaluates every stack against the same packs as your stacks are updated. Audit policy groups never block deployments. Findings appear in [policy findings](/docs/discovery-governance/operations/policy-findings/), where you can assign and resolve them, or hand a group of them to Pulumi Neo to draft a fix.
+When you're ready for realtime findings, select **Enable monitoring** on the report. This creates a Pulumi Best Practices audit [policy group](/docs/discovery-governance/concepts/policy-as-code/policy-groups/) that evaluates every stack against the same packs as your stacks are updated. Audit policy groups never block deployments. Findings appear in [policy findings](/docs/discovery-governance/operations/policy-findings/), where you can assign and resolve them, or hand a group of them to Pulumi Neo to draft a fix.
 
-From there, you can go further at your own pace: move the policies that matter most into a preventative policy group so violations are stopped before they deploy, and use [policy exceptions](/blog/policy-exceptions/) for the resources that have a good reason to break a rule.
+From there, you can go further at your own pace: move the policies that matter most into a preventative policy group so violations are stopped before they deploy, and use [policy exceptions](/blog/policy-exceptions/) to document exceptions when you want to acknowledge and document an exception to a policy rule.
 
 ## Next steps
 
