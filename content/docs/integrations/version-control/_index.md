@@ -34,18 +34,18 @@ sections:
 
     The following table shows which integrations support each capability.
 
-    | Integration | PR comments | Status checks | Push-to-deploy | Path filters | Tag triggers | Review stacks | Repository discovery | Managed webhooks | New Project Wizard | Template sources |
+    | Integration | PR comments | Checks | Push-to-deploy | Path filters | Tag triggers | Review stacks | Repo discovery | Managed webhooks | Project wizard | Templates |
     |---|---|---|---|---|---|---|---|---|---|---|
     | [GitHub](/docs/integrations/version-control/github-app/) | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
     | [GitLab](/docs/integrations/version-control/gitlab/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | Yes |
     | [Bitbucket](/docs/integrations/version-control/bitbucket/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | No |
     | [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | Yes |
-    | [Entire](/docs/integrations/version-control/entire/) | No | Yes | Yes | API only | Yes | Yes, on trails | Yes | Yes | No | No |
+    | [Entire](/docs/integrations/version-control/entire/) | No | Yes | Yes | API only | Yes | Yes | Yes | Yes | No | No |
     | [Cursor Origin](/docs/integrations/version-control/cursor-origin/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | No | No |
     | [Custom VCS](/docs/integrations/version-control/custom-vcs/) | No | No | Yes | Partial | Yes | No | Partial | No | No | No |
 
     - **API only:** the Pulumi Cloud console shows path filters for GitHub stacks only. For other integrations, set them through the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/).
-    - **Entire** reports results as checks and deployments instead of comments. A trail is the Entire equivalent of a pull request.
+    - **Entire** runs previews and review stacks on trails, the Entire equivalent of pull requests. It reports results as checks and deployments instead of comments.
     - **Custom VCS** connects any Git or Mercurial server through webhooks you configure. Path filters apply only when the webhook payload lists the changed files. You register repositories by hand and type the branch name.
 
     Provider pages document the details that differ, such as authentication methods, repository identifier formats, and injected environment variables.
