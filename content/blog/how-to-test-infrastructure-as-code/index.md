@@ -44,7 +44,7 @@ The annual [DORA State of DevOps research](https://cloud.google.com/devops/state
 
 ## What types of IaC tests are there?
 
-IaC testing mirrors the classic software test pyramid: a wide base of fast, cheap unit tests, a smaller layer of integration tests against real infrastructure, and policy checks that enforce rules throughout.
+IaC testing mirrors the classic software test pyramid: a wide base of fast, cheap unit tests, a smaller layer of integration tests against real infrastructure, and policy checks that enforce rules throughout. To compare the tools available for each layer, see [best tools for testing infrastructure as code](/blog/best-infrastructure-as-code-testing-tools-2026/).
 
 | Layer | What it tests | Speed | Cost | Cloud credentials? |
 |-------|--------------|-------|------|-------------------|
