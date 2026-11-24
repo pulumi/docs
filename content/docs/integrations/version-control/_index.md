@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Version Control Integrations"
-meta_desc: Connect Pulumi with GitHub, GitLab, Azure DevOps, Bitbucket, Entire, or any Git or Mercurial server using version control integrations.
+meta_desc: Connect Pulumi with GitHub, GitLab, Azure DevOps, Bitbucket, Entire, Cursor Origin, or any Git or Mercurial server using version control integrations.
 title: Version Control
 linktitle: Version Control
 h1: Version Control
@@ -16,7 +16,7 @@ menu:
 aliases:
 - /docs/version-control/
 description: |
-  Pulumi version control integrations connect Pulumi with your VCS provider, enabling infrastructure previews on pull requests and automated deployment workflows. Use a native integration for GitHub, GitLab, Azure DevOps, Bitbucket, or Entire, or connect any Git or Mercurial server with a Custom VCS integration.
+  Pulumi version control integrations connect Pulumi with your VCS provider, enabling infrastructure previews on pull requests and automated deployment workflows. Use a native integration for GitHub, GitLab, Azure DevOps, Bitbucket, Entire, or Cursor Origin, or connect any Git or Mercurial server with a Custom VCS integration.
 
 sections:
 - type: flat
@@ -34,6 +34,8 @@ sections:
 
     [Entire](/docs/integrations/version-control/entire/) provides push-to-deploy, previews, and review stacks on trails, the Entire equivalent of pull requests. It reports results as checks and deployments instead of comments, and it doesn't support new project creation or templates.
 
+    [Cursor Origin](/docs/integrations/version-control/cursor-origin/) provides pull request previews and comments, checks, push-to-deploy, and review stacks. It doesn't support new project creation or templates, and its path filters are set through the REST API instead of the console.
+
     [Custom VCS](/docs/integrations/version-control/custom-vcs/) is the exception: it connects any Git or Mercurial server via manually configured webhooks and supports push-to-deploy only — no pull request comments, commit statuses, or review stacks.
 
     Provider pages document the details that differ, such as authentication methods, repository identifier formats, and injected environment variables.
@@ -41,7 +43,7 @@ sections:
 - type: flat
   heading: Multiple providers and accounts
   description_md: |
-    You can connect multiple VCS providers to a single Pulumi organization simultaneously, for example GitHub, GitLab, Azure DevOps, Bitbucket, Entire, and Custom VCS all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups.
+    You can connect multiple VCS providers to a single Pulumi organization simultaneously, for example GitHub, GitLab, Azure DevOps, Bitbucket, Entire, Cursor Origin, and Custom VCS all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups.
 
     GitHub Enterprise Server is currently limited to one connection per Pulumi organization.
 
@@ -68,6 +70,10 @@ sections:
     heading: Entire
     description: Connect Entire to Pulumi Cloud for previews and review stacks on trails, push-to-deploy, and checks.
     link: /docs/integrations/version-control/entire/
+  - image: /logos/tech/git.svg
+    heading: Cursor Origin
+    description: Connect Cursor Origin to Pulumi Cloud for pull request previews, push-to-deploy, review stacks, and checks.
+    link: /docs/integrations/version-control/cursor-origin/
   - image: /logos/tech/git.svg
     heading: Custom VCS
     description: Connect any Git or Mercurial VCS server to Pulumi Deployments using webhooks and ESC-managed credentials.
