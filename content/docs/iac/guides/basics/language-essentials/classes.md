@@ -174,13 +174,18 @@ export class StaticWebsite extends pulumi.ComponentResource {
   ) {
     super("example:index:StaticWebsite", name, {}, opts);
 
-    this.bucket = new aws.s3.Bucket(
-      `${name}-bucket`,
-      { website: { indexDocument: args.indexDocument } },
+    this.bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
+
+    const website = new aws.s3.BucketWebsiteConfiguration(
+      `${name}-website`,
+      {
+        bucket: this.bucket.id,
+        indexDocument: { suffix: args.indexDocument },
+      },
       { parent: this },
     );
 
-    this.url = this.bucket.websiteEndpoint;
+    this.url = website.websiteEndpoint;
 
     this.registerOutputs({ url: this.url });
   }
@@ -202,11 +207,17 @@ class StaticWebsite(pulumi.ComponentResource):
 
         self.bucket = aws.s3.Bucket(
             f"{name}-bucket",
-            website=aws.s3.BucketWebsiteArgs(index_document=index_document),
             opts=pulumi.ResourceOptions(parent=self),
         )
 
-        self.url = self.bucket.website_endpoint
+        website = aws.s3.BucketWebsiteConfiguration(
+            f"{name}-website",
+            bucket=self.bucket.id,
+            index_document=aws.s3.BucketWebsiteConfigurationIndexDocumentArgs(suffix=index_document),
+            opts=pulumi.ResourceOptions(parent=self),
+        )
+
+        self.url = website.website_endpoint
 
         self.register_outputs({"url": self.url})
 
@@ -233,16 +244,22 @@ func NewStaticWebsite(ctx *pulumi.Context, name string, args StaticWebsiteArgs, 
 		return nil, err
 	}
 
-	bucket, err := s3.NewBucket(ctx, name+"-bucket", &s3.BucketArgs{
-		Website: &s3.BucketWebsiteArgs{
-			IndexDocument: pulumi.String(args.IndexDocument),
+	bucket, err := s3.NewBucket(ctx, name+"-bucket", nil, pulumi.Parent(component))
+	if err != nil {
+		return nil, err
+	}
+
+	website, err := s3.NewBucketWebsiteConfiguration(ctx, name+"-website", &s3.BucketWebsiteConfigurationArgs{
+		Bucket: bucket.ID(),
+		IndexDocument: &s3.BucketWebsiteConfigurationIndexDocumentArgs{
+			Suffix: pulumi.String(args.IndexDocument),
 		},
 	}, pulumi.Parent(component))
 	if err != nil {
 		return nil, err
 	}
 
-	component.URL = bucket.WebsiteEndpoint
+	component.URL = website.WebsiteEndpoint
 	if err := ctx.RegisterResourceOutputs(component, pulumi.Map{"url": component.URL}); err != nil {
 		return nil, err
 	}
@@ -266,12 +283,15 @@ public class StaticWebsite : ComponentResource
     public StaticWebsite(string name, StaticWebsiteArgs args, ComponentResourceOptions? opts = null)
         : base("example:index:StaticWebsite", name, opts)
     {
-        var bucket = new Bucket($"{name}-bucket", new BucketArgs
+        var bucket = new Bucket($"{name}-bucket", new BucketArgs(), new CustomResourceOptions { Parent = this });
+
+        var website = new BucketWebsiteConfiguration($"{name}-website", new BucketWebsiteConfigurationArgs
         {
-            Website = new BucketWebsiteArgs { IndexDocument = args.IndexDocument },
+            Bucket = bucket.Id,
+            IndexDocument = new BucketWebsiteConfigurationIndexDocumentArgs { Suffix = args.IndexDocument },
         }, new CustomResourceOptions { Parent = this });
 
-        Url = bucket.WebsiteEndpoint;
+        Url = website.WebsiteEndpoint;
 
         RegisterOutputs(new Dictionary<string, object?> { { "url", Url } });
     }
@@ -290,17 +310,21 @@ public class StaticWebsite extends ComponentResource {
     public StaticWebsite(String name, String indexDocument, ComponentResourceOptions options) {
         super("example:index:StaticWebsite", name, options);
 
-        var bucket = new Bucket(name + "-bucket", BucketArgs.builder()
-            .website(BucketWebsiteArgs.builder().indexDocument(indexDocument).build())
+        var bucket = new Bucket(name + "-bucket", BucketArgs.Empty,
+            CustomResourceOptions.builder().parent(this).build());
+
+        var website = new BucketWebsiteConfiguration(name + "-website", BucketWebsiteConfigurationArgs.builder()
+            .bucket(bucket.id())
+            .indexDocument(BucketWebsiteConfigurationIndexDocumentArgs.builder().suffix(indexDocument).build())
             .build(), CustomResourceOptions.builder().parent(this).build());
 
-        this.url = bucket.websiteEndpoint();
+        this.url = website.websiteEndpoint();
 
-        this.registerOutputs(Map.of("url", Output.of(this.url)));
+        this.registerOutputs(Map.of("url", this.url));
     }
 }
 
-var site = new StaticWebsite("docs", "index.html", CustomResourceOptions.Empty);
+var site = new StaticWebsite("docs", "index.html", ComponentResourceOptions.Empty);
 ```
 
 {{% /choosable %}}
