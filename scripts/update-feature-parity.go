@@ -576,7 +576,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 		keysByValue[m[2]] = m[1]
 	}
 
-	// Service-wide helpers such as SkipGitHubAppCheck(ctx) wrap getBool(key, context, default, subject)
+	// Service-wide helpers such as SkipGitHubAppCheck() wrap getBool(key, context, default, subject)
 	helpers := parseLaunchDarklyHelpers(filepath.Join(flagDir, "launch_darkly.go"))
 	if len(flagValues) == 0 || len(helpers) == 0 {
 		// A layout change upstream would otherwise silently drop every direct check
@@ -642,7 +642,7 @@ func addLaunchDarklyOnlyFeatures(servicePath string, features map[string]*Featur
 				rel, _ := filepath.Rel(servicePath, pos.Filename)
 				location := fmt.Sprintf("%s:%d", rel, pos.Line)
 
-				if helper, ok := helpers[sel.Sel.Name]; ok && len(call.Args) == 1 {
+				if helper, ok := helpers[sel.Sel.Name]; ok && len(call.Args) == helper.numArgs {
 					checks[helper.key] = append(checks[helper.key], ldCheck{defaultValue: helper.defaultValue, location: location})
 					return true
 				}
@@ -761,10 +761,11 @@ func ignoreChecks(checks map[string][]ldCheck, config *FeatureConfig) {
 type ldHelper struct {
 	key          string
 	defaultValue string
+	numArgs      int
 }
 
-// parseLaunchDarklyHelpers maps each helper that takes only a context to the flag it reads and its
-// default. The helpers are unexported methods that a generated model client exposes with the first
+// parseLaunchDarklyHelpers maps each helper that takes no arguments, or only a context, to the flag it
+// reads and its default. The helpers are unexported methods that a generated model client exposes with the first
 // letter capitalized (tfModulesRegistryEnabled becomes TfModulesRegistryEnabled), so they're keyed
 // by that exported name.
 func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
@@ -775,11 +776,17 @@ func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
 	}
 	for _, decl := range file.Decls {
 		fn, ok := decl.(*ast.FuncDecl)
-		if !ok || fn.Recv == nil || fn.Body == nil || fn.Type.Params.NumFields() != 1 {
+		if !ok || fn.Recv == nil || fn.Body == nil {
 			continue
 		}
-		if param, ok := fn.Type.Params.List[0].Type.(*ast.SelectorExpr); !ok || param.Sel.Name != "Context" {
+		numArgs := fn.Type.Params.NumFields()
+		if numArgs > 1 {
 			continue
+		}
+		if numArgs == 1 {
+			if param, ok := fn.Type.Params.List[0].Type.(*ast.SelectorExpr); !ok || param.Sel.Name != "Context" {
+				continue
+			}
 		}
 		name := strings.ToUpper(fn.Name.Name[:1]) + fn.Name.Name[1:]
 		ast.Inspect(fn.Body, func(n ast.Node) bool {
@@ -789,7 +796,7 @@ func parseLaunchDarklyHelpers(path string) map[string]ldHelper {
 			}
 			if sel, ok := call.Fun.(*ast.SelectorExpr); ok && strings.HasPrefix(sel.Sel.Name, "get") && len(call.Args) >= 3 {
 				if key, ok := call.Args[0].(*ast.Ident); ok && strings.HasPrefix(key.Name, "LDKey") {
-					helpers[name] = ldHelper{key: key.Name, defaultValue: exprSource(call.Args[2])}
+					helpers[name] = ldHelper{key: key.Name, defaultValue: exprSource(call.Args[2]), numArgs: numArgs}
 				}
 			}
 			return true

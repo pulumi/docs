@@ -48,6 +48,7 @@ jobs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
       auto_merge: ${{ steps.changes.outputs.needs_review == 'false' && github.event.inputs.pulumi_service_branch == '' }}
       changes: ${{ steps.changes.outputs.changes }}
+      error: ${{ steps.generate.outputs.error }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -93,14 +94,25 @@ jobs:
           cache: false
       # Each step is run by name rather than with --all, which skips quietly
       # when there's no pulumi-service clone. --enrich is left out on purpose.
+      # The generator's first Error line goes to Slack. Its errors count files rather than name them,
+      # so this exposes nothing beyond what the public log already shows.
       - name: Regenerate the feature parity page
+        id: generate
         working-directory: docs
         env:
           PULUMI_SERVICE_REPO: ${{ github.workspace }}/pulumi-service
         run: |
-          go run scripts/update-feature-parity.go --generate-raw
-          go run scripts/update-feature-parity.go --update-summary
-          go run scripts/update-feature-parity.go --publish
+          stderr="$RUNNER_TEMP/feature-parity-stderr.txt"
+          for mode in --generate-raw --update-summary --publish; do
+            status=0
+            go run scripts/update-feature-parity.go "$mode" 2> "$stderr" || status=$?
+            cat "$stderr" >&2
+            if [ "$status" -ne 0 ]; then
+              error=$(grep -m1 '^Error' "$stderr" || echo "update-feature-parity.go $mode exited with status $status")
+              echo "error=$error" >> "$GITHUB_OUTPUT"
+              exit "$status"
+            fi
+          done
       - name: List status changes
         id: changes
         working-directory: docs
@@ -175,7 +187,10 @@ jobs:
         env:
           SLACK_CHANNEL: docs-ops
           SLACK_COLOR: "#F54242"
-          SLACK_MESSAGE: "Self-hosted feature parity update failure in pulumi/docs repo :meow_sad:"
+          SLACK_MESSAGE: >-
+            ${{ needs.update-feature-parity.outputs.error != ''
+              && format('Self-hosted feature parity update failed: {0} The generator parses pulumi-service''s production branch, so this usually means its code changed shape; see scripts/self-hosted-feature-parity/README.md. Run: {1}/{2}/actions/runs/{3}', needs.update-feature-parity.outputs.error, github.server_url, github.repository, github.run_id)
+              || format('Self-hosted feature parity update failed in pulumi/docs. Run: {0}/{1}/actions/runs/{2}', github.server_url, github.repository, github.run_id) }}
           SLACK_USERNAME: docsbot
           SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
           SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
