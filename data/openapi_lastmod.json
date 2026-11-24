@@ -84,8 +84,8 @@
       "lastmod": "2026-11-20"
     },
     "Invites": {
-      "hash": "9249557f7703ec26c429fa082e2071471661301ca6366ff683c585b31655b3e7",
-      "lastmod": "2026-08-02"
+      "hash": "7b7e8c708380871bebf963639900d0539de49c29a47980c4f647c7775dc920b2",
+      "lastmod": "2026-11-24"
     },
     "Miscellaneous": {
       "hash": "2632143b75a1d433d99f936fae6057e5e4338dc315dce09f5deb1e5bfbd125a6",
@@ -108,7 +108,8 @@
       "lastmod": "2026-11-13"
     },
     "PolicyExceptions": {
-      "hash": "6f472764eb5117a3ead9729d56ed49b963d61844c318c203efc894813c9f43f8"
+      "hash": "5ce73f348709f8f9dc0b32abe06800605be01711fcc7beb5f45f9d6f1c708e69",
+      "lastmod": "2026-11-24"
     },
     "PolicyFindings": {
       "hash": "45db7a488d9edd980c0113eaadc10d41ed8f361fbcd17cb7ba305eed04e065e9"
@@ -479,8 +480,8 @@
       "hash": "f135958c6085a3c72b0eb19aa06b553355a07bf4b8ee72a0f112ea1fd14e7430"
     },
     "AppAPICapabilityConfig": {
-      "hash": "946ff00d4b745a3e66ab80b7bdcc28302a8eac24dbf945903d7c6211615d9b87",
-      "lastmod": "2026-11-05"
+      "hash": "aee59d0ce7b3fa4c53013ae1e8601186edc59a6f58df0d52046081fb5a90de39",
+      "lastmod": "2026-11-24"
     },
     "AppAppendUpdateLogEntryRequest": {
       "hash": "8b1cc7cac27407ac0be64b7d6b21873cdcdf4c4595875be408ec26daa9098b9d"
@@ -1313,8 +1314,8 @@
       "hash": "1fc6dee57791e853910af9cd562e8551dcf9132ce0dbc257c3e13baa5f3fb0c0"
     },
     "CreateOrganizationInviteRequest": {
-      "hash": "4f69f3cf4f864d91640bad9812da8d0873c0a404cd348068966b315b557135f3",
-      "lastmod": "2026-11-04"
+      "hash": "3f173f358464fb24486886529061b3ba2fbd17a05be515f7bea2d00c4d2d3181",
+      "lastmod": "2026-11-24"
     },
     "CreateOrganizationInviteResponse": {
       "hash": "7772946936c457c72b84a772a6bb9cec3518977cd7d34054e7dd8ac1541b54f9",
@@ -2202,8 +2203,8 @@
       "hash": "1d4e5a2592ef885f960a3e4faffa15b4e10d32b18c4eab595fdfeffeafe2d862"
     },
     "InsightsAccount": {
-      "hash": "2c9506f8ca607fc14290da383a1b74ac0e9edc08e769d51f8ffc95cc59eaa396",
-      "lastmod": "2026-09-15"
+      "hash": "68827d56ff2524739810337ee8b3dce4f44b4e260a16e377e04625c06ea7d068",
+      "lastmod": "2026-11-24"
     },
     "InsightsAccountTag": {
       "hash": "a56fb4443a992aafc77c93eacac718d1379503dd769fbc3f32ada41054e7fabb"
@@ -2412,7 +2413,8 @@
       "lastmod": "2026-09-15"
     },
     "ListOrganizationInvitesResponse": {
-      "hash": "8aa51e34d9cf452f3d82dd6d91fd8262855060dcb2824f1e817ea683a8645208"
+      "hash": "0b492dc827d5949b5cac34a38c98e8945f3a393f31f61ebf5333891a2b835cf9",
+      "lastmod": "2026-11-24"
     },
     "ListOrganizationMembersResponse": {
       "hash": "fee68b2f35d8e95820e3998eeeb528e017fdacb12e6930b1fa7d20e0ee9ee951",
