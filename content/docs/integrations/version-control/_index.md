@@ -20,23 +20,33 @@ description: |
 
 sections:
 - type: flat
-  heading: What every integration provides
+  heading: What the integrations provide
   description_md: |
-    The native integrations — GitHub, GitLab, Bitbucket, and Azure DevOps — all provide the same core set of capabilities. Whichever provider you connect, you get:
+    Native integrations connect to your provider's own events and APIs. Depending on the provider, you get:
 
     - **Pull request previews and comments.** When a pull request is opened or updated, Pulumi runs `pulumi preview` and posts the resource changes back as a comment, so reviewers see the infrastructure impact of a change without leaving the pull request. Comments can include a collapsible property-level diff.
-    - **Commit status checks.** Pull request deployment results are reported back to the provider as commit statuses, each linking to the full deployment in Pulumi Cloud. On GitHub, push-to-deploy runs report a check as well; on the other providers, statuses are posted for pull request deployments only.
-    - **Push-to-deploy.** Pushing to a configured branch runs `pulumi up` automatically. Path filters limit deployments to commits that touch matching files, and [tag triggers](/docs/deployments/concepts/settings/tag-filtering/) let you deploy on release tags instead of every commit.
+    - **Status checks.** Deployment results are reported back to the provider as commit statuses or checks, each linking to the full deployment in Pulumi Cloud.
+    - **Push-to-deploy.** Pushing to a configured branch runs `pulumi up` automatically. [Path filters](/docs/deployments/concepts/settings/path-filtering/) limit deployments to commits that touch matching files, and [tag triggers](/docs/deployments/concepts/settings/tag-filtering/) let you deploy on release tags instead of every commit.
     - **[Review stacks](/docs/deployments/concepts/review-stacks/).** Each pull request gets a real, ephemeral environment, destroyed automatically when the pull request is merged or closed.
     - **Repository and branch discovery.** Pulumi lists your repositories and branches when you configure a stack's deployment settings, instead of making you type identifiers by hand.
-    - **Managed credentials and webhooks.** Pulumi registers the necessary webhooks or service hooks and handles token issuance and rotation for you.
+    - **Managed credentials and webhooks.** Pulumi registers the necessary webhooks, service hooks, or app subscriptions and handles token issuance and rotation for you.
     - **New project creation.** The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) can create a repository or target an existing one, and organization [templates](/docs/idp/concepts/organization-templates/) can be sourced from your repositories.
 
-    [Entire](/docs/integrations/version-control/entire/) provides push-to-deploy, previews, and review stacks on trails, the Entire equivalent of pull requests. It reports results as checks and deployments instead of comments, and it doesn't support new project creation or templates.
+    The following table shows which integrations support each capability.
 
-    [Cursor Origin](/docs/integrations/version-control/cursor-origin/) provides pull request previews and comments, checks, push-to-deploy, and review stacks. It doesn't support new project creation or templates, and its path filters are set through the REST API instead of the console.
+    | Integration | PR comments | Status checks | Push-to-deploy | Path filters | Tag triggers | Review stacks | Repository discovery | Managed webhooks | New Project Wizard | Template sources |
+    |---|---|---|---|---|---|---|---|---|---|---|
+    | [GitHub](/docs/integrations/version-control/github-app/) | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+    | [GitLab](/docs/integrations/version-control/gitlab/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | Yes |
+    | [Bitbucket](/docs/integrations/version-control/bitbucket/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | No |
+    | [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | Yes | Yes |
+    | [Entire](/docs/integrations/version-control/entire/) | No | Yes | Yes | API only | Yes | Yes, on trails | Yes | Yes | No | No |
+    | [Cursor Origin](/docs/integrations/version-control/cursor-origin/) | Yes | Yes | Yes | API only | Yes | Yes | Yes | Yes | No | No |
+    | [Custom VCS](/docs/integrations/version-control/custom-vcs/) | No | No | Yes | Partial | Yes | No | Partial | No | No | No |
 
-    [Custom VCS](/docs/integrations/version-control/custom-vcs/) is the exception: it connects any Git or Mercurial server via manually configured webhooks and supports push-to-deploy only — no pull request comments, commit statuses, or review stacks.
+    - **API only:** the Pulumi Cloud console shows path filters for GitHub stacks only. For other integrations, set them through the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/).
+    - **Entire** reports results as checks and deployments instead of comments. A trail is the Entire equivalent of a pull request.
+    - **Custom VCS** connects any Git or Mercurial server through webhooks you configure. Path filters apply only when the webhook payload lists the changed files. You register repositories by hand and type the branch name.
 
     Provider pages document the details that differ, such as authentication methods, repository identifier formats, and injected environment variables.
 
