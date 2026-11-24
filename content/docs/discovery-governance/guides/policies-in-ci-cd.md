@@ -53,7 +53,7 @@ GitHub Actions downloads policy packs on each workflow run. Cache the `~/.pulumi
 
 ```yaml
 - name: Cache Pulumi policy packs
-  uses: actions/cache@v4
+  uses: actions/cache@v6
   with:
     path: ~/.pulumi/policies
     key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/package.json') }}

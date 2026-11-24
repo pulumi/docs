@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v2
         with:

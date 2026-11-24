@@ -256,14 +256,14 @@ jobs:
       PULUMI_ORG: 'pulumi' # Your Pulumi organization
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Authenticate to Pulumi
         uses: pulumi/auth-actions@v2
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-region: us-west-2
@@ -284,9 +284,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Setup Go ✨
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version: '1.24'
       - name: Downloading dependencies 📦
@@ -336,7 +336,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }} # Checkout the specific tag that triggered the workflow
           fetch-depth: 0 # Ensures the build matches the git tag.
@@ -374,7 +374,7 @@ This workflow will be automatically triggered any time a tag is pushed. The easi
 
 Similarly to the testing workflow, we use a mix of Pulumi-specific GitHub Actions, as well as some off-the-shelf standard actions:
 
-- `actions/checkout@v4` - check out the code into the GitHub runner
+- `actions/checkout@v7` - check out the code into the GitHub runner
 - `pulumi/auth-actions@v2` - authenticate with Pulumi Cloud
 
 However, `pulumi/actions` doesn't support the `publish` subcommand, so we set that step up manually via a `run` step. Use the `PULUMI_ORG` variable to set the `--publisher` and the GitHub Actions-internal `github.repository` variable to get the name of the repository.
@@ -409,7 +409,7 @@ jobs:
     name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2
       env:
