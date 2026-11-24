@@ -633,7 +633,7 @@ PolicyPack(
 {{% /choosable %}}
 {{% choosable language opa %}}
 
-OPA/Rego policies do not support remediation. Setting an OPA policy to `remediate` fails with an `invalid enforcement level` error. Use TypeScript or Python if you need a policy to remediate rather than just validate.
+OPA/Rego policies do not support remediation. Setting an OPA policy to `remediate` fails with an `invalid enforcement level` error. Use TypeScript or Python if you need a policy to remediate rather than only validate.
 
 {{% /choosable %}}
 
