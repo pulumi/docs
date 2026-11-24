@@ -25,7 +25,7 @@ sections:
     Native integrations connect to your provider's own events and APIs. Depending on the provider, you get:
 
     - **Pull request previews and comments.** When a pull request is opened or updated, Pulumi runs `pulumi preview` and posts the resource changes back as a comment, so reviewers see the infrastructure impact of a change without leaving the pull request. Comments can include a collapsible property-level diff.
-    - **Status checks.** Deployment results are reported back to the provider as commit statuses or checks, each linking to the full deployment in Pulumi Cloud.
+    - **Commit status checks.** Pull request deployment results are reported back to the provider as commit statuses or checks, each linking to the full deployment in Pulumi Cloud. On GitHub, Entire, and Cursor Origin, push-to-deploy runs report a check as well. On GitLab, Bitbucket, and Azure DevOps, statuses are posted for pull request deployments only.
     - **Push-to-deploy.** Pushing to a configured branch runs `pulumi up` automatically. [Path filters](/docs/deployments/concepts/settings/path-filtering/) limit deployments to commits that touch matching files, and [tag triggers](/docs/deployments/concepts/settings/tag-filtering/) let you deploy on release tags instead of every commit.
     - **[Review stacks](/docs/deployments/concepts/review-stacks/).** Each pull request gets a real, ephemeral environment, destroyed automatically when the pull request is merged or closed.
     - **Repository and branch discovery.** Pulumi lists your repositories and branches when you configure a stack's deployment settings, instead of making you type identifiers by hand.
