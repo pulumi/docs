@@ -634,9 +634,9 @@ to map a repository (or a directory within a monorepo) to a project and a Git br
 Whether your layers live in one repository or many is itself a tradeoff. A monorepo keeps everything visible and
 requires less cross-team coordination. A multi-repo setup gives each team its own access controls, CI/CD pipeline, and
 release cadence — at the cost of having to agree on naming conventions and discover what other teams have published.
-Sharing data works identically across both: a stack reference or ESC `pulumi-stacks` lookup resolves at deployment time
-by the referenced stack's fully qualified name, `<organization>/<project>/<stack>`, regardless of which repository its
-code lives in.
+Sharing data works identically across both: a stack reference resolves at deployment time by the referenced stack's
+fully qualified name, `<organization>/<project>/<stack>`, and an ESC `pulumi-stacks` lookup by its project-qualified
+name, `<project>/<stack>`, regardless of which repository its code lives in.
 
 A common multi-repo layout puts a platform team's shared infrastructure in one repo and a service team's resources in
 another:

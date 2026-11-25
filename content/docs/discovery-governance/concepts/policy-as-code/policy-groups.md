@@ -26,14 +26,14 @@ Pulumi Policies provides two types of policy groups, each designed for a differe
 
 - <a id="preventative-policy-groups"></a>**Preventative policy groups** apply to Pulumi stacks and run before any resource is deployed. They act as guardrails during `pulumi preview` and `pulumi up`, evaluating the resources your program declares and reporting violations in the same command the developer was already running. Because they run ahead of the deployment, a policy set to `mandatory` enforcement stops a non-compliant change before it reaches your cloud provider. They see only the resources Pulumi manages.
 
-- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/). For stacks, they evaluate the latest state each time the stack updates. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
+- <a id="audit-policy-groups"></a>**Audit policy groups** continuously monitor compliance for both Pulumi stacks and [cloud accounts](/docs/discovery-governance/concepts/discovery/cloud-accounts/). For stacks, they evaluate each stack's last deployed state as soon as the stack and a policy pack are in the group, without a new deployment, and again after each successful update. For cloud accounts, they scan on a schedule and cover every resource in the account, including resources created by hand, by another tool, or by a cloud service itself. Audit groups report violations rather than blocking them, which makes them the safest place to measure a new policy's impact before you enforce it anywhere.
 
 At a glance:
 
 | | Preventative | Audit |
 |:-------------------------|:----------------------------------------|:-------------------------------------------------------------|
 | **Applies to** | Pulumi stacks | Pulumi stacks and cloud accounts |
-| **When it runs** | During `pulumi preview` and `pulumi up` | On stack updates, and on a schedule for cloud accounts |
+| **When it runs** | During `pulumi preview` and `pulumi up` | When a stack joins the group, on stack updates, and on a schedule for cloud accounts |
 | **What it sees** | Resources Pulumi manages | Stack state, plus every resource in a connected cloud account |
 | **Blocks deployments** | Yes, with `mandatory` enforcement | No, findings are reported for you to act on |
 

@@ -48,7 +48,7 @@ Check that the agent is active. For events or schedules, also check that the aut
 Check the task for an error message:
 
 - **Usage limit reached:** Review the [organization usage limit](/docs/ai/concepts/neo/usage-limits/). Ask an administrator to raise it, or wait for the next billing period. Requests billed through your own model provider do not count toward this limit.
-- **Model connection failed:** [Test the model provider](/docs/ai/concepts/neo/model-providers/#test-a-provider) used by this agent and correct its settings.
+- **Model connection failed:** [Test the model provider](/docs/ai/agents/model-providers/#test-a-provider) used by this agent and correct its settings.
 - **Agents disabled:** Ask an administrator to check that **Enable AI features for this organization** and **Enable Pulumi Agents** are both on in [organization AI settings](/docs/ai/concepts/neo/settings/#per-feature-controls).
 
 See [Events and schedules](/docs/ai/agents/triggers/) for setup instructions.

@@ -20,8 +20,6 @@ link_buttons:
     label: Concepts
     link: /docs/delivery/concepts/
 
-# TODO(launch): Get the card icons from marketing. The icons below are placeholders from the
-# existing docs icon set. Swap each one for the icon marketing picks for that concept.
 sections:
 - type: button-cards
   heading: Learn Delivery
@@ -30,7 +28,7 @@ sections:
     heading: Concepts
     description: How pipelines, runs, stages, stacks, jobs, artifacts, sources, and releases fit together.
     link: /docs/delivery/concepts/
-  - icon: arrows-clockwise
+  - icon: git-branch
     heading: Sources and triggers
     description: Decide which repositories make up a release and which changes start a run.
     link: /docs/delivery/concepts/sources-and-triggers/
@@ -38,7 +36,7 @@ sections:
     heading: Stages and gates
     description: Order promotion between environments, hold a release for approval or an AI decision, and publish artifacts for other pipelines.
     link: /docs/delivery/concepts/stages-and-gates/
-  - icon: package
+  - icon: stack
     heading: Stacks and jobs
     description: Update stacks and run commands inside a stage.
     link: /docs/delivery/concepts/stacks-and-jobs/
@@ -54,15 +52,15 @@ sections:
     heading: Cloud credentials
     description: Give each stage the cloud credentials it needs to deploy your stacks.
     link: /docs/delivery/guides/cloud-credentials/
-  - icon: code-window
+  - icon: blueprint
     heading: Pipeline patterns
     description: Per-environment helper functions, smoke tests after each deploy, and container image building.
     link: /docs/delivery/guides/pipeline-patterns/
-  - icon: arrows-clockwise
+  - icon: plugs-connected
     heading: Connecting pipelines
     description: Pass values from an upstream pipeline to a downstream one.
     link: /docs/delivery/guides/multiple-pipelines/
-  - icon: wrench
+  - icon: gauge
     heading: Limits
     description: Size and time limits for pipelines and runs.
     link: /docs/delivery/limits/

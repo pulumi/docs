@@ -363,6 +363,22 @@ body.section-registry {
             }
         }
 
+        body.section-docs & .docs-main-content:not(:has(.docs-home)) {
+            // !important to win over a saved .docs-content-width-expanded state.
+            max-width: 56rem !important;
+        }
+
+        @media (min-width: 1280px) {
+            body.section-docs & {
+                padding-left: 24px;
+
+                .docs-main-content {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+
         .docs-table-of-contents {
             max-width: 700px;
             min-width: 0;

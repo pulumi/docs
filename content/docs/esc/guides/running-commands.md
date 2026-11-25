@@ -152,8 +152,10 @@ pulumi env run my-org/my-project/prod -- ./deploy.sh
 Start a shell session with environment variables loaded:
 
 ```bash
-pulumi env run my-org/my-project/dev -- bash
+pulumi env run -i my-org/my-project/dev -- bash
 ```
+
+By default, `pulumi env run` treats the command as non-interactive and filters its output to mask secret values. Pass `-i` (`--interactive`) to run an interactive program such as a shell, which disables that filtering.
 
 All environment variables from the ESC environment are available in the shell. This is useful for:
 

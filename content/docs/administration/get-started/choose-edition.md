@@ -50,7 +50,7 @@ Pulumi Cloud offers two deployment options, each designed for different organiza
 
 ### SaaS (Recommended for most organizations)
 
-Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade reliability built in. You get high availability, disaster recovery, and geo-replication out of the box, plus security and compliance features detailed in the [Pulumi Cloud Security Whitepaper](/security/pulumi-cloud-security-whitepaper). Sign up at [pulumi.com](/) to get started.
+Choose Pulumi Cloud SaaS if you want the simplest setup with enterprise-grade reliability built in. You get high availability, disaster recovery, and geo-replication out of the box, plus security and compliance features detailed in the [Pulumi Cloud Security Whitepaper](/whitepapers/pulumi-cloud-security/). Sign up at [pulumi.com](/) to get started.
 
 ### Self-hosted (For regulated or air-gapped environments)
 

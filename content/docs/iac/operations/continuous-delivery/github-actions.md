@@ -89,12 +89,12 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
         with:
           node-version-file: infra/package.json
       - name: Authenticate with Pulumi Cloud
-        uses: pulumi/auth-actions@v1
+        uses: pulumi/auth-actions@v2
         with:
           organization: acme
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Load the ESC environment
-        uses: pulumi/esc-action@v3
+        uses: pulumi/esc-action@v4
         with:
           environment: acme/website/ci
       - run: npm install

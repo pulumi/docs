@@ -443,6 +443,26 @@
     },
     {
       "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "A Delivery stage was paused, so it admits no normal run until it is resumed.",
+      "displayName": "Delivery Stage Paused",
+      "event": "delivery-stage-paused",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
+      "category": "delivery-pipelines",
+      "deprecated": false,
+      "description": "A paused Delivery stage was resumed, so it admits runs again.",
+      "displayName": "Delivery Stage Resumed",
+      "event": "delivery-stage-resumed",
+      "requiresOrgAdmin": false,
+      "requiresStackAdmin": false
+    },
+    {
+      "authenticationFailure": false,
       "category": "deployments",
       "deprecated": false,
       "description": "A self-hosted deployment runner pool was registered with the organization.",

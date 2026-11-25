@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.120.0",
+  "assemblyVersion": "3.120.1",
   "description": "The invocation configuration shared by every command: where to run the CLI, what environment to run it with, and where to send its output. Every generated\u2026"
 }
 </script>
@@ -132,6 +132,8 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconfigsetalloptions.html">PulumiConfigSetAllOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconfigsetoptions.html">PulumiConfigSetOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiconvertoptions.html">PulumiConvertOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideliveryoptions.html">PulumiDeliveryOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideliveryregisteroptions.html">PulumiDeliveryRegisterOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentcanceloptions.html">PulumiDeploymentCancelOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentgetoptions.html">PulumiDeploymentGetOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentlistoptions.html">PulumiDeploymentListOptions</a></div>
@@ -142,6 +144,7 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingseditoptions.html">PulumiDeploymentSettingsEditOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingsgetoptions.html">PulumiDeploymentSettingsGetOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumideploymentsettingsoptions.html">PulumiDeploymentSettingsOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumidestroyoptions.html">PulumiDestroyOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumidooptions.html">PulumiDoOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumidoshowresourcesoptions.html">PulumiDoShowResourcesOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvchangerequestapplyoptions.html">PulumiEnvChangeRequestApplyOptions</a></div>
@@ -204,6 +207,17 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookpingoptions.html">PulumiEnvWebhookPingOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumienvwebhookremoveoptions.html">PulumiEnvWebhookRemoveOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiimportoptions.html">PulumiImportOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountlistoptions.html">PulumiInsightsAccountListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountnewoptions.html">PulumiInsightsAccountNewOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountoptions.html">PulumiInsightsAccountOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountscangetoptions.html">PulumiInsightsAccountScanGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountscanlistoptions.html">PulumiInsightsAccountScanListOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountscanlogoptions.html">PulumiInsightsAccountScanLogOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsaccountscanoptions.html">PulumiInsightsAccountScanOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsoptions.html">PulumiInsightsOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsresourcegetoptions.html">PulumiInsightsResourceGetOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsresourceoptions.html">PulumiInsightsResourceOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinsightsresourcesearchoptions.html">PulumiInsightsResourceSearchOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiinstalloptions.html">PulumiInstallOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiloginoptions.html">PulumiLoginOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumilogsdecryptoptions.html">PulumiLogsDecryptOptions</a></div>
@@ -231,6 +245,7 @@ carries both the command's flags and its invocation configuration.</p>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiorgsetdefaultoptions.html">PulumiOrgSetDefaultOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiorgusagegetoptions.html">PulumiOrgUsageGetOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiorgusageoptions.html">PulumiOrgUsageOptions</a></div>
+      <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumipreviewoptions.html">PulumiPreviewOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiprojectlistoptions.html">PulumiProjectListOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumiprojectnewoptions.html">PulumiProjectNewOptions</a></div>
       <div class="level2"><a class="xref" href="pulumi.automation.commands.pulumirefreshoptions.html">PulumiRefreshOptions</a></div>
@@ -400,7 +415,7 @@ current process directory when null.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.120.0</p>
+    <p class="sdk-version">Version 3.120.1</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>

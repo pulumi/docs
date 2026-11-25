@@ -50,7 +50,7 @@ To create a service principal, you need the `service_principal:create` scope, wh
 
 1. Navigate to **Settings** > **Access management** and select the **Service Principals** tab.
 1. Select **Create service principal**.
-1. Enter a name. Names can contain letters, digits, spaces, hyphens, underscores, and periods, are at most 64 characters long, and must be unique in the organization.
+1. Enter a name. Names can contain letters, digits, spaces, hyphens, underscores, and periods, are at most 255 characters long, and must be unique in the organization.
 1. Choose the **Organization-wide role** (or **Organization-wide permissions**) the service principal starts with, or **None** to give it access only through entity access.
 1. Select **Create service principal**.
 

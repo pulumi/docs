@@ -64,4 +64,7 @@ export const marketingWebPaths = [
     // touching the same lines, so neither needs a merge conflict resolved
     // against the other regardless of merge order.
     "/product*",
+    // Hides every S3 object under /whitepapers/, so marketing-web 301s the two retired papers itself.
+    "/whitepapers*",
+    "/state-of-agentic-infrastructure*",
 ];
