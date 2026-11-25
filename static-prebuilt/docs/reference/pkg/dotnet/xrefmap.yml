@@ -45720,6 +45720,22 @@ references:
   isSpec: "True"
   fullName: Pulumi.Deployment.AwaitPendingRegistrations
   nameWithType: Deployment.AwaitPendingRegistrations
+- uid: Pulumi.Deployment.ExistsResource(System.String,Pulumi.Input{System.String},System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: ExistsResource(string, Input<string>, IDictionary<string, object?>?)
+  href: pulumi/pulumi.deployment.html#Pulumi_Deployment_ExistsResource_System_String_Pulumi_Input_System_String__System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Pulumi.Deployment.ExistsResource(System.String,Pulumi.Input{System.String},System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: ExistsResource(String, Input(Of String), IDictionary(Of String, Object))
+  fullName: Pulumi.Deployment.ExistsResource(string, Pulumi.Input<string>, System.Collections.Generic.IDictionary<string, object?>?)
+  fullName.vb: Pulumi.Deployment.ExistsResource(String, Pulumi.Input(Of String), System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: Deployment.ExistsResource(string, Input<string>, IDictionary<string, object?>?)
+  nameWithType.vb: Deployment.ExistsResource(String, Input(Of String), IDictionary(Of String, Object))
+- uid: Pulumi.Deployment.ExistsResource*
+  name: ExistsResource
+  href: pulumi/pulumi.deployment.html#Pulumi_Deployment_ExistsResource_
+  commentId: Overload:Pulumi.Deployment.ExistsResource
+  isSpec: "True"
+  fullName: Pulumi.Deployment.ExistsResource
+  nameWithType: Deployment.ExistsResource
 - uid: Pulumi.Deployment.Instance
   name: Instance
   href: pulumi/pulumi.deployment.html#Pulumi_Deployment_Instance

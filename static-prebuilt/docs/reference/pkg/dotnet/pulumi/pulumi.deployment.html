@@ -50,7 +50,7 @@
     "name": "Pulumi",
     "url": "https://www.pulumi.com/"
   },
-  "assemblyVersion": "3.120.1",
+  "assemblyVersion": "3.121.0",
   "description": "is the entry-point to a Pulumi application. .NET applications should perform all startup logic they need in their Main method and then end with: static\u2026"
 }
 </script>
@@ -213,6 +213,66 @@ passed to <a class="xref" href="pulumi.deployment.html#Pulumi_Deployment_RunAsyn
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Deployment/Deployment_ExistsResource.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Deployment_ExistsResource_" data-uid="Pulumi.Deployment.ExistsResource*"></a>
+  <h4 id="Pulumi_Deployment_ExistsResource_System_String_Pulumi_Input_System_String__System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Pulumi.Deployment.ExistsResource(System.String,Pulumi.Input{System.String},System.Collections.Generic.IDictionary{System.String,System.Object})">ExistsResource(string, Input&lt;string&gt;, IDictionary&lt;string, object?&gt;?)</h4>
+  <div class="markdown level1 summary"><p>Checks with the engine whether a resource with the given type and ID exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static Output&lt;bool&gt; ExistsResource(string type, Input&lt;string&gt; id, IDictionary&lt;string, object?&gt;? state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The resource type token (e.g. <code>&quot;aws:s3/bucket:Bucket&quot;</code>).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.input-1.html">Input</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The provider-assigned ID of the resource to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Optional state sufficient to uniquely identify the resource for providers that need it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.output-1.html">Output</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</td>
+        <td><p>An <a class="xref" href="pulumi.output-1.html">Output&lt;T&gt;</a> that resolves to <code>true</code> when the resource exists, <code>false</code> when it
+does not, and unknown when the engine could not determine existence (e.g. during a preview whose dependencies
+are still pending).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1103,7 +1163,7 @@ must run serially; parallel execution is not supported.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.120.1</p>
+    <p class="sdk-version">Version 3.121.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
