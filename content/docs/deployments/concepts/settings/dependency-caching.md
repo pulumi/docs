@@ -15,7 +15,7 @@ When using Pulumi-managed workflow runners, you can speed up deployments with de
 
 Dependency caching covers more than your language packages. A cache entry bundles three things a deployment would otherwise download every run: your language dependencies (including the Pulumi SDKs, which are cached as ordinary package-manager packages), the Pulumi [resource plugins](/docs/iac/concepts/plugins/) your program uses, and any [policy packs](/docs/discovery-governance/concepts/policy-as-code/policy-packs/). In practice the plugins are usually the largest and slowest to fetch, so caching them is where most of the time savings come from.
 
-When caching is enabled, the runner uses lock files and package-manager cache paths to calculate a cache key. Updates, refreshes, destroys (unless the stack is deleted afterward), and drift remediation can save new entries in blob storage. Later deployments of the same stack can restore those entries instead of downloading the dependencies again. Changed lock files or package-manager cache paths select a different key, which needs its own entry.
+When caching is enabled, the runner uses lock files and package-manager cache paths to calculate a cache key. Updates, refreshes, destroys (unless the stack is deleted afterward), and drift remediation can save new entries in blob storage. Later deployments of the same stack can restore those entries instead of downloading the dependencies again. When a lock file or package-manager cache path changes, the key changes too, so the next deployment misses the cache and saves a new entry.
 
 {{% notes type="info" %}}
 Dependency caching is unavailable on stacks that use a [customer-managed runner pool](/docs/administration/concepts/customer-managed-runners/#not-supported-on-customer-managed-runners), because you already control the lifetime and contents of those runners.
@@ -94,7 +94,7 @@ If a deployment isn't getting faster, the most common cause is a `Skipping cachi
 
 ## Clearing the cache
 
-Changed lock files or package-manager cache paths select a different cache key, so clearing the cache by hand is rarely necessary. If you need to force a cold rebuild, you can:
+Changing a lock file already produces a new cache entry, so clearing the cache by hand is rarely necessary. If you need to force a cold rebuild, you can:
 
 - **Pulumi Cloud**: use the **Clear cache** action on the stack's **Deployments** page.
 - **REST API**: send `DELETE /api/stacks/{organization}/{project}/{stack}/deployments/cache`.
@@ -106,6 +106,6 @@ Both actions clear cache entries for **all stacks in the project**. Each stack m
 - Cache entries are scoped per stack. Stacks do not share entries with each other, even within the same project and with identical lock files, and caches are never shared between organizations.
 - Cache archives are limited to 5 GB compressed. A larger archive is skipped with a warning rather than failing the deployment.
 - **A cache failure never fails a deployment.** Every problem with caching is a warning and a skip, which is why an unexpectedly slow deployment is worth checking against the log lines above.
-- Cache keys are matched exactly, with no partial or fallback key match. Changed lock files or package-manager cache paths select another key. That key produces a miss unless an entry already exists for it.
+- Cache keys must match exactly; there's no fallback to a similar entry. After a lock file changes, the next deployment misses the cache and saves a new entry. If the stack later returns to a lock file it has deployed before, for example by reverting a dependency update, it can restore that earlier entry unless the entry has been evicted or cleared.
 - Caches that go unread for roughly a month are evicted. A cache in regular use stays warm.
 - The **Save cache** step does not run for previews or drift detection, or when a `destroy` operation deletes the stack afterward.
