@@ -1,29 +1,30 @@
 ---
 # This file is auto-generated from github.com/pulumi/pulumi/v3/pkg/cmd/pulumi/markdown
-title: "pulumi env change-request | CLI commands"
+title: "pulumi env approval | CLI commands"
 aliases:
-  - /docs/reference/cli/pulumi_env_change-request/
-meta_desc: "Reference for the pulumi env change-request command: manage change requests. Usage, flags, and examples for the Pulumi CLI."
+  - /docs/reference/cli/pulumi_env_approval/
+meta_desc: "Reference for the pulumi env approval command: manage approval requests. Usage, flags, and examples for the Pulumi CLI."
 ---
 
 
 
-[EXPERIMENTAL] Manage change requests
+[EXPERIMENTAL] Manage approval requests
 
 ## Synopsis
 
-[EXPERIMENTAL] Manage change requests
+[EXPERIMENTAL] Manage approval requests
 
 When an environment is protected by approval rules, changes to it go through a change request
 that must be approved before it is applied. Change requests are created by commands that accept
 --draft, such as `env edit` and `env set`. Use `env open --draft=<id>`
-to open the draft version of an environment.
+to open the draft version of an environment. Requests to open an environment are created by
+`env open-request`.
 
 Subcommands exist for listing, viewing, diffing, approving, applying, closing, commenting on,
 rebasing, and showing the events of change requests.
 
 ```
-pulumi env change-request [flags]
+pulumi env approval [flags]
 ```
 
 ## Examples
@@ -31,16 +32,16 @@ pulumi env change-request [flags]
 ```
   # Propose a change, then review and apply it
   pulumi env set my-project/prod app.replicas 3 --draft
-  pulumi env change-request list --env my-project/prod
-  pulumi env change-request get <change-request-id>
-  pulumi env change-request approve <change-request-id> -m "Looks good"
-  pulumi env change-request apply <change-request-id>
+  pulumi env approval list --env my-project/prod
+  pulumi env approval get <change-request-id>
+  pulumi env approval approve <change-request-id> -m "Looks good"
+  pulumi env approval apply <change-request-id>
 ```
 
 ## Options
 
 ```
-  -h, --help                  help for change-request
+  -h, --help                  help for approval
   -o, --organization string   the organization that owns the change request (defaults to your default organization)
 ```
 
@@ -66,15 +67,15 @@ pulumi env change-request [flags]
 ## SEE ALSO
 
 * [pulumi env](/docs/iac/cli/commands/pulumi_env/)	 - Manage environments
-* [pulumi env change-request apply](/docs/iac/cli/commands/pulumi_env_change-request_apply/)	 - [EXPERIMENTAL] Apply a change request.
-* [pulumi env change-request approve](/docs/iac/cli/commands/pulumi_env_change-request_approve/)	 - [EXPERIMENTAL] Approve a change request.
-* [pulumi env change-request close](/docs/iac/cli/commands/pulumi_env_change-request_close/)	 - [EXPERIMENTAL] Close a change request.
-* [pulumi env change-request comment](/docs/iac/cli/commands/pulumi_env_change-request_comment/)	 - [EXPERIMENTAL] Comment on a change request.
-* [pulumi env change-request diff](/docs/iac/cli/commands/pulumi_env_change-request_diff/)	 - [EXPERIMENTAL] Show the change a change request proposes.
-* [pulumi env change-request get](/docs/iac/cli/commands/pulumi_env_change-request_get/)	 - [EXPERIMENTAL] Show a change request.
-* [pulumi env change-request list](/docs/iac/cli/commands/pulumi_env_change-request_list/)	 - [EXPERIMENTAL] List change requests.
-* [pulumi env change-request log](/docs/iac/cli/commands/pulumi_env_change-request_log/)	 - [EXPERIMENTAL] Show a change request's events.
-* [pulumi env change-request rebase](/docs/iac/cli/commands/pulumi_env_change-request_rebase/)	 - [EXPERIMENTAL] Rebase a draft onto the environment's current revision.
-* [pulumi env change-request unapprove](/docs/iac/cli/commands/pulumi_env_change-request_unapprove/)	 - [EXPERIMENTAL] Remove your approval from a change request.
+* [pulumi env approval apply](/docs/iac/cli/commands/pulumi_env_approval_apply/)	 - [EXPERIMENTAL] Apply a change request.
+* [pulumi env approval approve](/docs/iac/cli/commands/pulumi_env_approval_approve/)	 - [EXPERIMENTAL] Approve a change request.
+* [pulumi env approval close](/docs/iac/cli/commands/pulumi_env_approval_close/)	 - [EXPERIMENTAL] Close a change request.
+* [pulumi env approval comment](/docs/iac/cli/commands/pulumi_env_approval_comment/)	 - [EXPERIMENTAL] Comment on a change request.
+* [pulumi env approval diff](/docs/iac/cli/commands/pulumi_env_approval_diff/)	 - [EXPERIMENTAL] Show the change a change request proposes.
+* [pulumi env approval get](/docs/iac/cli/commands/pulumi_env_approval_get/)	 - [EXPERIMENTAL] Show a change request.
+* [pulumi env approval list](/docs/iac/cli/commands/pulumi_env_approval_list/)	 - [EXPERIMENTAL] List change requests.
+* [pulumi env approval log](/docs/iac/cli/commands/pulumi_env_approval_log/)	 - [EXPERIMENTAL] Show a change request's events.
+* [pulumi env approval rebase](/docs/iac/cli/commands/pulumi_env_approval_rebase/)	 - [EXPERIMENTAL] Rebase a draft onto the environment's current revision.
+* [pulumi env approval unapprove](/docs/iac/cli/commands/pulumi_env_approval_unapprove/)	 - [EXPERIMENTAL] Remove your approval from a change request.
 
-###### Auto generated by spf13/cobra on 18-Nov-2026
+###### Auto generated by spf13/cobra on 25-Nov-2026
