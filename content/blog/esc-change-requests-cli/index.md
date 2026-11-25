@@ -124,4 +124,4 @@ That's it! Alice's change is now live in `prod`.
 
 ## Get started
 
-Change requests are available on the Pulumi Cloud [Pro and Enterprise editions](/pricing/). See the [`pulumi env approval` docs](/docs/iac/cli/commands/pulumi_env_change-request/) to learn more. Give it a try, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/)!
+Change requests are available on the Pulumi Cloud [Pro and Enterprise editions](/pricing/). See the [`pulumi env approval` docs](/docs/iac/cli/commands/pulumi_env_approval/) to learn more. Give it a try, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/)!
