@@ -87,7 +87,8 @@ Each policy also has an **enforcement level**, which is specific to Pulumi as we
 
 #### Local policy execution
 
-The open source Pulumi CLI runs policy packs locally. Pass the `--policy-pack` flag to `pulumi preview` or `pulumi up`:
+The Pulumi CLI and the [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) are open source under the Apache 2.0 license, so running policy packs locally is free.
+The CLI runs policy packs locally. Pass the `--policy-pack` flag to `pulumi preview` or `pulumi up`:
 
 ```bash
 pulumi preview --policy-pack /path/to/policy-pack
@@ -131,5 +132,3 @@ Choose your path based on your needs:
 - **Building custom tooling?** Explore the [API & SDK reference](/docs/discovery-governance/reference/policy-api-sdk/) for the Policy SDK and Pulumi Cloud REST API endpoints.
 - **Looking for tutorials?** Follow the [custom policy pack tutorial](/dev/tutorials/custom-policy-pack/) to create, validate, and publish a policy pack step by step. Or browse more [policy as code tutorials and examples](/dev/tag/policy-as-code/).
 - **Building an internal developer platform?** Explore advanced patterns including [policies as tests](/docs/idp/guides/best-practices/patterns/policies-as-tests/), [validating component inputs using policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions/), and [cost control using components, policies, and constrained inputs](/docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs/).
-
-For common questions and troubleshooting, see the [FAQ](/docs/support/faq/policies/).

@@ -158,5 +158,4 @@ Alongside the SCIM-managed teams, you can also configure and manage Pulumi-local
 ## Learn more
 
 - [SCIM overview](/docs/administration/guides/scim/)
-- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
 - [Getting support](/docs/support/getting-support/)

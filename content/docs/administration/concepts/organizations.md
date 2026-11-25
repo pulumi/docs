@@ -65,7 +65,7 @@ For example, to become a member of a Pulumi organization backed by a GitLab Grou
 you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
-For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/faq/pulumi-cloud/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+To connect an identity to an existing account, see [Adding new identities](/docs/administration/concepts/accounts/#adding-new-identities).
 
 ### Backing membership doesn't grant Pulumi membership {#backing-membership}
 
@@ -228,8 +228,6 @@ To delete an organization:
 1. Navigate to **Settings** > **General** (`https://app.pulumi.com/<org-name>/settings/general`) and select **Delete organization**.
 
 Replace `<org-name>` with your organization's name.
-
-For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 
 ## Organization identity providers
 

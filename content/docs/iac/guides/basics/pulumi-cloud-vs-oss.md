@@ -11,6 +11,9 @@ menu:
 aliases:
   - /docs/deployments/get-started/what-is-it/
   - /docs/pulumi-cloud/get-started/what-is-it/
+  - /docs/support/faq/pulumi-cloud/
+  - /docs/support/pulumi-cloud-faq/
+  - /docs/pulumi-cloud/faq/
 ---
 
 This guide explains how Pulumi Cloud relates to open source Pulumi. It clarifies which capabilities are open source and which require Pulumi Cloud, and it breaks down the differences across each major area of the platform so you can decide which option fits your team.
@@ -58,6 +61,36 @@ Pulumi stores [state](/docs/iac/concepts/state-and-backends/)—the metadata it 
 DIY backends include built-in state locking, checkpoint history, project-scoped stacks, and support for several secrets encryption providers. However, they leave operational concerns to you, including securing access to the storage backend, backup and disaster recovery, monitoring availability, and managing team access.
 
 The Pulumi Cloud backend exposes a transactional REST API rather than a blob storage protocol. This allows it to record state incrementally and recover cleanly from partial failures—such as a network interruption during an update—where a blob storage backend has a coarser-grained protocol. Pulumi Cloud also handles the operational concerns above on your behalf, including retaining the state of recently deleted stacks so that an organization administrator can [restore a stack](/docs/iac/operations/stack-management/restoring-deleted-stacks/) that was removed by mistake. In addition to Pulumi state, Pulumi Cloud can store and manage Terraform state.
+
+### What depends on Pulumi Cloud
+
+When Pulumi Cloud is your backend, the Pulumi CLI uses it during every preview, update, and destroy as the source of truth for your stack's state.
+Pulumi Cloud also makes sure only one update runs on a stack at a time.
+Your deployed infrastructure doesn't depend on Pulumi Cloud: once resources are deployed, they run in your cloud provider without any calls to Pulumi Cloud.
+
+If Pulumi Cloud is unavailable, the infrastructure you've deployed keeps working, and you can still manage it with your cloud provider's console or CLI.
+You can't preview, update, or destroy stacks that Pulumi Cloud manages until it recovers.
+Commands that look up information in Pulumi Cloud, such as [`pulumi logs`](/docs/iac/cli/commands/pulumi_logs/), stop working too, but your cloud provider's own logs remain available.
+
+If your network restricts outbound traffic, allowlist the [Pulumi Cloud network addresses](/docs/administration/reference/network-addresses/).
+
+### Moving between Pulumi Cloud and a DIY backend
+
+You can move a stack from Pulumi Cloud to a DIY backend, or back, with `pulumi stack migrate`.
+It copies the stack's latest state and configuration and re-encrypts secrets for the target backend.
+See [Migrating between state backends](/docs/iac/concepts/state-and-backends/#migrating-between-state-backends).
+
+A stack on a DIY backend keeps working with the open source CLI, but loses everything that only Pulumi Cloud provides:
+
+- [Role-based access control](/docs/administration/concepts/rbac/teams/), SAML/SSO, and [audit logs](/docs/administration/concepts/audit-logs/).
+- [Pulumi ESC](/docs/esc/) environments.
+- Centrally managed policy enforcement and pre-built policy packs.
+- [Pulumi Discovery](/docs/discovery-governance/) and scheduled [drift detection](/docs/deployments/concepts/drift/).
+- [Pulumi Neo](/docs/ai/).
+- [Pulumi Deployments](/docs/deployments/), Review Stacks, and TTL stacks.
+- Organization-wide deployment history, the REST API, and webhooks.
+
+You also take on the operational work described above, such as securing access to the storage and backing it up.
 
 ## Access management
 

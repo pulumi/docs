@@ -115,9 +115,11 @@ The following option is available:
 | - | - |
 | `virtualenv` | Path to a Python virtual environment to use when running the policy pack. Defaults to `venv` for new projects created with `pulumi policy new`. Pulumi automatically creates the virtual environment and installs dependencies from `requirements.txt` into it. |
 
-When `virtualenv` is set, Pulumi manages the virtual environment for you. If you prefer to manage it yourself (for example, with [Pipenv](https://github.com/pypa/pipenv)), remove the `virtualenv` option and use the simple string form.
+When `virtualenv` is set, Pulumi manages the virtual environment for you. To add a dependency, add it to `requirements.txt` and run `venv/bin/pip install -r requirements.txt` (`venv\Scripts\pip install -r requirements.txt` on Windows).
 
-For more details on Python dependency management in policy packs, see the [Policies FAQ](/docs/support/faq/policies/#how-are-dependencies-managed-with-python-policy-packs).
+If you prefer to manage the virtual environment yourself (for example, with [Pipenv](https://github.com/pypa/pipenv)), remove the `virtualenv` option and use the simple string form. When you then [run the pack locally](/docs/discovery-governance/guides/write-a-policy-pack/#running-policies-locally), run `pulumi` commands from a shell with the virtual environment activated, or prefix them with your tool's runner, such as `pipenv run pulumi up`. If the Pulumi program is also written in Python, it can share the policy pack's virtual environment.
+
+Policy packs published to Pulumi Cloud always get a virtual environment with their dependencies installed when they run against a stack.
 
 {{% /choosable %}}
 
