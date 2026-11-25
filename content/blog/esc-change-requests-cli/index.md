@@ -1,8 +1,9 @@
 ---
 title: "Manage Pulumi ESC change requests from the CLI"
 date: 2026-10-26
+updated: 2026-11-19
 draft: false
-meta_desc: "The new `pulumi env change-request` commands let you review, approve, and apply Pulumi ESC change requests from the CLI."
+meta_desc: "The new `pulumi env approval` commands let you review, approve, and apply Pulumi ESC change requests from the CLI."
 authors:
     - sean-yeh
 tags:
@@ -23,7 +24,7 @@ social:
 
 With [ESC Approvals](/docs/esc/concepts/approvals/), changes to a protected environment go through a change request. Teammates can review and approve the change before it's applied.
 
-Today we're introducing the `pulumi env change-request` command to work with change requests from the CLI.
+Today we're introducing the `pulumi env approval` command to work with change requests from the CLI.
 
 Review changes without switching to the Pulumi Cloud console, script your approval workflows, or give your agent the tools it needs to review and work with change requests.
 
@@ -44,7 +45,7 @@ You're the reviewer. Here's how you'd take it from there.
 List the open change requests for an environment:
 
 ```bash
-$ pulumi env change-request list --env my-project/prod
+$ pulumi env approval list --env my-project/prod
 ┌──────────────────────────────────────┬────────┐
 │ ID                                   │ AUTHOR │
 ├──────────────────────────────────────┼────────┤
@@ -58,7 +59,7 @@ $ pulumi env change-request list --env my-project/prod
 See the details of a change request:
 
 ```bash
-$ pulumi env change-request get 3045b80b-9a13-43c3-9f63-59fa1b09e18d
+$ pulumi env approval get 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 ID: 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 Environment: acme/my-project/prod
 Action: update
@@ -78,7 +79,7 @@ URL: https://app.pulumi.com/acme/esc/my-project/prod?version=3045b80b-9a13-43c3-
 See what it changes:
 
 ```bash
-$ pulumi env change-request diff 3045b80b-9a13-43c3-9f63-59fa1b09e18d
+$ pulumi env approval diff 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 --- acme/my-project/prod@2
 +++ draft 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 @@ -1,3 +1,3 @@
@@ -93,7 +94,7 @@ $ pulumi env change-request diff 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 Approve it with a comment. The CLI shows the diff again before you confirm:
 
 ```bash
-$ pulumi env change-request approve 3045b80b-9a13-43c3-9f63-59fa1b09e18d -m "Looks good"
+$ pulumi env approval approve 3045b80b-9a13-43c3-9f63-59fa1b09e18d -m "Looks good"
 Change request 3045b80b-9a13-43c3-9f63-59fa1b09e18d will update environment acme/my-project/prod.
 ...
 
@@ -106,7 +107,7 @@ Approved change request 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 Once the change request has the required approvals, you or Alice can go ahead and apply it:
 
 ```bash
-$ pulumi env change-request apply 3045b80b-9a13-43c3-9f63-59fa1b09e18d
+$ pulumi env approval apply 3045b80b-9a13-43c3-9f63-59fa1b09e18d
 Change request 3045b80b-9a13-43c3-9f63-59fa1b09e18d will update environment acme/my-project/prod.
 ...
 
@@ -119,8 +120,8 @@ That's it! Alice's change is now live in `prod`.
 ## Beyond the basics
 
 - For scripts and agents: pass `--yes` to `approve` and `apply` to skip the confirmation prompt, and `--output json` to get machine-readable output from commands like `list`, `get`, and `apply`.
-- **[Concurrent change requests](/blog/esc-concurrent-change-requests/)**: if another change request is applied before yours, run `pulumi env change-request rebase <id>` to update yours to the latest revision.
+- **[Concurrent change requests](/blog/esc-concurrent-change-requests/)**: if another change request is applied before yours, run `pulumi env approval rebase <id>` to update yours to the latest revision.
 
 ## Get started
 
-Change requests are available on the Pulumi Cloud [Pro and Enterprise editions](/pricing/). See the [`pulumi env change-request` docs](/docs/iac/cli/commands/pulumi_env_change-request/) to learn more. Give it a try, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/)!
+Change requests are available on the Pulumi Cloud [Pro and Enterprise editions](/pricing/). See the [`pulumi env approval` docs](/docs/iac/cli/commands/pulumi_env_approval/) to learn more. Give it a try, and let us know what you think in the [Pulumi Community Slack](https://slack.pulumi.com/)!
