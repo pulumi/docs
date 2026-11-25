@@ -70,7 +70,6 @@ Your deployed infrastructure doesn't depend on Pulumi Cloud: once resources are 
 
 If Pulumi Cloud is unavailable, the infrastructure you've deployed keeps working, and you can still manage it with your cloud provider's console or CLI.
 You can't preview, update, or destroy stacks that Pulumi Cloud manages until it recovers.
-Commands that look up information in Pulumi Cloud, such as [`pulumi logs`](/docs/iac/cli/commands/pulumi_logs/), stop working too, but your cloud provider's own logs remain available.
 
 If your network restricts outbound traffic, allowlist the [Pulumi Cloud network addresses](/docs/administration/reference/network-addresses/).
 
