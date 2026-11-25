@@ -32,6 +32,7 @@ variable "availability_zones" {
 
 resource "aws_subnet" "app" {
   for_each          = toset(var.availability_zones)
+  vpc_id            = aws_vpc.app.id
   availability_zone = each.value
   cidr_block        = "10.0.${index(var.availability_zones, each.value)}.0/24"
 }
@@ -129,7 +130,7 @@ transforming a list into another list rather than iterating for a side
 effect:
 
 ```java
-var upper = zones.stream().map(String::toUpperCase).toList();
+var upper = zones.stream().map(String::toUpperCase).collect(Collectors.toList());
 ```
 
 {{% /choosable %}}
@@ -148,7 +149,9 @@ variable "availability_zones" {
 
 resource "aws_subnet" "app" {
   for_each          = toset(var.availability_zones)
+  vpc_id            = aws_vpc.app.id
   availability_zone = each.value
+  cidr_block        = "10.0.${index(var.availability_zones, each.value)}.0/24"
 }
 ```
 
@@ -170,11 +173,14 @@ instead of overwriting the same one:
 ```typescript
 import * as aws from "@pulumi/aws";
 
+const vpc = new aws.ec2.Vpc("app-vpc", { cidrBlock: "10.0.0.0/16" });
+
 const zones = ["us-east-1a", "us-east-1b", "us-east-1c"];
 
 const subnets = zones.map(
   (zone, index) =>
     new aws.ec2.Subnet(`app-subnet-${zone}`, {
+      vpcId: vpc.id,
       availabilityZone: zone,
       cidrBlock: `10.0.${index}.0/24`,
     }),
@@ -187,11 +193,14 @@ const subnets = zones.map(
 ```python
 import pulumi_aws as aws
 
+vpc = aws.ec2.Vpc("app-vpc", cidr_block="10.0.0.0/16")
+
 zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 subnets = [
     aws.ec2.Subnet(
         f"app-subnet-{zone}",
+        vpc_id=vpc.id,
         availability_zone=zone,
         cidr_block=f"10.0.{index}.0/24",
     )
@@ -214,10 +223,18 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := ec2.NewVpc(ctx, "app-vpc", &ec2.VpcArgs{
+			CidrBlock: pulumi.String("10.0.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+
 		zones := []string{"us-east-1a", "us-east-1b", "us-east-1c"}
 
 		for index, zone := range zones {
 			_, err := ec2.NewSubnet(ctx, fmt.Sprintf("app-subnet-%s", zone), &ec2.SubnetArgs{
+				VpcId:            vpc.ID(),
 				AvailabilityZone: pulumi.String(zone),
 				CidrBlock:        pulumi.String(fmt.Sprintf("10.0.%d.0/24", index)),
 			})
@@ -234,15 +251,19 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Linq;
 using Pulumi;
 using Pulumi.Aws.Ec2;
 
 return await Deployment.RunAsync(() =>
 {
+    var vpc = new Vpc("app-vpc", new VpcArgs { CidrBlock = "10.0.0.0/16" });
+
     var zones = new[] { "us-east-1a", "us-east-1b", "us-east-1c" };
 
     var subnets = zones.Select((zone, index) => new Subnet($"app-subnet-{zone}", new SubnetArgs
     {
+        VpcId = vpc.Id,
         AvailabilityZone = zone,
         CidrBlock = $"10.0.{index}.0/24",
     })).ToList();
@@ -256,15 +277,23 @@ return await Deployment.RunAsync(() =>
 import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Subnet;
 import com.pulumi.aws.ec2.SubnetArgs;
+import com.pulumi.aws.ec2.Vpc;
+import com.pulumi.aws.ec2.VpcArgs;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
+            var vpc = new Vpc("app-vpc", VpcArgs.builder()
+                .cidrBlock("10.0.0.0/16")
+                .build());
+
             var zones = List.of("us-east-1a", "us-east-1b", "us-east-1c");
 
             for (var i = 0; i < zones.size(); i++) {
                 var zone = zones.get(i);
                 var subnet = new Subnet("app-subnet-" + zone, SubnetArgs.builder()
+                    .vpcId(vpc.id())
                     .availabilityZone(zone)
                     .cidrBlock("10.0." + i + ".0/24")
                     .build());
@@ -283,14 +312,20 @@ by hand:
 
 ```yaml
 resources:
+  appVpc:
+    type: aws:ec2:Vpc
+    properties:
+      cidrBlock: 10.0.0.0/16
   appSubnetA:
     type: aws:ec2:Subnet
     properties:
+      vpcId: ${appVpc.id}
       availabilityZone: us-east-1a
       cidrBlock: 10.0.0.0/24
   appSubnetB:
     type: aws:ec2:Subnet
     properties:
+      vpcId: ${appVpc.id}
       availabilityZone: us-east-1b
       cidrBlock: 10.0.1.0/24
 ```
@@ -303,8 +338,13 @@ variable "availability_zones" {
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
+resource "aws_vpc" "app" {
+  cidr_block = "10.0.0.0/16"
+}
+
 resource "aws_subnet" "app" {
   for_each          = toset(var.availability_zones)
+  vpc_id            = aws_vpc.app.id
   availability_zone = each.value
   cidr_block        = "10.0.${index(var.availability_zones, each.value)}.0/24"
 }
