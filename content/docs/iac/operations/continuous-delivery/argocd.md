@@ -260,7 +260,7 @@ When a pull request merges, the operator's branch polling detects the new commit
 
 ### Promote to production with a release branch
 
-Production should not track `main` directly. The operator's `spec.branch` field takes a branch reference, so the Argo CD equivalent of a moving release tag is a long-lived `release` branch that you fast-forward to a vetted commit to promote:
+Production should not track `main` directly. Instead, point `spec.branch` at a long-lived `release` branch that you fast-forward to a vetted commit to promote:
 
 ```yaml
 spec:
@@ -342,7 +342,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - Review the workspace pod logs for the stack.
 - Enable `refresh: true` so the operator reconciles Pulumi state with the real state of your infrastructure before each update.
 
-## Additional resources
+## Learn more
 
 - [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — the operator that reconciles Pulumi stacks from inside your cluster.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to stacks and developers consistently.
