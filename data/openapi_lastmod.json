@@ -46,8 +46,8 @@
       "lastmod": "2026-11-17"
     },
     "AccessTokens": {
-      "hash": "3d248213667328d14fbb682c9625f62c52eb6a309904965cc1ae1ec9f3994404",
-      "lastmod": "2026-10-23"
+      "hash": "42164ae8f650d13b2914abe93aab30d61ddd51160d937dd7ae946d9c59f432e2",
+      "lastmod": "2026-11-25"
     },
     "Agent Integration Catalog": {
       "hash": "86196e68ef8f150cf7a3b1cb55e8fd62400f2ac83e112e477eee6eab72f7b29a"
@@ -104,8 +104,8 @@
       "lastmod": "2026-05-13"
     },
     "Organizations": {
-      "hash": "67f863e0bdc1c6733edd85e9bbb8c6e5b2b9cabeb409f9cdf6a48d06ac6a4ed8",
-      "lastmod": "2026-11-13"
+      "hash": "b972f888032cf99658dd1bf8341d48449d74d4bc44678b7fd4fba055788afe65",
+      "lastmod": "2026-11-25"
     },
     "PolicyExceptions": {
       "hash": "5ce73f348709f8f9dc0b32abe06800605be01711fcc7beb5f45f9d6f1c708e69",
@@ -1345,6 +1345,12 @@
       "hash": "3df8f696b007fe0c2191594598a5e3c32b18e7c30be2b683e7156c66870989d9",
       "lastmod": "2026-09-15"
     },
+    "CreateServicePrincipalRequest": {
+      "hash": "640d0b0ef4d070559ca5f984b0ea4dd5aa9b452d3aaf3aa00ded8ed626a6668e"
+    },
+    "CreateServicePrincipalTokenRequest": {
+      "hash": "5dbd219f6c64fa56e8854884dc4f9bd4e677ce1c213a9b555e2d1372c0983f4d"
+    },
     "CreateServiceRequest": {
       "hash": "c7a93f8da96739c219717c4339e70dcf4f55d6c0cd60961a0bd8eaf0e410fb66",
       "lastmod": "2026-11-10"
@@ -2490,6 +2496,9 @@
     "ListScheduledActionsResponse": {
       "hash": "c3feaeeb5b2208e3e455cb19b89eab25bb2006c90992cc47a58d7ab492d9c737"
     },
+    "ListServicePrincipalRolesResponse": {
+      "hash": "90e6d56931d3886e280e1733b3eda1bdb5ae95329f374c77bd3e61cf4d5cb603"
+    },
     "ListServicesResponse": {
       "hash": "bf9f0bbbb2c5d4aa9964d110c5596ad0576985e90b900ff9cbeb824102b015ec",
       "lastmod": "2026-09-15"
@@ -3525,6 +3534,9 @@
       "hash": "c09a20314c9a974d42a024227fe0b41a2593de56efdc0745503924fe189a3bab",
       "lastmod": "2026-11-07"
     },
+    "UpdateServicePrincipalRolesRequest": {
+      "hash": "74383d00f56dda21ca57ff828114026c87418ec4d2c768beae990400c92fd127"
+    },
     "UpdateStackNotificationSettingsRequest": {
       "hash": "191fdfc2e3a19a8d8bf0768f5db42d37a14f9bc020eea0a8c471f748e30193d2",
       "lastmod": "2026-09-15"
@@ -3576,8 +3588,8 @@
       "lastmod": "2026-09-15"
     },
     "UserInfo": {
-      "hash": "cf05731bf7eba11b64126e1ae1454c58e4036db8572409abd9cdaa746d3506a5",
-      "lastmod": "2026-11-18"
+      "hash": "707123a3206338f45417e6b3bf43dca2079214d4b133375c8124aaea6d8ac9e6",
+      "lastmod": "2026-11-25"
     },
     "UserPermission": {
       "hash": "58b07d4b3fd79a48b83c4bae2cff70f5c22cf5886e49ea2ff8a81ff77a0324bb",
