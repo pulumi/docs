@@ -16,7 +16,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=d772f404"></script>
+        <script src="_static/documentation_options.js?v=2480981e"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
   "url": "https://www.pulumi.com/docs/reference/pkg/python/pulumi/index.html",
   "programmingLanguage": "Python",
   "executableLibraryName": "pulumi",
-  "assemblyVersion": "3.277.0",
+  "assemblyVersion": "3.278.0",
   "about": {
     "@type": "SoftwareSourceCode",
     "name": "pulumi",
@@ -70,7 +70,7 @@
             Pulumi SDK
           </a>
               <div class="version">
-                3.277.0
+                3.278.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search/" method="get">
@@ -475,7 +475,10 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#pulumi.automation.RemoteWorkspaceOptions"><code class="docutils literal notranslate"><span class="pre">RemoteWorkspaceOptions</span></code></a></li>
-<li><a class="reference internal" href="#pulumi.automation.ResOpFailedEvent"><code class="docutils literal notranslate"><span class="pre">ResOpFailedEvent</span></code></a></li>
+<li><a class="reference internal" href="#pulumi.automation.ResOpFailedEvent"><code class="docutils literal notranslate"><span class="pre">ResOpFailedEvent</span></code></a><ul>
+<li><a class="reference internal" href="#pulumi.automation.ResOpFailedEvent.awaited"><code class="docutils literal notranslate"><span class="pre">ResOpFailedEvent.awaited</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#pulumi.automation.ResOutputsEvent"><code class="docutils literal notranslate"><span class="pre">ResOutputsEvent</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.automation.ResourcePreEvent"><code class="docutils literal notranslate"><span class="pre">ResourcePreEvent</span></code></a></li>
 <li><a class="reference internal" href="#pulumi.automation.RuntimeError"><code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></li>
@@ -4326,9 +4329,15 @@ cloud provider. Any such changes are adopted into the current stack.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pulumi.automation.ResOpFailedEvent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.automation.</span></span><span class="sig-name descname"><span class="pre">ResOpFailedEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.automation.StepEventMetadata" title="pulumi.automation.events.StepEventMetadata"><span class="pre">StepEventMetadata</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.ResOpFailedEvent" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.automation.</span></span><span class="sig-name descname"><span class="pre">ResOpFailedEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pulumi.automation.StepEventMetadata" title="pulumi.automation.events.StepEventMetadata"><span class="pre">StepEventMetadata</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">awaited</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.automation.ResOpFailedEvent" title="Link to this definition"></a></dt>
 <dd><p>ResOpFailedEvent is emitted when a resource operation fails. Typically a DiagnosticEvent is
 emitted before this event, indicating the root cause of the error.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.automation.ResOpFailedEvent.awaited">
+<span class="sig-name descname"><span class="pre">awaited</span></span><a class="headerlink" href="#pulumi.automation.ResOpFailedEvent.awaited" title="Link to this definition"></a></dt>
+<dd><p>True if the provider had to await the operation, rather than the operation failing.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
