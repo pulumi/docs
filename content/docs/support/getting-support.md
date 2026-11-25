@@ -29,7 +29,7 @@ Pulumi staff are active in both the community Slack and on GitHub, but response 
 
 In addition to the above, customers on a paid support plan have access to direct support channels with response-time commitments:
 
-- **Private chat channel** — A dedicated chat channel with Pulumi support staff for your organization.
+- **Private chat channel** — A dedicated chat channel with Pulumi support staff for your organization, on Bronze support and above. Standard support doesn't include one. See [support plans](/pricing/#support-plans) to compare.
 
 If you are on a paid plan and aren't sure how to reach your support channel, contact your Pulumi account team.
 

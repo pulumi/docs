@@ -195,21 +195,21 @@ If your organization is on a self-serve edition, your invoices are available to 
 
 - **Essentials** adds organizations with unlimited users, secure collaboration
   and CI/CD, Pulumi Neo, Resource Search and Property Search, webhooks, automatic
-  secrets rotation, audit logs, audit policies, the Pulumi Best Practices policy
-  pack, and policy results in advisory mode.
+  secrets rotation, audit policies, the Pulumi Best Practices policy pack, and
+  policy results in advisory mode.
 
 - **Pro** adds SAML/SSO and advanced role-based access control,
   organization-managed policy enforcement, preventative policies, custom policy
-  packs, scheduled Neo tasks, automated audit log export, drift detection and
-  remediation, time-to-live stacks, and customer-managed keys.
+  packs, scheduled Neo tasks, audit logs, drift detection and remediation,
+  time-to-live stacks, customer-managed keys, and GitHub Enterprise Cloud with
+  data residency support.
 
 - **Enterprise** adds [self-hosting](/docs/administration/self-hosting/),
   conformance packs for CIS, CIS Kubernetes, CMMC, HITRUST, ISO 27001, NIST,
   and PCI DSS,
-  [SCIM](/docs/administration/guides/scim/) user and group sync, unlimited
-  custom policy packs, policy remediation, GitHub Enterprise Server support,
-  GitHub Enterprise Cloud with data residency support, and unlimited custom
-  roles.
+  [SCIM](/docs/administration/guides/scim/) user and group sync, automated
+  audit log export, unlimited custom policy packs, policy remediation, GitHub
+  Enterprise Server support, and unlimited custom roles.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
