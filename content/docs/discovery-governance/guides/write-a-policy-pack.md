@@ -133,8 +133,8 @@ Create your first policy pack:
     >
     > ```yaml
     > runtime:
-    > name: python
-    > options:
+    >   name: python
+    >   options:
     >     virtualenv: .venv
     > ```
 
@@ -581,6 +581,7 @@ new PolicyPack("policy-pack-typescript", {
                 instance.storageEncrypted = true;
                 return instance;
             }
+            return undefined;
         }),
     }],
 });
@@ -632,7 +633,7 @@ PolicyPack(
 {{% /choosable %}}
 {{% choosable language opa %}}
 
-OPA/Rego policies do not support remediation. The OPA analyzer's `Remediate` method always returns an empty response, so an OPA policy pack set to `remediate` reports violations but never fixes them. Use TypeScript or Python if you need a policy to remediate rather than just validate.
+OPA/Rego policies do not support remediation. Setting an OPA policy to `remediate` fails with an `invalid enforcement level` error. Use TypeScript or Python if you need a policy to remediate rather than only validate.
 
 {{% /choosable %}}
 
@@ -642,7 +643,7 @@ A few behaviors are specific to remediation:
 
 - If a resource still triggers a violation after remediation runs, the reported level is downgraded from `remediate` to `mandatory`, and the deployment is blocked rather than silently allowed through with an unresolved problem.
 - When more than one policy pack applies to a resource, their remediations run sequentially in the order the packs were loaded, and each remediation sees the resource state as modified by the ones that ran before it, so a later remediation can build on an earlier one.
-- A policy whose enforcement level is `remediate` but which does not implement a remediation function is reported as not implementing remediation, so a resource going through it is neither fixed nor blocked.
+- A policy whose enforcement level is `remediate` but which does not implement a remediation function is treated as `mandatory`, so its violations block the deployment.
 - The `remediationSteps` metadata field (see [policy fields](/docs/discovery-governance/reference/policy-fields/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
 
 ## Writing policies for dynamic providers
