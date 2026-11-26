@@ -148,7 +148,7 @@ curl -X POST  \
     -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
     -d 'subject_token_type=urn:ietf:params:oauth:token-type:id_token' \
     -d 'requested_token_type=urn:pulumi:token-type:access_token:organization' \
-    -d 'subject_token='...' \
+    -d 'subject_token=<id-token>' \
     https://api.pulumi.com/api/oauth/token
 
 {"access_token":"...","issued_token_type":"urn:pulumi:token-type:access_token:organization","token_type":"token","expires_in":7200,"scope":""}
