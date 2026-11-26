@@ -8,7 +8,7 @@ title: "AWS Lambda SnapStart with Pulumi"
 date: 2022-11-28T14:00:00-08:00
 
 # Reflects a later edit (broken-link fix). Original publish date above is unchanged.
-lastmod: 2026-06-16
+lastmod: 2026-11-26
 
 # Use the meta_desc property to provide a brief summary (one or two sentences)
 # of the content of the post, which is useful for targeting search results or social-media
@@ -242,7 +242,7 @@ $ curl $(pulumi stack output apiUrl)
 [{"id":"24ecd2bc-5106-46f8-95f2-af7de19cba57","breed":"Bloodhound","name":"Cooper","dateOfBirth":1639148877751},{"id":"caf6e8fa-fc97-4b9c-bfe7-996f14dc7995","breed":"Bloodhound","name":"Zoe","dateOfBirth":1438614477751},{"id":"b3d28309-8c92-4ae8-b7bd-7b656a5ea0bf","breed":"Beagle","name":"Murphy","dateOfBirth":1282489677751},{"id":"3c572757-298a-4343-9ca7-5c0865f9fce1","breed":"Beagle","name":"Winston","dateOfBirth":1410188877751},{"id":"4f8ab29a-760d-4b29-801d-6e35a98c538b","breed":"Dalmatian","name":"Max","dateOfBirth":1619968077751},{"id":"31fe978f-5eb6-4116-9933-ba8d9edc89a8","breed":"Dalmatian","name":"Sasha","dateOfBirth":1615475277751},{"id":"772218c3-cc56-44b7-87be-1db1b46730a3","breed":"Afghan Hound","name":"Lucky","dateOfBirth":1579187277751},{"id":"e994816e-8a6a-448a-bc48-ed404b463e46","breed":"Dalmatian","name":"Roxy","dateOfBirth":1408806477752},{"id":"3987cae6-6db2-48f9-96cb-dcb9812b1ab1","breed":"Bernese Mountain Dog","name":"Bailey","dateOfBirth":1329059277752},{"id":"514c8db6-225e-4fab-8c5b-63acdc88da56","breed":"Bloodhound","name":"Maggie","dateOfBirth":1218812877752}]%
 ```
 
-To benchmark performance, use the [Apache ab](https://httpd.apache.org/docs/2.4/programs/ab.html) utility which is installed by default on macOS. The following command will run 1000 GET requests against our function:
+To benchmark performance, use the [Apache ab](https://web.archive.org/web/20261117035025/https://httpd.apache.org/docs/2.4/programs/ab.html) utility which is installed by default on macOS. The following command will run 1000 GET requests against our function:
 
 ```bash
 ab -n 1000 -c 50 $(pulumi stack output apiUrl)
