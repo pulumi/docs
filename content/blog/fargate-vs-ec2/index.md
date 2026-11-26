@@ -1,9 +1,10 @@
 ---
-title: "Fargate vs EC2"
+title: "Fargate vs EC2: How to Choose for ECS and EKS"
 date: 2024-11-18T08:42:34-05:00
-updated: 2025-03-26
+updated: 2026-11-26
 draft: false
-meta_desc: Explore the differences between AWS EKS Fargate and EC2-backed clusters for your Kubernetes EKS workloads.
+meta_desc: Fargate or EC2 for ECS and EKS? Compare cost, GPU and Spot support, startup time, and ops burden, with current pricing and Pulumi code for each.
+faq_schema: true
 authors:
     - adam-gordon-bell
 tags:
@@ -13,11 +14,13 @@ tags:
     - kubernetes
 category: general
 social:
-    twitter: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
-    linkedin: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
+    twitter: "Fargate or EC2 for your ECS and EKS workloads? Fargate wins for spiky, isolated work with no node patching. EC2 wins on steady load, GPUs, DaemonSets, and unit cost. Current pricing, a comparison table, and Pulumi code for both."
+    linkedin: "Fargate or EC2 for your ECS and EKS workloads? Fargate wins for spiky, isolated work with no node patching. EC2 wins on steady load, GPUs, DaemonSets, and unit cost. Current pricing, a comparison table, and Pulumi code for both."
 
 ---
-Building an EKS cluster requires choosing how your containers will actually run - either on EC2 instances you manage or through AWS Fargate's pod-by-pod approach. The differences can be pretty dramatic in practice. I'm setting up a demo cluster right now using Pulumi, so let me show you what I mean.
+Choose AWS Fargate when you want AWS to run the servers: spiky or isolated workloads, small teams, and no node patching. Choose EC2 when you need the lowest cost per container at steady load, GPUs, DaemonSets, or deep Spot discounts. Many teams run both.
+
+The same choice shows up on Amazon ECS and Amazon EKS. Either way you decide how your containers will actually run: on EC2 instances you manage or through Fargate's one-task-at-a-time approach. The differences can be pretty dramatic in practice. I'm setting up a demo EKS cluster right now using Pulumi, so let me show you what I mean. Later sections cover the ECS version of the same decision.
 
 1. [Bin Packing](/blog/fargate-vs-ec2/#bin-packing)
 2. [Pros and Cons](/blog/fargate-vs-ec2/#pros-and-cons)
@@ -25,8 +28,10 @@ Building an EKS cluster requires choosing how your containers will actually run 
 4. [Example: Go Services for E-commerce](/blog/fargate-vs-ec2/#example-go-services-for-e-commerce)
 5. [Fargate vs EC2 Pricing](/blog/fargate-vs-ec2/#fargate-vs-ec2-pricing)
 6. [Misconceptions About Fargate](/blog/fargate-vs-ec2/#misconceptions-about-fargate)
-7. [Managing Container Orchestration with Pulumi](/blog/fargate-vs-ec2/#managing-container-orchestration-with-pulumi)
-8. [Why Not Both](/blog/fargate-vs-ec2/#why-not-both)
+7. [Fargate vs EC2 on Amazon ECS](/blog/fargate-vs-ec2/#fargate-vs-ec2-on-amazon-ecs)
+8. [Managing Container Orchestration with Pulumi](/blog/fargate-vs-ec2/#managing-container-orchestration-with-pulumi)
+9. [Frequently Asked Questions](/blog/fargate-vs-ec2/#frequently-asked-questions)
+10. [Why Not Both](/blog/fargate-vs-ec2/#why-not-both)
 
 Here is my Fargate cluster:
 
@@ -74,7 +79,7 @@ Now, there are only two nodes, with the pods distributed among them. Those are m
 
 ![k9s eks demo](k9s-eks.gif)
 
-So when should you use Fargate, and when EC2 for EKS? Well, it really all relates to what we are seeing here with the number and size of nodes.
+So when should you use Fargate, and when EC2? Well, it really all relates to what we are seeing here with the number and size of nodes.
 
 Let me explain.
 
@@ -123,15 +128,20 @@ Since each pod is treated as a standalone instance, you lose out on the cost eff
 
 Both EC2 and Fargate work with Kubernetes' Horizontal Pod Autoscaling (HPA), which adds or removes pods based on metrics like CPU usage. The difference? With EC2, you need enough nodes available to handle new pods. With Fargate, AWS automatically provisions resources for each new pod - though you'll face that 30-60 second startup delay and potential VPC limits since each pod needs its own network interface.
 
-Feature | Fargate | EC2
---- | --- | ---
-Cost | Higher per pod | Lower cost per pod
-Scalability | Scales on-demand, isolated resources | Requires manual node scaling
-Resource Sharing | Not possible | Efficient resource sharing among pods
-Startup Time | 30-60 seconds | Near instant on existing nodes
-Use Cases | Burst workloads, isolated pods | Cost-sensitive workloads, Resource sharing workloads
+Here is how the two compare. Details are for Linux on-demand capacity and reflect AWS documentation as of November 2026.
 
-Maybe this will make more sense with an example.
+| | Fargate | EC2 |
+|---|---|---|
+| Cost model | Pay per vCPU and GB for each task or pod, billed per second with a one-minute minimum | Pay per instance, whether or not it is full |
+| Ops burden | No nodes to patch, size, or scale | You choose instance types, patch or replace AMIs, and scale node groups |
+| GPU support | None | Yes, on GPU instance types |
+| Spot support | Fargate Spot on ECS only, up to 70% off. Not available on EKS | EC2 Spot on ECS and EKS, up to 90% off |
+| Scaling | Capacity appears per task or pod | Needs spare node capacity or a node autoscaler |
+| Startup time | Typically 30-60 seconds | Near instant on a node with room |
+| Max size | Up to 16 vCPU and 120 GB per task or pod | Whatever the instance type offers |
+| DaemonSets and privileged containers | Not supported on EKS | Supported |
+| Storage | 20 GiB ephemeral by default, EFS supported. EKS pods cannot mount EBS | EBS, instance store, and EFS |
+| Arm (Graviton) | ECS only | ECS and EKS |
 
 ## Workload Example: Static Analysis
 
@@ -170,24 +180,33 @@ So, for lightweight micro-services that can share resources, EC2 nodes with many
 Fargate can excel with long-running event-driven and bursty workloads, where you need compute resources briefly or unpredictably. Think file processing jobs that trigger on uploads, or batch processing that runs sporadically. When jobs are intermittent, Fargate's ability to scale from zero and its isolated resources can outweigh its higher per-pod cost and startup delay. Just ensure your workload can tolerate the 30-60 second cold start.
 
 {{% notes type="info" %}}
-Fargate has some hard limitations that might rule it out for your use case:
+Fargate has some hard limitations that might rule it out for your use case. On EKS:
 
-- No DaemonSets
-- Maximum of 4 vCPU and 30GB memory per pod
-- Storage limitations: Only ephemeral storage up to 20GB per pod, no persistent volumes
-- No GPU support
+- No DaemonSets, privileged containers, HostPort, or HostNetwork
+- Maximum of 16 vCPU and 120 GB memory per pod
+- 20 GiB of ephemeral storage by default, up to 175 GiB. EFS volumes work, EBS volumes do not
+- No GPU, Arm, or Windows support
+- No Fargate Spot
 
 {{% /notes %}}
 
 ## Fargate vs EC2 Pricing
 
-Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. If my t3.medium ($0.0416/hr) can typically run 6-8 pods reliably, and this works out to under $0.01/hr per pod. Comparable Fargate pods (0.5 vCPU/1GB) cost about $0.025/hr each, so 2.5x.
+Ok, EC2 costs less than Fargate on a pure cost-of-compute basis. These numbers use the us-east-1 on-demand rates published by AWS in November 2026 for Linux on x86. Fargate charges $0.04048 per vCPU-hour and $0.004445 per GB-hour. A `t3.medium` (2 vCPU, 4 GiB) costs $0.0416 per hour. The same 2 vCPU and 4 GB on Fargate costs about $0.099 per hour, roughly 2.4 times as much for the same raw capacity.
 
-These calculations can change based on how much headroom you need on EC2 and how many containers you can run on a given EC2 instance. Still, Fargate is just more expensive unless all your containers fit the exact computing sizes offered by Fargate. And don't forget, AWS is likely incurring costs maintaining the warm compute capacity for launching Fargate pods, so it shouldn't be surprising that Fargate is more expensive.
+The gap grows or shrinks with packing. If a `t3.medium` reliably runs 6-8 small pods, that works out to $0.005-0.007 per pod-hour. A comparable Fargate pod (0.5 vCPU, 1 GB) costs about $0.025 per hour on ECS. On EKS, Fargate adds 256 MB to every pod's memory request for the Kubernetes components, so that same pod rounds up to 0.5 vCPU and 2 GB, about $0.029 per hour. That is roughly 3.5 to 5 times the per-pod cost of well-packed EC2 nodes.
 
-But really, pure compute cost calculations are an insufficient metric for making this decision - you need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
+Headroom and packing change this math. If EC2 nodes sit half empty, the gap closes. Fargate is more expensive unless your containers fit the sizes Fargate offers and your load is intermittent, so you stop paying when tasks stop.
 
-( Also, if Fargate makes sense because of your workload but the cost is a concern, then look into Fargate Spot instances, which can be up to 70% cheaper, but be aware that AWS can terminate them at any point to reclaim capacity. )
+There are several ways to lower the bill on either side:
+
+- Compute Savings Plans cover both Fargate and EC2 usage, with savings of up to 50% on Fargate in exchange for a one or three year commitment.
+- Fargate Spot on ECS is up to 70% cheaper for interruption-tolerant tasks, and AWS can reclaim the capacity with a two-minute warning. EKS on Fargate does not support Spot, but EC2 Spot nodes on EKS can reach up to 90% off.
+- Arm-based Graviton capacity is cheaper per vCPU than x86 on Fargate for ECS (about $0.0324 per vCPU-hour), and our post on [reducing cloud costs with ARM](/blog/reduce-cloud-costs-with-ARM/) covers the broader approach. For cost governance more generally, see [FinOps with Pulumi](/blog/finops-with-pulumi/).
+
+But really, pure compute cost calculations are an insufficient metric for making this decision. You need to factor in your team's operational capacity, scaling patterns, and isolation requirements.
+
+There are also options between the two. [EKS Auto Mode](/blog/aws-eks-auto-mode/) runs EC2 nodes that AWS manages for you, and Amazon ECS Managed Instances does something similar for ECS, including GPU instance types. Both keep EC2 pricing and instance flexibility while taking over patching and scaling.
 
 ## Misconceptions About Fargate
 
@@ -199,6 +218,51 @@ But really, pure compute cost calculations are an insufficient metric for making
    While it handles node scaling, you still face ENI limits, longer pod startup times (30-60s), and potential networking bottlenecks.
 - **It's simpler and more reliable**
   It may be, but it may not be. The complexity shifts to networking, pod configuration, and working within Fargate's constraints. You trade node management for new operational challenges like slower startups and possible networking complexity.
+
+## Fargate vs EC2 on Amazon ECS
+
+Everything above applies to ECS too, with a few differences. ECS tasks are the unit of Fargate capacity instead of pods, Fargate Spot is available, and Arm tasks are supported. For a broader comparison of ECS, Fargate, and EKS as platforms, see [ECS vs Fargate vs EKS: The Lowdown on Containers in AWS](/blog/running-containers-in-aws-the-lowdown-ecs-fargate-and-eks/).
+
+Here is a web service on ECS with Fargate, using Pulumi's `awsx` package:
+
+```python
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+cluster = aws.ecs.Cluster("app-cluster")
+
+service = awsx.ecs.FargateService("web",
+    cluster=cluster.arn,
+    desired_count=2,
+    assign_public_ip=True,
+    task_definition_args=awsx.ecs.FargateServiceTaskDefinitionArgs(
+        container=awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+            name="web",
+            image="nginx:latest",
+            cpu=512,
+            memory=1024,
+            essential=True,
+            port_mappings=[awsx.ecs.TaskDefinitionPortMappingArgs(container_port=80)],
+        ),
+    ),
+)
+```
+
+For interruption-tolerant batch work, adding `capacity_provider_strategies=[aws.ecs.ServiceCapacityProviderStrategyArgs(capacity_provider="FARGATE_SPOT", weight=1)]` to the same service moves it onto Fargate Spot.
+
+And here is the EC2-backed version. The cluster needs container instances registered to it, for example from an Auto Scaling group capacity provider, which is the node management Fargate removes:
+
+```python
+service = awsx.ecs.EC2Service("web",
+    cluster=cluster.arn,
+    desired_count=2,
+    task_definition_args=awsx.ecs.EC2ServiceTaskDefinitionArgs(
+        container=awsx.ecs.TaskDefinitionContainerDefinitionArgs(
+            name="web", image="nginx:latest", cpu=256, memory=512, essential=True,
+        ),
+    ),
+)
+```
 
 ## Managing Container Orchestration with Pulumi
 
@@ -215,9 +279,53 @@ Ready to streamline your EKS infrastructure management?
 
 {{< blog/cta-button "Try Pulumi for Free" "/up/" >}}
 
+## Frequently Asked Questions
+
+### Is Fargate cheaper than EC2?
+
+Usually not per unit of compute. At current us-east-1 on-demand rates, 2 vCPU and 4 GB on Fargate costs about 2.4 times a t3.medium with the same capacity. Fargate can still cost less overall for intermittent workloads, because you pay only while tasks run, while idle EC2 nodes keep billing.
+
+### Can Fargate run GPU workloads?
+
+No. Fargate does not offer GPUs, Inferentia, or Windows containers on EKS. For machine learning or video workloads, use EC2 GPU instances, EKS Auto Mode, or Amazon ECS Managed Instances, which supports GPU instance types.
+
+### Does EKS on Fargate support Spot?
+
+No. Fargate Spot is available only for Amazon ECS tasks, where it offers up to 70% off regular Fargate prices. On EKS, run interruption-tolerant pods on EC2 Spot nodes, which can be discounted by up to 90%.
+
+### Can I use Fargate and EC2 in the same cluster?
+
+Yes. On EKS, a Fargate profile selects which namespaces or labeled pods run on Fargate, and everything else lands on your node groups. On ECS, a service can use the Fargate and EC2 capacity providers in the same cluster.
+
+### How fast do Fargate tasks and pods start?
+
+Expect roughly 30 to 60 seconds, since AWS provisions capacity for each task or pod. Pods on an EC2 node with spare room start in a few seconds, limited mostly by image pull time. If your scaling needs fast bursts, keep warm EC2 capacity.
+
+### Do I still manage servers if I run containers on EC2?
+
+You manage nodes: instance types, AMI updates, node group scaling, and bin packing. With immutable, replaceable nodes this is lighter than managing pets, but it is still work that Fargate, EKS Auto Mode, and ECS Managed Instances take off your plate to different degrees.
+
 ## Why Not Both
 
 I hope my examples point to a pragmatic approach: use EC2 as your foundation for efficient microservices that can share resources, like our Go e-commerce setup. Add Fargate when you need isolation or flexible scaling - like for the static analysis workload. Better yet, combine both approaches in the same cluster, for cost-efficiency and isolation where needed.
+
+With `pulumi_eks`, that is one cluster with EC2 nodes as the default and a Fargate profile for the namespace that holds the bursty work:
+
+```python
+eks_cluster = eks.Cluster("eks-cluster",
+    vpc_id=eks_vpc.vpc_id,
+    private_subnet_ids=eks_vpc.private_subnet_ids,
+    instance_type="t3.medium",
+    desired_capacity=2,
+    min_size=1,
+    max_size=4,
+    fargate=eks.FargateProfileArgs(
+        selectors=[aws.eks.FargateProfileSelectorArgs(namespace="batch")],
+    ),
+)
+```
+
+Pods in the `batch` namespace get their own right-sized Fargate capacity, and everything else shares your EC2 nodes.
 
 If you're interested in using Pulumi to manage EKS infra, here's a [practical EKS setup guide](/docs/iac/clouds/aws/guides/eks/) guide to get your started.
 
