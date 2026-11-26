@@ -112,7 +112,7 @@ The Pulumi CLI supports OIDC token exchange natively through `pulumi login`. Thi
 pulumi login --oidc-token <token> --oidc-org <org-name>
 ```
 
-The `--oidc-token` flag accepts either a raw token string or a file path prefixed with `file://`. You can also pass `--oidc-team`, `--oidc-user`, or `--oidc-expiration`. For more details, see the [`pulumi login` documentation](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange).
+The `--oidc-token` flag accepts either a raw token string or a file path prefixed with `file://`. You can also pass `--oidc-team`, `--oidc-user`, or `--oidc-expiration`. For more details, see the [`pulumi login` documentation](/docs/iac/cli/commands/pulumi_login/).
 
 {{% notes type="warning" %}}
 If you see an error like:
