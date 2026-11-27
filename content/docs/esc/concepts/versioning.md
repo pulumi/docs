@@ -70,7 +70,7 @@ environment:
 
 ## View and compare version history
 
-You can see the history of revisions using `pulumi env version history` or in the Pulumi Cloud Console.
+You can see the history of revisions using `pulumi env version history` or in the Pulumi Cloud console.
 
 ```bash
 $ pulumi env version history myorg/test
