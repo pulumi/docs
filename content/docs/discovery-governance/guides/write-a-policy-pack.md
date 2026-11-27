@@ -1408,6 +1408,11 @@ Write policy assertions as complete sentences in imperative tone, specifying whi
 
 This format helps users understand which resource failed and why.
 
+### Secrets
+
+Pulumi decrypts [secrets](/docs/iac/concepts/secrets/) during previews and updates, so any policy that runs against a stack can read secret values in plaintext.
+Treat those values as sensitive, and only run policy packs you trust.
+
 ## Examples and resources
 
 - [Policy examples repository](https://github.com/pulumi/examples/tree/master/policy-packs) - Example policy packs demonstrating various implementation patterns

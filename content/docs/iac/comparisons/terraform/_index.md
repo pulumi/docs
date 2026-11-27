@@ -137,6 +137,13 @@ For a complete walkthrough including bulk conversion and state migration, see [M
 
 ## Frequently asked questions
 
+### Does Pulumi use Terraform?
+
+No. Pulumi has its own deployment engine, which plans and runs every update, and Pulumi manages its own state.
+Some Pulumi providers are bridged: they wrap an existing Terraform provider to reuse its resource schemas and the code that creates, reads, updates, and deletes resources.
+Native providers, such as [Azure Native](/registry/packages/azure-native/) and [Kubernetes](/registry/packages/kubernetes/), are generated from the cloud provider's own API schema and don't use Terraform code at all.
+See [types of providers](/docs/iac/concepts/providers/#types-of-providers) for details.
+
 ### Can Pulumi use existing Terraform providers?
 
 Yes. The [any-Terraform-provider](/docs/iac/concepts/providers/any-terraform-provider/) feature lets Pulumi adapt any provider published in the Terraform Registry into a Pulumi provider, so resources from a Terraform-only ecosystem can be managed from a Pulumi program. Many providers in the [Pulumi Registry](/registry/) are built this way — see [types of providers](/docs/iac/concepts/providers/#types-of-providers) for the differences between bridged, native, parameterized, and dynamic providers.

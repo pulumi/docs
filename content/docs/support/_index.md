@@ -8,11 +8,12 @@ menu:
   support:
     identifier: support-home
     weight: 1
-meta_desc: Get help with Pulumi through FAQs, troubleshooting guides, community resources, and support options.
+meta_desc: Get help with Pulumi through troubleshooting guides, community resources, and support options.
 h1: Support & Troubleshooting
-description: <p>Hitting an error or trying to diagnose a problem with a Pulumi program? Day-to-day troubleshooting, debugging, and logging guides live with the rest of the day-2 workflows under <a href="/docs/iac/operations/">IaC Operations</a>. This page covers FAQs, support channels, and how to file an issue.</p>
+description: <p>Hitting an error or trying to diagnose a problem with a Pulumi program? Day-to-day troubleshooting, debugging, and logging guides live with the rest of the day-2 workflows under <a href="/docs/iac/operations/">IaC Operations</a>. This page covers support channels, support policies, and how to file an issue.</p>
 aliases:
   - /docs/support/
+  - /docs/support/faq/
 
 sections:
 - type: button-cards
@@ -39,17 +40,12 @@ sections:
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
 - type: button-cards
-  heading: FAQs and help
+  heading: Help and policies
   cards:
   - icon: lifebuoy
     heading: Getting Support
     link: /docs/support/getting-support/
     description: Community channels and paid support options — what's available depending on your Pulumi plan.
-
-  - icon: question
-    heading: Frequently Asked Questions
-    link: /docs/support/faq/
-    description: Find answers to common questions about Pulumi infrastructure, secrets, policies, and platform features.
 
   - icon: chat-circle
     heading: Community Slack
@@ -65,4 +61,9 @@ sections:
     heading: Provider support policy
     link: /docs/support/provider-support-policy/
     description: How long Pulumi maintains each provider major version, and which providers get long-term security updates.
+
+  - icon: flask
+    heading: Experimental features
+    link: /docs/support/experimental-features/
+    description: What it means when a Pulumi feature is released as experimental.
 ---

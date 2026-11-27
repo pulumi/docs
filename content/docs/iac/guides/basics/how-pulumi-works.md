@@ -18,9 +18,18 @@ aliases:
     - /docs/intro/concepts/how-pulumi-works/
     - /docs/concepts/how-pulumi-works/
     - /docs/iac/concepts/how-pulumi-works/
+    - /docs/support/faq/infrastructure/
+    - /docs/reference/faq/
+    - /docs/troubleshooting/faq/
+    - /docs/iac/support/faq/
+    - /docs/iac/faq/
 ---
 
 This page describes how Pulumi Infrastructure as Code (IaC) turns a program into deployed cloud resources.
+
+Pulumi is declarative, even though you write programs in general-purpose languages.
+Your program describes the end state you want, and the Pulumi engine works out which operations get your infrastructure there.
+The language is for authoring that description: the engine and resource providers, not your program's control flow, make the calls to your cloud provider's API.
 
 ## Running a Pulumi program
 
@@ -504,6 +513,14 @@ By default, Pulumi creates the replacement before deleting the original to minim
 Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/iac/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/iac/concepts/resources/options/dependson/) resource option.
 
 By default, if a resource must be replaced, Pulumi attempts to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option. If you [configure auto-naming](/docs/iac/concepts/resources/names/#autonaming-configuration) so that names have no random part, Pulumi automatically deletes the old resource first, since the create operation for the new version would otherwise fail with the name in use. Providing a specific name for a resource can cause the same failure. Many providers avoid it by applying `deleteBeforeReplace` automatically, but not all do, so set the option on any resource you name that may need to be replaced.
+
+## When an update fails
+
+Pulumi doesn't roll back automatically.
+If an operation fails during an update, Pulumi finishes the operations already in progress, then stops and reports the error.
+Resources that were created, updated, or deleted before the failure stay that way, and the state records them.
+
+To roll back by hand, revert the code and configuration changes from the failed update and run `pulumi up` again.
 
 ## Architecture
 

@@ -150,7 +150,11 @@ The command migrates the latest [checkpoint](#checkpoints) (the most recent snap
 
 Use `--target <org>/<project>/<stack>` to choose a different target stack name or location.
 
-`pulumi stack migrate` does not migrate stacks between accounts in the same backend. For copying stack state between Pulumi Cloud accounts, including GitLab-backed accounts, see [GitLab support](/docs/support/faq/pulumi-cloud/#gitlab-support).
+`pulumi stack migrate` does not migrate stacks between accounts in the same backend.
+To move stacks between Pulumi Cloud organizations, [transfer them](/docs/administration/concepts/organizations/#transferring-stacks).
+To copy a stack's state to another Pulumi Cloud account, run [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/) on the source stack, create an empty stack in the other account, and run [`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/) on it.
+This copies the state but not the stack's update history, and the import overwrites the target stack's state.
+If the source stack uses service-managed secrets, contact Pulumi Support before copying it, because the target stack might not be able to decrypt the imported secrets.
 
 ## Refreshing state
 

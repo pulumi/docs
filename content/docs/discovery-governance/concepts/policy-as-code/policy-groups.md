@@ -15,6 +15,14 @@ aliases:
   - /docs/using-pulumi/crossguard/core-concepts/
   - /docs/insights/policy/policy-groups/
   - /docs/discovery-governance/policy/policy-groups/
+  - /docs/support/faq/policies/
+  - /docs/insights/policy/policy-as-code/faq/
+  - /docs/insights/policy/faq/
+  - /docs/iac/crossguard/faq/
+  - /docs/guides/crossguard/faq/
+  - /docs/using-pulumi/crossguard/faq/
+  - /docs/iac/packages-and-automation/crossguard/faq/
+  - /docs/iac/using-pulumi/crossguard/faq/
 pulumi_cloud_feature: preventative-policies
 ---
 
@@ -97,6 +105,36 @@ Policies within policy groups can have different enforcement levels:
 
 - **Advisory:** Issues warnings but allows deployments to proceed. Useful for testing new policies or providing informational guidance.
 - **Mandatory:** Blocks deployments when violations are detected. Use for critical security, compliance, or cost policies.
+
+## How policy groups are applied
+
+### Local policy packs
+
+The Pulumi CLI always runs the policy packs that Pulumi Cloud enforces on a stack.
+If you also pass a policy pack with `--policy-pack`, the CLI runs it in addition to the enforced packs.
+A mandatory violation from any of them stops the update.
+
+### Stacks and accounts in more than one group
+
+When a stack or cloud account belongs to several policy groups, Pulumi Cloud combines the policy packs from all of them and runs each pack once per update.
+If the groups require different versions of the same pack, only the newest version runs.
+For example, if `production-stacks` requires version 2 of `aws-policies` and `platform-stacks` requires version 4, a stack in both groups runs only version 4.
+If the groups require the same version with different configuration, the most recently modified configuration applies.
+
+To see which policy groups a stack belongs to and which policy packs a preview or update will run, open the stack's **Settings** tab in Pulumi Cloud.
+
+### Import and refresh
+
+Policy packs don't run during `pulumi stack import`, which changes the state file without changing any resources.
+`pulumi refresh` also changes no resources: it records their current state, including any settings that violate a policy.
+In both cases, the next update brings the resources back in line with your program, and that update succeeds only if the program complies with the required policy packs.
+
+### Existing resources that fall out of compliance
+
+When you add a policy pack that existing resources violate, the effect depends on the group type.
+In a preventative group, the stack's next preview or update fails until you fix the resources, though you can still destroy the stack.
+If a resource can't be fixed right away, a [policy exception](/docs/discovery-governance/concepts/policy-as-code/policy-exceptions/) can exempt it, with a recorded reason, so the stack can be updated again.
+In an audit group, the violations are reported as findings and nothing is blocked.
 
 ## Run audit policy groups on customer-managed runners
 

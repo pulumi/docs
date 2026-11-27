@@ -9,6 +9,8 @@ menu:
         parent: support-home
         weight: 3
         identifier: support-provider-support-policy
+aliases:
+  - /docs/iac/support/version-support/
 ---
 
 Pulumi actively maintains the latest released major version of every provider it publishes.
@@ -70,8 +72,17 @@ At any time, exactly one major version of a covered provider is the LTS version.
 | **Long-term support (N−1)** | Up to 12 months from N's release, or until N+1 ships. | Security updates in the provider's code or its direct dependencies.|
 | **End of life (N−2 and older)** | — | These versions are not supported and will not receive updates.|
 
+## Best practices for maintaining provider versions
+
+Older major versions receive no patches, so plan to keep every provider you use on a supported major.
+You can find the latest version of each Pulumi-maintained provider in the [Pulumi Registry](/registry/).
+
+- **Start planning an upgrade when a new major version ships.** Major versions can include deprecations and breaking changes that need migration steps. Planning early gives you time to assess the impact and test compatibility.
+- **Update to the latest minor version at least quarterly, and read the release notes.** Minor versions add resources, features, and fixes without breaking changes. Regular updates keep the next major upgrade small.
+- **Always take patch updates on your current minor version.** Patch versions contain bug fixes and security updates and are backward compatible. For example, in npm, use a tilde range such as `~1.2.3`.
+- **Don't fall two major versions behind.** Each major version includes migration logic from the previous major only, so skipping a major can require a multi-step upgrade.
+
 ## Learn more
 
-- [Best practices for maintaining provider versions](/docs/support/faq/infrastructure/#what-are-the-best-practices-for-maintaining-provider-versions)
 - [Pulumi Registry](/registry/)
 - [Getting support](/docs/support/getting-support/)

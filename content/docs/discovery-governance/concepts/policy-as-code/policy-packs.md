@@ -45,6 +45,7 @@ A policy can also define a configuration schema, which turns fixed values into p
 ## Versions
 
 Policy packs follow [semantic versioning](https://semver.org/). Publishing a pack with [`pulumi policy publish`](/docs/iac/cli/commands/pulumi_policy_publish/) creates a new version rather than replacing the existing one.
+Each version number can be published only once, so a pack can never reuse a version number.
 
 A policy group references a particular version, so publishing does not change what is enforced until a group is pointed at the new version. If you would rather track releases automatically, enable `latest` instead of a specific version.
 
