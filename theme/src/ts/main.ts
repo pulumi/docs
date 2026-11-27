@@ -23,6 +23,7 @@ import "./packages";
 import "./support-form";
 import "./developer-advocates";
 import "./docs-main";
+import { forwardDocsCampaignTags } from "./campaign-links";
 import "./docs-theme";
 import "./redirects";
 // Algolia is built as a separate entry point (algolia-entry.ts) and loaded
@@ -34,6 +35,8 @@ import "./announcement-banner";
 import "./statuspage";
 import "./intercom-identity";
 import "./consent-media";
+
+forwardDocsCampaignTags(document);
 
 // Register all Stencil components.
 defineCustomElements();
