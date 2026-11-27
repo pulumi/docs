@@ -63,13 +63,16 @@
 #     Supabase, Spacelift, and HCP Terraform free tiers across content/, and the
 #     guide itself exempts "usage tier", "subscription", and "the legacy Pro
 #     plan". ("Business Critical" IS mirrored, in RetiredNames.yml.)
+#   - "step, action (for what runs in a stage)" -> "member", verified
+#     2026-11-23. Both are everyday words (CI steps, GitHub Actions, "take
+#     action") whose Delivery-stage sense no regex can isolate.
 #
 # The console row (Pulumi Console / Pulumi Cloud Console / Pulumi UI) IS
 # mirrored, but in Nomenclature.yml, not RetiredNames.yml. Don't add it to both:
 # both carry `action: replace`, so a duplicate offers two one-click fixes with
 # different replacements on the same span.
 
-last_synced: "2026-10-26"
+last_synced: "2026-11-23"
 
 sections:
   # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/

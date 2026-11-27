@@ -109,3 +109,9 @@ swap:
   # (already flagged by DeprecatedProductNames). Hedged tier: historical posts
   # name the old self-hosted product legitimately.
   '\bself-(?:hosted|managed) Pulumi(?: IaC)?\b(?!\s+(?:Cloud|Deployments|ESC|Services?|backends?|state|Enterprise|installation)\b)': self-hosted Pulumi Cloud
+  # Product name, not the practice: "delivery as code" lowercase is the practice
+  # and is fine, so case-sensitive. Hedged tier because a capitalized "Delivery
+  # as Code" can also be an overcapitalized reference to the practice, where the
+  # right fix is lowercasing rather than the product name. One alternation so
+  # "Pulumi Delivery as Code" is a single finding.
+  '(?-i)\b(?:Pulumi )?Delivery(?: as |-as-)Code\b': Pulumi Delivery
