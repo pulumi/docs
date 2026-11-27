@@ -131,7 +131,7 @@ talks:
   date: 2025-07-22T15:00:00.000-07:00 
 - event: "WAX CONFÉRENCE 2025"
   title: "Internal Developer Platforms : choisir la bonne voie pour votre organisation"
-  url: "https://www.waxconf.fr/schedule/wax-conference-2025"
+  url: "https://web.archive.org/web/20260717022432/https://www.waxconf.fr/schedule/wax-conference-2025"
   date: 2025-06-24T15:00:00.000-07:00 
 - event: "KCD New York 2025"
   title: "Is There AI in the Future of Infrastructure as Code?"
