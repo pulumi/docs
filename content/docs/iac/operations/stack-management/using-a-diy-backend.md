@@ -174,11 +174,15 @@ For additional configuration options, see the [README ↗](https://github.com/pu
 
 Versions of Pulumi before v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default—same as the Pulumi Cloud backend.
 
-DIY backends that still use the global namespace are deprecated, and Pulumi commands fail against them until you run `pulumi state upgrade`, which scopes every stack in the backend by project. The deprecation error blocks that command too, so set `PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=1` when you run it:
+Pulumi v3.275.0 and later don't support DIY backends that still use the global namespace, and fail with `Legacy DIY state is no longer supported`.
+
+To upgrade one of these backends, run `pulumi state upgrade` once with Pulumi v3.274.1, which you can download from [Available versions](/docs/install/versions/). The upgrade moves each stack under its project, so stacks in different projects can share a name. v3.274.1 refuses to run the upgrade unless you set `PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=1`:
 
 ```sh
 $ PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=1 pulumi state upgrade
 ```
+
+After the upgrade, use the current version of Pulumi with the backend.
 
 {{% notes type="info" %}}
 `pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.

@@ -291,35 +291,6 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Using a self-managed (DIY) state backend, such as a local directory or an Amazon S3, Google Cloud Storage, or
-            Azure Blob Storage bucket, in the legacy non-project-scoped stack layout is deprecated and due to be removed in
-            a future release. The CLI now raises an error rather than a warning when it detects this layout. Set this to
-            <code class="text-xs">true</code> to bypass the error and continue using the legacy layout. We recommend running
-            <a href="/docs/iac/cli/commands/pulumi_state_upgrade/"><code class="text-xs">pulumi state upgrade</code></a>
-            to move to project-scoped stacks instead, and consider moving to the
-            <a href="/docs/iac/concepts/state-and-backends/#pulumi-cloud-backend">Pulumi Cloud backend</a> while you are at
-            it, since it manages this state layout, locking, and encryption for you.
-        </p>
-        <pre><code class="text-xs">PULUMI_DIY_BACKEND_IGNORE_DEPRECATION_ERROR=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_DIY_BACKEND_LEGACY_LAYOUT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Uses the legacy layout for new buckets, which currently default to project-scoped stacks.
-        </p>
-        <pre><code class="text-xs">PULUMI_DIY_BACKEND_LEGACY_LAYOUT=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
             PULUMI_DIY_BACKEND_NO_LEGACY_WARNING
         </span>
     </dt>

@@ -48,7 +48,7 @@ The stack name is specified in one of the following formats:
 {{% notes type="info" %}}
 For [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
 
-Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [State and Backends](/docs/iac/concepts/state-and-backends/) for more details.
+Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`), and Pulumi v3.275.0 and later can't use them until they're upgraded. See [Scoping](/docs/iac/operations/stack-management/using-a-diy-backend/#scoping) for how to upgrade them.
 {{% /notes %}}
 
 Given the stack `my-org/my-project/dev`, the following are  all equivalent if the current organization is `my-org` and the current project is `my-project`:
