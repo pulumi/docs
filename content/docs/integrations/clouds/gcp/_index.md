@@ -31,21 +31,16 @@ To start from scratch, follow the [get-started guide](/up/).
 - [Docker](/registry/packages/docker/) — build and push Docker images to Artifact Registry, Container Registry, or other registries.
 - [Kubernetes](/registry/packages/kubernetes/) — deploy application workloads to GKE or any Kubernetes cluster.
 
-## Architecture templates
+## Tutorials, templates, and examples
 
-[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+The [Pulumi Dev Center](/dev/cloud/google-cloud/) collects hands-on Google Cloud content, filterable by language and topic:
 
-Start new Google Cloud projects from a pre-built template:
-
-- [Container service on Google Cloud](/dev/templates/container-service/gcp/) — containerized service on Cloud Run.
-- [Serverless application on Google Cloud](/dev/templates/serverless-application/gcp/) — Cloud Functions with supporting resources.
-- [Static website on Google Cloud](/dev/templates/static-website/gcp/) — Cloud Storage static site.
-- [Virtual machine on Google Cloud](/dev/templates/virtual-machine/gcp/) — Compute Engine VM with configurable networking.
-- [Kubernetes cluster on Google Cloud](/dev/templates/kubernetes/gcp/) — Google Kubernetes Engine (GKE) cluster ready for workloads.
+- [Tutorials](/dev/browse/?type=tutorial&cloud=google-cloud) — step-by-step guides to building on Google Cloud with Pulumi.
+- [Templates](/dev/browse/?type=template&cloud=google-cloud) — ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a project.
+- [Examples](/dev/browse/?type=example&cloud=google-cloud) — complete Pulumi programs you can read, run, and adapt.
+- [Workshops](/dev/browse/?type=workshop&cloud=google-cloud) — instructor-led workshops, live and on demand.
 
 ## Guides
-
-Hands-on infrastructure as code guides for building on Google Cloud with Pulumi.
 
 - [Google Cloud Build CI/CD](/docs/iac/operations/continuous-delivery/google-cloud-build/) — drive Pulumi stack updates from Cloud Build pipelines.
 

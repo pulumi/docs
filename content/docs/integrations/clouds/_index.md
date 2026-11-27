@@ -24,19 +24,19 @@ sections:
   cards:
   - image: /logos/tech/aws.svg
     heading: AWS
-    description: Providers, packages (AWSx, API Gateway, EKS), architecture templates, guides (including the CDK adapter), ESC integrations, Discovery, and policy packs.
+    description: Providers, packages (AWSx, API Gateway, EKS), Dev Center tutorials and templates, guides (including the CDK adapter), ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/aws/
   - image: /logos/tech/azure.svg
     heading: Azure
-    description: Azure Native and Classic providers, architecture templates, guides, ARM template conversion, ESC integrations, Discovery, and policy packs.
+    description: Azure Native and Classic providers, Dev Center tutorials and templates, ARM template conversion, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/azure/
   - image: /logos/tech/gcp.svg
     heading: Google Cloud
-    description: Google Cloud provider, architecture templates, guides, ESC integrations, Discovery, and policy packs.
+    description: Google Cloud provider, Dev Center tutorials and templates, ESC integrations, Discovery, and policy packs.
     link: /docs/integrations/clouds/gcp/
   - image: /logos/tech/kubernetes.svg
     heading: Kubernetes
-    description: Kubernetes provider, Pulumi Kubernetes Operator, cluster management packages, architecture templates, and guides.
+    description: Kubernetes provider, Pulumi Kubernetes Operator, cluster management packages, and Dev Center tutorials and templates.
     link: /docs/integrations/clouds/kubernetes/
 
 - type: flat

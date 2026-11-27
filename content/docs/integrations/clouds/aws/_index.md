@@ -33,31 +33,18 @@ Pulumi provides several packages for working with AWS. Most projects combine mor
 - [Docker](/registry/packages/docker/) — build and push Docker images to Amazon ECR or other registries.
 - [Kubernetes](/registry/packages/kubernetes/) — deploy application workloads to Amazon EKS or any Kubernetes cluster.
 
-## Architecture templates
+## Tutorials, templates, and examples
 
-[Pulumi templates](/dev/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+The [Pulumi Dev Center](/dev/cloud/aws/) collects hands-on AWS content, filterable by language and topic:
 
-Start new AWS projects from a pre-built template:
-
-- [Container service on AWS](/dev/templates/container-service/aws/) — containerized service on Amazon ECS Fargate.
-- [Serverless application on AWS](/dev/templates/serverless-application/aws/) — AWS Lambda behind API Gateway with supporting resources.
-- [Static website on AWS](/dev/templates/static-website/aws/) — S3-hosted static site with CloudFront CDN.
-- [Virtual machine on AWS](/dev/templates/virtual-machine/aws/) — EC2 instance with configurable networking.
-- [Kubernetes cluster on AWS](/dev/templates/kubernetes/aws/) — Amazon EKS cluster ready for workloads.
+- [Tutorials](/dev/browse/?type=tutorial&cloud=aws) — step-by-step guides to building on AWS with Pulumi.
+- [Templates](/dev/browse/?type=template&cloud=aws) — ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a project.
+- [Examples](/dev/browse/?type=example&cloud=aws) — complete Pulumi programs you can read, run, and adapt.
+- [Workshops](/dev/browse/?type=workshop&cloud=aws) — instructor-led workshops, live and on demand.
 
 ## Guides
 
-Hands-on infrastructure as code guides for building on AWS with Pulumi.
-
-- [Pulumi CDK Adapter for AWS](/dev/tutorials/aws-cdk/) — use AWS CDK constructs inside a Pulumi program.
-- [AWS Identity & Access Management (IAM)](/dev/tutorials/aws-iam/) — model IAM roles, policies, and users in code.
-- [AWS Virtual Private Cloud (VPC)](/dev/tutorials/aws-vpc/) — define VPCs, subnets, and routing.
-- [AWS Lambda & serverless events](/dev/tutorials/aws-lambda/) — author Lambda functions and event sources in code.
-- [Amazon ECS](/dev/tutorials/aws-ecs/) — run containers on Elastic Container Service.
-- [Amazon EKS](/dev/tutorials/aws-eks/) — run workloads on Elastic Kubernetes Service.
-- [Amazon ECR](/dev/tutorials/aws-ecr/) — build and publish images to Elastic Container Registry.
-- [Elastic Load Balancing](/dev/tutorials/aws-elb/) — configure application and network load balancers.
-- [AWS API Gateway](/dev/tutorials/aws-api-gateway/) — configure HTTP and REST APIs on API Gateway.
+- [Pulumi CDK Adapter for AWS](/docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/) — use AWS CDK constructs inside a Pulumi program.
 - [AWS CodePipeline & CodeDeploy](/docs/iac/operations/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
 
 ## Secrets & configuration (ESC)
