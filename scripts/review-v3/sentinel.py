@@ -8,7 +8,8 @@ each also published as its own informational status (`Sentinel / <gate>`):
              mechanical PRs, fork PRs, and the PRs the review lane skips
              by policy — see below)
   findings   every 🚨/❓ finding on the author card carries a REVIEW_STATE
-             disposition (or is checked off)
+             disposition (or is checked off), and any the PR's author
+             accepted as-is have an approval submitted after the accept
   staging    a change on `staging_evidence.paths` carries a successful
              staging deploy at the current head. That list is narrow on
              purpose — only what can break `pulumi up`, since a PR's own
@@ -120,6 +121,7 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 
 _HERE = Path(__file__).resolve().parent
@@ -240,6 +242,8 @@ def _waiting_on(g: Gate, n_blocking: int) -> str:
             return "the automated review"
         return f"a current review{cmd}"
     if gate == "findings":
+        if g.short.startswith("Waiting on a reviewer's approval"):
+            return SELF_ACCEPT_WAITING
         n = n_blocking or "open"
         return f"answers to {n} finding{'' if n_blocking == 1 else 's'} (/update-review)"
     if gate == "staging":
@@ -1273,21 +1277,63 @@ def _waive_state(gh: Gh, config: routing.Config, labels: set[str]) -> tuple[bool
 ACK_ASSOCIATIONS = frozenset({"OWNER", "MEMBER", "COLLABORATOR"})
 
 
-def _oversized_ack(config: routing.Config, reviews: list[dict],
-                   head_sha: str, author: str) -> str:
-    """The login whose approval at this head carries `/oversized-ack`, or "".
-    Not the author, not a bot, and an owner, org member or collaborator."""
+def _standing_approvals(config: routing.Config, reviews: list[dict], author: str) -> dict[str, dict]:
+    """Each qualifying reviewer's standing approval, by login: their latest
+    non-comment review is APPROVED, and they are not the author, not a bot,
+    and an owner, org member or collaborator."""
     latest: dict[str, dict] = {}
     for r in reviews:
         user = (r.get("user") or {}).get("login") or ""
         if user and r.get("state") != "COMMENTED":
             latest[user] = r
-    for login, r in latest.items():
-        u = r.get("user") or {}
-        if (r.get("state") == "APPROVED" and r.get("commit_id") == head_sha and login != author
-                and u.get("type") != "Bot" and login not in set(config.bots or [])
-                and (r.get("author_association") or "").upper() in ACK_ASSOCIATIONS
-                and _has_oversized_ack(r.get("body") or "")):
+    bots = set(config.bots or [])
+    return {
+        login: r for login, r in latest.items()
+        if r.get("state") == "APPROVED" and login != author
+        and (r.get("user") or {}).get("type") != "Bot" and login not in bots
+        and (r.get("author_association") or "").upper() in ACK_ASSOCIATIONS
+    }
+
+
+def _oversized_ack(config: routing.Config, reviews: list[dict],
+                   head_sha: str, author: str) -> str:
+    """The login whose approval at this head carries `/oversized-ack`, or "".
+    Not the author, not a bot, and an owner, org member or collaborator."""
+    for login, r in _standing_approvals(config, reviews, author).items():
+        if r.get("commit_id") == head_sha and _has_oversized_ack(r.get("body") or ""):
+            return login
+    return ""
+
+
+def _parse_ts(value) -> datetime | None:
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+
+
+def _self_accepted(state: dict, author: str) -> tuple[list[str], datetime | None]:
+    """The findings the PR's author accepted as-is, and when the last one was.
+    An entry with an unreadable timestamp counts as accepted just now."""
+    ids: list[str] = []
+    last: datetime | None = None
+    for fid, entry in sorted((state.get("findings") or {}).items(),
+                             key=lambda kv: int(kv[0][1:]) if kv[0][1:].isdigit() else 0):
+        if entry.get("disposition") != "accepted" or entry.get("actor") != author:
+            continue
+        ids.append(fid)
+        ts = _parse_ts(entry.get("updated_at")) or datetime.now(timezone.utc)
+        last = ts if last is None or ts > last else last
+    return ids, last
+
+
+def _approved_since(config: routing.Config, reviews: list[dict], author: str,
+                    since: datetime) -> str:
+    """A qualifying reviewer whose standing approval was submitted after
+    `since`, or "". An approval with no readable time doesn't count."""
+    for login, r in _standing_approvals(config, reviews, author).items():
+        at = _parse_ts(r.get("submitted_at"))
+        if at is not None and at > since:
             return login
     return ""
 
@@ -1313,6 +1359,35 @@ def _stamp_report_only(verdict: Verdict) -> Verdict:
     verdict.title = f"Preview — would be: {verdict.conclusion} (not enforced yet)"
     verdict.conclusion = "neutral"
     return verdict
+
+
+# `/update-review accept` lets the author answer their own findings with no
+# model run and no reason. The card moves each one to the reviewer brief's
+# ⚠️ list for the reviewer to weigh, so the gate holds until a reviewer has
+# approved after the last of them: an approval submitted before the accept
+# never saw those rows (pulumi/docs#23048 merged 4 minutes after its author
+# accepted 6 open questions under an approval from before the accept).
+SELF_ACCEPT_WAITING = "a reviewer's approval of the findings the author accepted"
+
+
+def _accepted_findings_gate(config: routing.Config, reviews: list[dict],
+                            author: str, state: dict) -> Gate:
+    ids, last = _self_accepted(state, author)
+    if not ids or last is None:
+        return Gate("findings", "ok", "every finding answered")
+    shown = " ".join(ids[:4]) + (" …" if len(ids) > 4 else "")
+    approver = _approved_since(config, reviews, author, last)
+    if approver:
+        return Gate("findings", "ok",
+                    f"every finding answered; `{approver}` approved after the author accepted {shown}")
+    return Gate(
+        "findings", "red",
+        f"The author accepted {len(ids)} finding(s) as-is ({', '.join(ids)}), so they "
+        "moved to the reviewer brief's ⚠️ list. A reviewer reads them there and "
+        "submits an **Approve** review after the accept; an approval from before "
+        "it doesn't count.",
+        short=f"Waiting on a reviewer's approval after the author accepted {shown}",
+    )
 
 
 def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Verdict:
@@ -1555,7 +1630,7 @@ def evaluate(gh: Gh, config: routing.Config, *, report_only: bool = False) -> Ve
                     f"the review{at} is not current — see the review gate",
                 ))
             else:
-                gates.append(Gate("findings", "ok", "every finding answered"))
+                gates.append(_accepted_findings_gate(config, reviews, author, state))
     elif legacy:
         outstanding = None
         missing = legacy.get("review_pages_missing") or []

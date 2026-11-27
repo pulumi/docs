@@ -21,7 +21,7 @@ Every 🚨 and ❓ item above needs one of these before merge:
 
    Either way your answer counts: the review marks the item resolved, or keeps it with a 🛡️ note for your human reviewer to weigh — it stops blocking merge in both cases.
 
-1. **Accept it as-is** — you own the PR; the reason is optional, and your reviewer sees it beside the finding. This one runs in about a minute, with no re-review:
+1. **Accept it as-is** — you own the PR; the reason is optional, and your reviewer sees it beside the finding. This one runs in about a minute, with no re-review. The item moves to your reviewer's list, so merge then waits for a reviewer to approve after your accept; an approval from before it doesn't count:
 
    ```text
    /update-review accept F2 <your reason>
