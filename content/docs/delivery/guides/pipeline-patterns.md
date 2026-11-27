@@ -19,7 +19,7 @@ This page shows common patterns for building pipelines with Pulumi Delivery. If 
 
 When your environments differ by only a few values, you can write functions in your language of choice to extract common functionality and avoid repetition. In this example, a function defines the `Stacks` and `Job` resources for each stage of the pipeline:
 
-{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -363,6 +363,104 @@ public class App {
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML doesn't support user-defined functions, so declare each stage's resources separately:
+
+```yaml
+name: shop-delivery
+runtime: yaml
+
+resources:
+  repo:
+    type: delivery:GitHubSource
+    properties:
+      repository: acme/shop
+      branch: main
+      trigger:
+        paths:
+          - app/**
+          - delivery/**
+  shop:
+    type: delivery:Pipeline
+
+  dev:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+  devApp:
+    type: delivery:Stacks
+    name: dev
+    properties:
+      stage: ${dev}
+      stacks:
+        app: { stack: shop-app/dev, source: "${repo}", directory: app }
+  devSmoke:
+    type: delivery:Job
+    name: smoke-dev
+    properties:
+      stage: ${dev}
+      source: ${repo}
+      directory: delivery
+      command: sh smoke.sh
+      environment:
+        ENDPOINT: ${devApp.outputs["app"]["endpoint"]}
+        EXPECTED_REGION: eu-central-1
+
+  staging:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+      from:
+        - ${dev}
+  stagingApp:
+    type: delivery:Stacks
+    name: staging
+    properties:
+      stage: ${staging}
+      stacks:
+        app: { stack: shop-app/staging, source: "${repo}", directory: app }
+  stagingSmoke:
+    type: delivery:Job
+    name: smoke-staging
+    properties:
+      stage: ${staging}
+      source: ${repo}
+      directory: delivery
+      command: sh smoke.sh
+      environment:
+        ENDPOINT: ${stagingApp.outputs["app"]["endpoint"]}
+        EXPECTED_REGION: eu-west-1
+
+  prod:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+      from:
+        - ${staging}
+      when:
+        kind: approval
+  prodApp:
+    type: delivery:Stacks
+    name: prod
+    properties:
+      stage: ${prod}
+      stacks:
+        app: { stack: shop-app/prod, source: "${repo}", directory: app }
+  prodSmoke:
+    type: delivery:Job
+    name: smoke-prod
+    properties:
+      stage: ${prod}
+      source: ${repo}
+      directory: delivery
+      command: sh smoke.sh
+      environment:
+        ENDPOINT: ${prodApp.outputs["app"]["endpoint"]}
+        EXPECTED_REGION: us-west-2
+```
+
+{{% /choosable %}}
 {{% choosable language hcl %}}
 
 ```hcl
@@ -459,7 +557,7 @@ In the build stage, use a stack whose Pulumi program uses the Docker Build provi
 
 This program, in the `image` directory, builds the application in `app` and reads the registry and its credentials from stack config:
 
-{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -690,6 +788,50 @@ public class App {
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+<!-- This program is tested verbatim in https://github.com/pulumi/dac-docker-build-playground/tree/main/doc-pipeline-patterns-yaml. Update both together. -->
+
+```yaml
+config:
+  # Registry host, for example "ghcr.io".
+  registry:
+    type: string
+  # Repository in that registry, for example "acme/shop".
+  repository:
+    type: string
+  # Source commit, passed by the pipeline.
+  commit:
+    type: string
+  registryUsername:
+    type: string
+  registryPassword:
+    type: string
+    secret: true
+
+resources:
+  shop:
+    type: docker-build:Image
+    properties:
+      context:
+        location: ../app
+      # For example "ghcr.io/acme/shop:3f2c1a9e4b7d6c5f8a0b2d4e6f8a1c3e5b7d9f0a".
+      tags:
+        - ${registry}/${repository}:${commit}
+      push: true
+      # Credentials for pushing to the registry.
+      registries:
+        - address: ${registry}
+          username: ${registryUsername}
+          password: ${registryPassword}
+
+outputs:
+  # The tag plus the digest, for example
+  # "ghcr.io/acme/shop:3f2c1a9e4b7d6c5f8a0b2d4e6f8a1c3e5b7d9f0a@sha256:4e8d2f0c5b9a…".
+  imageRef: ${shop.ref}
+```
+
+{{% /choosable %}}
 {{% choosable language hcl %}}
 
 <!-- This program is tested verbatim in https://github.com/pulumi/dac-docker-build-playground/tree/main/doc-pipeline-patterns-hcl. Update both together. -->
@@ -758,7 +900,7 @@ This example pushes to GitHub Container Registry. To use another registry, such 
 
 This pipeline builds on the [helper example](#reducing-duplication-with-helper-functions), without the smoke-test job to keep it short. It runs the image stack in a `build` stage and passes `imageRef` to the stacks in every later stage:
 
-{{< chooser language "typescript,python,go,csharp,java,hcl" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -1187,6 +1329,107 @@ public class App {
             .build());
     }
 }
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+name: shop-delivery
+runtime: yaml
+
+resources:
+  repo:
+    type: delivery:GitHubSource
+    properties:
+      repository: acme/shop
+      branch: main
+      trigger:
+        paths:
+          - app/**      # Application source and its Dockerfile.
+          - image/**    # Program that builds and pushes the image.
+          - infra/**    # Program that deploys the image.
+          - delivery/** # This pipeline program.
+  shop:
+    type: delivery:Pipeline
+
+  build:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+  image:
+    type: delivery:Stacks
+    properties:
+      stage: ${build}
+      stacks:
+        image:
+          stack: shop-image/build
+          source: ${repo}
+          directory: image
+          config:
+            commit: ${repo.commit}
+
+  dev:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+      from:
+        - ${build}
+  devApp:
+    type: delivery:Stacks
+    name: dev
+    properties:
+      stage: ${dev}
+      stacks:
+        app:
+          stack: shop-app/dev
+          source: ${repo}
+          directory: infra
+          config:
+            imageRef: ${imageRef}
+
+  staging:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+      from:
+        - ${dev}
+  stagingApp:
+    type: delivery:Stacks
+    name: staging
+    properties:
+      stage: ${staging}
+      stacks:
+        app:
+          stack: shop-app/staging
+          source: ${repo}
+          directory: infra
+          config:
+            imageRef: ${imageRef}
+
+  prod:
+    type: delivery:Stage
+    properties:
+      pipeline: ${shop}
+      from:
+        - ${staging}
+      when:
+        kind: approval
+  prodApp:
+    type: delivery:Stacks
+    name: prod
+    properties:
+      stage: ${prod}
+      stacks:
+        app:
+          stack: shop-app/prod
+          source: ${repo}
+          directory: infra
+          config:
+            imageRef: ${imageRef}
+
+variables:
+  imageRef: ${image.outputs["image"]["imageRef"]}
 ```
 
 {{% /choosable %}}
