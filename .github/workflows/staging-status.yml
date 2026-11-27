@@ -161,6 +161,7 @@ jobs:
           WR_BRANCH: ${{ github.event.workflow_run.head_branch }}
           WR_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           WR_URL: ${{ github.event.workflow_run.html_url }}
+          WR_TITLE: ${{ github.event.workflow_run.display_title }}
         run: |
           # pipefail is NOT GitHub's default (`bash -e`), and the jq reads
           # below are the whole point of the step — a gh failure upstream of
@@ -175,6 +176,7 @@ jobs:
             BRANCH=$(jq -er .head_branch <<<"$RUN_JSON")
             CONCLUSION=$(jq -r '.conclusion // ""' <<<"$RUN_JSON")
             RUN_URL=$(jq -er .html_url <<<"$RUN_JSON")
+            TITLE=$(jq -r '.display_title // ""' <<<"$RUN_JSON")
             TRIGGER=$(jq -er .event <<<"$RUN_JSON")
             STATUS=$(jq -er .status <<<"$RUN_JSON")
             if [ "$TRIGGER" != "workflow_dispatch" ]; then
@@ -195,6 +197,7 @@ jobs:
             BRANCH="$WR_BRANCH"
             CONCLUSION="$WR_CONCLUSION"
             RUN_URL="$WR_URL"
+            TITLE="$WR_TITLE"
           fi
           echo "run $RUN_ID: branch=$BRANCH sha=${SHA:0:9} conclusion=$CONCLUSION"
           {
@@ -204,6 +207,11 @@ jobs:
             echo "conclusion=$CONCLUSION"
             echo "run_url=$RUN_URL"
           } >> "$GITHUB_OUTPUT"
+          # A PR stack run is titled "PR stack www-pr-<n> (<branch>)"; its green
+          # status links that PR's own site. See scripts/pr-stack.sh.
+          if [[ "$TITLE" =~ ^PR\ stack\ www-pr-([0-9]+) ]]; then
+            echo "pr_stack=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
+          fi
 
       # Only the Sentinel poke needs this; the status write does not. An
       # unresolvable PR is a notice, never a failure.
@@ -237,13 +245,19 @@ jobs:
           SHA: ${{ steps.run.outputs.sha }}
           CONCLUSION: ${{ steps.run.outputs.conclusion }}
           RUN_URL: ${{ steps.run.outputs.run_url }}
+          PR_STACK: ${{ steps.run.outputs.pr_stack }}
+          PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}
         run: |
           set -euo pipefail
+          SITE_URL="https://www.pulumi-test.io"
+          if [ -n "${PR_STACK:-}" ] && [ -n "${PR_STACK_DOMAIN_SUFFIX:-}" ]; then
+            SITE_URL="https://pr-${PR_STACK}.${PR_STACK_DOMAIN_SUFFIX}"
+          fi
           # Same three descriptions the in-run job used, so nothing a reader
           # or a script has learned to recognize changes. `error` for
           # cancelled: it is neither a green deploy nor a broken build.
           case "$CONCLUSION" in
-            success)   STATE=success; DESC="staging deploy green";     URL="https://www.pulumi-test.io" ;;
+            success)   STATE=success; DESC="staging deploy green";     URL="$SITE_URL" ;;
             cancelled) STATE=error;   DESC="staging deploy cancelled"; URL="$RUN_URL" ;;
             *)         STATE=failure; DESC="staging deploy failed";    URL="$RUN_URL" ;;
           esac
@@ -307,6 +321,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}
         run: |
           set -euo pipefail
           python3 scripts/review-v3/staging-sweep.py \

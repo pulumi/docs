@@ -1,9 +1,26 @@
 name: Build and deploy testing
+# PR stack runs are titled "PR stack www-pr-<n> (<branch>)". await-in-progress.js keys on
+# that prefix so master deploys of www-testing don't queue behind them, and the staging
+# status links the PR's own site from it. Other runs keep GitHub's default title.
+run-name: ${{ inputs.pr_number && format('PR stack www-pr-{0} ({1})', inputs.pr_number, github.ref_name) || '' }}
 on:
-  workflow_dispatch: null
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        # staging-deploy.sh sets this for an infra PR. Empty redeploys pulumi-test.io from
+        # the dispatched ref, which should be master: www-testing mirrors production.
+        description: "Deploy this PR's own stack (www-pr-<n>, see scripts/pr-stack.sh). Leave empty to redeploy pulumi-test.io."
+        required: false
+        default: ""
+        type: string
   push:
     branches:
       - master
+# One deploy at a time per PR stack; a newer push replaces a queued one. Every other run
+# gets a group of its own, since www-testing is serialized by await-in-progress.js.
+concurrency:
+  group: ${{ inputs.pr_number && format('pr-stack-{0}', inputs.pr_number) || format('testing-deploy-{0}', github.run_id) }}
+  cancel-in-progress: false
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
@@ -71,6 +88,21 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/actions@v7
 
+      - name: Configure the PR stack
+        id: pr-stack
+        if: inputs.pr_number != ''
+        env:
+          PR_NUMBER: ${{ inputs.pr_number }}
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+          PR_STACK_DOMAIN_SUFFIX: ${{ vars.PR_STACK_DOMAIN_SUFFIX }}
+          PR_STACK_CERTIFICATE_ARN: ${{ vars.PR_STACK_CERTIFICATE_ARN }}
+          PR_STACK_HOSTED_ZONE: ${{ vars.PR_STACK_HOSTED_ZONE }}
+        run: |
+          set -euo pipefail
+          pulumi login
+          ./scripts/pr-stack.sh configure "$PR_NUMBER"
+          echo "domain=$(./scripts/pr-stack.sh domain "$PR_NUMBER")" >> "$GITHUB_OUTPUT"
+
       # Restore previously generated OpenGraph cards so the build-time generator
       # only re-renders pages that changed (manifest content-hash skip). The
       # cards are gitignored; this cache is their only persistence across runs.
@@ -120,10 +152,12 @@ jobs:
       - name: Build and deploy
         run: make ci_push
         env:
-          CDN_PULUMI_URN: ${{ vars.CDN_PULUMI_URN }}
+          CDN_PULUMI_URN: ${{ inputs.pr_number && format('urn:pulumi:www-pr-{0}::www.pulumi.com::aws:cloudfront/distribution:Distribution::cdn', inputs.pr_number) || vars.CDN_PULUMI_URN }}
           DEPLOYMENT_ENVIRONMENT: ${{ vars.DEPLOYMENT_ENVIRONMENT }}
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
-          PULUMI_STACK_NAME: ${{ vars.PULUMI_STACK_NAME }}
+          PULUMI_STACK_NAME: ${{ inputs.pr_number && format('pulumi/www-pr-{0}', inputs.pr_number) || vars.PULUMI_STACK_NAME }}
+          PR_STACK_NUMBER: ${{ inputs.pr_number }}
+          PR_STACK_DOMAIN: ${{ steps.pr-stack.outputs.domain }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}

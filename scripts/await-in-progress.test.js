@@ -10,7 +10,7 @@
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
 
-const { dropStaleRuns, maxRunAgeMs } = require("./await-in-progress.js");
+const { dropStaleRuns, isPrStackRun, maxRunAgeMs } = require("./await-in-progress.js");
 
 const NOW = Date.parse("2026-09-21T23:00:00Z");
 const ago = ms => new Date(NOW - ms).toISOString();
@@ -165,4 +165,16 @@ test("announces each distinct wedged run once", () => {
     assert.equal(lines.length, 2, "each run gets its own warning, once");
     assert.match(lines.join("\n"), /23509983446/);
     assert.match(lines.join("\n"), /32907599016/);
+});
+
+// A master deploy of www-testing must not queue behind a PR stack deploy: they lock
+// different stacks. testing-build-and-deploy.yml's run-name is what tells them apart.
+test("recognizes a PR stack run by its run name", () => {
+    assert.equal(isPrStackRun(run({ display_title: "PR stack www-pr-23001 (fix/cdn-headers)" })), true);
+});
+
+test("treats a master or legacy staging run as a www-testing run", () => {
+    assert.equal(isPrStackRun(run({ display_title: "Fix a broken link (#23000)" })), false);
+    assert.equal(isPrStackRun(run({ display_title: "Build and deploy testing" })), false);
+    assert.equal(isPrStackRun(run({})), false, "a run with no title is waited on, the safe direction");
 });

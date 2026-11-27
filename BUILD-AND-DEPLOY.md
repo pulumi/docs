@@ -1074,7 +1074,7 @@ flowchart TD
   WAIT -.->|ready_for_review| T
   T -->|workflow_run| R["`claude-code-review.yml: full review, cards pinned`"]
   A --> I{"`Touches infra paths?`"}
-  I -->|yes| SD["`staging-deploy-auto.yml: deploy head to pulumi-test.io`"]
+  I -->|yes| SD["`staging-deploy-auto.yml: deploy head to its own stack, www-pr-N`"]
   SD --> SS["`staging-status.yml: commit status and Sentinel poke`"]
   R --> S["`review-sentinel.yml: the merge gate`"]
   SS --> S
@@ -1082,7 +1082,7 @@ flowchart TD
   H --> M["`Squash-merge to master`"]
   M --> BD["`build-and-deploy.yml to www.pulumi.com`"]
   M --> TD["`testing-build-and-deploy.yml to www.pulumi-test.io`"]
-  M --> PC["`pr-closed.yml deletes preview buckets`"]
+  M --> PC["`pr-closed.yml destroys the PR stack and deletes preview buckets`"]
   BD -->|workflow_run, success| HC["`post-deployment-health-check.yml`"]
   BD -->|workflow_run, success| SO["`schedule-social.yml`"]
 ```
@@ -1134,9 +1134,15 @@ Key points:
 
 #### testing-build-and-deploy.yml
 
-**Purpose:** Deploy to the testing environment (<www.pulumi-test.io>).
+**Purpose:** Deploy to the testing environment (<www.pulumi-test.io>), and deploy infra PRs to their own stacks.
 
-**Triggers:** Push to `master`; manual `workflow_dispatch`. `staging-deploy-auto.yml` also dispatches it at an infra PR's head branch to produce Sentinel staging evidence. See [Sentinel merge gate](#sentinel-merge-gate-and-staging-evidence).
+**Triggers:** Push to `master`; manual `workflow_dispatch`. `staging-deploy-auto.yml` and `/deploy-staging` also dispatch it at an infra PR's head branch, with the `pr_number` input, to produce Sentinel staging evidence. See [Sentinel merge gate](#sentinel-merge-gate-and-staging-evidence).
+
+**pulumi-test.io takes master only.** A run with `pr_number` set deploys to that PR's own stack, `pulumi/www-pr-<n>`, at `https://pr-<n>.<PR_STACK_DOMAIN_SUFFIX>`, instead of `www-testing`. It runs the same `make ci_push` as master. `scripts/pr-stack.sh configure` builds the stack's config from `www-testing` on every run, overriding the domain, certificate, logs bucket, and the account-level resources (WAF, data warehouse access, fallback bucket) that only the long-lived stacks own. The run is titled `PR stack www-pr-<n> (<branch>)`, which `await-in-progress.js` uses to keep master deploys from queuing behind it, and `staging-status.yml` uses to link the PR's site. Each PR's deploys queue in their own concurrency group. Origin buckets are named `…-pr-<n>-<sha>-…`, so the existing PR bucket cleanup removes them.
+
+A branch cut before PR stacks existed doesn't accept the `pr_number` input. `staging-deploy.sh` falls back to dispatching it without one, which deploys it to pulumi-test.io as before, with a warning to merge master in.
+
+**One-time setup:** the repository variables `PR_STACK_DOMAIN_SUFFIX` (for example `www.pulumi-test.io`) and `PR_STACK_CERTIFICATE_ARN` (a us-east-1 ACM certificate covering `*.<suffix>`), and optionally `PR_STACK_HOSTED_ZONE` (defaults to the suffix). Each open infra PR holds one CloudFront distribution in the testing account, which counts against its quota.
 
 **Environment:** Testing (AWS account `571684982431`). Same pipeline as production, built with `--buildFuture` against the testing stack. Failures go to `#docs-ops-test`.
 
@@ -1224,7 +1230,17 @@ Slack is alerted if a successful PR build runs longer than 15 minutes, and on fa
 
 **Triggers:** Pull request closed (merged or abandoned), same-repo branches only.
 
-Runs `make ci_pull_request_closed`, which deletes every bucket matching `*-pr-{PR_NUMBER}-*` and posts a comment that the previews were removed.
+First destroys the PR's stack, if it had one (`./scripts/pr-stack.sh destroy`). It unprotects the stack's resources and runs `pulumi destroy --continue-on-error`. AWS won't delete a Lambda@Edge function until its replicas clear, which can take hours, so a destroy can leave a few resources behind; the stack then stays until `pr-stack-sweep.yml` empties and removes it. A failure in this step never blocks the next one.
+
+Then runs `make ci_pull_request_closed`, which deletes every bucket matching `*-pr-{PR_NUMBER}-*` and posts a comment that the previews were removed.
+
+#### pr-stack-sweep.yml
+
+**Purpose:** Remove the stacks of closed PRs.
+
+**Triggers:** Daily at 16:17 UTC; manual `workflow_dispatch`.
+
+Runs `./scripts/pr-stack.sh destroy` for every `www-pr-<n>` stack whose PR is closed, retrying the Lambda@Edge functions a close-time destroy left behind and catching any stack whose close-time destroy never ran.
 
 #### scheduled-test.yml
 
@@ -1336,10 +1352,10 @@ flowchart LR
 - **Break-glass:** the `review:waived` label, which is logged and clears every gate, `staging` included. Only a member of a team in `review-routing.yml`'s `teams:` can apply one that counts, and the Sentinel checks that with the org-scoped token, so an outage of that token refuses the waive. The workflow fetches that token only for a PR carrying `review:waived`; no gate reads it.
 - **When the Sentinel never reports:** re-run it from **Actions › Sentinel › Run workflow** with the PR number. If it still can't conclude, a repo admin can merge past it; branch protection exempts admins.
 
-`staging` needs a successful pulumi-test.io deploy at the PR's current head:
+`staging` needs a successful deploy of the PR's current head to its own stack, `www-pr-<n>` (see [testing-build-and-deploy.yml](#testing-build-and-deployyml)). The status context is still named `staging/pulumi-test-io`, so branch protection and open PRs didn't have to change:
 
-- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's `staging` row. To retry, re-run the failed deploy, or comment `/deploy-staging` on the PR (write access required; `staging-deploy-command.yml`). Don't dispatch the workflow by hand: "Build and deploy testing" sits next to the production "Build and deploy" in the Actions sidebar, and the comment can only reach staging.
-- **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
+- **staging-deploy-auto.yml** (pull request events): runs `route-pr.py` from the default branch. If it reports `staging_evidence_required`, it dispatches `testing-build-and-deploy.yml` at the PR's head branch with the PR number. Same-repo PRs only. It never checks out PR code and never fails a PR. If the dispatch itself fails (for example, the testing workflow is disabled), it writes `staging/pulumi-test-io` = error with the reason, which shows in the merge box and on the Sentinel's `staging` row. To retry, re-run the failed deploy, or comment `/deploy-staging` on the PR (write access required; `staging-deploy-command.yml`). Don't dispatch the workflow by hand: "Build and deploy testing" sits next to the production "Build and deploy" in the Actions sidebar, and the comment can only reach staging.
+- **staging-status.yml** (every 10 minutes; `workflow_run` after the testing deploy; manual): writes the terminal `staging/pulumi-test-io` commit status, linked to the PR stack's site, and pokes the Sentinel. The schedule is the trigger that actually fires: runs dispatched with `GITHUB_TOKEN` never produce `workflow_run` events, so the listener almost never fires for staging deploys.
 
 ### Content upkeep automation
 
@@ -1517,6 +1533,7 @@ All cron expressions are UTC. Eastern times shift by an hour when daylight savin
 | 14:30 | `blog-review-index.yml` | Weekdays |
 | 14:41 | `stale-pr-sweep.yml` (when `STALE_PR_SWEEP=1`) | Daily |
 | 15:00 | `bucket-cleanup.yml`, `bucket-cleanup-testing.yml`, `check-links.yml`, `check-lighthouse.yml` | Daily |
+| 16:17 | `pr-stack-sweep.yml` | Daily |
 
 ### Workflow inventory
 
@@ -1525,7 +1542,7 @@ Every workflow in `.github/workflows/`, grouped by family.
 | Workflow | Family | Trigger | Purpose |
 |----------|--------|---------|---------|
 | `build-and-deploy.yml` | Ship | Push to master, 3× daily, manual | Production deploy |
-| `testing-build-and-deploy.yml` | Ship | Push to master, manual | Testing deploy; staging evidence for infra PRs |
+| `testing-build-and-deploy.yml` | Ship | Push to master, manual | Testing deploy; infra PR stacks for staging evidence |
 | `post-deployment-health-check.yml` | Ship | After a successful deploy, manual | Live-site smoke checks |
 | `schedule-social.yml` | Ship | After a successful production deploy, manual | Schedule blog social posts |
 | `update-search-index.yml` | Ship | Hourly, manual | Refresh Algolia |
@@ -1533,7 +1550,8 @@ Every workflow in `.github/workflows/`, grouped by family.
 | `bucket-cleanup.yml` | Ship | Daily | Delete old production buckets |
 | `bucket-cleanup-testing.yml` | Ship | Daily, manual | Delete old testing and preview buckets |
 | `pull-request.yml` | PR checks | Pull request | Lint, test, preview build and deploy |
-| `pr-closed.yml` | PR checks | PR closed | Delete preview buckets |
+| `pr-closed.yml` | PR checks | PR closed | Destroy the PR stack, delete preview buckets |
+| `pr-stack-sweep.yml` | PR checks | Daily, manual | Remove the stacks of closed PRs |
 | `scheduled-test.yml` | PR checks | Pull request, daily, manual | Example program tests |
 | `review-pipeline-tests.yml` | PR checks | Pull request (paths) | Review pipeline test suites |
 | `support-form-tests.yml` | PR checks | Pull request (paths) | Support form, pricing API, and infra tests |

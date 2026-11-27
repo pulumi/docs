@@ -1,7 +1,7 @@
 name: Staging deploy (/deploy-staging command)
 
 # `/deploy-staging`, at the start of a line in a PR comment, starts the
-# pulumi-test.io deploy of the PR's current head that the Sentinel's staging gate
+# deploy of the PR's current head to its own stack (scripts/pr-stack.sh) that the Sentinel's staging gate
 # verifies. It's for when the auto lane (staging-deploy-auto.yml) produced
 # none: its dispatch failed, or the PR predates it. The gate used to tell
 # people to dispatch "Build and deploy testing" by hand, which sits one click
@@ -140,6 +140,7 @@ jobs:
           COMMENTER: ${{ github.event.comment.user.login }}
           HEAD_SHA: ${{ steps.plan.outputs.head_sha }}
           HEAD_REF: ${{ steps.plan.outputs.head_ref }}
+          PR: ${{ github.event.issue.number }}
           JOB_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -uo pipefail
@@ -158,7 +159,7 @@ jobs:
           fi
           LOG=$(mktemp)
           if scripts/review-v3/staging-deploy.sh \
-               --repo "$REPO" --head-sha "$HEAD_SHA" --head-ref "$HEAD_REF" 2>&1 | tee "$LOG"; then
+               --repo "$REPO" --pr "$PR" --head-sha "$HEAD_SHA" --head-ref "$HEAD_REF" 2>&1 | tee "$LOG"; then
             RUN_URL=$(grep -oE "https://github.com/$REPO/actions/runs/[0-9]+" "$LOG" | tail -1 || true)
             python3 "$CMD" started --repo "$REPO" --sha "$HEAD_SHA" --commenter "$COMMENTER" \
               --run-url "$RUN_URL" --reply-out "$REPLY"
