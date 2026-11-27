@@ -262,13 +262,13 @@ terraform {
 }
 
 # Read the deployment and the storage account name.
-data "azure-native_resources_get_deployment" "storage" {
+data "azure-native_resources_deployment" "storage" {
   deployment_name     = "myStorageDeployment62ba53a3"
   resource_group_name = "myrg"
 }
 
 locals {
-  storage_account_name = data.azure-native_resources_get_deployment.storage.properties.outputs.storageAccountName.value
+  storage_account_name = data.azure-native_resources_deployment.storage.properties.outputs.storageAccountName.value
 }
 
 # Create a blob for our own deployment.
