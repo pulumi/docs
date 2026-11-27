@@ -113,6 +113,7 @@ Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-ve
 - **Feature names.** Capitalization and punctuation must match how the product refers to itself in docs. If a blog introduces a feature, the feature name should match the canonical doc page's title.
 - **"Generally available," not "generally released."** Release terminology beyond what Vale's substitution list covers.
 - **Canonical links to docs.** Every feature announcement should link to the relevant `/docs/` page. Missing doc links are a pre-existing-issue finding (the blog post is fine on its own; it's the site SEO that suffers).
+- **HCL.** New posts follow `AGENTS.md` §HCL as a Pulumi language. An older post that predates Pulumi HCL and says Pulumi can't run HCL, or treats HCL only as the alternative, needs `{{% hcl-note %}}` after the `<!--more-->` break rather than a rewrite. Flag a missing one as a pre-existing issue.
 - **"New" vs "now supports."** A feature that landed more than ~30 days ago should use "now supports" or "recently added," not "new." If the frontmatter `date` is old relative to the claim's subject, flag.
 - **Title quality.** Title should describe the post's subject specifically and contain the topical hook a search/AI user would type. Flag:
   - **Clickbait constructions** ("You won't believe...", "10 things every X needs"), question-headlines without a clear payoff.

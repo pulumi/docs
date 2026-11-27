@@ -74,6 +74,14 @@ Then flag the file-specific issues the brand guide doesn't own:
 - Outdated information
 - Missing code examples where they'd help
 
+**HCL as a Pulumi language** (`AGENTS.md` §HCL as a Pulumi language):
+
+- Language lists that leave HCL out, or call Pulumi's languages "general-purpose" as if that were the whole set
+- Language choosers with no `hcl` tab where Pulumi HCL supports what the page shows
+- Framing that treats HCL as the thing Pulumi frees readers from
+- Terraform and migration content that presents converting out of HCL as the only route
+- Blog posts that predate Pulumi HCL and need `{{% hcl-note %}}`
+
 **Front matter:**
 
 - Missing or incomplete required fields (title, description, etc.)
@@ -199,6 +207,7 @@ Develop a detailed plan organized by issue category:
 - Missing context to add
 - Code examples to add or improve
 - Outdated information to update
+- HCL gaps: languages lists to switch to `{{< pulumi-languages >}}`, `hcl` chooser tabs to add (only from the HCL docs and pulumi/pulumi-hcl, never invented), and anti-HCL framing to rewrite without superlatives
 
 **8. Estimated impact:**
 
