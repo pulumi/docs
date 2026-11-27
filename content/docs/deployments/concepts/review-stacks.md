@@ -349,3 +349,7 @@ const reviewSettings = new pulumiservice.DeploymentSettings("reviewSettings", {
 	},
 });
 ```
+
+{{% notes type="info" %}}
+The `reviewStackLabels` setting can also be configured directly via the Pulumi Cloud Console or using the `pulumi deployment settings` CLI commands. If using the Pulumi Service provider (`pulumiservice`), verify that your installed provider version supports this property in its schema.
+{{% /notes %}}
