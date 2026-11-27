@@ -510,6 +510,10 @@ function getDefaultExcludedKeywords() {
         // the specific snapshot URLs rather than the whole archive.org domain so a genuinely dead snapshot still gets caught.
         "https://web.archive.org/web/20260415184227/https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",        // blog/next-level-iac-breakpoint-debugging
         "https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
+        // The crawler reports these snapshot URLs with the embedded scheme collapsed to "https:/", so the "https://" forms above never match. Exclude the form it actually reports.
+        "https://web.archive.org/web/20260415184227/https:/www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",         // blog/next-level-iac-breakpoint-debugging
+        "https://web.archive.org/web/20240301073955/https:/engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
+        "https://web.archive.org/web/20260817150314/https:/docs.aws.amazon.com/corretto/latest/corretto-11-ug/what-is-corretto-11.html", // blog/aws-lambda-snapstart
     ];
 }
 
