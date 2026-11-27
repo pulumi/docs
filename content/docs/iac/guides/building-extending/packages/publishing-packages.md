@@ -306,7 +306,7 @@ Metadata for your package is generated from the [`schema.json`](/docs/iac/guides
 - `logoUrl`: a web-accessible URL to a logo for your package (ideally an SVG); we recommend using the githubusercontent.com raw URL for a logo stored in your package's repository; all surrounding whitespace should be removed from the logo, and wordmarks are preferred
 - `publisher`: your personal or company name, as you'd like it to be shown on the Registry
 - `keywords`:
-  - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `versioncontrol`
+  - `category/CATEGORY`: replace `CATEGORY` with one of `cloud`, `database`, `infrastructure`, `monitoring`, `network`, `utility`, `vcs`
   - `kind/KIND`: replace `KIND` with one of `native`, `component`
     - Note: don't set a kind if you're bridging a Terraform provider
 - `pluginDownloadURL`: a web-accessible URL that contains the compiled plugin binary associated with your package. See [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/#plugindownloadurl) for the URL format, hosting options (GitHub Releases, GitLab Releases, custom HTTP), and interpolation variables.
@@ -388,6 +388,6 @@ The file maps the `publisher` string in your schema (the key) to that publisher'
 
 ## Keep your listing current
 
-To ship a new version, cut a new GitHub release. You don't open another pull request. A scheduled job in `pulumi/registry` runs twice a day, at 05:30 and 17:30 UTC, and checks every listed package for a release newer than the one the Registry has. When it finds one it regenerates that package's metadata and documentation from the new release and opens a pull request, which a Pulumi maintainer merges. Your updated listing, documentation, and API docs go live from there.
+To ship a new version, cut a new GitHub release. You don't open another pull request. A scheduled job in `pulumi/registry` runs twice a day, at 05:30 and 17:30 UTC, and checks every listed package for a release newer than the one the Registry has. When it finds one it regenerates that package's metadata and documentation from the new release and opens a pull request, which is approved and merged automatically once its checks pass. Your updated listing, documentation, and API docs go live from there.
 
 Search works the same way. The filter box on the Registry index page matches a package by its title, its name, and its keywords, and those keywords come from the `keywords` field of your `schema.json`. To make your package findable by a new term, add the term to `keywords` and cut a release. Don't edit the generated package YAML in `pulumi/registry` by hand; the next metadata publish overwrites it.
