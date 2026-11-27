@@ -15,6 +15,7 @@ These guides walk through common Pulumi Deployments tasks. Each one is self-cont
 - [Cloud Credentials](/docs/deployments/guides/cloud-credentials/): Supply the cloud credentials a deployment needs to manage your infrastructure.
 - [Set up customer-managed runners](/docs/administration/guides/customer-managed-runners/): Set up, scale, and assign customer-managed runner pools.
 - [Custom Images](/docs/deployments/guides/custom-images/): Customize the container image your deployments run in.
+- [Reuse preparation across stacks](/docs/deployments/guides/faster-deployments/): Choose between dependency caching, custom images, release bundles, and runner storage so stacks stop repeating the same preparation.
 - [Private Sources](/docs/deployments/guides/private-sources/): Give deployments access to private Git repositories and package feeds.
 - [Dependent Stack Updates](/docs/deployments/guides/dependent-stack-updates/): Trigger downstream stacks automatically when an upstream stack changes, without duplicate fires or loops.
 - [OIDC Setup](/docs/deployments/guides/oidc/): Configure OpenID Connect to obtain short-lived cloud provider credentials.
