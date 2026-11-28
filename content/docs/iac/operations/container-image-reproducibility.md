@@ -768,8 +768,8 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version-file: infra/package.json
       - run: npm install
@@ -790,7 +790,7 @@ jobs:
           work-dir: infra
 ```
 
-The ESC environment referenced above supplies the ECR credentials the Pulumi program's AWS provider needs, following the same [OIDC pattern used elsewhere in Pulumi's GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/#authenticate-without-a-stored-token-using-oidc) — no long-lived AWS keys or Docker registry passwords are stored as repository secrets. Swap the `npm install` and `setup-node` steps for your program's language (`pip install -r requirements.txt` with `actions/setup-python@v5`, and so on); everything about the caching behavior above is identical regardless of the language the Pulumi program itself is written in. GitLab CI/CD, Jenkins, and other CI systems follow the same shape: a job that authenticates, installs dependencies, and runs `pulumi up` — the registry-backed cache works identically because it's a property of the registry, not the CI system.
+The ESC environment referenced above supplies the ECR credentials the Pulumi program's AWS provider needs, following the same [OIDC pattern used elsewhere in Pulumi's GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/#authenticate-without-a-stored-token-using-oidc) — no long-lived AWS keys or Docker registry passwords are stored as repository secrets. Swap the `npm install` and `setup-node` steps for your program's language (`pip install -r requirements.txt` with `actions/setup-python@v7`, and so on); everything about the caching behavior above is identical regardless of the language the Pulumi program itself is written in. GitLab CI/CD, Jenkins, and other CI systems follow the same shape: a job that authenticates, installs dependencies, and runs `pulumi up` — the registry-backed cache works identically because it's a property of the registry, not the CI system.
 
 BuildKit also supports a GitHub Actions-native cache backend (`gha`, exposed on `cacheFrom`/`cacheTo` as `{ gha: { scope: "..." } }`), which avoids a registry round trip entirely by using the GitHub Actions cache service. It needs the `ACTIONS_CACHE_URL` and `ACTIONS_RUNTIME_TOKEN` environment variables exported into the job, which the default `GITHUB_TOKEN` doesn't provide on its own — add a step like [`crazy-max/ghaction-github-runtime`](https://github.com/crazy-max/ghaction-github-runtime) before `pulumi up` to export them. Prefer the registry-backed cache shown above when your CI runs across multiple providers or self-hosted runners; reach for `gha` when you're committed to GitHub-hosted runners and want to avoid the extra registry pushes for cache layers.
 
