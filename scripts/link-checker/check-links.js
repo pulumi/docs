@@ -296,6 +296,7 @@ function getDefaultExcludedKeywords() {
         "/docs/get-started/install/versions",
         "https://api.pulumi.com/",
         "https://github.com/pulls?",
+        "https://github.com/customer-stories", // additionalRoutes crawls github.com/pulumi/pulumi; GitHub's own nav links to /customer-stories, which returns HTTP 500 to automated clients. Not in our content.
         "https://github.com/pulumi/pulumi/projects", // additionalRoutes crawls github.com/pulumi/pulumi; GitHub's own page links to its now-deprecated /projects tab (HTTP 400). Not in our content.
         "https://github.com/pulumi/docs/edit/master",
         "https://github.com/pulumi/docs/issues/new",
@@ -510,6 +511,11 @@ function getDefaultExcludedKeywords() {
         // the specific snapshot URLs rather than the whole archive.org domain so a genuinely dead snapshot still gets caught.
         "https://web.archive.org/web/20260415184227/https://www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",        // blog/next-level-iac-breakpoint-debugging
         "https://web.archive.org/web/20240301073955/https://engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
+        // The crawler collapses the "//" in the embedded URL ("/https:/host/..."), so the entries above never match what it reports.
+        // Exclude the normalized forms it actually emits (still flagged ECONNREFUSED on 2026-11-28; all three resolve 200 on recheck).
+        "https://web.archive.org/web/20260415184227/https:/www.cs.colostate.edu/~fsieker/misc/debug/DEBUG.html",         // blog/next-level-iac-breakpoint-debugging
+        "https://web.archive.org/web/20240301073955/https:/engineering.statefarm.com/blog/terraform-s3-upload-with-mime/", // blog/next-level-iac-package-ecosystems
+        "https://web.archive.org/web/20260817150314/https:/docs.aws.amazon.com/corretto/latest/corretto-11-ug/what-is-corretto-11.html", // blog/aws-lambda-snapstart
     ];
 }
 
