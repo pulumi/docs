@@ -138,6 +138,7 @@ jobs:
           check_endpoint "/blog/" "Blog landing"
           check_endpoint "/what-is/" "What-is landing (redirects to /topics/)"
           check_endpoint "/topics/" "Topics landing"
+          check_endpoint "/enterprise/" "Enterprise landing"
           check_endpoint "/customers/" "Customers landing"
           check_endpoint "/whitepapers/" "Whitepapers landing"
           check_endpoint "/state-of-agentic-infrastructure/" "State of agentic infrastructure report"
