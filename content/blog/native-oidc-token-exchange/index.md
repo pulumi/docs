@@ -141,7 +141,7 @@ Native OIDC token exchange is available now in the latest version of the Pulumi 
 
 For complete documentation, including setup guides for specific identity providers, see:
 
-- [`pulumi login` command reference](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange)
+- [`pulumi login` command reference](/docs/iac/cli/commands/pulumi_login/)
 - [OIDC client integration guide](/docs/administration/guides/oidc-issuers/)
 - [GitHub OIDC setup](/docs/administration/guides/oidc-issuers/github/)
 - [GKE OIDC setup](/docs/administration/guides/oidc-issuers/kubernetes-gke/)
